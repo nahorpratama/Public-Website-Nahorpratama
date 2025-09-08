@@ -626,7 +626,7 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px 2vw;
+  padding: 12px 2vw;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -636,14 +636,15 @@ figcaption {
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 70px;
 }
 
 .navigation-item {
-  padding: 12px 20px;
-  margin: 0 5px;
+  padding: 10px 18px;
+  margin: 0 3px;
   opacity: 0.8;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.4;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -689,6 +690,8 @@ figcaption {
   background-image: url('../images/Copy_of_ENP_WEB__1_-removebg.png');
   background-position: 0px 0px;
   background-size: auto;
+  max-height: 50px;
+  width: auto;
 }
 
 .navigation-items {
@@ -716,8 +719,8 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3266,8 +3269,10 @@ figcaption {
 }
 
 .text-block-9 {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .div-block-11 {
@@ -3277,11 +3282,12 @@ figcaption {
 .footer-section {
   margin-right: auto;
   margin-left: auto;
-  padding: 40px;
+  padding: 30px 40px;
   background-color: #1a1b1f;
   color: #fff;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 80px;
 }
 
 .sub-heading-3 {
@@ -4584,8 +4590,10 @@ a, button, input, textarea, select {
 }
 
 .text-block-10 {
-  font-size: 10px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .map-section {
@@ -6877,11 +6885,12 @@ a, button, input, textarea, select {
   }
 
   .navigation {
-    padding: 10px 30px;
+    padding: 8px 30px;
+    min-height: 60px;
   }
 
   .navigation-item {
-    padding: 15px 30px;
+    padding: 12px 25px;
     -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     text-align: center;
@@ -7766,7 +7775,8 @@ a, button, input, textarea, select {
   }
 
   .navigation {
-    padding: 5px 40px 5px 20px;
+    padding: 8px 40px 8px 20px;
+    min-height: 60px;
   }
 
   .navigation-items {
@@ -8496,17 +8506,18 @@ a, button, input, textarea, select {
   .footer-container {
     overflow: hidden;
     width: 90%;
-    height: 90%;
+    height: auto;
     margin-bottom: 0px;
-    padding: 0px;
+    padding: 20px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    min-height: 60px;
   }
 
   .paragraph-tiny {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .paragraph-bigger {
@@ -8633,7 +8644,8 @@ a, button, input, textarea, select {
   }
 
   .navigation {
-    padding: 10px 20px;
+    padding: 8px 20px;
+    min-height: 55px;
   }
 
   .navigation-item {
