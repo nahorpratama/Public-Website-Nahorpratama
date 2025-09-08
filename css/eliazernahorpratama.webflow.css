@@ -642,8 +642,8 @@ figcaption {
   padding: 12px 20px;
   margin: 0 5px;
   opacity: 0.8;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.4;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -3266,8 +3266,10 @@ figcaption {
 }
 
 .text-block-9 {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .div-block-11 {
@@ -4584,8 +4586,10 @@ a, button, input, textarea, select {
 }
 
 .text-block-10 {
-  font-size: 10px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .map-section {
