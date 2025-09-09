@@ -53,6 +53,161 @@
       font-weight: 600;
       margin-top: 4px;
     }
+    
+    /* Professional About Section Styling */
+    .about-section-professional {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f5f9 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-section-professional::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('images/construction-background.svg') center/cover no-repeat;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .about-header {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+    
+    .about-main-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+    
+    .about-subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      color: #34495e;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    .about-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    .vision-card, .mission-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .vision-card:hover, .mission-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .card-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    
+    .card-description {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+      text-align: left;
+    }
+    
+    .mission-points {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .mission-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .point-icon {
+      background: #3498db;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .point-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+      text-align: left;
+    }
+    
+    @media (max-width: 768px) {
+      .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .about-main-title {
+        font-size: 36px;
+      }
+      
+      .about-subtitle {
+        font-size: 20px;
+      }
+      
+      .vision-card, .mission-card {
+        padding: 30px;
+      }
+      
+      .card-title {
+        font-size: 24px;
+      }
+      
+      .card-description {
+        font-size: 16px;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -100,33 +255,39 @@
       </div>
     </div>
   </div>
-  <div class="content-section">
+  <div class="content-section about-section-professional">
     <div class="body-content">
-      <div class="grid-section cc-homepage">
-        <div id="w-node-edf939ed-8c50-b178-bd7f-28b58be6ab69-068c7ce3" data-w-id="edf939ed-8c50-b178-bd7f-28b58be6ab69" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-qusetion">
-          <h1 class="h2-headings">What We Do ?</h1>
-          <h1 class="h2-headings">General<br>Construction<br>&amp; Trade</h1>
+      <div class="about-container">
+        <div class="about-header">
+          <h2 class="about-main-title">What We Do</h2>
+          <h3 class="about-subtitle">General Construction & Trade</h3>
         </div>
-        <div id="w-node-bb9e4c89-4cdc-813e-320a-9678fa67ddf2-068c7ce3" data-w-id="bb9e4c89-4cdc-813e-320a-9678fa67ddf2" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-vission">
-          <h1 class="h2-headings">VISION</h1>
-          <p class="paragraph-bigger">To be the leading company in EPCI that is integrated <br>and environmentally friendly.</p>
-        </div>
-        <div id="w-node-_0bd86cd5-70b0-55ec-e2bc-274e39b25d86-068c7ce3" class="div-block-12"></div>
-        <div id="w-node-_8e880145-f5b5-e65d-5d63-15838eccb7f3-068c7ce3" data-w-id="8e880145-f5b5-e65d-5d63-15838eccb7f3" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-mission">
-          <div class="div-block-15">
-            <h1 class="h2-headings">Mission</h1>
+        
+        <div class="about-content-grid">
+          <div class="vision-card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-description">To be the leading company in EPCI that is integrated and environmentally friendly, delivering exceptional value to our clients while maintaining the highest standards of safety and sustainability.</p>
           </div>
-          <ol role="list" class="list w-list-unstyled">
-            <li class="list-item">
-              <p class="paragraph-small">Prioritizing productivity, punctuality, quality, and safety of the employees by putting forward values such as integrity and accountability.</p>
-            </li>
-            <li class="list-item">
-              <p class="paragraph-small">We strive to provide the greatest client satisfaction.</p>
-            </li>
-            <li class="list-item">
-              <p class="paragraph-small">We are committed to pursue a sustainable future and improving the economic, social and environmental well being of the community.</p>
-            </li>
-          </ol>
+          
+          <div class="mission-card">
+            <div class="card-icon">🚀</div>
+            <h3 class="card-title">Our Mission</h3>
+            <div class="mission-points">
+              <div class="mission-point">
+                <div class="point-icon">✓</div>
+                <p class="point-text">Prioritizing productivity, punctuality, quality, and safety of our employees by upholding values of integrity and accountability in every project we undertake.</p>
+              </div>
+              <div class="mission-point">
+                <div class="point-icon">✓</div>
+                <p class="point-text">Striving to provide the greatest client satisfaction through innovative solutions, timely delivery, and exceptional service quality.</p>
+              </div>
+              <div class="mission-point">
+                <div class="point-icon">✓</div>
+                <p class="point-text">Committed to pursuing a sustainable future and improving the economic, social, and environmental well-being of the communities we serve.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
