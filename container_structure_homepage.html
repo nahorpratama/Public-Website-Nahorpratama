@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Kontainer Halaman Utama - PT Eliazer Nahor Pratama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #eff6ff 50%, #eef2ff 75%, #f0f4ff 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #3498db;
+        }
+        
+        .container-section h2 {
+            color: #2c5aa0;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .container-section h3 {
+            color: #34495e;
+            font-size: 1.2rem;
+            margin: 15px 0 8px 0;
+            font-weight: 600;
+        }
+        
+        .container-section p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .container-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .container-section li {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #495057;
+            overflow-x: auto;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .container-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px dashed #dee2e6;
+        }
+        
+        .arrow {
+            font-size: 2rem;
+            color: #3498db;
+            margin: 0 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container-section {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Struktur Kontainer Halaman Utama</h1>
+            <p>PT Eliazer Nahor Pratama - Urutan Kontainer dari Atas ke Bawah</p>
+        </div>
+        
+        <!-- Container 1: Navigation -->
+        <div class="container-section">
+            <h2>🔗 1. Navigation Container (Baris 67-87)</h2>
+            <h3>Fungsi:</h3>
+            <p>Header navigasi utama dengan logo perusahaan, menu navigasi, dan tombol kontak.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="navigation w-nav"&gt;
+  &lt;div class="navigation-wrap"&gt;
+    &lt;a href="index.html" class="logo-link w-nav-brand"&gt;
+      &lt;img src="logo.png" class="logo-image"&gt;
+      &lt;div class="text-block-9"&gt;PT ELIAZER NAHOR PRATAMA&lt;/div&gt;
+    &lt;/a&gt;
+    &lt;div class="menu"&gt;
+      &lt;nav class="navigation-items w-nav-menu"&gt;
+        &lt;a href="about.html" class="navigation-item"&gt;About&lt;/a&gt;
+        &lt;a href="projects.html" class="navigation-item"&gt;Project&lt;/a&gt;
+        &lt;a href="experience.html" class="navigation-item"&gt;Experience&lt;/a&gt;
+        &lt;a href="equipment.html" class="navigation-item"&gt;Equipment&lt;/a&gt;
+        &lt;a href="team.html" class="navigation-item"&gt;team&lt;/a&gt;
+        &lt;a href="contact.html" class="navigation-item"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;div class="menu-button w-nav-button"&gt;
+        &lt;img src="menu-icon.png" class="menu-icon"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href="mailto:..." class="button cc-contact-us"&gt;
+      &lt;div class="text-block-10"&gt;Contact us&lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>Fitur:</h3>
+            <ul>
+                <li>Logo perusahaan dengan nama lengkap</li>
+                <li>6 menu navigasi dengan font size <span class="highlight">10px</span> dan margin <span class="highlight">2px</span></li>
+                <li>Hamburger menu untuk mobile</li>
+                <li>Tombol "Contact us" dengan link email</li>
+            </ul>
+        </div>
+        
+        <div class="container-flow">
+            <span class="arrow">⬇️</span>
+        </div>
+        
+        <!-- Container 2: Hero Section -->
+        <div class="container-section">
+            <h2>🏠 2. Hero Section Container (Baris 88-102)</h2>
+            <h3>Fungsi:</h3>
+            <p>Hero section utama dengan judul perusahaan, tagline, dan tombol call-to-action.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="intro-section cc-store-home-wrap"&gt;
+  &lt;div class="intro-header"&gt;
+    &lt;div class="intro-content cc-homepage"&gt;
+      &lt;div class="intro-text"&gt;
+        &lt;h1 class="h1-headtext"&gt;BUILDING YOUR VISION&lt;br&gt;CONSTRUCTING YOUR FUTURE&lt;/h1&gt;
+        &lt;h1 class="sub-heading-light"&gt;AN INDONESIAN CONSTRUCTION&lt;br&gt;SERVICE COMPANY&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="button-content"&gt;
+        &lt;a href="about.html" class="button cc-jumbo-button cc-jumbo-white"&gt;
+          &lt;div class="text-block"&gt;Learn More&lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>CSS Properties:</h3>
+            <ul>
+                <li><span class="highlight">Background:</span> #ffffff (white)</li>
+                <li><span class="highlight">Layout:</span> Flex dengan center alignment</li>
+                <li><span class="highlight">Animation:</span> Transform dan opacity untuk fade-in effect</li>
+                <li><span class="highlight">Content:</span> Judul utama + tagline + tombol "Learn More"</li>
+            </ul>
+        </div>
+        
+        <div class="container-flow">
+            <span class="arrow">⬇️</span>
+        </div>
+        
+        <!-- Container 3: About Section -->
+        <div class="container-section">
+            <h2>📄 3. About Section Container (Baris 103-133)</h2>
+            <h3>Fungsi:</h3>
+            <p>Menampilkan informasi tentang perusahaan: What We Do, Vision, dan Mission.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="content-section"&gt;
+  &lt;div class="body-content"&gt;
+    &lt;div class="grid-section cc-homepage"&gt;
+      &lt;div class="section-qusetion"&gt;
+        &lt;h1 class="h2-headings"&gt;What We Do ?&lt;/h1&gt;
+        &lt;h1 class="h2-headings"&gt;General&lt;br&gt;Construction&lt;br&gt;&amp; Trade&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="section-vission"&gt;
+        &lt;h1 class="h2-headings"&gt;VISION&lt;/h1&gt;
+        &lt;p class="paragraph-bigger"&gt;To be the leading company in EPCI...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="section-mission"&gt;
+        &lt;h1 class="h2-headings"&gt;Mission&lt;/h1&gt;
+        &lt;ol class="list w-list-unstyled"&gt;
+          &lt;li class="list-item"&gt;...&lt;/li&gt;
+          &lt;li class="list-item"&gt;...&lt;/li&gt;
+          &lt;li class="list-item"&gt;...&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>CSS Properties:</h3>
+            <ul>
+                <li><span class="highlight">Background:</span> #f8f9fa (light gray)</li>
+                <li><span class="highlight">Layout:</span> Grid layout untuk 3 section</li>
+                <li><span class="highlight">Animation:</span> Scale dan opacity effects</li>
+                <li><span class="highlight">Content:</span> What We Do, Vision, Mission dengan 3 poin</li>
+            </ul>
+        </div>
+        
+        <div class="container-flow">
+            <span class="arrow">⬇️</span>
+        </div>
+        
+        <!-- Container 4: Projects Section -->
+        <div class="container-section">
+            <h2>🏗️ 4. Projects Section Container (Baris 134-167)</h2>
+            <h3>Fungsi:</h3>
+            <p>Menampilkan showcase proyek-proyek perusahaan dalam grid layout dengan gambar dan nama lokasi.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="content-section"&gt;
+  &lt;div class="second-content"&gt;
+    &lt;div class="main-content"&gt;
+      &lt;div class="title-content"&gt;
+        &lt;h1 class="h2-headings"&gt;Our PROJECT&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="grid-content"&gt;
+        &lt;div class="first-block"&gt;
+          &lt;div class="picture-section"&gt;
+            &lt;img src="images/Copy-of-ENP-WEB-7.jpg" class="image-3"&gt;
+          &lt;/div&gt;
+          &lt;div class="text-section"&gt;
+            &lt;div class="heading-2"&gt;DUMAI&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="second-block"&gt;
+          &lt;div class="picture-section"&gt;
+            &lt;img src="images/Copy-of-ENP-WEB-8_1.jpg" class="image-5"&gt;
+          &lt;/div&gt;
+          &lt;div class="text-sections"&gt;
+            &lt;div class="heading-2"&gt;DURI&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="third-block"&gt;
+          &lt;div class="picture-section"&gt;
+            &lt;img src="images/Copy-of-ENP-WEB-9.jpg" class="image-4"&gt;
+          &lt;/div&gt;
+          &lt;div class="text-section"&gt;
+            &lt;div class="heading-2"&gt;Kerinci&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="button-content"&gt;
+        &lt;a href="projects.html" class="button cc-jumbo-button cc-jumbo-white"&gt;
+          &lt;div class="text-block"&gt;Learn More&lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>Fitur:</h3>
+            <ul>
+                <li>3 proyek showcase: DUMAI, DURI, Kerinci</li>
+                <li>Responsive images dengan srcset</li>
+                <li>Grid layout untuk menampilkan proyek</li>
+                <li>Tombol "Learn More" mengarah ke halaman projects</li>
+            </ul>
+        </div>
+        
+        <div class="container-flow">
+            <span class="arrow">⬇️</span>
+        </div>
+        
+        <!-- Container 5: CTA Section -->
+        <div class="container-section">
+            <h2>📢 5. CTA Section Container (Baris 168-182)</h2>
+            <h3>Fungsi:</h3>
+            <p>Call-to-Action section untuk mengajak pengunjung menghubungi perusahaan.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="intro-section cc-cta" style="margin: 0; padding: 0; width: 100%;"&gt;
+  &lt;div class="cta-container" style="margin: 0; width: 100%;"&gt;
+    &lt;div class="cta-wrap"&gt;
+      &lt;div class="cta-text"&gt;
+        &lt;h1 class="h2-headingscta"&gt;We construct for you&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="cta-paragraph"&gt;
+        &lt;p class="paragraphscta"&gt;Delivering exceptional construction services...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;a href="contact.html" class="button cc-jumbo-button"&gt;
+        &lt;div class="text-block-2"&gt;Start Now&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>CSS Properties:</h3>
+            <ul>
+                <li><span class="highlight">Background:</span> #2c3e50 (dark blue)</li>
+                <li><span class="highlight">Color:</span> White text</li>
+                <li><span class="highlight">Width:</span> 100% full width</li>
+                <li><span class="highlight">Content:</span> Judul + deskripsi + tombol "Start Now"</li>
+            </ul>
+        </div>
+        
+        <div class="container-flow">
+            <span class="arrow">⬇️</span>
+        </div>
+        
+        <!-- Container 6: Footer Section -->
+        <div class="container-section">
+            <h2>🦶 6. Footer Section Container (Baris 183-189)</h2>
+            <h3>Fungsi:</h3>
+            <p>Footer sederhana dengan informasi perusahaan di bagian bawah halaman.</p>
+            
+            <h3>Struktur HTML:</h3>
+            <div class="code-block">
+&lt;div class="intro-section" style="margin: 0; padding: 0; width: 100%;"&gt;
+  &lt;div class="footer-section" style="padding: 15px 40px; margin: 0; width: 100%;"&gt;
+    &lt;div class="footer-wrap"&gt;
+      &lt;p class="paragraph-tiny"&gt;PT Eliazer Nahor Pratama&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+            
+            <h3>CSS Properties:</h3>
+            <ul>
+                <li><span class="highlight">Background:</span> #2c3e50 (dark blue)</li>
+                <li><span class="highlight">Color:</span> White text</li>
+                <li><span class="highlight">Padding:</span> 15px 40px</li>
+                <li><span class="highlight">Width:</span> 100% full width</li>
+                <li><span class="highlight">Content:</span> Nama perusahaan saja</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <h3>Ringkasan Struktur Kontainer</h3>
+            <p>Halaman utama terdiri dari 6 kontainer utama yang tersusun secara vertikal:</p>
+            <p><strong>Navigation → Hero → About → Projects → CTA → Footer</strong></p>
+        </div>
+    </div>
+</body>
+</html>
