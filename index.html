@@ -447,6 +447,64 @@
     
     /* PROJECTS SECTION FIXES */
     
+    /* CTA Section Styling Override to maintain original appearance */
+    .intro-section.cc-cta {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+      color: #ffffff !important;
+      padding: 80px 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    
+    .cta-container {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 0 20px !important;
+    }
+    
+    .cta-wrap {
+      text-align: center !important;
+    }
+    
+    .h2-headingscta {
+      font-size: 48px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      margin-bottom: 20px !important;
+      line-height: 1.2 !important;
+    }
+    
+    .paragraphscta {
+      font-size: 18px !important;
+      color: #f8f9fa !important;
+      line-height: 1.6 !important;
+      margin-bottom: 30px !important;
+      max-width: 600px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+    .button.cc-jumbo-button {
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+      color: #ffffff !important;
+      padding: 15px 35px !important;
+      border-radius: 50px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3) !important;
+      display: inline-block !important;
+    }
+    
+    .button.cc-jumbo-button:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
+    }
+    
     .second-content {
       max-width: 1200px;
       margin: 0 auto;
@@ -586,6 +644,42 @@
         padding: 60px 0 !important;
         margin-bottom: 60px !important;
       }
+      
+      .intro-section.cc-cta {
+        padding: 60px 0 !important;
+      }
+      
+      .h2-headingscta {
+        font-size: 36px !important;
+      }
+      
+      .paragraphscta {
+        font-size: 16px !important;
+      }
+      
+      .button.cc-jumbo-button {
+        font-size: 15px !important;
+        padding: 14px 30px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .intro-section.cc-cta {
+        padding: 40px 0 !important;
+      }
+      
+      .h2-headingscta {
+        font-size: 28px !important;
+      }
+      
+      .paragraphscta {
+        font-size: 14px !important;
+      }
+      
+      .button.cc-jumbo-button {
+        font-size: 14px !important;
+        padding: 12px 25px !important;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -706,8 +800,8 @@
       </div>
     </div>
   </div>
-  <div class="intro-section cc-cta">
-    <div class="cta-container">
+  <div class="intro-section cc-cta" style="margin: 0; padding: 0; width: 100%;">
+    <div class="cta-container" style="margin: 0; width: 100%;">
       <div class="cta-wrap">
         <div data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f163" class="cta-text">
           <h1 class="h2-headingscta">We construct for you</h1>
