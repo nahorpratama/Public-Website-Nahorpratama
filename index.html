@@ -500,8 +500,8 @@
     
     .grid-content {
       display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-      gap: 30px !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 20px !important;
       margin-bottom: 50px !important;
     }
     
@@ -521,7 +521,7 @@
     
     .picture-section {
       width: 100% !important;
-      height: 250px !important;
+      height: 200px !important;
       overflow: hidden !important;
     }
     
@@ -537,15 +537,15 @@
     }
     
     .text-section {
-      padding: 20px !important;
+      padding: 15px !important;
       text-align: center !important;
     }
     
     .heading-2 {
-      font-size: 24px !important;
+      font-size: 20px !important;
       font-weight: 700 !important;
       color: #2c3e50 !important;
-      margin-bottom: 15px !important;
+      margin-bottom: 10px !important;
       letter-spacing: 0.5px !important;
       text-transform: none !important;
     }
@@ -583,6 +583,13 @@
     }
     
     /* Responsive Design */
+    @media (max-width: 1024px) {
+      .grid-content {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+    }
+    
     @media (max-width: 768px) {
       .projects-main-title {
         font-size: 36px !important;
