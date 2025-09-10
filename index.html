@@ -459,6 +459,141 @@
         padding: 12px 25px;
       }
     }
+    
+    /* PROJECTS SECTION FIXES */
+    .projects-section-professional {
+      background-color: #f8f9fa !important;
+      padding: 80px 0 !important;
+      margin: 0 !important;
+    }
+    
+    .second-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .main-content {
+      width: 100%;
+    }
+    
+    .title-content {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .projects-main-title {
+      font-size: 48px !important;
+      font-weight: 700 !important;
+      color: #2c3e50 !important;
+      margin-bottom: 20px !important;
+      line-height: 1.2 !important;
+    }
+    
+    .projects-subtitle {
+      font-size: 18px !important;
+      color: #666 !important;
+      line-height: 1.6 !important;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .grid-content {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+      gap: 30px !important;
+      margin-bottom: 50px !important;
+    }
+    
+    .project-card {
+      background: #ffffff !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      margin: 0 !important;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .picture-section {
+      width: 100% !important;
+      height: 250px !important;
+      overflow: hidden !important;
+    }
+    
+    .picture-section img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      transition: transform 0.3s ease !important;
+    }
+    
+    .project-card:hover .picture-section img {
+      transform: scale(1.05) !important;
+    }
+    
+    .text-section {
+      padding: 25px !important;
+    }
+    
+    .heading-2 {
+      font-size: 24px !important;
+      font-weight: 700 !important;
+      color: #2c3e50 !important;
+      margin-bottom: 15px !important;
+      letter-spacing: 1px !important;
+    }
+    
+    .project-description {
+      font-size: 16px !important;
+      color: #666 !important;
+      line-height: 1.6 !important;
+      margin: 0 !important;
+    }
+    
+    .button-content {
+      text-align: center !important;
+      margin-top: 40px !important;
+    }
+    
+    .button.cc-jumbo-button.cc-jumbo-white {
+      background: #2c3e50 !important;
+      color: #ffffff !important;
+      padding: 15px 40px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      transition: background 0.3s ease !important;
+    }
+    
+    .button.cc-jumbo-button.cc-jumbo-white:hover {
+      background: #34495e !important;
+    }
+    
+    .text-block {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .projects-main-title {
+        font-size: 36px !important;
+      }
+      
+      .grid-content {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .projects-section-professional {
+        padding: 60px 0 !important;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -560,7 +695,7 @@
           </div>
           <div data-w-id="a1ad0410-55bf-bfb7-e137-f6db09f7c8f8" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card second-block">
             <div class="picture-section"><img src="images/Copy-of-ENP-WEB-8_1.jpg" loading="lazy" sizes="(max-width: 479px) 56vw, (max-width: 767px) 26vw, (max-width: 991px) 27vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" width="950.5" srcset="images/Copy-of-ENP-WEB-8_1-p-500.jpg 500w, images/Copy-of-ENP-WEB-8_1-p-800.jpg 800w, images/Copy-of-ENP-WEB-8_1-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-8_1-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-8_1.jpg 1901w" alt="" class="image-5"></div>
-            <div class="text-sections">
+            <div class="text-section">
               <div class="heading-2">DURI</div>
               <p class="project-description">EPCI project in Duri, demonstrating our capabilities in engineering, procurement, construction, and installation.</p>
             </div>
