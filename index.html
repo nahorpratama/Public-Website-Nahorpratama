@@ -240,27 +240,38 @@
       z-index: 1;
     }
     
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
     .projects-main-title {
-      font-size: 48px;
+      font-size: 42px;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       line-height: 1.2;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       text-align: center;
+      letter-spacing: -0.3px;
     }
     
     .projects-subtitle {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 400;
       color: #f8f9fa;
-      margin: 0 0 60px 0;
+      margin: 0 0 70px 0;
       line-height: 1.5;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       text-align: center;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      letter-spacing: 0.1px;
     }
     
     .project-card {
@@ -272,6 +283,7 @@
       backdrop-filter: blur(15px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      margin-bottom: 0;
     }
     
     .project-card:hover {
@@ -303,11 +315,12 @@
     }
     
     .project-card .heading-2 {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 15px;
       line-height: 1.3;
+      letter-spacing: -0.2px;
     }
     
     .project-description {
@@ -317,6 +330,7 @@
       margin: 0;
       text-align: left;
       font-weight: 400;
+      letter-spacing: 0.05px;
     }
     
     .projects-section-professional .button-content {
@@ -327,13 +341,14 @@
     .projects-section-professional .button {
       background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
       color: white;
-      padding: 15px 40px;
+      padding: 15px 35px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
       transition: all 0.3s ease;
       box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+      letter-spacing: 0.2px;
     }
     
     .projects-section-professional .button:hover {
@@ -341,14 +356,87 @@
       box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+      .grid-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 15px;
+      }
+      
       .projects-main-title {
-        font-size: 36px;
+        font-size: 38px;
       }
       
       .projects-subtitle {
-        font-size: 18px;
+        font-size: 17px;
+        margin-bottom: 60px;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 24px;
+      }
+      
+      .project-description {
+        font-size: 15px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .grid-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+      }
+      
+      .projects-main-title {
+        font-size: 34px;
+        margin-bottom: 15px;
+        letter-spacing: -0.2px;
+      }
+      
+      .projects-subtitle {
+        font-size: 16px;
+        margin-bottom: 50px;
+        letter-spacing: 0.05px;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 25px;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        letter-spacing: -0.1px;
+      }
+      
+      .project-description {
+        font-size: 15px;
+        letter-spacing: 0.02px;
+      }
+      
+      .projects-section-professional .button {
+        font-size: 15px;
+        padding: 14px 30px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .grid-content {
+        gap: 15px;
+        padding: 0 5px;
+      }
+      
+      .projects-main-title {
+        font-size: 28px;
+        letter-spacing: -0.1px;
+      }
+      
+      .projects-subtitle {
+        font-size: 14px;
         margin-bottom: 40px;
+        letter-spacing: 0.02px;
       }
       
       .project-card .text-section,
@@ -357,11 +445,18 @@
       }
       
       .project-card .heading-2 {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 10px;
       }
       
       .project-description {
         font-size: 14px;
+        line-height: 1.5;
+      }
+      
+      .projects-section-professional .button {
+        font-size: 14px;
+        padding: 12px 25px;
       }
     }
   </style>
