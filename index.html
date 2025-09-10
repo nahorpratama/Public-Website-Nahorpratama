@@ -76,14 +76,35 @@
       margin-top: 4px;
     }
     
+    /* ========================================
+       BACKGROUND SYSTEM - MUDAH DIGANTI
+       ======================================== */
+    
+    /* CSS Custom Properties untuk Background */
+    :root {
+      /* Background Options - Ganti nilai di sini untuk mengubah background */
+      --about-bg-image: url('images/construction-hero-bg.svg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      --about-bg-position: center;
+      --about-bg-size: cover;
+      --about-bg-repeat: no-repeat;
+      --about-bg-attachment: fixed;
+      
+      /* Overlay Options */
+      --about-overlay-opacity: 0.7;
+      --about-overlay-color-1: rgba(44, 62, 80, var(--about-overlay-opacity));
+      --about-overlay-color-2: rgba(52, 73, 94, calc(var(--about-overlay-opacity) + 0.05));
+      --about-overlay-color-3: rgba(44, 62, 80, var(--about-overlay-opacity));
+    }
+    
     /* Professional About Section Styling */
     .about-section-professional {
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-      background-image: url('images/construction-hero-bg.svg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: var(--about-bg-fallback);
+      background-image: var(--about-bg-image);
+      background-position: var(--about-bg-position);
+      background-size: var(--about-bg-size);
+      background-repeat: var(--about-bg-repeat);
+      background-attachment: var(--about-bg-attachment);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -98,7 +119,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.7) 0%, rgba(52, 73, 94, 0.75) 50%, rgba(44, 62, 80, 0.7) 100%);
+      background: linear-gradient(135deg, var(--about-overlay-color-1) 0%, var(--about-overlay-color-2) 50%, var(--about-overlay-color-3) 100%);
       z-index: 0;
       pointer-events: none;
     }
@@ -226,6 +247,89 @@
       .about-section-professional {
         background-attachment: scroll;
       }
+    }
+    
+    /* ========================================
+       BACKGROUND PRESETS - PILIH SALAH SATU
+       ======================================== */
+    
+    /* Preset 1: Construction Site (Default) */
+    .about-section-professional.bg-construction {
+      --about-bg-image: url('images/construction-hero-bg.svg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 2: Project Site 1 */
+    .about-section-professional.bg-project1 {
+      --about-bg-image: url('images/Copy-of-ENP-WEB-1.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 3: Project Site 2 */
+    .about-section-professional.bg-project2 {
+      --about-bg-image: url('images/Copy-of-ENP-WEB-4.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 4: Construction Work */
+    .about-section-professional.bg-work1 {
+      --about-bg-image: url('images/IMG_20220623_091905.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 5: Construction Work 2 */
+    .about-section-professional.bg-work2 {
+      --about-bg-image: url('images/IMG_20220719_091458.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 6: Construction Work 3 */
+    .about-section-professional.bg-work3 {
+      --about-bg-image: url('images/IMG_20220729_164508.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 7: Construction Work 4 */
+    .about-section-professional.bg-work4 {
+      --about-bg-image: url('images/IMG_20220807_110604.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 8: Construction Work 5 */
+    .about-section-professional.bg-work5 {
+      --about-bg-image: url('images/IMG_20221029_132108.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 9: Background Pattern 1 */
+    .about-section-professional.bg-pattern1 {
+      --about-bg-image: url('images/BGP-1.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 10: Background Pattern 2 */
+    .about-section-professional.bg-pattern2 {
+      --about-bg-image: url('images/BGP.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 11: No Background Image (Gradient Only) */
+    .about-section-professional.bg-gradient-only {
+      --about-bg-image: none;
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    }
+    
+    /* Preset 12: Custom Overlay Opacity */
+    .about-section-professional.bg-light-overlay {
+      --about-overlay-opacity: 0.4;
+    }
+    
+    .about-section-professional.bg-medium-overlay {
+      --about-overlay-opacity: 0.6;
+    }
+    
+    .about-section-professional.bg-dark-overlay {
+      --about-overlay-opacity: 0.8;
     }
     
     /* Professional Projects Section Styling */
@@ -742,7 +846,27 @@
       </div>
     </div>
   </div>
-  <div class="content-section about-section-professional">
+  <!-- 
+    ========================================
+    BACKGROUND OPTIONS - GANTI CLASS DI SINI
+    ========================================
+    
+    Pilihan Background:
+    - bg-construction (default)
+    - bg-project1, bg-project2
+    - bg-work1, bg-work2, bg-work3, bg-work4, bg-work5
+    - bg-pattern1, bg-pattern2
+    - bg-gradient-only
+    
+    Pilihan Overlay (tambahkan setelah class background):
+    - bg-light-overlay (overlay ringan)
+    - bg-medium-overlay (overlay sedang)
+    - bg-dark-overlay (overlay gelap)
+    
+    Contoh: bg-project1 bg-light-overlay
+    Lihat file background-guide.md untuk panduan lengkap
+  -->
+  <div class="content-section about-section-professional bg-construction">
     <div class="body-content">
       <div class="about-container">
         <div class="about-header">
