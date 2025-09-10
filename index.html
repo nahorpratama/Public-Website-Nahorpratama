@@ -25,6 +25,28 @@
     .content-section {
       background-color: #f8f9fa;
     }
+    
+    .content-section.about-section-professional {
+      background-color: transparent;
+      background-image: none;
+    }
+    
+    /* Ensure no background overlap between sections */
+    .intro-section + .content-section.about-section-professional,
+    .content-section.about-section-professional + .content-section {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    /* Prevent background stripes or overlaps */
+    .intro-section {
+      margin-bottom: 0;
+    }
+    
+    .content-section.about-section-professional {
+      border-top: none;
+      border-bottom: none;
+    }
     .footer-section {
       background-color: #2c3e50;
       color: #ffffff;
@@ -54,14 +76,40 @@
       margin-top: 4px;
     }
     
+    /* ========================================
+       BACKGROUND SYSTEM - MUDAH DIGANTI
+       ======================================== */
+    
+    /* CSS Custom Properties untuk Background */
+    :root {
+      /* Background Options - Ganti nilai di sini untuk mengubah background */
+      --about-bg-image: url('images/construction-hero-bg.svg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      --about-bg-position: center;
+      --about-bg-size: cover;
+      --about-bg-repeat: no-repeat;
+      --about-bg-attachment: fixed;
+      
+      /* Overlay Options */
+      --about-overlay-opacity: 0.7;
+      --about-overlay-color-1: rgba(44, 62, 80, var(--about-overlay-opacity));
+      --about-overlay-color-2: rgba(52, 73, 94, calc(var(--about-overlay-opacity) + 0.05));
+      --about-overlay-color-3: rgba(44, 62, 80, var(--about-overlay-opacity));
+    }
+    
     /* Professional About Section Styling */
     .about-section-professional {
-      background: url('images/construction-hero-bg.svg') center/cover no-repeat;
-      background-attachment: fixed;
+      background: var(--about-bg-fallback);
+      background-image: var(--about-bg-image);
+      background-position: var(--about-bg-position);
+      background-size: var(--about-bg-size);
+      background-repeat: var(--about-bg-repeat);
+      background-attachment: var(--about-bg-attachment);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
       min-height: 100vh;
+      margin: 0;
     }
     
     .about-section-professional::before {
@@ -71,12 +119,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.85) 0%, rgba(52, 73, 94, 0.9) 50%, rgba(44, 62, 80, 0.85) 100%);
+      background: linear-gradient(135deg, var(--about-overlay-color-1) 0%, var(--about-overlay-color-2) 50%, var(--about-overlay-color-3) 100%);
       z-index: 0;
+      pointer-events: none;
     }
     
     .about-container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
       position: relative;
@@ -89,7 +138,7 @@
     }
     
     .about-main-title {
-      font-size: 48px;
+      font-size: 42px;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 15px;
@@ -98,7 +147,7 @@
     }
     
     .about-subtitle {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 500;
       color: #f8f9fa;
       margin: 0;
@@ -109,14 +158,16 @@
     .about-content-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
       align-items: start;
+      max-width: 900px;
+      margin: 0 auto;
     }
     
     .vision-card, .mission-card {
       background: rgba(255, 255, 255, 0.98);
       border-radius: 20px;
-      padding: 40px;
+      padding: 35px;
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(15px);
@@ -128,14 +179,8 @@
       box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
     }
     
-    .card-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-      display: block;
-    }
-    
     .card-title {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 20px;
@@ -143,8 +188,8 @@
     }
     
     .card-description {
-      font-size: 18px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.6;
       color: #2c3e50;
       margin: 0;
       text-align: left;
@@ -154,32 +199,15 @@
     .mission-points {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 20px;
     }
     
     .mission-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-    }
-    
-    .point-icon {
-      background: #3498db;
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: bold;
-      flex-shrink: 0;
-      margin-top: 2px;
+      display: block;
     }
     
     .point-text {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.6;
       color: #2c3e50;
       margin: 0;
@@ -194,24 +222,114 @@
       }
       
       .about-main-title {
-        font-size: 36px;
+        font-size: 32px;
       }
       
       .about-subtitle {
-        font-size: 20px;
+        font-size: 18px;
       }
       
       .vision-card, .mission-card {
-        padding: 30px;
+        padding: 25px;
       }
       
       .card-title {
-        font-size: 24px;
+        font-size: 22px;
       }
       
       .card-description {
-        font-size: 16px;
+        font-size: 15px;
       }
+    }
+    
+    /* Fix background attachment on mobile */
+    @media (max-width: 768px) {
+      .about-section-professional {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* ========================================
+       BACKGROUND PRESETS - PILIH SALAH SATU
+       ======================================== */
+    
+    /* Preset 1: Construction Site (Default) */
+    .about-section-professional.bg-construction {
+      --about-bg-image: url('images/construction-hero-bg.svg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 2: Project Site 1 */
+    .about-section-professional.bg-project1 {
+      --about-bg-image: url('images/Copy-of-ENP-WEB-1.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 3: Project Site 2 */
+    .about-section-professional.bg-project2 {
+      --about-bg-image: url('images/Copy-of-ENP-WEB-4.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 4: Construction Work */
+    .about-section-professional.bg-work1 {
+      --about-bg-image: url('images/IMG_20220623_091905.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 5: Construction Work 2 */
+    .about-section-professional.bg-work2 {
+      --about-bg-image: url('images/IMG_20220719_091458.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 6: Construction Work 3 */
+    .about-section-professional.bg-work3 {
+      --about-bg-image: url('images/IMG_20220729_164508.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 7: Construction Work 4 */
+    .about-section-professional.bg-work4 {
+      --about-bg-image: url('images/IMG_20220807_110604.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 8: Construction Work 5 */
+    .about-section-professional.bg-work5 {
+      --about-bg-image: url('images/IMG_20221029_132108.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 9: Background Pattern 1 */
+    .about-section-professional.bg-pattern1 {
+      --about-bg-image: url('images/BGP-1.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    /* Preset 10: Background Pattern 2 */
+    .about-section-professional.bg-pattern2 {
+      --about-bg-image: url('images/BGP.jpg');
+      --about-bg-fallback: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    }
+    
+    /* Preset 11: No Background Image (Gradient Only) */
+    .about-section-professional.bg-gradient-only {
+      --about-bg-image: none;
+      --about-bg-fallback: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    }
+    
+    /* Preset 12: Custom Overlay Opacity */
+    .about-section-professional.bg-light-overlay {
+      --about-overlay-opacity: 0.4;
+    }
+    
+    .about-section-professional.bg-medium-overlay {
+      --about-overlay-opacity: 0.6;
+    }
+    
+    .about-section-professional.bg-dark-overlay {
+      --about-overlay-opacity: 0.8;
     }
     
     /* Professional Projects Section Styling */
@@ -728,7 +846,27 @@
       </div>
     </div>
   </div>
-  <div class="content-section about-section-professional">
+  <!-- 
+    ========================================
+    BACKGROUND OPTIONS - GANTI CLASS DI SINI
+    ========================================
+    
+    Pilihan Background:
+    - bg-construction (default)
+    - bg-project1, bg-project2
+    - bg-work1, bg-work2, bg-work3, bg-work4, bg-work5
+    - bg-pattern1, bg-pattern2
+    - bg-gradient-only
+    
+    Pilihan Overlay (tambahkan setelah class background):
+    - bg-light-overlay (overlay ringan)
+    - bg-medium-overlay (overlay sedang)
+    - bg-dark-overlay (overlay gelap)
+    
+    Contoh: bg-project1 bg-light-overlay
+    Lihat file background-guide.md untuk panduan lengkap
+  -->
+  <div class="content-section about-section-professional bg-construction">
     <div class="body-content">
       <div class="about-container">
         <div class="about-header">
@@ -738,25 +876,20 @@
         
         <div class="about-content-grid">
           <div class="vision-card">
-            <div class="card-icon">🎯</div>
             <h3 class="card-title">Our Vision</h3>
             <p class="card-description">To be the leading company in EPCI that is integrated and environmentally friendly, delivering exceptional value to our clients while maintaining the highest standards of safety and sustainability.</p>
           </div>
           
           <div class="mission-card">
-            <div class="card-icon">🚀</div>
             <h3 class="card-title">Our Mission</h3>
             <div class="mission-points">
               <div class="mission-point">
-                <div class="point-icon">✓</div>
                 <p class="point-text">Prioritizing productivity, punctuality, quality, and safety of our employees by upholding values of integrity and accountability in every project we undertake.</p>
               </div>
               <div class="mission-point">
-                <div class="point-icon">✓</div>
                 <p class="point-text">Striving to provide the greatest client satisfaction through innovative solutions, timely delivery, and exceptional service quality.</p>
               </div>
               <div class="mission-point">
-                <div class="point-icon">✓</div>
                 <p class="point-text">Committed to pursuing a sustainable future and improving the economic, social, and environmental well-being of the communities we serve.</p>
               </div>
             </div>
