@@ -6628,7 +6628,7 @@ var _shared$IX2VanillaPlu = _shared.IX2VanillaPlugins,
 var ua = navigator.userAgent;
 var IS_MOBILE_SAFARI = ua.match(/iPad/i) || ua.match(/iPhone/); // Keep throttled events at ~80fps to reduce reflows while maintaining render accuracy
 
-var THROTTLED_EVENT_WAIT = 5000; // $FlowFixMe
+var THROTTLED_EVENT_WAIT = 300000; // $FlowFixMe
 
 function observeRequests(store) {
   observeStore({
