@@ -24,6 +24,676 @@
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       margin-bottom: 20px;
     }
+    
+    /* About Story Section Background - Same as Main Menu */
+    .about-story-section {
+      background: #f8f9fa;
+      background-image: url('images/construction-hero-bg.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      min-height: 100vh;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-story-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(44, 62, 80, 0.7);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .about-story-section .intro-header-about,
+    .about-story-section .footer-container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Ensure proper container styling */
+    .about-story-section .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .about-story-section .about-story-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .about-story-section .intro-header-about {
+      background: transparent;
+      background-image: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Ensure header text is properly centered and styled */
+    .about-story-section .intro-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Ensure text readability with new background */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+      font-size: 16px;
+      line-height: 1.8;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      margin: 0;
+    }
+    
+    /* Override any existing paragraph styling for about story section */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+    }
+    
+    /* Ensure proper spacing and layout */
+    .about-story-section .footer-container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    
+    /* Fix any potential z-index issues */
+    .about-story-section * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Ensure proper text contrast */
+    .about-story-section .h1-headtext {
+      color: #ffffff !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure proper background coverage */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Responsive adjustments for about story section */
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+        min-height: 100vh;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    /* Remove duplicate background-attachment rule */
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll !important;
+      }
+    }
+    
+    /* Ensure proper background positioning */
+    .about-story-section {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* Ensure proper text alignment and spacing */
+    .about-story-section .about-story-wrap {
+      text-align: left;
+    }
+    
+    .about-story-section .intro-content {
+      text-align: center;
+    }
+    
+    /* Ensure proper spacing between sections */
+    .about-story-section + .intro-section {
+      margin-top: 0;
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      min-height: 100vh;
+      height: auto;
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Ensure proper header styling */
+    .about-story-section .h1-headtext {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    
+    /* Responsive header sizing */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section {
+        width: 100%;
+        margin: 0;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      
+      .about-story-section .intro-header-about,
+      .about-story-section .footer-container {
+        padding: 0 10px;
+      }
+    }
+    
+    /* Ensure proper background coverage on all screen sizes */
+    .about-story-section {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    /* Ensure proper text contrast */
+    .about-story-section .paragraphx {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+    
+    /* Additional mobile fixes */
+    @media (max-width: 360px) {
+      .about-story-section .paragraphx {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper background coverage */
+    .about-story-section {
+      background-image: url('images/construction-hero-bg.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* Ensure proper overlay */
+    .about-story-section::before {
+      background: rgba(44, 62, 80, 0.7);
+    }
+    
+    /* Ensure proper text styling */
+    .about-story-section .paragraphx {
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    
+    /* Ensure proper header styling */
+    .about-story-section .h1-headtext {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure proper responsive design */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper background coverage */
+    .about-story-section {
+      background-image: url('images/construction-hero-bg.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* Ensure proper overlay */
+    .about-story-section::before {
+      background: rgba(44, 62, 80, 0.7);
+    }
+    
+    /* Ensure proper text styling */
+    .about-story-section .paragraphx {
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    
+    /* Ensure proper header styling */
+    .about-story-section .h1-headtext {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure proper responsive design */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper header styling */
+    .about-story-section .h1-headtext {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure proper responsive design */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper responsive design */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Ensure proper background coverage */
+    .about-story-section {
+      background-image: url('images/construction-hero-bg.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* Ensure proper overlay */
+    .about-story-section::before {
+      background: rgba(44, 62, 80, 0.7);
+    }
+    
+    /* Ensure proper text styling */
+    .about-story-section .paragraphx {
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    
+    /* Ensure proper header styling */
+    .about-story-section .h1-headtext {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .about-story-section .sub-heading-light2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure proper responsive design */
+    @media (max-width: 768px) {
+      .about-story-section .h1-headtext {
+        font-size: 36px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 16px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-story-section .h1-headtext {
+        font-size: 28px;
+      }
+      
+      .about-story-section .sub-heading-light2 {
+        font-size: 14px;
+      }
+      
+      .about-story-section .paragraphx {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Ensure proper background coverage on all devices */
+    .about-story-section {
+      background-attachment: fixed;
+    }
+    
+    @media (max-width: 768px) {
+      .about-story-section {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Ensure proper text readability */
+    .about-story-section .paragraphx {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
     /* Soft Black and White Theme */
     body {
       background-color: #f8f9fa;
@@ -226,7 +896,7 @@
       </a>
     </div>
   </div>
-  <div class="intro-section cc-home-wrap">
+  <div class="intro-section cc-home-wrap about-story-section">
     <div class="intro-header-about">
       <div data-w-id="162606cf-5e38-9400-4c2b-ff4d96880041" class="intro-content">
         <h1 class="h1-headtext">ABOUT US</h1>
