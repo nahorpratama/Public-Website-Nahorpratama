@@ -1139,6 +1139,209 @@
       background: rgba(44, 62, 80, 0.6);
     }
     
+    /* Partner Logos Slider Styling - Keep background unchanged */
+    .mid-section .slider-3,
+    .mid-section-web .slider4 {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      min-height: 120px;
+    }
+    
+    .mid-section .slider-3 .w-slider-mask,
+    .mid-section-web .slider4 .w-slider-mask {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      height: 100%;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+    
+    .mid-section .slider-3 .w-slide,
+    .mid-section-web .slider4 .w-slide {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      height: 100%;
+      white-space: normal;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .mid-section .slider-3 .logo-head,
+    .mid-section-web .slider4 .logo-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    .mid-section .slider-3 .logo,
+    .mid-section-web .slider4 .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      min-height: 80px;
+      min-width: 120px;
+    }
+    
+    .mid-section .slider-3 .logo:hover,
+    .mid-section-web .slider4 .logo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .mid-section .slider-3 .logo img,
+    .mid-section-web .slider4 .logo img {
+      max-width: 100%;
+      height: auto;
+      max-height: 60px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+    
+    .mid-section .slider-3 .logo:hover img,
+    .mid-section-web .slider4 .logo:hover img {
+      filter: grayscale(0%);
+    }
+    
+    /* Slider Navigation for Partner Logos */
+    .mid-section .slide-nav-2,
+    .mid-section-web .slide-nav-2 {
+      position: absolute;
+      z-index: 2;
+      top: auto;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      margin: auto;
+      padding-top: 10px;
+      height: 40px;
+      text-align: center;
+    }
+    
+    .mid-section .slide-nav-2 .w-slider-nav-dot,
+    .mid-section-web .slide-nav-2 .w-slider-nav-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(44, 62, 80, 0.3);
+      margin: 0 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .mid-section .slide-nav-2 .w-slider-nav-dot.w-active,
+    .mid-section-web .slide-nav-2 .w-slider-nav-dot.w-active {
+      background: #2c3e50;
+    }
+    
+    .mid-section .slide-nav-2 .w-slider-nav-dot:hover,
+    .mid-section-web .slide-nav-2 .w-slider-nav-dot:hover {
+      background: rgba(44, 62, 80, 0.6);
+    }
+    
+    /* Responsive Design for Partner Logos Slider */
+    @media (max-width: 768px) {
+      .mid-section .slider-3 .logo-head,
+      .mid-section-web .slider4 .logo-head {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      
+      .mid-section .slider-3 .logo,
+      .mid-section-web .slider4 .logo {
+        min-height: 70px;
+        min-width: 100px;
+        padding: 8px;
+      }
+      
+      .mid-section .slider-3 .logo img,
+      .mid-section-web .slider4 .logo img {
+        max-height: 50px;
+      }
+      
+      .mid-section .slider-3 .w-slide,
+      .mid-section-web .slider4 .w-slide {
+        padding: 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .mid-section .slider-3 .logo-head,
+      .mid-section-web .slider4 .logo-head {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .mid-section .slider-3 .logo,
+      .mid-section-web .slider4 .logo {
+        min-height: 60px;
+        min-width: 80px;
+        padding: 6px;
+        width: 100%;
+        max-width: 200px;
+      }
+      
+      .mid-section .slider-3 .logo img,
+      .mid-section-web .slider4 .logo img {
+        max-height: 40px;
+      }
+      
+      .mid-section .slider-3 .w-slide,
+      .mid-section-web .slider4 .w-slide {
+        padding: 10px;
+      }
+      
+      .mid-section .slider-3,
+      .mid-section-web .slider4 {
+        min-height: 100px;
+      }
+    }
+    
+    /* Ensure proper spacing and alignment */
+    .mid-section,
+    .mid-section-web {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .mid-section .slider-3,
+    .mid-section-web .slider4 {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    
+    /* Prevent overflow on partner logos */
+    .mid-section .slider-3,
+    .mid-section-web .slider4 {
+      overflow: hidden;
+    }
+    
+    .mid-section .slider-3 .w-slider-mask,
+    .mid-section-web .slider4 .w-slider-mask {
+      overflow: hidden;
+    }
+    
     /* Ensure proper container styling */
     .certification-section .heading-certificate {
       max-width: 1200px;
