@@ -451,7 +451,7 @@
     .intro-section.cc-cta {
       background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
       color: #ffffff !important;
-      padding: 80px 0 !important;
+      padding: 40px 0 !important;
       margin: 0 !important;
       width: 100% !important;
     }
@@ -463,17 +463,40 @@
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 0 20px !important;
+      height: auto !important;
     }
     
     .cta-wrap {
       text-align: center !important;
+      padding: 20px 0 !important;
+      height: auto !important;
+      margin: 0 !important;
+    }
+    
+    /* Override original CSS that causes excessive spacing */
+    .intro-section.cc-cta .cta-container {
+      height: auto !important;
+    }
+    
+    .intro-section.cc-cta .cta-wrap {
+      padding: 20px 0 !important;
+      height: auto !important;
+    }
+    
+    /* Remove excessive spacing from CTA elements */
+    .cta-text {
+      margin: 0 !important;
+    }
+    
+    .cta-paragraph {
+      margin: 0 !important;
     }
     
     .h2-headingscta {
       font-size: 48px !important;
       font-weight: 700 !important;
       color: #ffffff !important;
-      margin-bottom: 20px !important;
+      margin: 0 0 15px 0 !important;
       line-height: 1.2 !important;
     }
     
@@ -481,7 +504,7 @@
       font-size: 18px !important;
       color: #f8f9fa !important;
       line-height: 1.6 !important;
-      margin-bottom: 30px !important;
+      margin: 0 0 20px 0 !important;
       max-width: 600px !important;
       margin-left: auto !important;
       margin-right: auto !important;
@@ -646,15 +669,21 @@
       }
       
       .intro-section.cc-cta {
-        padding: 60px 0 !important;
+        padding: 30px 0 !important;
+      }
+      
+      .intro-section.cc-cta .cta-wrap {
+        padding: 15px 0 !important;
       }
       
       .h2-headingscta {
         font-size: 36px !important;
+        margin: 0 0 12px 0 !important;
       }
       
       .paragraphscta {
         font-size: 16px !important;
+        margin: 0 0 18px 0 !important;
       }
       
       .button.cc-jumbo-button {
@@ -665,7 +694,7 @@
     
     @media (max-width: 480px) {
       .intro-section.cc-cta {
-        padding: 40px 0 !important;
+        padding: 20px 0 !important;
       }
       
       .h2-headingscta {
@@ -800,8 +829,8 @@
       </div>
     </div>
   </div>
-  <div class="intro-section cc-cta" style="margin: 0; padding: 0; width: 100%;">
-    <div class="cta-container" style="margin: 0; width: 100%;">
+  <div class="intro-section cc-cta">
+    <div class="cta-container">
       <div class="cta-wrap">
         <div data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f163" class="cta-text">
           <h1 class="h2-headingscta">We construct for you</h1>
