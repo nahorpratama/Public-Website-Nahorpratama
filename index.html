@@ -68,15 +68,30 @@
     /* Professional About Section Styling */
     .about-section-professional {
       background-color: #2c3e50;
-      background: url('images/construction-hero-bg.jpg') center/cover no-repeat;
-      background-attachment: fixed;
+      background-image: url('./images/construction-hero-bg.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       margin: 0;
       position: relative;
       overflow: hidden;
       min-height: 100vh;
+    }
+    
+    /* Fallback for background image */
+    .about-section-professional::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('./images/construction-hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
     }
     
     .about-section-professional::before {
@@ -86,7 +101,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.4) 0%, rgba(52, 73, 94, 0.5) 50%, rgba(44, 62, 80, 0.4) 100%);
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.2) 0%, rgba(52, 73, 94, 0.3) 50%, rgba(44, 62, 80, 0.2) 100%);
       z-index: 0;
     }
     
@@ -682,6 +697,13 @@
       }
       
       /* About Section Tablet Fixes */
+      .about-section-professional {
+        background-attachment: scroll !important; /* Fix for tablet */
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+      }
+      
       .about-container {
         padding: 60px 20px !important;
         max-width: 100% !important;
@@ -757,6 +779,13 @@
       }
       
       /* About Section Mobile Fixes */
+      .about-section-professional {
+        background-attachment: scroll !important; /* Fix for mobile */
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+      }
+      
       .about-container {
         padding: 40px 15px !important;
         max-width: 100% !important;
