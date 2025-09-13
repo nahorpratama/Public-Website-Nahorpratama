@@ -63,6 +63,154 @@
       font-weight: 600;
       margin-top: 4px;
     }
+    
+    /* Organization Chart Styles */
+    .org-chart-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .org-level {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .org-position {
+      background: #ffffff;
+      border: 2px solid #2c3e50;
+      border-radius: 8px;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      min-width: 120px;
+    }
+    
+    .org-position:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .org-level-1 .org-position {
+      background: #2c3e50;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 16px 24px;
+      border: 3px solid #34495e;
+    }
+    
+    .org-level-2 .org-position {
+      background: #34495e;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 14px 22px;
+    }
+    
+    .org-level-3 .org-position {
+      background: #3498db;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 12px 20px;
+    }
+    
+    .org-level-4 .org-position {
+      background: #e74c3c;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 10px 18px;
+    }
+    
+    .org-level-5 .org-position,
+    .org-level-6 .org-position {
+      font-size: 13px;
+      padding: 8px 16px;
+    }
+    
+    .org-department {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .org-sub-departments {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .sub-department {
+      background: #ecf0f1;
+      color: #2c3e50;
+      border: 1px solid #bdc3c7;
+      font-size: 12px;
+      padding: 6px 12px;
+      min-width: 80px;
+    }
+    
+    .department {
+      background: #f39c12;
+      color: #ffffff;
+      border: 2px solid #e67e22;
+    }
+    
+    /* Connecting lines */
+    .org-level::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #bdc3c7;
+      height: 20px;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .org-level-1::before {
+      display: none;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .org-chart-container {
+        padding: 10px;
+      }
+      
+      .org-level {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .org-position {
+        min-width: 100px;
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 16px;
+        padding: 12px 18px;
+      }
+      
+      .org-level-2 .org-position {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+      
+      .org-level-3 .org-position {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -111,7 +259,82 @@
         </div>
         <p class="paragraph-smallx">Our Structure Organization</p>
       </div>
-      <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org"><img src="images/Structur-Organization.png" loading="lazy" sizes="(max-width: 767px) 72vw, (max-width: 991px) 64vw, 56vw" srcset="images/Structur-Organization-p-500.png 500w, images/Structur-Organization-p-800.png 800w, images/Structur-Organization-p-1080.png 1080w, images/Structur-Organization-p-1600.png 1600w, images/Structur-Organization-p-2000.png 2000w, images/Structur-Organization.png 2275w" alt="" class="img-organization"></div>
+      <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org">
+        <div class="org-chart-container">
+          <!-- Top Level: COMMISSIONER -->
+          <div class="org-level org-level-1">
+            <div class="org-position commissioner">COMMISSIONER</div>
+          </div>
+          
+          <!-- Second Level: PRESIDENT DIRECTOR -->
+          <div class="org-level org-level-2">
+            <div class="org-position president-director">PRESIDENT DIRECTOR</div>
+          </div>
+          
+          <!-- Third Level: DIRECTOR -->
+          <div class="org-level org-level-3">
+            <div class="org-position director">DIRECTOR</div>
+          </div>
+          
+          <!-- Fourth Level: BRANCH MANAGER and EXECUTIVE SECRETARY -->
+          <div class="org-level org-level-4">
+            <div class="org-position branch-manager">BRANCH MANAGER</div>
+            <div class="org-position executive-secretary">EXECUTIVE SECRETARY</div>
+          </div>
+          
+          <!-- Fifth Level: Departments under BRANCH MANAGER -->
+          <div class="org-level org-level-5">
+            <div class="org-department">
+              <div class="org-position department">HR</div>
+              <div class="org-sub-departments">
+                <div class="org-position sub-department">GA</div>
+                <div class="org-position sub-department">DOCUMENT CONTROL</div>
+              </div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">LEGAL</div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">PROCUREMENT</div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">QSHE</div>
+              <div class="org-sub-departments">
+                <div class="org-position sub-department">QC</div>
+                <div class="org-position sub-department">HSE</div>
+              </div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">BUSINESS DEVELOPMENT</div>
+            </div>
+          </div>
+          
+          <!-- Functional Departments under DIRECTOR -->
+          <div class="org-level org-level-6">
+            <div class="org-department">
+              <div class="org-position department">OPERATION</div>
+              <div class="org-sub-departments">
+                <div class="org-position sub-department">PROJECT</div>
+                <div class="org-position sub-department">ENGINEERING</div>
+              </div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">FINANCE</div>
+              <div class="org-sub-departments">
+                <div class="org-position sub-department">ACCOUNTING</div>
+                <div class="org-position sub-department">TAX</div>
+              </div>
+            </div>
+            <div class="org-department">
+              <div class="org-position department">HEAVY EQUIPMENT</div>
+              <div class="org-sub-departments">
+                <div class="org-position sub-department">OPERATOR</div>
+                <div class="org-position sub-department">MECHANIC</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="partner-section">
