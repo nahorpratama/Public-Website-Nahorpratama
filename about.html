@@ -30,7 +30,7 @@
       color: #2c3e50;
     }
     .intro-section {
-      background-color: #ffffff;
+      /* background-color: #ffffff; - Removed to show background image */
     }
     .content-section {
       background-color: #f8f9fa;
@@ -62,6 +62,26 @@
       font-size: 13px;
       font-weight: 600;
       margin-top: 4px;
+    }
+    
+    /* Black Button Style */
+    .button.cc-jumbo-button.cc-jumbo-black {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
+    }
+    
+    .button.cc-jumbo-button.cc-jumbo-black:hover {
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .button.cc-jumbo-button.cc-jumbo-black:active {
+      background-color: #1a1a1a !important;
     }
     @media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="162606cf-5e38-9400-4c2b-ff4d96880041"] {-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="162606cf-5e38-9400-4c2b-ff4d96880041"] {-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="162606cf-5e38-9400-4c2b-ff4d96880041"] {-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}}
   </style>
@@ -266,7 +286,7 @@
         <div class="cta-paragraph">
           <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
         </div>
-        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button w-inline-block">
+        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button cc-jumbo-black w-inline-block">
           <div class="text-block-2">Start Now</div>
         </a>
       </div>
