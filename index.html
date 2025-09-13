@@ -80,7 +80,7 @@
     }
     
     .about-container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 80px 20px;
       position: relative;
@@ -113,14 +113,16 @@
     .about-content-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
       align-items: start;
+      max-width: 800px;
+      margin: 0 auto;
     }
     
     .vision-card, .mission-card {
       background: rgba(255, 255, 255, 0.98);
       border-radius: 20px;
-      padding: 40px;
+      padding: 30px;
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(15px);
@@ -193,7 +195,7 @@
       }
       
       .vision-card, .mission-card {
-        padding: 30px;
+        padding: 25px;
       }
       
       .card-title {
@@ -404,6 +406,16 @@
       
       .about-container {
         padding: 40px 10px;
+        max-width: 100%;
+      }
+      
+      .about-content-grid {
+        max-width: 100%;
+        gap: 20px;
+      }
+      
+      .vision-card, .mission-card {
+        padding: 20px;
       }
       
       .grid-content {
