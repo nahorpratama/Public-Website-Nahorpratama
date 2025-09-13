@@ -58,7 +58,7 @@
     .about-section-professional {
       background: url('images/construction-hero-bg.svg') center/cover no-repeat;
       background-attachment: fixed;
-      margin: 80px 15px;
+      margin: 0;
       position: relative;
       overflow: hidden;
       min-height: 100vh;
@@ -78,7 +78,7 @@
     .about-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 80px 20px;
       position: relative;
       z-index: 1;
     }
@@ -189,7 +189,11 @@
     
     @media (max-width: 768px) {
       .about-section-professional {
-        margin: 60px 10px;
+        margin: 0;
+      }
+      
+      .about-container {
+        padding: 60px 15px;
       }
       
       .about-content-grid {
@@ -412,7 +416,11 @@
     
     @media (max-width: 480px) {
       .about-section-professional {
-        margin: 50px 5px;
+        margin: 0;
+      }
+      
+      .about-container {
+        padding: 40px 10px;
       }
       
       .grid-content {
@@ -481,6 +489,9 @@
     
     .main-content {
       width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
     }
     
     .title-content {
@@ -599,6 +610,10 @@
     }
     
     @media (max-width: 768px) {
+      .main-content {
+        padding: 60px 15px;
+      }
+      
       .projects-main-title {
         font-size: 36px !important;
       }
@@ -620,6 +635,9 @@
     }
     
     @media (max-width: 480px) {
+      .main-content {
+        padding: 40px 10px;
+      }
       
       .button.cc-jumbo-button {
         font-size: 14px !important;
@@ -674,8 +692,7 @@
     </div>
   </div>
   <div class="content-section about-section-professional">
-    <div class="body-content">
-      <div class="about-container">
+    <div class="about-container">
         <div class="about-header">
           <h2 class="about-main-title">What We Do</h2>
           <h3 class="about-subtitle">General Construction & Trade</h3>
@@ -707,12 +724,10 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <div class="content-section projects-section-professional">
-    <div class="second-content">
-      <div class="main-content">
+    <div class="main-content">
         <div data-w-id="b2fbc218-22e4-b658-2665-b62421ea138f" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="title-content">
           <h1 class="projects-main-title">Our Gallery</h1>
           <p class="projects-subtitle">Showcasing our successful construction and EPCI gallery across Indonesia</p>
@@ -742,7 +757,6 @@
             <div class="text-block">Learn More</div>
           </a>
         </div>
-      </div>
     </div>
   </div>
   <div class="intro-section cc-cta">
@@ -754,8 +768,8 @@
         <div class="cta-paragraph">
           <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
         </div>
-        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button w-inline-block">
-          <div class="text-block-2">Start Now</div>
+        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button cc-jumbo-white w-inline-block">
+          <div class="text-block">Start Now</div>
         </a>
       </div>
     </div>
