@@ -15,215 +15,19 @@
   <link href="css/eliazernahorpratama.webflow.css" rel="stylesheet" type="text/css">
   <style>
     /* Soft Black and White Theme */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+    body {
       background-color: #f8f9fa;
       color: #2c3e50;
-      background-attachment: scroll; /* Fix mobile background issues */
-      overflow-x: hidden; /* Prevent horizontal scroll */
     }
     .intro-section {
       background-color: #ffffff;
-      min-height: 100vh; /* Ensure full viewport height */
-      height: 100vh; /* Force full height */
     }
     .content-section {
       background-color: #f8f9fa;
-    }
-    
-    .content-section.about-section-professional {
-      background-color: transparent;
-      background-image: none;
-    }
-    
-    /* Ensure no background overlap between sections */
-    .intro-section + .content-section.about-section-professional,
-    .content-section.about-section-professional + .content-section {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    
-    /* Prevent background stripes or overlaps */
-    .intro-section {
-      margin-bottom: 0;
-      margin-top: 0;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    
-    .content-section.about-section-professional {
-      border-top: none;
-      border-bottom: none;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    
-    /* Ensure full width and height for all main sections */
-    .intro-section,
-    .content-section,
-    .about-section-professional,
-    .gallery-section-professional {
-      box-sizing: border-box;
-      position: relative;
-      width: 100%;
-      left: 0;
-      right: 0;
-    }
-    
-    /* Fix any potential margin issues from parent containers */
-    .body-content,
-    .second-content,
-    .main-content {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Ensure all containers don't cause background issues */
-    .w-container,
-    .container,
-    .wrapper {
-      max-width: 100%;
-      width: 100%;
-    }
-    
-    /* Fix any potential overflow issues */
-    * {
-      box-sizing: border-box;
-    }
-    
-    /* Ensure no element causes background to be cut off */
-    .w-container {
-      max-width: 100%;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Fix any potential margin issues from Webflow classes */
-    .w-row {
-      margin: 0;
-      width: 100%;
-    }
-    
-    .w-col {
-      padding: 0;
-    }
-    
-    /* Ensure all sections have proper background coverage */
-    .intro-section.cc-store-home-wrap {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-      min-height: 100vh;
-    }
-    
-    /* Fix any potential issues with the main container */
-    .w-container {
-      max-width: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Ensure all sections have proper background coverage */
-    .intro-section,
-    .content-section,
-    .about-section-professional,
-    .gallery-section-professional {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-    }
-    
-    /* Fix any potential issues with content containers */
-    .intro-content,
-    .about-container,
-    .second-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Ensure footer has full width background */
-    .intro-section:last-child {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-    }
-    
-    /* Fix any potential issues with Webflow's default styling */
-    .w-nav {
-      width: 100%;
-      position: relative;
-    }
-    
-    /* Ensure all main sections have consistent styling */
-    .intro-section,
-    .content-section {
-      display: block;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-    }
-    
-    /* Fix any potential issues with the main container */
-    .w-container {
-      max-width: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Ensure body content doesn't cause issues */
-    .body-content {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Fix any potential issues with the main wrapper */
-    .w-container {
-      max-width: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Ensure all sections have proper background coverage */
-    .intro-section.cc-store-home-wrap {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-      min-height: 100vh;
-    }
-    
-    /* Fix any potential issues with the main container */
-    .w-container {
-      max-width: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Ensure all sections have proper background coverage */
-    .intro-section,
-    .content-section,
-    .about-section-professional,
-    .gallery-section-professional {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
     }
     .footer-section {
       background-color: #2c3e50;
       color: #ffffff;
-      width: 100%;
-      margin: 0;
-      padding: 15px 40px;
     }
     .cta-container {
       background-color: #2c3e50;
@@ -244,122 +48,20 @@
       padding: 8px 16px;
       margin: 0 2px;
     }
-    
-    /* Ensure navigation doesn't interfere with background */
-    .navigation {
-      position: relative;
-      z-index: 1000;
-      width: 100%;
-    }
-    
-    /* Navigation Responsive */
-    @media (max-width: 1024px) {
-      .navigation-item {
-        font-size: 9px;
-        padding: 6px 12px;
-        margin: 0 1px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .navigation-item {
-        font-size: 8px;
-        padding: 5px 10px;
-        margin: 0;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .navigation-item {
-        font-size: 7px;
-        padding: 4px 8px;
-      }
-    }
     .text-block-9 {
       font-size: 13px;
       font-weight: 600;
       margin-top: 4px;
     }
     
-    /* Hero Section Responsive */
-    @media (max-width: 1024px) {
-      .h1-headtext {
-        font-size: 36px !important;
-        line-height: 1.2 !important;
-      }
-      
-      .sub-heading-light {
-        font-size: 16px !important;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .h1-headtext {
-        font-size: 28px !important;
-        line-height: 1.1 !important;
-      }
-      
-      .sub-heading-light {
-        font-size: 14px !important;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .h1-headtext {
-        font-size: 24px !important;
-        line-height: 1.1 !important;
-      }
-      
-      .sub-heading-light {
-        font-size: 12px !important;
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .h1-headtext {
-        font-size: 20px !important;
-      }
-      
-      .sub-heading-light {
-        font-size: 11px !important;
-      }
-    }
-    
-    /* ========================================
-       BACKGROUND SYSTEM - MUDAH DIGANTI
-       ======================================== */
-    
-    /* CSS Custom Properties untuk Background */
-    :root {
-      /* Background Options - Ganti nilai di sini untuk mengubah background */
-      --about-bg-image: url('images/construction-hero-bg.svg');
-      --about-bg-fallback: transparent;
-      --about-bg-position: center;
-      --about-bg-size: cover;
-      --about-bg-repeat: no-repeat;
-      --about-bg-attachment: fixed;
-      
-      /* Overlay Options */
-      --about-overlay-opacity: 0.7;
-      --about-overlay-color-1: rgba(44, 62, 80, var(--about-overlay-opacity));
-      --about-overlay-color-2: rgba(52, 73, 94, calc(var(--about-overlay-opacity) + 0.05));
-      --about-overlay-color-3: rgba(44, 62, 80, var(--about-overlay-opacity));
-    }
-    
     /* Professional About Section Styling */
     .about-section-professional {
-      background: #f8f9fa;
-      background-image: none;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      padding: 60px 0;
+      background: url('images/construction-hero-bg.svg') center/cover no-repeat;
+      background-attachment: fixed;
+      padding: 100px 0;
       position: relative;
       overflow: hidden;
-      margin: 0;
-      min-height: 100vh; /* Ensure full viewport height */
-      width: 100%; /* Ensure full width */
+      min-height: 100vh;
     }
     
     .about-section-professional::before {
@@ -369,13 +71,12 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: transparent;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.85) 0%, rgba(52, 73, 94, 0.9) 50%, rgba(44, 62, 80, 0.85) 100%);
       z-index: 0;
-      pointer-events: none;
     }
     
     .about-container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
       position: relative;
@@ -384,53 +85,57 @@
     
     .about-header {
       text-align: left;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     
     .about-main-title {
-      font-size: 42px;
+      font-size: 48px;
       font-weight: 700;
-      color: #2c3e50;
+      color: #ffffff;
       margin-bottom: 15px;
       line-height: 1.2;
-      text-shadow: none;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .about-subtitle {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 500;
-      color: #2c3e50;
+      color: #f8f9fa;
       margin: 0;
       line-height: 1.4;
-      text-shadow: none;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
     
     .about-content-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 40px;
       align-items: start;
-      max-width: 900px;
-      margin: 0 auto;
     }
     
     .vision-card, .mission-card {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.98);
       border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      backdrop-filter: none;
+      padding: 40px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .vision-card:hover, .mission-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(-15px);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    }
+    
+    .card-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      display: block;
     }
     
     .card-title {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 20px;
@@ -438,8 +143,8 @@
     }
     
     .card-description {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.7;
       color: #2c3e50;
       margin: 0;
       text-align: left;
@@ -449,15 +154,32 @@
     .mission-points {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 25px;
     }
     
     .mission-point {
-      display: block;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .point-icon {
+      background: #3498db;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
     
     .point-text {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
       color: #2c3e50;
       margin: 0;
@@ -465,9 +187,10 @@
       font-weight: 500;
     }
     
-    @media (max-width: 1024px) {
-      .about-section-professional {
-        padding: 50px 0;
+    @media (max-width: 768px) {
+      .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
       
       .about-main-title {
@@ -475,228 +198,44 @@
       }
       
       .about-subtitle {
-        font-size: 18px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .about-section-professional {
-        padding: 40px 0;
-      }
-      
-      .about-content-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-      
-      .about-main-title {
-        font-size: 28px;
-      }
-      
-      .about-subtitle {
-        font-size: 16px;
-      }
-      
-      .vision-card, .mission-card {
-        padding: 20px;
-      }
-      
-      .card-title {
         font-size: 20px;
       }
       
-      .card-description {
-        font-size: 14px;
-      }
-      
-      .about-header {
-        margin-bottom: 30px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .about-section-professional {
-        padding: 30px 0;
-      }
-      
-      .about-main-title {
-        font-size: 24px;
-      }
-      
-      .about-subtitle {
-        font-size: 14px;
-      }
-      
       .vision-card, .mission-card {
-        padding: 15px;
+        padding: 30px;
       }
       
       .card-title {
-        font-size: 18px;
+        font-size: 24px;
       }
       
       .card-description {
-        font-size: 13px;
+        font-size: 16px;
       }
-      
-      .about-header {
-        margin-bottom: 20px;
-      }
-    }
-    
-    /* Fix background attachment on mobile */
-    @media (max-width: 768px) {
-      .about-section-professional {
-        background-attachment: scroll;
-      }
-      
-      /* Ensure full height on mobile */
-      .intro-section {
-        min-height: 100vh;
-        height: auto;
-      }
-      
-      .about-section-professional,
-      .gallery-section-professional {
-        min-height: 100vh;
-      }
-      
-      /* Ensure full width on mobile */
-      .intro-section,
-      .content-section,
-      .about-section-professional,
-      .gallery-section-professional {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
-      }
-    }
-    
-    /* Additional mobile fixes */
-    @media (max-width: 480px) {
-      .intro-section,
-      .content-section,
-      .about-section-professional,
-      .gallery-section-professional {
-        min-height: 100vh;
-        width: 100%;
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-    
-    /* Desktop fixes for full background coverage */
-    @media (min-width: 769px) {
-      .intro-section,
-      .content-section,
-      .about-section-professional,
-      .gallery-section-professional {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
-      }
-    }
-    
-    /* ========================================
-       BACKGROUND PRESETS - PILIH SALAH SATU
-       ======================================== */
-    
-    /* Preset 1: Construction Site (Default) */
-    .about-section-professional.bg-construction {
-      --about-bg-image: url('images/construction-hero-bg.svg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 2: Project Site 1 */
-    .about-section-professional.bg-project1 {
-      --about-bg-image: url('images/Copy-of-ENP-WEB-1.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 3: Project Site 2 */
-    .about-section-professional.bg-project2 {
-      --about-bg-image: url('images/Copy-of-ENP-WEB-4.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 4: Construction Work */
-    .about-section-professional.bg-work1 {
-      --about-bg-image: url('images/IMG_20220623_091905.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 5: Construction Work 2 */
-    .about-section-professional.bg-work2 {
-      --about-bg-image: url('images/IMG_20220719_091458.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 6: Construction Work 3 */
-    .about-section-professional.bg-work3 {
-      --about-bg-image: url('images/IMG_20220729_164508.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 7: Construction Work 4 */
-    .about-section-professional.bg-work4 {
-      --about-bg-image: url('images/IMG_20220807_110604.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 8: Construction Work 5 */
-    .about-section-professional.bg-work5 {
-      --about-bg-image: url('images/IMG_20221029_132108.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 9: Background Pattern 1 */
-    .about-section-professional.bg-pattern1 {
-      --about-bg-image: url('images/BGP-1.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 10: Background Pattern 2 */
-    .about-section-professional.bg-pattern2 {
-      --about-bg-image: url('images/BGP.jpg');
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 11: No Background Image (Transparent) */
-    .about-section-professional.bg-gradient-only {
-      --about-bg-image: none;
-      --about-bg-fallback: transparent;
-    }
-    
-    /* Preset 12: Custom Overlay Opacity */
-    .about-section-professional.bg-light-overlay {
-      --about-overlay-opacity: 0.4;
-    }
-    
-    .about-section-professional.bg-medium-overlay {
-      --about-overlay-opacity: 0.6;
-    }
-    
-    .about-section-professional.bg-dark-overlay {
-      --about-overlay-opacity: 0.8;
     }
     
     /* Professional Projects Section Styling */
-    .gallery-section-professional {
+    .projects-section-professional {
       background-color: #f8f9fa;
-      padding: 60px 0;
-      margin-bottom: 0;
-      position: relative;
-      min-height: 100vh; /* Ensure full viewport height */
-      width: 100%; /* Ensure full width */
-    }
-    
-    .gallery-section-professional .second-content {
+      padding: 80px 0;
+      margin-bottom: 80px;
       position: relative;
     }
     
+    .projects-section-professional .second-content {
+      position: relative;
+    }
     
-    .gallery-main-title {
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .projects-main-title {
       font-size: 42px;
       font-weight: 700;
       color: #2c3e50;
@@ -704,10 +243,9 @@
       line-height: 1.2;
       text-align: center;
       letter-spacing: -0.3px;
-      text-transform: uppercase;
     }
     
-    .gallery-subtitle {
+    .projects-subtitle {
       font-size: 18px;
       font-weight: 400;
       color: #666;
@@ -720,22 +258,202 @@
       letter-spacing: 0.1px;
     }
     
+    .project-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 0;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
     
+    .project-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    }
     
+    .project-card .picture-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+    }
     
+    .project-card .picture-section img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 12px 12px 0 0;
+    }
     
+    .project-card:hover .picture-section img {
+      transform: scale(1.05);
+    }
     
+    .project-card .text-section,
+    .project-card .text-sections {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .project-card .heading-2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      line-height: 1.3;
+      letter-spacing: -0.2px;
+    }
+    
+    .project-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+      text-align: left;
+      font-weight: 400;
+      letter-spacing: 0.05px;
+    }
+    
+    .projects-section-professional .button-content {
+      text-align: center;
+      margin-top: 60px;
+    }
+    
+    .projects-section-professional .button {
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+      letter-spacing: 0.2px;
+    }
+    
+    .projects-section-professional .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+    }
+    
+    @media (max-width: 1024px) {
+      .grid-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 15px;
+      }
+      
+      .projects-main-title {
+        font-size: 38px;
+      }
+      
+      .projects-subtitle {
+        font-size: 17px;
+        margin-bottom: 60px;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 24px;
+      }
+      
+      .project-description {
+        font-size: 15px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .grid-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+      }
+      
+      .projects-main-title {
+        font-size: 34px;
+        margin-bottom: 15px;
+        letter-spacing: -0.2px;
+      }
+      
+      .projects-subtitle {
+        font-size: 16px;
+        margin-bottom: 50px;
+        letter-spacing: 0.05px;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 25px;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        letter-spacing: -0.1px;
+      }
+      
+      .project-description {
+        font-size: 15px;
+        letter-spacing: 0.02px;
+      }
+      
+      .projects-section-professional .button {
+        font-size: 15px;
+        padding: 14px 30px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .grid-content {
+        gap: 15px;
+        padding: 0 5px;
+      }
+      
+      .projects-main-title {
+        font-size: 28px;
+        letter-spacing: -0.1px;
+      }
+      
+      .projects-subtitle {
+        font-size: 14px;
+        margin-bottom: 40px;
+        letter-spacing: 0.02px;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 20px;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      
+      .project-description {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      
+      .projects-section-professional .button {
+        font-size: 14px;
+        padding: 12px 25px;
+      }
+    }
     
     /* PROJECTS SECTION FIXES */
     
     /* CTA Section Styling Override to maintain original appearance */
     .intro-section.cc-cta {
-      background: #2c3e50 !important;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
       color: #ffffff !important;
-      padding: 60px 0 !important;
+      padding: 80px 0 !important;
       margin: 0 !important;
       width: 100% !important;
-      min-height: 100vh !important; /* Ensure full viewport height */
     }
     
     .cta-container {
@@ -799,19 +517,18 @@
     
     .title-content {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     
-    .gallery-main-title {
+    .projects-main-title {
       font-size: 48px !important;
       font-weight: 700 !important;
       color: #2c3e50 !important;
       margin-bottom: 20px !important;
       line-height: 1.2 !important;
-      text-transform: uppercase !important;
     }
     
-    .gallery-subtitle {
+    .projects-subtitle {
       font-size: 18px !important;
       color: #666 !important;
       line-height: 1.6 !important;
@@ -913,24 +630,9 @@
       }
     }
     
-    @media (max-width: 1024px) {
-      .intro-section.cc-cta {
-        padding: 50px 0 !important;
-      }
-      
-      .h2-headingscta {
-        font-size: 42px !important;
-      }
-      
-      .paragraphscta {
-        font-size: 17px !important;
-      }
-    }
-    
     @media (max-width: 768px) {
-      .gallery-main-title {
+      .projects-main-title {
         font-size: 36px !important;
-        text-transform: uppercase !important;
       }
       
       .grid-content {
@@ -938,64 +640,45 @@
         gap: 20px !important;
       }
       
-      .gallery-section-professional {
-        padding: 40px 0 !important;
-        margin-bottom: 0 !important;
+      .projects-section-professional {
+        padding: 60px 0 !important;
+        margin-bottom: 60px !important;
       }
       
       .intro-section.cc-cta {
-        padding: 40px 0 !important;
+        padding: 60px 0 !important;
       }
       
       .h2-headingscta {
-        font-size: 32px !important;
+        font-size: 36px !important;
       }
       
       .paragraphscta {
-        font-size: 15px !important;
+        font-size: 16px !important;
       }
       
       .button.cc-jumbo-button {
-        font-size: 14px !important;
-        padding: 12px 25px !important;
+        font-size: 15px !important;
+        padding: 14px 30px !important;
       }
     }
     
     @media (max-width: 480px) {
       .intro-section.cc-cta {
-        padding: 25px 0 !important;
+        padding: 40px 0 !important;
       }
       
       .h2-headingscta {
-        font-size: 24px !important;
+        font-size: 28px !important;
       }
       
       .paragraphscta {
-        font-size: 13px !important;
+        font-size: 14px !important;
       }
       
       .button.cc-jumbo-button {
-        font-size: 13px !important;
-        padding: 10px 20px !important;
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .intro-section.cc-cta {
-        padding: 20px 0 !important;
-      }
-      
-      .h2-headingscta {
-        font-size: 20px !important;
-      }
-      
-      .paragraphscta {
-        font-size: 12px !important;
-      }
-      
-      .button.cc-jumbo-button {
-        font-size: 12px !important;
-        padding: 8px 16px !important;
+        font-size: 14px !important;
+        padding: 12px 25px !important;
       }
     }
   </style>
@@ -1017,7 +700,7 @@
       <div class="menu">
         <nav role="navigation" class="navigation-items w-nav-menu">
           <a href="about.html" class="navigation-item w-nav-link">About</a>
-          <a href="projects.html" class="navigation-item w-nav-link">Gallery</a>
+          <a href="projects.html" class="navigation-item w-nav-link">Project</a>
           <a href="experience.html" class="navigation-item w-nav-link">Experience</a>
           <a href="equipment.html" class="navigation-item w-nav-link">Equipment</a>
           <a href="team.html" class="navigation-item w-nav-link">team</a>
@@ -1035,7 +718,7 @@
       <div class="intro-content cc-homepage">
         <div data-w-id="86e64837-0616-515b-4568-76c147234d20" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="intro-text">
           <h1 class="h1-headtext">BUILDING YOUR VISION <br>CONSTRUCTING YOUR FUTURE</h1>
-          <h1 class="sub-heading-light">AN INDONESIAN CONSTRUCTION <br>SERVICE COMPANY</h1>
+          <h1 class="sub-heading-light">AN INDONESIAN CONSTRUCTION <br>SERVICE COMPANY</h1>
         </div>
         <div class="button-content">
           <a href="about.html" data-w-id="fae612e9-522e-abb0-7925-b03b70317713" style="opacity:0" class="button cc-jumbo-button cc-jumbo-white w-inline-block">
@@ -1045,27 +728,7 @@
       </div>
     </div>
   </div>
-  <!-- 
-    ========================================
-    BACKGROUND OPTIONS - GANTI CLASS DI SINI
-    ========================================
-    
-    Pilihan Background:
-    - bg-construction (default)
-    - bg-project1, bg-project2
-    - bg-work1, bg-work2, bg-work3, bg-work4, bg-work5
-    - bg-pattern1, bg-pattern2
-    - bg-gradient-only
-    
-    Pilihan Overlay (tambahkan setelah class background):
-    - bg-light-overlay (overlay ringan)
-    - bg-medium-overlay (overlay sedang)
-    - bg-dark-overlay (overlay gelap)
-    
-    Contoh: bg-project1 bg-light-overlay
-    Lihat file background-guide.md untuk panduan lengkap
-  -->
-  <div class="content-section about-section-professional bg-construction">
+  <div class="content-section about-section-professional">
     <div class="body-content">
       <div class="about-container">
         <div class="about-header">
@@ -1075,24 +738,64 @@
         
         <div class="about-content-grid">
           <div class="vision-card">
+            <div class="card-icon">🎯</div>
             <h3 class="card-title">Our Vision</h3>
             <p class="card-description">To be the leading company in EPCI that is integrated and environmentally friendly, delivering exceptional value to our clients while maintaining the highest standards of safety and sustainability.</p>
           </div>
           
           <div class="mission-card">
+            <div class="card-icon">🚀</div>
             <h3 class="card-title">Our Mission</h3>
             <div class="mission-points">
               <div class="mission-point">
+                <div class="point-icon">✓</div>
                 <p class="point-text">Prioritizing productivity, punctuality, quality, and safety of our employees by upholding values of integrity and accountability in every project we undertake.</p>
               </div>
               <div class="mission-point">
+                <div class="point-icon">✓</div>
                 <p class="point-text">Striving to provide the greatest client satisfaction through innovative solutions, timely delivery, and exceptional service quality.</p>
               </div>
               <div class="mission-point">
+                <div class="point-icon">✓</div>
                 <p class="point-text">Committed to pursuing a sustainable future and improving the economic, social, and environmental well-being of the communities we serve.</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-section projects-section-professional">
+    <div class="second-content">
+      <div class="main-content">
+        <div data-w-id="b2fbc218-22e4-b658-2665-b62421ea138f" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="title-content">
+          <h1 class="projects-main-title">Our PROJECTS</h1>
+          <p class="projects-subtitle">Showcasing our successful construction and EPCI projects across Indonesia</p>
+        </div>
+        <div class="grid-content">
+          <div data-w-id="90996bc9-f7db-f04c-0bda-90c8d72d682d" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card first-block">
+            <div class="picture-section"><img src="images/Copy-of-ENP-WEB-7.jpg" loading="lazy" width="960" sizes="(max-width: 479px) 75vw, (max-width: 767px) 26vw, (max-width: 991px) 28vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" srcset="images/Copy-of-ENP-WEB-7-p-500.jpg 500w, images/Copy-of-ENP-WEB-7-p-800.jpg 800w, images/Copy-of-ENP-WEB-7-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-7-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-7.jpg 1920w" alt="" class="image-3"></div>
+            <div class="text-section">
+              <div class="heading-2">Dumai</div>
+            </div>
+          </div>
+          <div data-w-id="a1ad0410-55bf-bfb7-e137-f6db09f7c8f8" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card second-block">
+            <div class="picture-section"><img src="images/Copy-of-ENP-WEB-8_1.jpg" loading="lazy" sizes="(max-width: 479px) 56vw, (max-width: 767px) 26vw, (max-width: 991px) 27vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" width="950.5" srcset="images/Copy-of-ENP-WEB-8_1-p-500.jpg 500w, images/Copy-of-ENP-WEB-8_1-p-800.jpg 800w, images/Copy-of-ENP-WEB-8_1-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-8_1-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-8_1.jpg 1901w" alt="" class="image-5"></div>
+            <div class="text-section">
+              <div class="heading-2">Duri</div>
+            </div>
+          </div>
+          <div data-w-id="1689230a-aa77-7aa9-1668-abf3679145cc" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card third-block">
+            <div class="picture-section"><img src="images/Copy-of-ENP-WEB-9.jpg" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 26vw, (max-width: 991px) 28vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" width="960" srcset="images/Copy-of-ENP-WEB-9-p-500.jpg 500w, images/Copy-of-ENP-WEB-9-p-800.jpg 800w, images/Copy-of-ENP-WEB-9-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-9-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-9.jpg 1920w" alt="" class="image-4"></div>
+            <div class="text-section">
+              <div class="heading-2">Kerinci</div>
+            </div>
+          </div>
+        </div>
+        <div class="button-content">
+          <a href="projects.html" data-w-id="f30f2919-8b62-a1cf-3c3a-b139de854503" style="opacity:0" class="button cc-jumbo-button cc-jumbo-white w-inline-block">
+            <div class="text-block">Learn More</div>
+          </a>
         </div>
       </div>
     </div>
