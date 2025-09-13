@@ -18,6 +18,17 @@
     body {
       background-color: #f8f9fa;
       color: #2c3e50;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
+    /* General Mobile Responsiveness */
+    * {
+      box-sizing: border-box;
+    }
+    
+    .intro-section, .content-section, .cta-container {
+      max-width: 100%;
+      overflow-x: hidden;
     }
     .intro-section {
       background-color: #ffffff;
@@ -628,10 +639,73 @@
         margin: 60px 0 !important;
       }
       
-      
       .button.cc-jumbo-button {
         font-size: 15px !important;
         padding: 14px 30px !important;
+      }
+      
+      /* Tablet CTA Section Fixes */
+      .cta-container {
+        height: auto !important;
+        min-height: 45vh;
+        padding: 50px 20px !important;
+      }
+      
+      .cta-wrap {
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      .cta-text {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .cta-paragraph {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
+      }
+      
+      .h2-headingscta {
+        font-size: 32px !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+      }
+      
+      .paragraphscta {
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+      }
+      
+      /* About Section Tablet Fixes */
+      .about-container {
+        padding: 60px 20px !important;
+        max-width: 100% !important;
+      }
+      
+      .about-content-grid {
+        max-width: 100% !important;
+        gap: 25px !important;
+      }
+      
+      .vision-card, .mission-card {
+        padding: 25px !important;
+        max-width: 100% !important;
+      }
+      
+      /* Projects Section Tablet Fixes */
+      .grid-content {
+        gap: 20px !important;
+        padding: 0 15px !important;
+        max-width: 100% !important;
+      }
+      
+      .project-card {
+        max-width: 100% !important;
       }
     }
     
@@ -643,6 +717,86 @@
       .button.cc-jumbo-button {
         font-size: 14px !important;
         padding: 12px 25px !important;
+      }
+      
+      /* Mobile CTA Section Fixes */
+      .cta-container {
+        height: auto !important;
+        min-height: 40vh;
+        padding: 40px 15px !important;
+      }
+      
+      .cta-wrap {
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      .cta-text {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .cta-paragraph {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
+      }
+      
+      .h2-headingscta {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+      }
+      
+      .paragraphscta {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+      }
+      
+      /* About Section Mobile Fixes */
+      .about-container {
+        padding: 40px 15px !important;
+        max-width: 100% !important;
+      }
+      
+      .about-content-grid {
+        max-width: 100% !important;
+        gap: 20px !important;
+      }
+      
+      .vision-card, .mission-card {
+        padding: 20px !important;
+        max-width: 100% !important;
+      }
+      
+      /* Projects Section Mobile Fixes */
+      .grid-content {
+        gap: 15px !important;
+        padding: 0 10px !important;
+        max-width: 100% !important;
+      }
+      
+      .project-card {
+        max-width: 100% !important;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 20px !important;
+      }
+      
+      /* Navigation Mobile Fixes */
+      .navigation-item {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+        margin: 0 1px !important;
+      }
+      
+      .text-block-9 {
+        font-size: 11px !important;
       }
     }
   </style>
