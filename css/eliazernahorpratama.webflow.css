@@ -165,8 +165,8 @@ figcaption {
 .intro-section.cc-cta {
   height: auto;
   margin-bottom: auto;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: 0px;
+  padding-left: 0px;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #eff6ff 50%, #eef2ff 75%, #f0f4ff 100%);
   color: #1a1b1f;
 }
@@ -1669,7 +1669,7 @@ figcaption {
 
 .cta-container {
   height: 50vh;
-  margin: auto;
+  margin: 0;
 }
 
 .content-section {
@@ -6924,7 +6924,7 @@ a, button, input, textarea, select {
 
   .cta-wrap {
     width: auto;
-    padding: 80px 140px 90px;
+    padding: 0;
   }
 
   .intro-header {
@@ -7680,9 +7680,9 @@ a, button, input, textarea, select {
   }
 
   .intro-section.cc-cta {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
   }
 
   .intro-section.cc-home-wrap {
@@ -7785,8 +7785,8 @@ a, button, input, textarea, select {
   }
 
   .cta-wrap {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .intro-header {
@@ -8700,8 +8700,8 @@ a, button, input, textarea, select {
   }
 
   .cta-wrap {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .intro-header {
