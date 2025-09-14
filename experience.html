@@ -57,7 +57,7 @@
     }
     /* Soft Black and White Theme */
     body {
-      background-color: #f8f9fa;
+      background-color: transparent;
       color: #2c3e50;
     }
     .intro-section {
@@ -101,7 +101,7 @@
     .experience-tabs-section {
       min-height: 100vh;
       padding: 40px 0;
-      background-color: #f8f9fa;
+      background-color: transparent;
       /* Primary background - construction theme */
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
       /* Alternative backgrounds (uncomment to use):
@@ -123,7 +123,7 @@
     /* Desktop large screens */
     @media (min-width: 1200px) {
       .experience-tabs-section {
-        background-color: #f8f9fa;
+        background-color: transparent;
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
         background-position: center center;
         background-size: cover;
@@ -137,23 +137,23 @@
       padding: 40px;
       position: relative;
       z-index: 2;
-      background: rgba(255, 255, 255, 0.95);
+      background: transparent;
       border-radius: 50px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: none;
+      box-shadow: none;
     }
     
     @media (max-width: 1200px) {
       .experience-tabs-section {
-        background-color: #f8f9fa;
+        background-color: transparent;
       }
       .experience-tabs-container {
         max-width: 1000px;
         padding: 30px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .project-item {
         padding: 25px;
@@ -171,7 +171,7 @@
       .experience-tabs-section {
         min-height: 100vh;
         padding: 30px 0;
-        background-color: #f8f9fa;
+        background-color: transparent;
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
         background-position: center center;
         background-size: cover;
@@ -181,9 +181,9 @@
       .experience-tabs-container {
         padding: 25px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .experience-tabs {
         margin-bottom: 15px;
@@ -203,9 +203,9 @@
       .experience-tabs-container {
         padding: 20px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .experience-tabs {
         margin-bottom: 12px;
@@ -239,14 +239,14 @@
       .experience-tabs-section {
         min-height: 100vh;
         padding: 20px 0;
-        background-color: #f8f9fa;
+        background-color: transparent;
       }
       .experience-tabs-container {
         padding: 15px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .experience-tabs {
         margin-bottom: 10px;
@@ -360,8 +360,8 @@
       padding: 0 20px;
     }
     .experience-tab {
-      background: rgba(255, 255, 255, 0.9);
-      border: none;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.3);
       padding: 6px 20px;
       margin: 0 8px;
       font-size: 16px;
@@ -373,19 +373,20 @@
       white-space: nowrap;
       flex-shrink: 0;
       border-radius: 8px 8px 0 0;
-      backdrop-filter: blur(10px);
+      backdrop-filter: none;
       position: relative;
       z-index: 1;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: none;
     }
     .experience-tab:hover {
       color: #333;
-      background-color: #f8f9fa;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
     }
     .experience-tab.active {
       color: #2c5aa0;
-      border-bottom-color: #2c5aa0;
-      background-color: #f0f4f8;
+      border-color: #2c5aa0;
+      background-color: rgba(44, 90, 160, 0.1);
     }
     .experience-content {
       height: auto;
@@ -438,7 +439,7 @@
     .feature-item {
       text-align: center;
       padding: 20px;
-      background: #f8f9fa;
+        background: transparent;
       border-radius: 8px;
       border-left: 4px solid #3498db;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -477,7 +478,7 @@
       .experience-tabs-section {
         height: 100vh;
         padding: 20px 0;
-        background-color: #f8f9fa;
+        background-color: transparent;
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
         background-position: center center;
         background-size: cover;
@@ -507,9 +508,9 @@
       .experience-tabs-container {
         padding: 15px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .project-details {
         max-height: 55vh;
@@ -556,9 +557,9 @@
       .experience-tabs-container {
         padding: 10px;
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
       }
       .project-details {
         max-height: 50vh;
