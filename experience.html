@@ -102,6 +102,18 @@
       min-height: 100vh;
       padding: 40px 0;
       background-color: #f8f9fa;
+      /* Primary background - construction theme */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
+      /* Alternative backgrounds (uncomment to use):
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/projects-hero-bg.svg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/BGP-1.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/IMG_20220719_091458.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/SAVE_20211219_093754.jpg');
+      */
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -112,14 +124,23 @@
     @media (min-width: 1200px) {
       .experience-tabs-section {
         background-color: #f8f9fa;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
     }
     .experience-tabs-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 40px;
       position: relative;
       z-index: 2;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     }
     
     @media (max-width: 1200px) {
@@ -128,7 +149,11 @@
       }
       .experience-tabs-container {
         max-width: 1000px;
-        padding: 0 30px;
+        padding: 30px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .project-item {
         padding: 25px;
@@ -147,16 +172,25 @@
         min-height: 100vh;
         padding: 30px 0;
         background-color: #f8f9fa;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
       }
       .experience-tabs-container {
-        padding: 0 20px;
+        padding: 25px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .experience-tabs {
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         padding: 0 15px;
       }
       .experience-tab {
-        padding: 10px 20px;
+        padding: 5px 18px;
         font-size: 14px;
       }
       .experience-content {
@@ -167,15 +201,19 @@
     
     @media (max-width: 768px) {
       .experience-tabs-container {
-        padding: 0 15px;
+        padding: 20px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .experience-tabs {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
         padding: 0 10px;
         gap: 8px;
       }
       .experience-tab {
-        padding: 10px 18px;
+        padding: 5px 16px;
         font-size: 13px;
         margin: 0 5px;
       }
@@ -204,15 +242,19 @@
         background-color: #f8f9fa;
       }
       .experience-tabs-container {
-        padding: 0 10px;
+        padding: 15px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .experience-tabs {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
         padding: 0 5px;
         gap: 5px;
       }
       .experience-tab {
-        padding: 8px 14px;
+        padding: 4px 12px;
         font-size: 12px;
         margin: 0 3px;
       }
@@ -240,7 +282,7 @@
     
     .project-item {
       background: #ffffff;
-      border-radius: 10px;
+      border-radius: 50px;
       padding: 30px;
       margin-bottom: 30px;
       border-left: 5px solid #3498db;
@@ -261,6 +303,7 @@
       color: #2c3e50;
       margin-bottom: 20px;
       line-height: 1.4;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
     
     .project-info p {
@@ -274,10 +317,41 @@
       color: #2c3e50;
       font-weight: 600;
     }
+    
+    /* Professional Project Journey Heading Styling */
+    .section-heading-org h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+    
+    @media (max-width: 1024px) {
+      .section-heading-org h2 {
+        font-size: 2.2rem;
+        letter-spacing: 0.8px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .section-heading-org h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .section-heading-org h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+      }
+    }
     .experience-tabs {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       border-bottom: 3px solid #e0e0e0;
       flex-wrap: wrap;
       gap: 10px;
@@ -286,22 +360,23 @@
       padding: 0 20px;
     }
     .experience-tab {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       border: none;
-      padding: 12px 24px;
+      padding: 6px 20px;
       margin: 0 8px;
       font-size: 16px;
       font-weight: 600;
-      color: #666;
+      color: #333;
       cursor: pointer;
       border-bottom: 4px solid transparent;
       transition: all 0.3s ease;
       white-space: nowrap;
       flex-shrink: 0;
       border-radius: 8px 8px 0 0;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
       position: relative;
       z-index: 1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     .experience-tab:hover {
       color: #333;
@@ -403,11 +478,16 @@
         height: 100vh;
         padding: 20px 0;
         background-color: #f8f9fa;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
       }
       .experience-tabs {
         flex-wrap: wrap;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         justify-content: flex-start;
         padding: 0 5px;
         overflow-x: auto;
@@ -415,7 +495,7 @@
       }
       .experience-tab {
         margin: 2px;
-        padding: 10px 16px;
+        padding: 5px 14px;
         font-size: 13px;
         min-width: 60px;
         text-align: center;
@@ -423,6 +503,13 @@
       .experience-content {
         max-height: 65vh;
         padding: 0 5px;
+      }
+      .experience-tabs-container {
+        padding: 15px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .project-details {
         max-height: 55vh;
@@ -454,9 +541,10 @@
       .experience-tabs {
         gap: 5px;
         padding: 0 2px;
+        margin-bottom: 8px;
       }
       .experience-tab {
-        padding: 8px 14px;
+        padding: 4px 12px;
         font-size: 12px;
         margin: 1px;
         min-width: 55px;
@@ -464,6 +552,13 @@
       .experience-content {
         max-height: 60vh;
         padding: 0 2px;
+      }
+      .experience-tabs-container {
+        padding: 10px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .project-details {
         max-height: 50vh;
@@ -527,8 +622,8 @@
       <div class="experience-tabs-section">
         <div class="experience-tabs-container">
           <div class="section-heading-org" style="text-align: center; margin-bottom: 30px;">
-            <h2 class="h2-headings">Professional Project Journey</h2>
-            <p class="paragraph-smallx">Our track record of successful projects across the years</p>
+            <h2 class="h2-headings" style="color: #2c3e50; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);">Professional Project Journey</h2>
+            <p class="paragraph-smallx" style="color: #555; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);">Our track record of successful projects across the years</p>
           </div>
           <div class="experience-tabs">
             <button class="experience-tab active" data-year="2021">2021</button>
