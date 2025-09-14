@@ -101,16 +101,18 @@
     .experience-tabs-section {
       min-height: 100vh;
       padding: 40px 0;
-      background-color: #ffffff;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.95))), url('../images/Copy-of-ENP-WEB-4.jpg');
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/Copy-of-ENP-WEB-4.jpg');
-      background-position: 0px 0px, 50% 50%;
-      background-size: auto, cover;
-      background-repeat: repeat, no-repeat;
+      background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       position: relative;
+    }
+    
+    /* Desktop large screens */
+    @media (min-width: 1200px) {
+      .experience-tabs-section {
+        background-color: #f8f9fa;
+      }
     }
     .experience-tabs-container {
       max-width: 1200px;
@@ -121,6 +123,9 @@
     }
     
     @media (max-width: 1200px) {
+      .experience-tabs-section {
+        background-color: #f8f9fa;
+      }
       .experience-tabs-container {
         max-width: 1000px;
         padding: 0 30px;
@@ -141,6 +146,7 @@
       .experience-tabs-section {
         min-height: 100vh;
         padding: 30px 0;
+        background-color: #f8f9fa;
       }
       .experience-tabs-container {
         padding: 0 20px;
@@ -150,8 +156,8 @@
         padding: 0 15px;
       }
       .experience-tab {
-        padding: 15px 25px;
-        font-size: 16px;
+        padding: 10px 20px;
+        font-size: 14px;
       }
       .experience-content {
         padding: 0 15px;
@@ -169,8 +175,8 @@
         gap: 8px;
       }
       .experience-tab {
-        padding: 12px 20px;
-        font-size: 14px;
+        padding: 10px 18px;
+        font-size: 13px;
         margin: 0 5px;
       }
       .experience-content {
@@ -195,6 +201,7 @@
       .experience-tabs-section {
         min-height: 100vh;
         padding: 20px 0;
+        background-color: #f8f9fa;
       }
       .experience-tabs-container {
         padding: 0 10px;
@@ -205,7 +212,7 @@
         gap: 5px;
       }
       .experience-tab {
-        padding: 10px 15px;
+        padding: 8px 14px;
         font-size: 12px;
         margin: 0 3px;
       }
@@ -232,14 +239,13 @@
     }
     
     .project-item {
-      background: rgba(248, 249, 250, 0.95);
+      background: #ffffff;
       border-radius: 10px;
       padding: 30px;
       margin-bottom: 30px;
       border-left: 5px solid #3498db;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
       position: relative;
       z-index: 1;
     }
@@ -270,7 +276,7 @@
     }
     .experience-tabs {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin-bottom: 50px;
       border-bottom: 3px solid #e0e0e0;
       flex-wrap: wrap;
@@ -282,9 +288,9 @@
     .experience-tab {
       background: rgba(255, 255, 255, 0.8);
       border: none;
-      padding: 18px 30px;
+      padding: 12px 24px;
       margin: 0 8px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: #666;
       cursor: pointer;
@@ -396,6 +402,7 @@
       .experience-tabs-section {
         height: 100vh;
         padding: 20px 0;
+        background-color: #f8f9fa;
       }
       .experience-tabs {
         flex-wrap: wrap;
@@ -408,8 +415,8 @@
       }
       .experience-tab {
         margin: 2px;
-        padding: 12px 18px;
-        font-size: 14px;
+        padding: 10px 16px;
+        font-size: 13px;
         min-width: 60px;
         text-align: center;
       }
@@ -449,8 +456,8 @@
         padding: 0 2px;
       }
       .experience-tab {
-        padding: 10px 15px;
-        font-size: 13px;
+        padding: 8px 14px;
+        font-size: 12px;
         margin: 1px;
         min-width: 55px;
       }
@@ -519,7 +526,7 @@
     <div class="body-content">
       <div class="experience-tabs-section">
         <div class="experience-tabs-container">
-          <div class="section-heading-org" style="text-align: center; margin-bottom: 30px; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); position: relative; z-index: 1;">
+          <div class="section-heading-org" style="text-align: center; margin-bottom: 30px;">
             <h2 class="h2-headings">Professional Project Journey</h2>
             <p class="paragraph-smallx">Our track record of successful projects across the years</p>
           </div>
