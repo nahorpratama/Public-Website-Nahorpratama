@@ -106,773 +106,119 @@
       margin-top: 4px;
     }
     
-    /* Organization Chart Styles */
-    .org-chart-container {
-      max-width: 100%;
+    /* Team Section Styles */
+    .team-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .team-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 15px 30px;
-      font-family: 'Montserrat', sans-serif;
-      position: relative;
-      overflow-x: auto;
-      overflow-y: visible;
+      padding: 0 20px;
     }
     
-    .org-chart-title {
-      text-align: left;
-      font-size: 20px;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-bottom: 20px;
-      margin-top: 0;
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
     
-    .org-chart {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      min-width: 800px;
-      width: 100%;
-      padding: 30px 0;
-      min-height: 70vh;
-    }
-    
-    .org-level {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 12px 0;
-      position: relative;
-      flex-wrap: nowrap;
-      gap: 8px;
-      width: 100%;
-    }
-    
-    .org-position {
-      background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
-      border: 2px solid #6b5b47;
-      border-radius: 8px;
-      padding: 10px 16px;
+    .team-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
       text-align: center;
-      font-weight: 600;
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f3f4;
       transition: all 0.3s ease;
-      min-width: 100px;
-      position: relative;
-      font-size: 12px;
-      white-space: nowrap;
-      flex-shrink: 0;
     }
     
-    .org-position:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
     
-    .org-level-1 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
+    .team-role {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2c5aa0;
+      margin-bottom: 10px;
     }
     
-    .org-level-2 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
+    .team-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
     }
     
-    .org-level-3 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
+    .team-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
     }
     
-    .org-level-4 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
+    .stat-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f3f4;
     }
     
-    .org-level-5 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #2c5aa0;
+      margin-bottom: 10px;
     }
     
-    .org-level-6 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
-    }
-    
-    .org-level-7 .org-position {
-      font-size: 12px;
-      padding: 10px 16px;
-      min-width: 100px;
-    }
-    
-    /* Connecting lines - Vertical lines from level to level */
-    .org-level::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    .org-level-1::before {
-      display: none;
-    }
-    
-    /* Level 2 - Single position, centered line */
-    .org-level-2::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Level 3 - Single position, centered line */
-    .org-level-3::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Level 4 - Two positions, line from center */
-    .org-level-4::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Horizontal line connecting the two positions in level 4 */
-    .org-level-4::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: #2c3e50;
-      width: 200px;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Vertical lines from level 4 horizontal line to each position */
-    .org-level-4 .org-position::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Level 5 - Multiple departments, line from Branch Manager only */
-    .org-level-5::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 25%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Main horizontal line for all departments - starting from Branch Manager */
-    .org-level-5::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: #2c3e50;
-      width: 80%;
-      max-width: 600px;
-      top: 50%;
-      left: 25%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Vertical lines from horizontal line to each department */
-    .org-level-5 .org-position::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Level 6 - Sub-departments grouped under their parent departments */
-    .org-level-6 {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 0;
-      margin-top: 10px;
-    }
-    
-    /* Vertical line from level 5 to level 6 - only from Branch Manager */
-    .org-level-6::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 25%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Sub-department groups */
-    .sub-dept-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      gap: 8px;
-      min-width: 80px;
-      flex: 1;
-      max-width: 100px;
-    }
-    
-    /* Vertical line from level 6 horizontal line to sub-department group */
-    .sub-dept-group::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 20px;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Horizontal line connecting all sub-department groups - starting from Branch Manager */
-    .org-level-6::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: #2c3e50;
-      width: 80%;
-      max-width: 600px;
-      top: 50%;
-      left: 25%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Horizontal line connecting sub-departments within each group */
-    .sub-dept-group::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: #2c3e50;
-      width: 100%;
-      top: 50%;
-      left: 0;
-      z-index: 1;
-    }
-    
-    /* Vertical lines from horizontal line to each sub-department */
-    .sub-dept-group .org-position::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #2c3e50;
-      height: 15px;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Ensure proper spacing and alignment */
-    .org-chart {
-      padding: 30px 0;
-    }
-    
-    .org-level {
-      margin: 15px 0;
-    }
-    
-    .org-level-1 {
-      margin-top: 0;
-    }
-    
-    .org-level-6 {
-      margin-bottom: 0;
-    }
-    
-    /* Hide empty groups */
-    .sub-dept-group.empty {
-      visibility: hidden;
-    }
-    
-    .sub-dept-group.empty::before,
-    .sub-dept-group.empty::after {
-      display: none;
-    }
-    
-    /* Invisible positions */
-    .org-position.invisible {
-      visibility: hidden;
-      height: 0;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
-    
-    .org-position.invisible::before {
-      display: none;
-    }
-    
-    /* Additional styling for better line connections */
-    .org-level-5 {
-      position: relative;
-    }
-    
-    .org-level-5 .org-position {
-      position: relative;
-    }
-    
-    
-    /* Ensure sub-department groups are properly aligned */
-    .org-level-6 .sub-dept-group {
-      justify-content: center;
-    }
-    
-    /* Better positioning for empty groups */
-    .sub-dept-group.empty {
-      min-width: 80px;
-      max-width: 100px;
-    }
-    
-    /* Ensure proper line connections */
-    .org-level-2::before,
-    .org-level-3::before,
-    .org-level-4::before,
-    .org-level-5::before,
-    .org-level-6::before {
-      z-index: 2;
-    }
-    
-    .org-level-4::after,
-    .org-level-5::after,
-    .org-level-6::after {
-      z-index: 2;
-    }
-    
-    .org-level-4 .org-position::before,
-    .org-level-5 .org-position::before,
-    .sub-dept-group::before,
-    .sub-dept-group .org-position::before {
-      z-index: 2;
-    }
-    
-    /* Ensure proper line thickness and color */
-    .org-level::before,
-    .org-level::after,
-    .org-position::before,
-    .sub-dept-group::before,
-    .sub-dept-group::after {
-      background: #2c3e50;
-      border: none;
-    }
-    
-    /* Ensure proper line positioning */
-    .org-level-4 .org-position::before {
-      top: -20px;
-    }
-    
-    .org-level-5 .org-position::before {
-      top: -20px;
-    }
-    
-    .sub-dept-group::before {
-      top: -20px;
-    }
-    
-    .sub-dept-group .org-position::before {
-      top: -15px;
-    }
-    
-    /* Ensure proper line connections */
-    .org-level-4::after {
-      top: 50%;
-    }
-    
-    .org-level-5::after {
-      top: 50%;
-    }
-    
-    .org-level-6::after {
-      top: 50%;
-    }
-    
-    .sub-dept-group::after {
-      top: 50%;
-    }
-    
-    /* Ensure proper line thickness */
-    .org-level::before,
-    .org-level::after,
-    .org-position::before,
-    .sub-dept-group::before,
-    .sub-dept-group::after {
-      width: 2px;
-    }
-    
-    .org-level::after,
-    .sub-dept-group::after {
-      height: 2px;
-    }
-    
-    /* Ensure proper line positioning for vertical lines */
-    .org-level::before {
-      height: 20px;
-    }
-    
-    .org-position::before {
-      height: 20px;
-    }
-    
-    .sub-dept-group::before {
-      height: 20px;
-    }
-    
-    .sub-dept-group .org-position::before {
-      height: 15px;
-    }
-    
-    /* Responsive design */
-    @media (max-width: 1200px) {
-      .org-chart-container {
-        padding: 15px 30px;
-      }
-      
-      .org-chart {
-        min-width: 700px;
-        min-height: 60vh;
-      }
-      
-      .org-position {
-        font-size: 11px;
-        padding: 9px 14px;
-        min-width: 90px;
-      }
-      
-      .org-level-5::after {
-        width: 75%;
-        max-width: 500px;
-        left: 25%;
-      }
-      
-      .org-level-6::after {
-        width: 75%;
-        max-width: 500px;
-        left: 25%;
-      }
-      
-      .sub-dept-group {
-        min-width: 70px;
-        max-width: 90px;
-      }
-      
-      .intro-header-team {
-        height: 55vh;
-        padding: 40px 30px;
-        background-attachment: fixed;
-      }
-      
-      .intro-header-team .h1-headtext {
-        font-size: 36px;
-        line-height: 1.3;
-      }
-      
-      .intro-header-team .sub-heading-light2 {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-    }
-    
-    @media (max-width: 1024px) {
-      .org-chart-container {
-        padding: 12px 25px;
-      }
-      
-      .org-chart {
-        min-width: 650px;
-        min-height: 55vh;
-      }
-      
-      .org-position {
-        font-size: 10px;
-        padding: 8px 12px;
-        min-width: 80px;
-      }
-      
-      .org-level-5::after {
-        width: 70%;
-        max-width: 450px;
-        left: 25%;
-      }
-      
-      .org-level-6::after {
-        width: 70%;
-        max-width: 450px;
-        left: 25%;
-      }
-      
-      .sub-dept-group {
-        min-width: 60px;
-        max-width: 80px;
-      }
-      
-      .org-level-4::after {
-        width: 180px;
-      }
-      
-      .intro-header-team {
-        height: 45vh;
-        padding: 25px 20px;
-        background-attachment: scroll;
-      }
-      
-      .intro-header-team .h1-headtext {
-        font-size: 32px;
-        line-height: 1.2;
-      }
-      
-      .intro-header-team .sub-heading-light2 {
-        font-size: 16px;
-        margin-bottom: 18px;
-      }
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
     }
     
     @media (max-width: 768px) {
-      .org-chart-container {
-        padding: 8px 15px;
-        overflow-x: auto;
+      .team-section {
+        padding: 40px 0;
       }
       
-      .org-chart {
-        min-width: 600px;
-        padding: 20px 0;
-        min-height: 50vh;
+      .team-container {
+        padding: 0 15px;
       }
       
-      .org-level {
-        gap: 6px;
-        margin: 8px 0;
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
       }
       
-      .org-position {
-        min-width: 70px;
-        font-size: 9px;
-        padding: 6px 10px;
+      .team-card {
+        padding: 25px;
       }
       
-      .org-level-1 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
+      .team-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 30px;
       }
       
-      .org-level-2 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
+      .stat-card {
+        padding: 20px;
       }
       
-      .org-level-3 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
-      }
-      
-      .org-level-4 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
-      }
-      
-      .org-level-5 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
-      }
-      
-      .org-level-6 .org-position {
-        font-size: 9px;
-        padding: 6px 10px;
-        min-width: 70px;
-      }
-      
-      .org-level-4::after {
-        width: 120px;
-      }
-      
-      .org-level-5::after {
-        width: 65%;
-        max-width: 400px;
-        left: 25%;
-      }
-      
-      .org-level-6::after {
-        width: 65%;
-        max-width: 400px;
-        left: 25%;
-      }
-      
-      .sub-dept-group {
-        gap: 4px;
-        min-width: 50px;
-        max-width: 60px;
-      }
-      
-      .org-chart-title {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-      
-      .intro-header-team {
-        height: 50vh;
-        padding: 30px 15px;
-        background-attachment: scroll;
-      }
-      .intro-header-team .h1-headtext {
-        font-size: 28px;
-        line-height: 1.2;
-      }
-      .intro-header-team .sub-heading-light2 {
-        font-size: 14px;
-        margin-bottom: 15px;
+      .stat-number {
+        font-size: 24px;
       }
     }
     
     @media (max-width: 480px) {
-      .org-chart-container {
-        padding: 6px 10px;
-      }
-      
-      .org-chart {
-        min-width: 500px;
-        padding: 15px 0;
-        min-height: 45vh;
-      }
-      
-      .org-position {
-        min-width: 60px;
-        font-size: 8px;
-        padding: 5px 8px;
-      }
-      
-      .org-level-1 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-2 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-3 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-4 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-5 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-6 .org-position {
-        font-size: 8px;
-        padding: 5px 8px;
-        min-width: 60px;
-      }
-      
-      .org-level-4::after {
-        width: 100px;
-      }
-      
-      .org-level-5::after {
-        width: 60%;
-        max-width: 350px;
-        left: 25%;
-      }
-      
-      .org-level-6::after {
-        width: 60%;
-        max-width: 350px;
-        left: 25%;
-      }
-      
-      .sub-dept-group {
-        min-width: 45px;
-        max-width: 55px;
-      }
-      
-      .intro-header-team {
-        height: 40vh;
-        padding: 20px 10px;
-        background-attachment: scroll;
-      }
-      
-      .intro-header-team .h1-headtext {
-        font-size: 24px;
-        line-height: 1.1;
-      }
-      
-      .intro-header-team .sub-heading-light2 {
-        font-size: 12px;
-        margin-bottom: 10px;
+      .team-stats {
+        grid-template-columns: 1fr;
       }
     }
   </style>
