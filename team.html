@@ -89,7 +89,7 @@
     .org-chart-container {
       max-width: 100%;
       margin: 0 auto;
-      padding: 10px 20px;
+      padding: 20px 40px;
       font-family: 'Montserrat', sans-serif;
       position: relative;
       overflow-x: auto;
@@ -110,9 +110,9 @@
       flex-direction: column;
       align-items: center;
       position: relative;
-      min-width: 800px;
+      min-width: 900px;
       width: 100%;
-      padding: 20px 0;
+      padding: 30px 0;
       min-height: 80vh;
     }
     
@@ -130,16 +130,16 @@
     .org-position {
       background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
       border: 2px solid #6b5b47;
-      border-radius: 6px;
-      padding: 8px 12px;
+      border-radius: 8px;
+      padding: 10px 16px;
       text-align: center;
       font-weight: 600;
       color: #ffffff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
-      min-width: 80px;
+      min-width: 100px;
       position: relative;
-      font-size: 10px;
+      font-size: 12px;
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -150,45 +150,45 @@
     }
     
     .org-level-1 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-2 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-3 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-4 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-5 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-6 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     .org-level-7 .org-position {
-      font-size: 10px;
-      padding: 8px 12px;
-      min-width: 80px;
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     /* Connecting lines */
@@ -319,14 +319,42 @@
     }
     
     /* Responsive design */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       .org-chart-container {
-        padding: 10px 15px;
+        padding: 15px 30px;
       }
       
       .org-chart {
-        min-width: 700px;
+        min-width: 800px;
+        min-height: 75vh;
+      }
+      
+      .org-position {
+        font-size: 11px;
+        padding: 9px 14px;
+        min-width: 90px;
+      }
+      
+      .org-level-5::after {
+        width: 90%;
+        max-width: 550px;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .org-chart-container {
+        padding: 12px 25px;
+      }
+      
+      .org-chart {
+        min-width: 750px;
         min-height: 70vh;
+      }
+      
+      .org-position {
+        font-size: 10px;
+        padding: 8px 12px;
+        min-width: 80px;
       }
       
       .org-level-5::after {
@@ -337,61 +365,61 @@
     
     @media (max-width: 768px) {
       .org-chart-container {
-        padding: 10px 10px;
+        padding: 8px 15px;
         overflow-x: auto;
       }
       
       .org-chart {
-        min-width: 600px;
-        padding: 15px 0;
+        min-width: 650px;
+        padding: 20px 0;
         min-height: 60vh;
       }
       
       .org-level {
-        gap: 6px;
-        margin: 6px 0;
+        gap: 8px;
+        margin: 8px 0;
       }
       
       .org-position {
-        min-width: 60px;
-        font-size: 8px;
-        padding: 6px 10px;
+        min-width: 70px;
+        font-size: 9px;
+        padding: 7px 12px;
       }
       
       .org-level-1 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-2 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-3 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-4 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-5 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-6 .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 60px;
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
       }
       
       .org-level-4::after {
@@ -429,55 +457,55 @@
     
     @media (max-width: 480px) {
       .org-chart-container {
-        padding: 5px 5px;
+        padding: 5px 10px;
       }
       
       .org-chart {
-        min-width: 500px;
-        padding: 10px 0;
+        min-width: 550px;
+        padding: 15px 0;
         min-height: 50vh;
       }
       
       .org-position {
-        min-width: 50px;
-        font-size: 7px;
-        padding: 4px 8px;
+        min-width: 60px;
+        font-size: 8px;
+        padding: 5px 10px;
       }
       
       .org-level-1 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-2 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-3 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-4 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-5 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-6 .org-position {
-        font-size: 7px;
-        padding: 4px 8px;
-        min-width: 50px;
+        font-size: 8px;
+        padding: 5px 10px;
+        min-width: 60px;
       }
       
       .org-level-4::after {
