@@ -99,8 +99,12 @@
       color: #2c3e50;
     }
     .experience-tabs-section {
-      padding: 60px 0;
+      height: 100vh;
+      padding: 40px 0;
       background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .experience-tabs-container {
       max-width: 1200px;
@@ -109,6 +113,10 @@
     }
     
     @media (max-width: 1024px) {
+      .experience-tabs-section {
+        height: 100vh;
+        padding: 30px 0;
+      }
       .experience-tabs-container {
         padding: 0 15px;
       }
@@ -121,8 +129,19 @@
     }
     
     @media (max-width: 480px) {
+      .experience-tabs-section {
+        height: 100vh;
+        padding: 15px 0;
+      }
       .experience-tabs-container {
         padding: 0 5px;
+      }
+      .experience-tabs {
+        margin-bottom: 15px;
+      }
+      .experience-tab {
+        padding: 8px 15px;
+        font-size: 12px;
       }
     }
     
@@ -182,24 +201,40 @@
       border-bottom-color: #2c5aa0;
     }
     .experience-content {
-      min-height: 300px;
+      height: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .experience-year-content {
       display: none;
       padding: 20px 0;
+      flex: 1;
+      overflow-y: auto;
     }
     .experience-year-content.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
     @media (max-width: 768px) {
+      .experience-tabs-section {
+        height: 100vh;
+        padding: 20px 0;
+      }
       .experience-tabs {
         flex-wrap: wrap;
         gap: 10px;
+        margin-bottom: 20px;
       }
       .experience-tab {
         margin: 5px;
         padding: 10px 20px;
         font-size: 14px;
+      }
+      .experience-content {
+        flex: 1;
+        min-height: 0;
       }
       .intro-header-experience {
         height: 60vh;
