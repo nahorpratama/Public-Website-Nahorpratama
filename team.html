@@ -294,7 +294,7 @@
       z-index: 1;
     }
     
-    /* Level 5 - Multiple departments, line from center */
+    /* Level 5 - Multiple departments, line from Branch Manager only */
     .org-level-5::before {
       content: '';
       position: absolute;
@@ -302,21 +302,21 @@
       background: #2c3e50;
       height: 20px;
       top: -20px;
-      left: 50%;
+      left: 25%;
       transform: translateX(-50%);
       z-index: 1;
     }
     
-    /* Main horizontal line for all departments */
+    /* Main horizontal line for all departments - starting from Branch Manager */
     .org-level-5::after {
       content: '';
       position: absolute;
       height: 2px;
       background: #2c3e50;
-      width: 90%;
-      max-width: 600px;
+      width: 75%;
+      max-width: 500px;
       top: 50%;
-      left: 50%;
+      left: 25%;
       transform: translateX(-50%);
       z-index: 1;
     }
@@ -344,7 +344,7 @@
       margin-top: 10px;
     }
     
-    /* Vertical line from level 5 to level 6 */
+    /* Vertical line from level 5 to level 6 - only from Branch Manager */
     .org-level-6::before {
       content: '';
       position: absolute;
@@ -352,7 +352,7 @@
       background: #2c3e50;
       height: 20px;
       top: -20px;
-      left: 50%;
+      left: 25%;
       transform: translateX(-50%);
       z-index: 1;
     }
@@ -382,16 +382,16 @@
       z-index: 1;
     }
     
-    /* Horizontal line connecting all sub-department groups */
+    /* Horizontal line connecting all sub-department groups - starting from Branch Manager */
     .org-level-6::after {
       content: '';
       position: absolute;
       height: 2px;
       background: #2c3e50;
-      width: 90%;
-      max-width: 600px;
+      width: 75%;
+      max-width: 500px;
       top: 50%;
-      left: 50%;
+      left: 25%;
       transform: translateX(-50%);
       z-index: 1;
     }
@@ -597,8 +597,15 @@
       }
       
       .org-level-5::after {
-        width: 90%;
-        max-width: 550px;
+        width: 70%;
+        max-width: 400px;
+        left: 25%;
+      }
+      
+      .org-level-6::after {
+        width: 70%;
+        max-width: 400px;
+        left: 25%;
       }
       
       .sub-dept-group {
@@ -640,8 +647,15 @@
       }
       
       .org-level-5::after {
-        width: 85%;
-        max-width: 500px;
+        width: 65%;
+        max-width: 350px;
+        left: 25%;
+      }
+      
+      .org-level-6::after {
+        width: 65%;
+        max-width: 350px;
+        left: 25%;
       }
       
       .sub-dept-group {
@@ -734,8 +748,15 @@
       }
       
       .org-level-5::after {
-        width: 80%;
-        max-width: 400px;
+        width: 60%;
+        max-width: 300px;
+        left: 25%;
+      }
+      
+      .org-level-6::after {
+        width: 60%;
+        max-width: 300px;
+        left: 25%;
       }
       
       .sub-dept-group {
@@ -822,8 +843,15 @@
       }
       
       .org-level-5::after {
-        width: 70%;
-        max-width: 300px;
+        width: 55%;
+        max-width: 250px;
+        left: 25%;
+      }
+      
+      .org-level-6::after {
+        width: 55%;
+        max-width: 250px;
+        left: 25%;
       }
       
       .sub-dept-group {
