@@ -5356,7 +5356,7 @@ a, button, input, textarea, select {
   display: -ms-flexbox;
   display: flex;
   width: 80vw;
-  height: 60vh;
+  height: 100vh;
   margin: 0px auto 60px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -7634,7 +7634,7 @@ a, button, input, textarea, select {
   }
 
   .section-body-org {
-    height: 50vh;
+    height: 80vh;
     margin-top: 10px;
     margin-bottom: 40px;
   }
@@ -8423,7 +8423,7 @@ a, button, input, textarea, select {
 
   .section-body-org {
     width: 90vw;
-    height: 50vh;
+    height: 70vh;
     margin-top: 0px;
     margin-bottom: 40px;
   }
@@ -9794,7 +9794,7 @@ a, button, input, textarea, select {
 
   .section-body-org {
     width: 80%;
-    height: 20vh;
+    height: 60vh;
     margin-top: 10px;
     margin-bottom: 20px;
   }
