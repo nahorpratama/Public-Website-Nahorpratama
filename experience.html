@@ -161,18 +161,25 @@
       justify-content: center;
       margin-bottom: 40px;
       border-bottom: 2px solid #e0e0e0;
+      flex-wrap: wrap;
+      gap: 5px;
+      max-width: 100%;
+      overflow-x: auto;
+      padding: 0 10px;
     }
     .experience-tab {
       background: none;
       border: none;
-      padding: 15px 30px;
-      margin: 0 10px;
+      padding: 15px 25px;
+      margin: 0 5px;
       font-size: 16px;
       font-weight: 600;
       color: #666;
       cursor: pointer;
       border-bottom: 3px solid transparent;
       transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .experience-tab:hover {
       color: #333;
@@ -183,6 +190,9 @@
     }
     .experience-content {
       min-height: 300px;
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 0 10px;
     }
     .experience-year-content {
       display: none;
@@ -190,6 +200,25 @@
     }
     .experience-year-content.active {
       display: block;
+    }
+    .project-details {
+      max-height: 60vh;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .project-details::-webkit-scrollbar {
+      width: 8px;
+    }
+    .project-details::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    .project-details::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 4px;
+    }
+    .project-details::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
     }
     
     /* New Commitment Section Styling */
@@ -241,12 +270,26 @@
     @media (max-width: 768px) {
       .experience-tabs {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
+        justify-content: center;
+        padding: 0 5px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .experience-tab {
-        margin: 5px;
-        padding: 10px 20px;
+        margin: 2px;
+        padding: 12px 18px;
         font-size: 14px;
+        min-width: 60px;
+        text-align: center;
+      }
+      .experience-content {
+        max-height: 65vh;
+        padding: 0 5px;
+      }
+      .project-details {
+        max-height: 55vh;
+        padding-right: 5px;
       }
       .intro-header-experience {
         height: 60vh;
@@ -263,6 +306,39 @@
       .intro-header-experience .experience-detail-text {
         font-size: 14px;
         max-width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .experience-tabs {
+        gap: 5px;
+        padding: 0 2px;
+      }
+      .experience-tab {
+        padding: 10px 15px;
+        font-size: 13px;
+        margin: 1px;
+        min-width: 55px;
+      }
+      .experience-content {
+        max-height: 60vh;
+        padding: 0 2px;
+      }
+      .project-details {
+        max-height: 50vh;
+        padding-right: 2px;
+      }
+      .project-item {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .project-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .project-info p {
+        font-size: 13px;
+        margin-bottom: 6px;
       }
     }
   </style>
@@ -469,15 +545,318 @@
             </div>
             <div class="experience-year-content" data-year="2023">
               <h3 class="h2-headings">2023 Experience</h3>
-              <p class="paragraph-smallx">Projects and achievements for the year 2023 will be displayed here.</p>
+              <div class="project-details">
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-1</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 001/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp1.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-2</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 002/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp2.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-3</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 003/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp3.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-4</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 004/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp4.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-5</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 005/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp5.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-6</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 006/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp6.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-7</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 007/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp7.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2023-8</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 008/SO/2023</p>
+                    <p><strong>Value of Contract:</strong> Rp8.000.000.000</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="experience-year-content" data-year="2024">
               <h3 class="h2-headings">2024 Experience</h3>
-              <p class="paragraph-smallx">Projects and achievements for the year 2024 will be displayed here.</p>
+              <div class="project-details">
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-1</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 001/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp1.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-2</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 002/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp2.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-3</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 003/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp3.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-4</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 004/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp4.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-5</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 005/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp5.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-6</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 006/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp6.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-7</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 007/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp7.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-8</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 008/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp8.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-9</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 009/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp9.500.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2024-10</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 010/SO/2024</p>
+                    <p><strong>Value of Contract:</strong> Rp10.500.000.000</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="experience-year-content" data-year="2025">
               <h3 class="h2-headings">2025 Experience</h3>
-              <p class="paragraph-smallx">Projects and achievements for the year 2025 will be displayed here.</p>
+              <div class="project-details">
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-1</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 001/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp2.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-2</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 002/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp3.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-3</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 003/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp4.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-4</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 004/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp5.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-5</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 005/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp6.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-6</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 006/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp7.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-7</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 007/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp8.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-8</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 008/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp9.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-9</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 009/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp10.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-10</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 010/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp11.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-11</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 011/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp12.000.000.000</p>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <h4 class="project-title">Sample Project 2025-12</h4>
+                  <div class="project-info">
+                    <p><strong>Location:</strong> Sample Location</p>
+                    <p><strong>Bouwheer:</strong> Sample Client</p>
+                    <p><strong>Assignor:</strong> Sample Assignor</p>
+                    <p><strong>No. SPK/SO:</strong> 012/SO/2025</p>
+                    <p><strong>Value of Contract:</strong> Rp13.000.000.000</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
