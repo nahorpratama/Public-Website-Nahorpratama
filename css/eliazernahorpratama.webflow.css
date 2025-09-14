@@ -5355,11 +5355,10 @@ a, button, input, textarea, select {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 80vw;
-  height: 60vh;
-  margin: 0px auto 60px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0px;
+  padding: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5373,6 +5372,9 @@ a, button, input, textarea, select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  flex: 1;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .section-heading-org {
@@ -5381,9 +5383,8 @@ a, button, input, textarea, select {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  margin-top: 60px;
-  margin-bottom: 10px;
-  padding-top: 0px;
+  margin: 0px 0px 20px;
+  padding: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5397,6 +5398,9 @@ a, button, input, textarea, select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .organization-block-1 {
@@ -5736,7 +5740,7 @@ a, button, input, textarea, select {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5750,6 +5754,9 @@ a, button, input, textarea, select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cta-paragraph {
@@ -5775,8 +5782,12 @@ a, button, input, textarea, select {
 }
 
 .img-organization {
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  max-height: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 1280px) {
@@ -6719,9 +6730,9 @@ a, button, input, textarea, select {
   }
 
   .section-body-org {
-    width: 80%;
-    margin-bottom: 20px;
-    padding-bottom: 0px;
+    width: 100%;
+    margin: 20px auto 0px;
+    padding: 0px;
   }
 
   .section-heading-org {
@@ -7634,9 +7645,9 @@ a, button, input, textarea, select {
   }
 
   .section-body-org {
-    height: 50vh;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    height: auto;
+    margin: 20px auto 0px;
+    padding: 0px;
   }
 
   .section-heading-org {
@@ -7661,7 +7672,10 @@ a, button, input, textarea, select {
   }
 
   .footer-orgnization-container {
-    height: auto;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .cta-paragraph {
@@ -7669,7 +7683,10 @@ a, button, input, textarea, select {
   }
 
   .img-organization {
-    width: 80%;
+    width: 100%;
+    max-width: 800px;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -8422,10 +8439,10 @@ a, button, input, textarea, select {
   }
 
   .section-body-org {
-    width: 90vw;
-    height: 50vh;
-    margin-top: 0px;
-    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0px;
+    padding: 0px;
   }
 
   .section-heading-org {
@@ -8466,7 +8483,10 @@ a, button, input, textarea, select {
   }
 
   .footer-orgnization-container {
-    height: auto;
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .cta-paragraph {
@@ -9793,10 +9813,10 @@ a, button, input, textarea, select {
   }
 
   .section-body-org {
-    width: 80%;
-    height: 20vh;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0px;
+    padding: 0px;
   }
 
   .section-heading-org {
@@ -9873,7 +9893,10 @@ a, button, input, textarea, select {
   }
 
   .footer-orgnization-container {
-    height: auto;
+    height: 100vh;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .text-block-11 {
@@ -9901,8 +9924,11 @@ a, button, input, textarea, select {
   }
 
   .img-organization {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
 
