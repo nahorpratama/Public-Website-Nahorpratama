@@ -106,119 +106,310 @@
       margin-top: 4px;
     }
     
-    /* Team Section Styles */
-    .team-section {
-      padding: 60px 0;
-      background-color: #f8f9fa;
-    }
-    
-    .team-container {
-      max-width: 1200px;
+    /* Organization Chart Styles - Compact Version */
+    .org-chart-container {
+      max-width: 100%;
       margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .team-card {
-      background: #ffffff;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f9fa;
       border-radius: 12px;
-      padding: 30px;
+    }
+    
+    .org-chart-title {
       text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    
+    .org-chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #f1f3f4;
+    }
+    
+    .org-level {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .org-position {
+      background: linear-gradient(135deg, #8B4513, #A0522D);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 12px;
+      min-width: 120px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
     }
     
-    .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    .org-position:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     
-    .team-role {
-      font-size: 18px;
-      font-weight: 700;
-      color: #2c5aa0;
-      margin-bottom: 10px;
-    }
-    
-    .team-description {
+    /* Level 1: President Director */
+    .org-level-1 .org-position {
+      background: linear-gradient(135deg, #B8860B, #DAA520);
       font-size: 14px;
-      color: #666;
-      line-height: 1.6;
+      padding: 15px 25px;
+      min-width: 150px;
     }
     
-    .team-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Level 2: Director */
+    .org-level-2 .org-position {
+      background: linear-gradient(135deg, #8B4513, #A0522D);
+      font-size: 13px;
+      padding: 14px 22px;
+      min-width: 140px;
+    }
+    
+    /* Level 3: Branch Manager & Executive Secretary */
+    .org-level-3 .org-position {
+      background: linear-gradient(135deg, #CD853F, #DEB887);
+      color: #333;
+      font-size: 12px;
+      padding: 12px 18px;
+      min-width: 130px;
+    }
+    
+    /* Level 4: Departments */
+    .org-level-4 .org-position {
+      background: linear-gradient(135deg, #D2691E, #F4A460);
+      color: #333;
+      font-size: 11px;
+      padding: 10px 16px;
+      min-width: 110px;
+    }
+    
+    /* Level 5: Sub-departments */
+    .org-level-5 .org-position {
+      background: linear-gradient(135deg, #F4A460, #FFE4B5);
+      color: #333;
+      font-size: 10px;
+      padding: 8px 14px;
+      min-width: 100px;
+    }
+    
+    /* Connecting lines */
+    .org-level::before {
+      content: '';
+      width: 2px;
+      height: 15px;
+      background: #333;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .org-level-1::before {
+      display: none;
+    }
+    
+    /* Horizontal lines for level 3 */
+    .org-level-3::after {
+      content: '';
+      width: 200px;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Vertical lines from horizontal line to positions */
+    .org-level-3 .org-position::before {
+      content: '';
+      width: 2px;
+      height: 15px;
+      background: #333;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Horizontal line for level 4 */
+    .org-level-4::after {
+      content: '';
+      width: 80%;
+      max-width: 600px;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .org-level-4 .org-position::before {
+      content: '';
+      width: 2px;
+      height: 15px;
+      background: #333;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Sub-departments layout */
+    .org-level-5 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       gap: 20px;
-      margin-top: 40px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 900px;
     }
     
-    .stat-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #f1f3f4;
+    .sub-dept-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      position: relative;
     }
     
-    .stat-number {
-      font-size: 32px;
-      font-weight: 700;
-      color: #2c5aa0;
-      margin-bottom: 10px;
+    .sub-dept-group::before {
+      content: '';
+      width: 2px;
+      height: 15px;
+      background: #333;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
-    .stat-label {
-      font-size: 14px;
-      color: #666;
-      font-weight: 500;
+    .sub-dept-group .org-position::before {
+      content: '';
+      width: 2px;
+      height: 12px;
+      background: #333;
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
+    /* Horizontal line connecting sub-departments */
+    .org-level-5::after {
+      content: '';
+      width: 80%;
+      max-width: 700px;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Responsive design */
     @media (max-width: 768px) {
-      .team-section {
-        padding: 40px 0;
+      .org-chart-container {
+        padding: 15px;
       }
       
-      .team-container {
-        padding: 0 15px;
-      }
-      
-      .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 30px;
-      }
-      
-      .team-card {
-        padding: 25px;
-      }
-      
-      .team-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        margin-top: 30px;
-      }
-      
-      .stat-card {
+      .org-chart {
         padding: 20px;
+        gap: 12px;
       }
       
-      .stat-number {
-        font-size: 24px;
+      .org-level {
+        gap: 15px;
+      }
+      
+      .org-position {
+        font-size: 10px;
+        padding: 8px 12px;
+        min-width: 90px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 12px;
+        padding: 12px 18px;
+        min-width: 120px;
+      }
+      
+      .org-level-2 .org-position {
+        font-size: 11px;
+        padding: 10px 16px;
+        min-width: 110px;
+      }
+      
+      .org-level-3 .org-position {
+        font-size: 10px;
+        padding: 8px 14px;
+        min-width: 100px;
+      }
+      
+      .org-level-4 .org-position {
+        font-size: 9px;
+        padding: 6px 12px;
+        min-width: 80px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 8px;
+        padding: 6px 10px;
+        min-width: 70px;
+      }
+      
+      .org-level-5 {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .sub-dept-group {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
       }
     }
     
     @media (max-width: 480px) {
-      .team-stats {
-        grid-template-columns: 1fr;
+      .org-chart {
+        padding: 15px;
+        gap: 10px;
+      }
+      
+      .org-level {
+        gap: 10px;
+      }
+      
+      .org-position {
+        font-size: 8px;
+        padding: 6px 10px;
+        min-width: 70px;
+      }
+      
+      .org-level-5 {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .sub-dept-group {
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
       }
     }
   </style>
@@ -265,36 +456,31 @@
     <div class="footer-orgnization-container">
       <div data-w-id="c28cc763-f708-1e61-f196-6bd9fce98034" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-heading-org">
         <div class="heading-text">
-          <h1 class="h2-headings">Chart Organization</h1>
+          <h1 class="h2-headings">Our Structure Organization</h1>
         </div>
-        <p class="paragraph-smallx">Our Structure Organization</p>
+        <p class="paragraph-smallx">Professional organizational structure</p>
       </div>
       <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org" style="padding: 20px 0; margin-top: 20px;">
         <div class="org-chart-container">
           <div class="org-chart">
-            <!-- Level 1: COMMISSIONER -->
+            <!-- Level 1: PRESIDENT DIRECTOR -->
             <div class="org-level org-level-1">
-              <div class="org-position">COMMISSIONER</div>
-            </div>
-            
-            <!-- Level 2: PRESIDENT DIRECTOR -->
-            <div class="org-level org-level-2">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
-            <!-- Level 3: DIRECTOR -->
-            <div class="org-level org-level-3">
+            <!-- Level 2: DIRECTOR -->
+            <div class="org-level org-level-2">
               <div class="org-position">DIRECTOR</div>
             </div>
             
-            <!-- Level 4: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-4">
+            <!-- Level 3: BRANCH MANAGER and EXECUTIVE SECRETARY -->
+            <div class="org-level org-level-3">
               <div class="org-position">BRANCH MANAGER</div>
               <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
-            <!-- Level 5: All departments -->
-            <div class="org-level org-level-5">
+            <!-- Level 4: All departments -->
+            <div class="org-level org-level-4">
               <div class="org-position">HR</div>
               <div class="org-position">LEGAL</div>
               <div class="org-position">PROCUREMENT</div>
@@ -305,20 +491,20 @@
               <div class="org-position">HEAVY EQUIPMENT</div>
             </div>
             
-            <!-- Level 6: Sub-departments aligned with their parent departments -->
-            <div class="org-level org-level-6">
+            <!-- Level 5: Sub-departments -->
+            <div class="org-level org-level-5">
               <!-- HR sub-departments -->
               <div class="sub-dept-group">
                 <div class="org-position">GA</div>
                 <div class="org-position">DOCUMENT CONTROL</div>
               </div>
               <!-- LEGAL sub-departments (empty) -->
-              <div class="sub-dept-group empty">
-                <div class="org-position invisible"></div>
+              <div class="sub-dept-group">
+                <div class="org-position" style="visibility: hidden;">&nbsp;</div>
               </div>
               <!-- PROCUREMENT sub-departments (empty) -->
-              <div class="sub-dept-group empty">
-                <div class="org-position invisible"></div>
+              <div class="sub-dept-group">
+                <div class="org-position" style="visibility: hidden;">&nbsp;</div>
               </div>
               <!-- QSHE sub-departments -->
               <div class="sub-dept-group">
@@ -326,22 +512,19 @@
                 <div class="org-position">HSE</div>
               </div>
               <!-- BUSINESS DEVELOPMENT sub-departments (empty) -->
-              <div class="sub-dept-group empty">
-                <div class="org-position invisible"></div>
+              <div class="sub-dept-group">
+                <div class="org-position" style="visibility: hidden;">&nbsp;</div>
               </div>
               <!-- OPERATION sub-departments -->
               <div class="sub-dept-group">
                 <div class="org-position">PROJECT</div>
-                <div class="org-position">ENGINEERING</div>
+                <div class="org-position">ACCOUNTING</div>
+                <div class="org-position">OPERATOR</div>
               </div>
               <!-- FINANCE sub-departments -->
               <div class="sub-dept-group">
-                <div class="org-position">ACCOUNTING</div>
+                <div class="org-position">ENGINEERING</div>
                 <div class="org-position">TAX</div>
-              </div>
-              <!-- HEAVY EQUIPMENT sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">OPERATOR</div>
                 <div class="org-position">MECHANIC</div>
               </div>
             </div>
