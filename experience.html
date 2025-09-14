@@ -100,7 +100,7 @@
     }
     .experience-tabs-section {
       min-height: 100vh;
-      padding: 40px 0;
+      padding: 20px 0;
       background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
@@ -117,13 +117,14 @@
     .experience-tabs-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 40px;
       position: relative;
       z-index: 2;
       background: #ffffff;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       border: 1px solid #f1f3f4;
+      overflow: hidden;
     }
     
     @media (max-width: 1200px) {
@@ -132,36 +133,40 @@
       }
       .experience-tabs-container {
         max-width: 1000px;
-        padding: 50px 30px;
+        padding: 30px 20px;
         border-radius: 20px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-item {
-        padding: 25px;
-        margin-bottom: 25px;
+        padding: 20px;
+        margin-bottom: 18px;
       }
       .project-title {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 14px;
       }
       .project-info p {
-        font-size: 14px;
+        font-size: 13px;
+        margin-bottom: 8px;
       }
     }
     
     @media (max-width: 1024px) {
       .experience-tabs-section {
         min-height: 100vh;
-        padding: 30px 0;
+        padding: 20px 0;
         background-color: #f8f9fa;
       }
       .experience-tabs-container {
-        padding: 40px 25px;
+        padding: 25px 20px;
         border-radius: 20px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 15px;
@@ -172,18 +177,23 @@
         font-size: 14px;
       }
       .experience-content {
-        padding: 0 15px;
-        max-height: 75vh;
+        padding: 0;
+        max-height: 65vh;
+        margin-top: 15px;
       }
     }
     
     @media (max-width: 768px) {
+      .experience-tabs-section {
+        padding: 20px 0;
+      }
       .experience-tabs-container {
-        padding: 30px 20px;
+        padding: 20px 15px;
         border-radius: 20px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 12px;
@@ -196,8 +206,9 @@
         margin: 0 5px;
       }
       .experience-content {
-        padding: 0 10px;
-        max-height: 70vh;
+        padding: 0;
+        max-height: 60vh;
+        margin-top: 12px;
       }
       .project-item {
         padding: 20px;
@@ -220,11 +231,12 @@
         background-color: #f8f9fa;
       }
       .experience-tabs-container {
-        padding: 25px 15px;
-        border-radius: 20px;
+        padding: 15px 10px;
+        border-radius: 15px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 10px;
@@ -237,20 +249,21 @@
         margin: 0 3px;
       }
       .experience-content {
-        padding: 0 5px;
-        max-height: 65vh;
+        padding: 0;
+        max-height: 55vh;
+        margin-top: 10px;
       }
       .project-item {
-        padding: 15px;
-        margin-bottom: 15px;
-      }
-      .project-title {
-        font-size: 14px;
+        padding: 12px;
         margin-bottom: 12px;
       }
+      .project-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
       .project-info p {
-        font-size: 12px;
-        margin-bottom: 6px;
+        font-size: 11px;
+        margin-bottom: 5px;
       }
     }
     
@@ -261,14 +274,16 @@
     .project-item {
       background: #ffffff;
       border-radius: 16px;
-      padding: 32px;
-      margin-bottom: 24px;
+      padding: 24px;
+      margin-bottom: 20px;
       border-left: 4px solid #2c5aa0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease;
       position: relative;
       z-index: 1;
       border: 1px solid #f1f3f4;
+      max-width: 100%;
+      overflow: hidden;
     }
     
     .project-item:hover {
@@ -278,20 +293,24 @@
     }
     
     .project-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 700;
       color: #1a202c;
-      margin-bottom: 24px;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .project-info p {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #4a5568;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
       font-weight: 400;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .project-info strong {
@@ -380,9 +399,10 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      max-height: 80vh;
+      max-height: 70vh;
       overflow-y: auto;
-      padding: 0 20px;
+      padding: 0;
+      margin-top: 20px;
     }
     .experience-year-content {
       display: none;
@@ -395,7 +415,7 @@
       flex-direction: column;
     }
     .project-details {
-      max-height: 70vh;
+      max-height: 60vh;
       overflow-y: auto;
       padding-right: 8px;
     }
@@ -484,18 +504,20 @@
         text-align: center;
       }
       .experience-content {
-        max-height: 65vh;
-        padding: 0 5px;
+        max-height: 60vh;
+        padding: 0;
+        margin-top: 10px;
       }
       .experience-tabs-container {
-        padding: 25px 15px;
+        padding: 20px 15px;
         border-radius: 20px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-details {
-        max-height: 55vh;
+        max-height: 50vh;
         padding-right: 5px;
       }
       .experience-content {
@@ -533,31 +555,33 @@
         min-width: 55px;
       }
       .experience-content {
-        max-height: 60vh;
-        padding: 0 2px;
+        max-height: 55vh;
+        padding: 0;
+        margin-top: 8px;
       }
       .experience-tabs-container {
-        padding: 10px;
+        padding: 12px 8px;
         border-radius: 15px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-details {
-        max-height: 50vh;
+        max-height: 45vh;
         padding-right: 2px;
       }
       .project-item {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 14px;
+        margin-bottom: 14px;
       }
       .project-title {
-        font-size: 16px;
-        margin-bottom: 12px;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
       .project-info p {
-        font-size: 13px;
-        margin-bottom: 6px;
+        font-size: 11px;
+        margin-bottom: 5px;
       }
     }
   </style>
