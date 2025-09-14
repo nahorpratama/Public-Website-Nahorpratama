@@ -100,20 +100,8 @@
     }
     .experience-tabs-section {
       min-height: 100vh;
-      padding: 40px 0;
-      background-color: transparent;
-      /* Primary background - construction theme */
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
-      /* Alternative backgrounds (uncomment to use):
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/projects-hero-bg.svg');
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/BGP-1.jpg');
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/IMG_20220719_091458.jpg');
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/SAVE_20211219_093754.jpg');
-      */
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      padding: 20px 0;
+      background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -123,70 +111,62 @@
     /* Desktop large screens */
     @media (min-width: 1200px) {
       .experience-tabs-section {
-        background-color: transparent;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-color: #f8f9fa;
       }
     }
     .experience-tabs-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 40px;
       position: relative;
       z-index: 2;
-      background: rgba(255, 255, 255, 0.95);
+      background: #ffffff;
       border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f3f4;
+      overflow: hidden;
     }
     
     @media (max-width: 1200px) {
       .experience-tabs-section {
-        background-color: transparent;
+        background-color: #f8f9fa;
       }
       .experience-tabs-container {
         max-width: 1000px;
-        padding: 50px 30px;
+        padding: 30px 20px;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-item {
-        padding: 25px;
-        margin-bottom: 25px;
+        padding: 20px;
+        margin-bottom: 18px;
       }
       .project-title {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 14px;
       }
       .project-info p {
-        font-size: 14px;
+        font-size: 13px;
+        margin-bottom: 8px;
       }
     }
     
     @media (max-width: 1024px) {
       .experience-tabs-section {
         min-height: 100vh;
-        padding: 30px 0;
-        background-color: transparent;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
+        padding: 20px 0;
+        background-color: #f8f9fa;
       }
       .experience-tabs-container {
-        padding: 40px 25px;
+        padding: 25px 20px;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 15px;
@@ -197,19 +177,23 @@
         font-size: 14px;
       }
       .experience-content {
-        padding: 0 15px;
-        max-height: 75vh;
+        padding: 0;
+        max-height: 65vh;
+        margin-top: 15px;
       }
     }
     
     @media (max-width: 768px) {
+      .experience-tabs-section {
+        padding: 20px 0;
+      }
       .experience-tabs-container {
-        padding: 30px 20px;
+        padding: 20px 15px;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 12px;
@@ -222,8 +206,9 @@
         margin: 0 5px;
       }
       .experience-content {
-        padding: 0 10px;
-        max-height: 70vh;
+        padding: 0;
+        max-height: 60vh;
+        margin-top: 12px;
       }
       .project-item {
         padding: 20px;
@@ -243,15 +228,15 @@
       .experience-tabs-section {
         min-height: 100vh;
         padding: 20px 0;
-        background-color: transparent;
+        background-color: #f8f9fa;
       }
       .experience-tabs-container {
-        padding: 25px 15px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 15px 10px;
+        border-radius: 15px;
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .experience-tabs {
         margin-bottom: 10px;
@@ -264,20 +249,21 @@
         margin: 0 3px;
       }
       .experience-content {
-        padding: 0 5px;
-        max-height: 65vh;
+        padding: 0;
+        max-height: 55vh;
+        margin-top: 10px;
       }
       .project-item {
-        padding: 15px;
-        margin-bottom: 15px;
-      }
-      .project-title {
-        font-size: 14px;
+        padding: 12px;
         margin-bottom: 12px;
       }
+      .project-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
       .project-info p {
-        font-size: 12px;
-        margin-bottom: 6px;
+        font-size: 11px;
+        margin-bottom: 5px;
       }
     }
     
@@ -288,14 +274,16 @@
     .project-item {
       background: #ffffff;
       border-radius: 16px;
-      padding: 32px;
-      margin-bottom: 24px;
+      padding: 24px;
+      margin-bottom: 20px;
       border-left: 4px solid #2c5aa0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease;
       position: relative;
       z-index: 1;
       border: 1px solid #f1f3f4;
+      max-width: 100%;
+      overflow: hidden;
     }
     
     .project-item:hover {
@@ -305,20 +293,24 @@
     }
     
     .project-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 700;
       color: #1a202c;
-      margin-bottom: 24px;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .project-info p {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #4a5568;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
       font-weight: 400;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .project-info strong {
@@ -407,9 +399,10 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      max-height: 80vh;
+      max-height: 70vh;
       overflow-y: auto;
-      padding: 0 20px;
+      padding: 0;
+      margin-top: 20px;
     }
     .experience-year-content {
       display: none;
@@ -422,7 +415,7 @@
       flex-direction: column;
     }
     .project-details {
-      max-height: 70vh;
+      max-height: 60vh;
       overflow-y: auto;
       padding-right: 8px;
     }
@@ -452,10 +445,11 @@
     .feature-item {
       text-align: center;
       padding: 20px;
-        background: transparent;
+      background: #ffffff;
       border-radius: 8px;
       border-left: 4px solid #3498db;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
     
     .feature-item:hover {
@@ -491,12 +485,7 @@
       .experience-tabs-section {
         height: 100vh;
         padding: 20px 0;
-        background-color: transparent;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/construction-hero-bg.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
+        background-color: #f8f9fa;
       }
       .experience-tabs {
         flex-wrap: wrap;
@@ -515,19 +504,20 @@
         text-align: center;
       }
       .experience-content {
-        max-height: 65vh;
-        padding: 0 5px;
+        max-height: 60vh;
+        padding: 0;
+        margin-top: 10px;
       }
       .experience-tabs-container {
-        padding: 25px 15px;
+        padding: 20px 15px;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-details {
-        max-height: 55vh;
+        max-height: 50vh;
         padding-right: 5px;
       }
       .experience-content {
@@ -565,31 +555,33 @@
         min-width: 55px;
       }
       .experience-content {
-        max-height: 60vh;
-        padding: 0 2px;
+        max-height: 55vh;
+        padding: 0;
+        margin-top: 8px;
       }
       .experience-tabs-container {
-        padding: 10px;
+        padding: 12px 8px;
         border-radius: 15px;
-        background: transparent;
-        backdrop-filter: none;
-        box-shadow: none;
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f3f4;
+        overflow: hidden;
       }
       .project-details {
-        max-height: 50vh;
+        max-height: 45vh;
         padding-right: 2px;
       }
       .project-item {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 14px;
+        margin-bottom: 14px;
       }
       .project-title {
-        font-size: 16px;
-        margin-bottom: 12px;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
       .project-info p {
-        font-size: 13px;
-        margin-bottom: 6px;
+        font-size: 11px;
+        margin-bottom: 5px;
       }
     }
   </style>
@@ -637,8 +629,8 @@
       <div class="experience-tabs-section">
         <div class="experience-tabs-container">
           <div class="section-heading-org" style="text-align: center; margin-bottom: 30px;">
-            <h2 class="h2-headings" style="color: #2c3e50; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); text-transform: none;">Professional project journey</h2>
-            <p class="paragraph-smallx" style="color: #555; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);">Our track record of successful projects across the years</p>
+            <h2 class="h2-headings" style="color: #2c3e50; text-transform: none;">Professional project journey</h2>
+            <p class="paragraph-smallx" style="color: #555;">Our track record of successful projects across the years</p>
           </div>
           <div class="experience-tabs">
             <button class="experience-tab active" data-year="2021">2021</button>
