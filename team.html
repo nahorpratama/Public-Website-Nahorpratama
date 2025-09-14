@@ -87,12 +87,13 @@
     
     /* Organization Chart Styles */
     .org-chart-container {
-      max-width: 1000px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 20px 40px;
+      padding: 10px 20px;
       font-family: 'Montserrat', sans-serif;
       position: relative;
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: visible;
     }
     
     .org-chart-title {
@@ -109,33 +110,37 @@
       flex-direction: column;
       align-items: center;
       position: relative;
-      max-height: 600px;
-      overflow-y: auto;
+      min-width: 800px;
+      width: 100%;
+      padding: 20px 0;
     }
     
     .org-level {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 10px 0;
+      margin: 8px 0;
       position: relative;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      width: 100%;
     }
     
     .org-position {
       background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
       border: 2px solid #6b5b47;
       border-radius: 6px;
-      padding: 8px 16px;
+      padding: 6px 12px;
       text-align: center;
       font-weight: 600;
       color: #ffffff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
-      min-width: 100px;
+      min-width: 80px;
       position: relative;
-      font-size: 11px;
+      font-size: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     
     .org-position:hover {
@@ -144,45 +149,45 @@
     }
     
     .org-level-1 .org-position {
-      font-size: 14px;
-      padding: 12px 20px;
-      min-width: 120px;
-    }
-    
-    .org-level-2 .org-position {
-      font-size: 13px;
-      padding: 10px 18px;
-      min-width: 110px;
-    }
-    
-    .org-level-3 .org-position {
       font-size: 12px;
       padding: 8px 16px;
       min-width: 100px;
     }
     
-    .org-level-4 .org-position {
+    .org-level-2 .org-position {
       font-size: 11px;
-      padding: 8px 14px;
+      padding: 7px 14px;
       min-width: 90px;
     }
     
-    .org-level-5 .org-position {
+    .org-level-3 .org-position {
       font-size: 10px;
       padding: 6px 12px;
       min-width: 80px;
     }
     
-    .org-level-6 .org-position {
+    .org-level-4 .org-position {
       font-size: 9px;
-      padding: 5px 10px;
+      padding: 6px 10px;
       min-width: 70px;
     }
     
-    .org-level-7 .org-position {
+    .org-level-5 .org-position {
       font-size: 8px;
-      padding: 4px 8px;
+      padding: 5px 8px;
       min-width: 60px;
+    }
+    
+    .org-level-6 .org-position {
+      font-size: 7px;
+      padding: 4px 6px;
+      min-width: 50px;
+    }
+    
+    .org-level-7 .org-position {
+      font-size: 6px;
+      padding: 3px 5px;
+      min-width: 40px;
     }
     
     /* Connecting lines */
@@ -208,7 +213,7 @@
       position: absolute;
       height: 2px;
       background: #2c3e50;
-      width: 200px;
+      width: 150px;
       top: 50%;
       left: 50%;
       transform: translateX(-50%);
@@ -221,7 +226,8 @@
       position: absolute;
       height: 2px;
       background: #2c3e50;
-      width: 700px;
+      width: 90%;
+      max-width: 600px;
       top: 50%;
       left: 50%;
       transform: translateX(-50%);
@@ -312,90 +318,171 @@
     }
     
     /* Responsive design */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .org-chart-container {
-        padding: 10px 20px;
-        max-width: 100%;
+        padding: 10px 15px;
       }
       
       .org-chart {
-        max-height: 500px;
+        min-width: 700px;
+      }
+      
+      .org-level-5::after {
+        width: 85%;
+        max-width: 500px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .org-chart-container {
+        padding: 10px 10px;
+        overflow-x: auto;
+      }
+      
+      .org-chart {
+        min-width: 600px;
+        padding: 15px 0;
       }
       
       .org-level {
-        flex-direction: column;
-        gap: 8px;
-        margin: 8px 0;
+        gap: 6px;
+        margin: 6px 0;
       }
       
       .org-position {
-        min-width: 80px;
-        font-size: 9px;
-        padding: 6px 10px;
+        min-width: 60px;
+        font-size: 8px;
+        padding: 4px 8px;
       }
       
       .org-level-1 .org-position {
-        font-size: 12px;
-        padding: 10px 16px;
-        min-width: 100px;
-      }
-      
-      .org-level-2 .org-position {
-        font-size: 11px;
-        padding: 8px 14px;
-        min-width: 90px;
-      }
-      
-      .org-level-3 .org-position {
         font-size: 10px;
         padding: 6px 12px;
         min-width: 80px;
       }
       
-      .org-level-4 .org-position {
+      .org-level-2 .org-position {
         font-size: 9px;
-        padding: 6px 10px;
+        padding: 5px 10px;
         min-width: 70px;
       }
       
-      .org-level-5 .org-position {
+      .org-level-3 .org-position {
         font-size: 8px;
         padding: 4px 8px;
         min-width: 60px;
       }
       
+      .org-level-4 .org-position {
+        font-size: 7px;
+        padding: 4px 6px;
+        min-width: 50px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 6px;
+        padding: 3px 5px;
+        min-width: 40px;
+      }
+      
       .org-level-6 .org-position {
+        font-size: 5px;
+        padding: 2px 4px;
+        min-width: 35px;
+      }
+      
+      .org-level-4::after {
+        width: 100px;
+      }
+      
+      .org-level-5::after {
+        width: 80%;
+        max-width: 400px;
+      }
+      
+      .sub-dept-group {
+        gap: 4px;
+        min-width: 40px;
+      }
+      
+      .org-chart-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      
+      .intro-header-team {
+        height: 50vh;
+        padding: 30px 15px;
+      }
+      .intro-header-team .h1-headtext {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      .intro-header-team .sub-heading-light2 {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .org-chart-container {
+        padding: 5px 5px;
+      }
+      
+      .org-chart {
+        min-width: 500px;
+        padding: 10px 0;
+      }
+      
+      .org-position {
+        min-width: 50px;
+        font-size: 7px;
+        padding: 3px 6px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 9px;
+        padding: 5px 10px;
+        min-width: 70px;
+      }
+      
+      .org-level-2 .org-position {
+        font-size: 8px;
+        padding: 4px 8px;
+        min-width: 60px;
+      }
+      
+      .org-level-3 .org-position {
         font-size: 7px;
         padding: 3px 6px;
         min-width: 50px;
       }
       
+      .org-level-4 .org-position {
+        font-size: 6px;
+        padding: 3px 5px;
+        min-width: 40px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 5px;
+        padding: 2px 4px;
+        min-width: 35px;
+      }
+      
+      .org-level-6 .org-position {
+        font-size: 4px;
+        padding: 2px 3px;
+        min-width: 30px;
+      }
+      
+      .org-level-4::after {
+        width: 80px;
+      }
+      
       .org-level-5::after {
-        width: 100%;
-      }
-      
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 8px;
-        min-width: 60px;
-      }
-      
-      .org-chart-title {
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
-      
-      .intro-header-team {
-        height: 60vh;
-        padding: 40px 15px;
-      }
-      .intro-header-team .h1-headtext {
-        font-size: 32px;
-        line-height: 1.2;
-      }
-      .intro-header-team .sub-heading-light2 {
-        font-size: 16px;
-        margin-bottom: 15px;
+        width: 70%;
+        max-width: 300px;
       }
     }
   </style>
