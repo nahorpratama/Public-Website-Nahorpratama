@@ -112,6 +112,7 @@
     /* Organization Chart Styles - Fully Responsive SVG Version */
     .org-chart-container {
       max-width: 100%;
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
       font-family: 'Montserrat', sans-serif;
@@ -140,10 +141,10 @@
     .org-chart {
       position: relative;
       background: #ffffff;
-      padding: 40px;
+      padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      min-height: 600px;
+      min-height: 500px;
       width: 100%;
       max-width: 100%;
     }
@@ -152,20 +153,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
-      margin: 20px 0;
+      margin: 10px 0;
+      width: 100%;
     }
     
     .org-position {
       background: linear-gradient(135deg, #8B4513, #A0522D);
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
       text-align: center;
       font-weight: 600;
-      font-size: 12px;
-      min-width: 120px;
+      font-size: 10px;
+      min-width: 80px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       position: relative;
@@ -182,44 +184,44 @@
     /* Level 1: President Director */
     .org-level-1 .org-position {
       background: linear-gradient(135deg, #B8860B, #DAA520);
-      font-size: 14px;
-      padding: 15px 25px;
-      min-width: 150px;
+      font-size: 12px;
+      padding: 12px 20px;
+      min-width: 120px;
     }
     
     /* Level 2: Director */
     .org-level-2 .org-position {
       background: linear-gradient(135deg, #8B4513, #A0522D);
-      font-size: 13px;
-      padding: 14px 22px;
-      min-width: 140px;
+      font-size: 11px;
+      padding: 10px 16px;
+      min-width: 100px;
     }
     
     /* Level 3: Branch Manager & Executive Secretary */
     .org-level-3 .org-position {
       background: linear-gradient(135deg, #CD853F, #DEB887);
       color: #333;
-      font-size: 12px;
-      padding: 12px 18px;
-      min-width: 130px;
+      font-size: 10px;
+      padding: 9px 14px;
+      min-width: 90px;
     }
     
     /* Level 4: Departments */
     .org-level-4 .org-position {
       background: linear-gradient(135deg, #D2691E, #F4A460);
       color: #333;
-      font-size: 11px;
-      padding: 10px 16px;
-      min-width: 110px;
+      font-size: 9px;
+      padding: 7px 12px;
+      min-width: 70px;
     }
     
     /* Level 5: Sub-departments */
     .org-level-5 .org-position {
       background: linear-gradient(135deg, #F4A460, #FFE4B5);
       color: #333;
-      font-size: 10px;
-      padding: 8px 14px;
-      min-width: 100px;
+      font-size: 8px;
+      padding: 6px 10px;
+      min-width: 60px;
     }
     
     /* Sub-departments layout */
@@ -227,10 +229,10 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
       width: 100%;
-      max-width: 900px;
+      max-width: 100%;
     }
     
     .sub-dept-group {
@@ -239,6 +241,7 @@
       align-items: center;
       gap: 8px;
       position: relative;
+      min-width: 60px;
     }
     
     /* SVG Lines */
@@ -270,88 +273,88 @@
     /* Large Desktop (1200px+) */
     @media (min-width: 1200px) {
       .org-chart {
-        min-height: 700px;
-        padding: 50px;
+        min-height: 500px;
+        padding: 30px;
       }
       
       .org-position {
-        font-size: 13px;
-        padding: 14px 22px;
-        min-width: 130px;
+        font-size: 11px;
+        padding: 10px 15px;
+        min-width: 90px;
       }
       
       .org-level-1 .org-position {
-        font-size: 16px;
-        padding: 18px 30px;
-        min-width: 180px;
+        font-size: 14px;
+        padding: 14px 25px;
+        min-width: 140px;
       }
       
       .org-level-2 .org-position {
-        font-size: 15px;
-        padding: 16px 26px;
-        min-width: 160px;
-      }
-      
-      .org-level-3 .org-position {
-        font-size: 14px;
-        padding: 14px 22px;
-        min-width: 150px;
-      }
-      
-      .org-level-4 .org-position {
-        font-size: 12px;
-        padding: 12px 18px;
+        font-size: 13px;
+        padding: 12px 20px;
         min-width: 120px;
       }
       
-      .org-level-5 .org-position {
-        font-size: 11px;
-        padding: 10px 16px;
+      .org-level-3 .org-position {
+        font-size: 12px;
+        padding: 11px 18px;
         min-width: 110px;
+      }
+      
+      .org-level-4 .org-position {
+        font-size: 10px;
+        padding: 9px 14px;
+        min-width: 80px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 9px;
+        padding: 8px 12px;
+        min-width: 70px;
       }
     }
     
     /* Desktop (992px - 1199px) */
     @media (max-width: 1199px) and (min-width: 992px) {
       .org-chart {
-        min-height: 650px;
-        padding: 45px;
+        min-height: 450px;
+        padding: 25px;
       }
       
       .org-position {
-        font-size: 12px;
-        padding: 12px 20px;
-        min-width: 120px;
+        font-size: 10px;
+        padding: 8px 12px;
+        min-width: 80px;
       }
       
       .org-level-1 .org-position {
-        font-size: 15px;
-        padding: 16px 28px;
-        min-width: 170px;
+        font-size: 13px;
+        padding: 12px 22px;
+        min-width: 130px;
       }
       
       .org-level-2 .org-position {
-        font-size: 14px;
-        padding: 15px 24px;
-        min-width: 150px;
-      }
-      
-      .org-level-3 .org-position {
-        font-size: 13px;
-        padding: 13px 20px;
-        min-width: 140px;
-      }
-      
-      .org-level-4 .org-position {
-        font-size: 11px;
-        padding: 11px 17px;
+        font-size: 12px;
+        padding: 11px 18px;
         min-width: 110px;
       }
       
-      .org-level-5 .org-position {
-        font-size: 10px;
-        padding: 9px 15px;
+      .org-level-3 .org-position {
+        font-size: 11px;
+        padding: 10px 16px;
         min-width: 100px;
+      }
+      
+      .org-level-4 .org-position {
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 70px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 8px;
+        padding: 6px 10px;
+        min-width: 60px;
       }
     }
     
@@ -362,152 +365,25 @@
       }
       
       .org-chart {
-        padding: 30px;
-        min-height: 550px;
-      }
-      
-      .org-level {
-        gap: 15px;
-        margin: 15px 0;
-      }
-      
-      .org-position {
-        font-size: 11px;
-        padding: 10px 16px;
-        min-width: 100px;
-      }
-      
-      .org-level-1 .org-position {
-        font-size: 14px;
-        padding: 14px 24px;
-        min-width: 150px;
-      }
-      
-      .org-level-2 .org-position {
-        font-size: 13px;
-        padding: 13px 20px;
-        min-width: 130px;
-      }
-      
-      .org-level-3 .org-position {
-        font-size: 12px;
-        padding: 12px 18px;
-        min-width: 120px;
-      }
-      
-      .org-level-4 .org-position {
-        font-size: 10px;
-        padding: 9px 15px;
-        min-width: 90px;
-      }
-      
-      .org-level-5 .org-position {
-        font-size: 9px;
-        padding: 8px 13px;
-        min-width: 80px;
-      }
-      
-      .org-level-5 {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .sub-dept-group {
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-      }
-    }
-    
-    /* Mobile Large (576px - 767px) */
-    @media (max-width: 767px) and (min-width: 576px) {
-      .org-chart-container {
-        padding: 10px;
-      }
-      
-      .org-chart {
         padding: 20px;
-        min-height: 500px;
+        min-height: 400px;
       }
       
       .org-level {
         gap: 12px;
-        margin: 12px 0;
+        margin: 8px 0;
+        flex-wrap: wrap;
       }
       
       .org-position {
-        font-size: 10px;
-        padding: 8px 14px;
-        min-width: 90px;
-      }
-      
-      .org-level-1 .org-position {
-        font-size: 13px;
-        padding: 12px 20px;
-        min-width: 130px;
-      }
-      
-      .org-level-2 .org-position {
-        font-size: 12px;
-        padding: 11px 18px;
-        min-width: 110px;
-      }
-      
-      .org-level-3 .org-position {
-        font-size: 11px;
-        padding: 10px 16px;
-        min-width: 100px;
-      }
-      
-      .org-level-4 .org-position {
         font-size: 9px;
-        padding: 7px 13px;
-        min-width: 80px;
-      }
-      
-      .org-level-5 .org-position {
-        font-size: 8px;
-        padding: 6px 11px;
+        padding: 7px 11px;
         min-width: 70px;
       }
       
-      .org-level-5 {
-        flex-direction: column;
-        gap: 12px;
-      }
-      
-      .sub-dept-group {
-        flex-direction: row;
-        gap: 8px;
-        justify-content: center;
-      }
-    }
-    
-    /* Mobile Small (480px - 575px) */
-    @media (max-width: 575px) and (min-width: 480px) {
-      .org-chart-container {
-        padding: 8px;
-      }
-      
-      .org-chart {
-        padding: 15px;
-        min-height: 450px;
-      }
-      
-      .org-level {
-        gap: 10px;
-        margin: 10px 0;
-      }
-      
-      .org-position {
-        font-size: 9px;
-        padding: 7px 12px;
-        min-width: 80px;
-      }
-      
       .org-level-1 .org-position {
         font-size: 12px;
-        padding: 11px 18px;
+        padding: 11px 20px;
         min-width: 120px;
       }
       
@@ -525,25 +401,162 @@
       
       .org-level-4 .org-position {
         font-size: 8px;
-        padding: 6px 11px;
-        min-width: 70px;
+        padding: 6px 10px;
+        min-width: 60px;
       }
       
       .org-level-5 .org-position {
         font-size: 7px;
-        padding: 5px 9px;
-        min-width: 60px;
+        padding: 5px 8px;
+        min-width: 50px;
       }
       
       .org-level-5 {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       .sub-dept-group {
-        flex-direction: row;
+        flex-direction: column;
         gap: 6px;
         justify-content: center;
+        min-width: 50px;
+      }
+    }
+    
+    /* Mobile Large (576px - 767px) */
+    @media (max-width: 767px) and (min-width: 576px) {
+      .org-chart-container {
+        padding: 10px;
+      }
+      
+      .org-chart {
+        padding: 15px;
+        min-height: 350px;
+      }
+      
+      .org-level {
+        gap: 10px;
+        margin: 8px 0;
+        flex-wrap: wrap;
+      }
+      
+      .org-position {
+        font-size: 8px;
+        padding: 6px 10px;
+        min-width: 60px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 11px;
+        padding: 10px 18px;
+        min-width: 110px;
+      }
+      
+      .org-level-2 .org-position {
+        font-size: 10px;
+        padding: 9px 15px;
+        min-width: 90px;
+      }
+      
+      .org-level-3 .org-position {
+        font-size: 9px;
+        padding: 8px 13px;
+        min-width: 80px;
+      }
+      
+      .org-level-4 .org-position {
+        font-size: 7px;
+        padding: 5px 9px;
+        min-width: 50px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 6px;
+        padding: 4px 7px;
+        min-width: 40px;
+      }
+      
+      .org-level-5 {
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      
+      .sub-dept-group {
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        min-width: 40px;
+      }
+    }
+    
+    /* Mobile Small (480px - 575px) */
+    @media (max-width: 575px) and (min-width: 480px) {
+      .org-chart-container {
+        padding: 8px;
+      }
+      
+      .org-chart {
+        padding: 12px;
+        min-height: 300px;
+      }
+      
+      .org-level {
+        gap: 8px;
+        margin: 6px 0;
+        flex-wrap: wrap;
+      }
+      
+      .org-position {
+        font-size: 7px;
+        padding: 5px 8px;
+        min-width: 50px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 10px;
+        padding: 8px 15px;
+        min-width: 100px;
+      }
+      
+      .org-level-2 .org-position {
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 80px;
+      }
+      
+      .org-level-3 .org-position {
+        font-size: 8px;
+        padding: 6px 10px;
+        min-width: 70px;
+      }
+      
+      .org-level-4 .org-position {
+        font-size: 6px;
+        padding: 4px 7px;
+        min-width: 40px;
+      }
+      
+      .org-level-5 .org-position {
+        font-size: 5px;
+        padding: 3px 6px;
+        min-width: 35px;
+      }
+      
+      .org-level-5 {
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      
+      .sub-dept-group {
+        flex-direction: column;
+        gap: 3px;
+        justify-content: center;
+        min-width: 35px;
       }
     }
     
@@ -555,107 +568,111 @@
       
       .org-chart {
         padding: 10px;
-        min-height: 400px;
+        min-height: 280px;
       }
       
       .org-level {
-        gap: 8px;
-        margin: 8px 0;
+        gap: 6px;
+        margin: 5px 0;
+        flex-wrap: wrap;
       }
       
       .org-position {
+        font-size: 6px;
+        padding: 4px 7px;
+        min-width: 40px;
+      }
+      
+      .org-level-1 .org-position {
+        font-size: 9px;
+        padding: 7px 12px;
+        min-width: 90px;
+      }
+      
+      .org-level-2 .org-position {
         font-size: 8px;
         padding: 6px 10px;
         min-width: 70px;
       }
       
-      .org-level-1 .org-position {
-        font-size: 11px;
-        padding: 10px 16px;
-        min-width: 110px;
-      }
-      
-      .org-level-2 .org-position {
-        font-size: 10px;
-        padding: 9px 14px;
-        min-width: 90px;
-      }
-      
       .org-level-3 .org-position {
-        font-size: 9px;
-        padding: 8px 12px;
-        min-width: 80px;
-      }
-      
-      .org-level-4 .org-position {
         font-size: 7px;
-        padding: 5px 9px;
+        padding: 5px 8px;
         min-width: 60px;
       }
       
+      .org-level-4 .org-position {
+        font-size: 5px;
+        padding: 3px 6px;
+        min-width: 35px;
+      }
+      
       .org-level-5 .org-position {
-        font-size: 6px;
-        padding: 4px 7px;
-        min-width: 50px;
+        font-size: 4px;
+        padding: 2px 5px;
+        min-width: 30px;
       }
       
       .org-level-5 {
-        flex-direction: column;
-        gap: 8px;
+        flex-direction: row;
+        gap: 6px;
+        flex-wrap: wrap;
       }
       
       .sub-dept-group {
-        flex-direction: row;
-        gap: 5px;
+        flex-direction: column;
+        gap: 2px;
         justify-content: center;
+        min-width: 30px;
       }
     }
     
     /* Landscape orientation for mobile */
     @media (max-height: 500px) and (orientation: landscape) {
       .org-chart {
-        min-height: 300px;
-        padding: 15px;
+        min-height: 250px;
+        padding: 10px;
       }
       
       .org-level {
-        margin: 8px 0;
+        margin: 5px 0;
+        gap: 8px;
       }
       
       .org-position {
-        font-size: 8px;
-        padding: 6px 10px;
-        min-width: 70px;
+        font-size: 7px;
+        padding: 5px 8px;
+        min-width: 50px;
       }
       
       .org-level-1 .org-position {
         font-size: 10px;
-        padding: 8px 14px;
+        padding: 8px 12px;
         min-width: 100px;
       }
       
       .org-level-2 .org-position {
         font-size: 9px;
-        padding: 7px 12px;
+        padding: 7px 10px;
         min-width: 80px;
       }
       
       .org-level-3 .org-position {
         font-size: 8px;
-        padding: 6px 10px;
+        padding: 6px 9px;
         min-width: 70px;
       }
       
       .org-level-4 .org-position {
-        font-size: 7px;
-        padding: 5px 8px;
-        min-width: 60px;
+        font-size: 6px;
+        padding: 4px 7px;
+        min-width: 50px;
       }
       
       .org-level-5 .org-position {
-        font-size: 6px;
-        padding: 4px 6px;
-        min-width: 50px;
+        font-size: 5px;
+        padding: 3px 6px;
+        min-width: 40px;
       }
     }
     
@@ -848,63 +865,63 @@
             </svg>
             
             <!-- Level 1: PRESIDENT DIRECTOR -->
-            <div class="org-level org-level-1" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-1" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
             <!-- Level 2: DIRECTOR -->
-            <div class="org-level org-level-2" style="position: absolute; top: 160px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">DIRECTOR</div>
             </div>
             
             <!-- Level 3: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-3" style="position: absolute; top: 220px; left: 50%; transform: translateX(-50%); width: 200px;">
-              <div class="org-position" style="position: absolute; left: 0;">BRANCH MANAGER</div>
-              <div class="org-position" style="position: absolute; right: 0;">EXECUTIVE SECRETARY</div>
+            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
+              <div class="org-position">BRANCH MANAGER</div>
+              <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
             <!-- Level 4: All departments -->
-            <div class="org-level org-level-4" style="position: absolute; top: 340px; left: 50%; transform: translateX(-50%); width: 600px;">
-              <div class="org-position" style="position: absolute; left: 0;">HR</div>
-              <div class="org-position" style="position: absolute; left: 50px;">LEGAL</div>
-              <div class="org-position" style="position: absolute; left: 100px;">PROCUREMENT</div>
-              <div class="org-position" style="position: absolute; left: 150px;">QSHE</div>
-              <div class="org-position" style="position: absolute; left: 200px;">BUSINESS DEVELOPMENT</div>
-              <div class="org-position" style="position: absolute; left: 300px;">OPERATION</div>
-              <div class="org-position" style="position: absolute; left: 400px;">FINANCE</div>
-              <div class="org-position" style="position: absolute; left: 500px;">HEAVY EQUIPMENT</div>
+            <div class="org-level org-level-4" style="position: absolute; top: 280px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+              <div class="org-position">HR</div>
+              <div class="org-position">LEGAL</div>
+              <div class="org-position">PROCUREMENT</div>
+              <div class="org-position">QSHE</div>
+              <div class="org-position">BUSINESS DEVELOPMENT</div>
+              <div class="org-position">OPERATION</div>
+              <div class="org-position">FINANCE</div>
+              <div class="org-position">HEAVY EQUIPMENT</div>
             </div>
             
             <!-- Level 5: Sub-departments -->
-            <div class="org-level org-level-5" style="position: absolute; top: 460px; left: 50%; transform: translateX(-50%); width: 600px;">
+            <div class="org-level org-level-5" style="position: absolute; top: 360px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
               <!-- HR sub-departments -->
-              <div class="sub-dept-group" style="position: absolute; left: 0;">
+              <div class="sub-dept-group">
                 <div class="org-position">GA</div>
                 <div class="org-position">DOCUMENT CONTROL</div>
               </div>
               
               <!-- QSHE sub-departments -->
-              <div class="sub-dept-group" style="position: absolute; left: 150px;">
+              <div class="sub-dept-group">
                 <div class="org-position">QC</div>
                 <div class="org-position">HSE</div>
               </div>
               
               <!-- OPERATION sub-departments -->
-              <div class="sub-dept-group" style="position: absolute; left: 300px;">
+              <div class="sub-dept-group">
                 <div class="org-position">PROJECT</div>
                 <div class="org-position">ACCOUNTING</div>
                 <div class="org-position">OPERATOR</div>
               </div>
               
               <!-- FINANCE sub-departments -->
-              <div class="sub-dept-group" style="position: absolute; left: 400px;">
+              <div class="sub-dept-group">
                 <div class="org-position">ENGINEERING</div>
                 <div class="org-position">TAX</div>
                 <div class="org-position">MECHANIC</div>
               </div>
               
               <!-- HEAVY EQUIPMENT sub-departments -->
-              <div class="sub-dept-group" style="position: absolute; left: 500px;">
+              <div class="sub-dept-group">
                 <div class="org-position">OPERATOR</div>
                 <div class="org-position">MECHANIC</div>
               </div>
