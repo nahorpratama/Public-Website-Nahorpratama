@@ -144,7 +144,7 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      min-height: 200px;
+      min-height: 400px;
       width: 100%;
       max-width: 100%;
     }
@@ -153,7 +153,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 50px;
+      gap: 15px;
       flex-wrap: wrap;
       margin: 6px 0;
       width: 100%;
@@ -232,7 +232,7 @@
     /* Large Desktop (1200px+) */
     @media (min-width: 1200px) {
       .org-chart {
-        min-height: 200px;
+        min-height: 400px;
         padding: 20px;
       }
       
@@ -246,7 +246,7 @@
     /* Desktop (992px - 1199px) */
     @media (max-width: 1199px) and (min-width: 992px) {
       .org-chart {
-        min-height: 180px;
+        min-height: 360px;
         padding: 18px;
       }
       
@@ -265,11 +265,11 @@
       
       .org-chart {
         padding: 15px;
-        min-height: 160px;
+        min-height: 320px;
       }
       
       .org-level {
-        gap: 50px;
+        gap: 15px;
         margin: 6px 0;
         flex-wrap: wrap;
       }
@@ -282,14 +282,14 @@
       
       .org-level-6 {
         flex-direction: row;
-        gap: 50px;
+        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
       }
       
       .sub-dept-group {
         flex-direction: column;
-        gap: 50px;
+        gap: 15px;
         justify-content: center;
         min-width: 40px;
       }
@@ -303,11 +303,11 @@
       
       .org-chart {
         padding: 12px;
-        min-height: 140px;
+        min-height: 280px;
       }
       
       .org-level {
-        gap: 50px;
+        gap: 15px;
         margin: 6px 0;
         flex-wrap: wrap;
       }
@@ -320,13 +320,13 @@
       
       .org-level-6 {
         flex-direction: row;
-        gap: 50px;
+        gap: 15px;
         flex-wrap: wrap;
       }
       
       .sub-dept-group {
         flex-direction: column;
-        gap: 50px;
+        gap: 15px;
         justify-content: center;
         min-width: 30px;
       }
@@ -340,11 +340,11 @@
       
       .org-chart {
         padding: 10px;
-        min-height: 120px;
+        min-height: 240px;
       }
       
       .org-level {
-        gap: 50px;
+        gap: 15px;
         margin: 6px 0;
         flex-wrap: wrap;
       }
@@ -357,13 +357,13 @@
       
       .org-level-6 {
         flex-direction: row;
-        gap: 50px;
+        gap: 15px;
         flex-wrap: wrap;
       }
       
       .sub-dept-group {
         flex-direction: column;
-        gap: 50px;
+        gap: 15px;
         justify-content: center;
         min-width: 25px;
       }
@@ -377,11 +377,11 @@
       
       .org-chart {
         padding: 8px;
-        min-height: 100px;
+        min-height: 200px;
       }
       
       .org-level {
-        gap: 50px;
+        gap: 15px;
         margin: 6px 0;
         flex-wrap: wrap;
       }
@@ -394,13 +394,13 @@
       
       .org-level-6 {
         flex-direction: row;
-        gap: 50px;
+        gap: 15px;
         flex-wrap: wrap;
       }
       
       .sub-dept-group {
         flex-direction: column;
-        gap: 50px;
+        gap: 15px;
         justify-content: center;
         min-width: 20px;
       }
@@ -409,13 +409,13 @@
     /* Landscape orientation for mobile */
     @media (max-height: 500px) and (orientation: landscape) {
       .org-chart {
-        min-height: 120px;
+        min-height: 240px;
         padding: 8px;
       }
       
       .org-level {
         margin: 6px 0;
-        gap: 50px;
+        gap: 15px;
       }
       
       .org-position {
@@ -554,109 +554,109 @@
         <div class="org-chart-container">
           <div class="org-chart">
             <!-- SVG Lines for clean L-shaped connections -->
-            <svg class="org-lines" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+            <svg class="org-lines" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
               <!-- Main vertical line from Commissioner to President Director -->
-              <line x1="400" y1="20" x2="400" y2="32" />
+              <line x1="400" y1="40" x2="400" y2="100" />
               
               <!-- Vertical line from President Director to Director -->
-              <line x1="400" y1="44" x2="400" y2="56" />
+              <line x1="400" y1="120" x2="400" y2="160" />
               
               <!-- L-shaped lines from Director to Branch Manager and Executive Secretary -->
               <!-- Vertical line from Director down -->
-              <line x1="400" y1="68" x2="400" y2="80" />
+              <line x1="400" y1="180" x2="400" y2="220" />
               <!-- Horizontal line connecting to Branch Manager -->
-              <line x1="400" y1="80" x2="320" y2="80" />
+              <line x1="400" y1="220" x2="320" y2="220" />
               <!-- Vertical line down to Branch Manager -->
-              <line x1="320" y1="80" x2="320" y2="92" />
+              <line x1="320" y1="220" x2="320" y2="240" />
               <!-- Horizontal line connecting to Executive Secretary -->
-              <line x1="400" y1="80" x2="480" y2="80" />
+              <line x1="400" y1="220" x2="480" y2="220" />
               <!-- Vertical line down to Executive Secretary -->
-              <line x1="480" y1="80" x2="480" y2="92" />
+              <line x1="480" y1="220" x2="480" y2="240" />
               
               <!-- L-shaped lines from Branch Manager to departments -->
               <!-- Vertical line from Branch Manager down -->
-              <line x1="320" y1="104" x2="320" y2="116" />
+              <line x1="320" y1="280" x2="320" y2="300" />
               <!-- Horizontal line to first half departments -->
-              <line x1="100" y1="116" x2="300" y2="116" />
+              <line x1="100" y1="300" x2="300" y2="300" />
               <!-- Vertical lines down to departments -->
-              <line x1="100" y1="116" x2="100" y2="128" />
-              <line x1="150" y1="116" x2="150" y2="128" />
-              <line x1="200" y1="116" x2="200" y2="128" />
-              <line x1="250" y1="116" x2="250" y2="128" />
-              <line x1="300" y1="116" x2="300" y2="128" />
+              <line x1="100" y1="300" x2="100" y2="320" />
+              <line x1="150" y1="300" x2="150" y2="320" />
+              <line x1="200" y1="300" x2="200" y2="320" />
+              <line x1="250" y1="300" x2="250" y2="320" />
+              <line x1="300" y1="300" x2="300" y2="320" />
               
               <!-- L-shaped lines from Executive Secretary to departments -->
               <!-- Vertical line from Executive Secretary down -->
-              <line x1="480" y1="104" x2="480" y2="116" />
+              <line x1="480" y1="280" x2="480" y2="300" />
               <!-- Horizontal line to second half departments -->
-              <line x1="350" y1="116" x2="700" y2="116" />
+              <line x1="350" y1="300" x2="700" y2="300" />
               <!-- Vertical lines down to departments -->
-              <line x1="350" y1="116" x2="350" y2="128" />
-              <line x1="400" y1="116" x2="400" y2="128" />
-              <line x1="450" y1="116" x2="450" y2="128" />
-              <line x1="500" y1="116" x2="500" y2="128" />
-              <line x1="550" y1="116" x2="550" y2="128" />
-              <line x1="600" y1="116" x2="600" y2="128" />
-              <line x1="650" y1="116" x2="650" y2="128" />
-              <line x1="700" y1="116" x2="700" y2="128" />
+              <line x1="350" y1="300" x2="350" y2="320" />
+              <line x1="400" y1="300" x2="400" y2="320" />
+              <line x1="450" y1="300" x2="450" y2="320" />
+              <line x1="500" y1="300" x2="500" y2="320" />
+              <line x1="550" y1="300" x2="550" y2="320" />
+              <line x1="600" y1="300" x2="600" y2="320" />
+              <line x1="650" y1="300" x2="650" y2="320" />
+              <line x1="700" y1="300" x2="700" y2="320" />
               
               <!-- L-shaped lines from departments to sub-departments -->
               <!-- HR to GA and DOCUMENT CONTROL -->
-              <line x1="100" y1="140" x2="100" y2="152" />
-              <line x1="80" y1="152" x2="120" y2="152" />
-              <line x1="80" y1="152" x2="80" y2="164" />
-              <line x1="120" y1="152" x2="120" y2="164" />
+              <line x1="100" y1="360" x2="100" y2="380" />
+              <line x1="80" y1="380" x2="120" y2="380" />
+              <line x1="80" y1="380" x2="80" y2="400" />
+              <line x1="120" y1="380" x2="120" y2="400" />
               
               <!-- QSHE to QC and HSE -->
-              <line x1="250" y1="140" x2="250" y2="152" />
-              <line x1="230" y1="152" x2="270" y2="152" />
-              <line x1="230" y1="152" x2="230" y2="164" />
-              <line x1="270" y1="152" x2="270" y2="164" />
+              <line x1="250" y1="360" x2="250" y2="380" />
+              <line x1="230" y1="380" x2="270" y2="380" />
+              <line x1="230" y1="380" x2="230" y2="400" />
+              <line x1="270" y1="380" x2="270" y2="400" />
               
               <!-- OPERATION to PROJECT, ACCOUNTING, OPERATOR -->
-              <line x1="400" y1="140" x2="400" y2="152" />
-              <line x1="350" y1="152" x2="450" y2="152" />
-              <line x1="350" y1="152" x2="350" y2="164" />
-              <line x1="400" y1="152" x2="400" y2="164" />
-              <line x1="450" y1="152" x2="450" y2="164" />
+              <line x1="400" y1="360" x2="400" y2="380" />
+              <line x1="350" y1="380" x2="450" y2="380" />
+              <line x1="350" y1="380" x2="350" y2="400" />
+              <line x1="400" y1="380" x2="400" y2="400" />
+              <line x1="450" y1="380" x2="450" y2="400" />
               
               <!-- FINANCE to ENGINEERING, TAX, MECHANIC -->
-              <line x1="500" y1="140" x2="500" y2="152" />
-              <line x1="480" y1="152" x2="520" y2="152" />
-              <line x1="480" y1="152" x2="480" y2="164" />
-              <line x1="500" y1="152" x2="500" y2="164" />
-              <line x1="520" y1="152" x2="520" y2="164" />
+              <line x1="500" y1="360" x2="500" y2="380" />
+              <line x1="480" y1="380" x2="520" y2="380" />
+              <line x1="480" y1="380" x2="480" y2="400" />
+              <line x1="500" y1="380" x2="500" y2="400" />
+              <line x1="520" y1="380" x2="520" y2="400" />
               
               <!-- HEAVY EQUIPMENT to OPERATOR and MECHANIC -->
-              <line x1="700" y1="140" x2="700" y2="152" />
-              <line x1="680" y1="152" x2="720" y2="152" />
-              <line x1="680" y1="152" x2="680" y2="164" />
-              <line x1="720" y1="152" x2="720" y2="164" />
+              <line x1="700" y1="360" x2="700" y2="380" />
+              <line x1="680" y1="380" x2="720" y2="380" />
+              <line x1="680" y1="380" x2="680" y2="400" />
+              <line x1="720" y1="380" x2="720" y2="400" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
-            <div class="org-level org-level-1" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-1" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">COMMISSIONER</div>
             </div>
             
             <!-- Level 2: PRESIDENT DIRECTOR -->
-            <div class="org-level org-level-2" style="position: absolute; top: 22px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
             <!-- Level 3: DIRECTOR -->
-            <div class="org-level org-level-3" style="position: absolute; top: 34px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">DIRECTOR</div>
             </div>
             
             <!-- Level 4: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-4" style="position: absolute; top: 46px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
+            <div class="org-level org-level-4" style="position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
               <div class="org-position">BRANCH MANAGER</div>
               <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
             <!-- Level 5: All departments -->
-            <div class="org-level org-level-5" style="position: absolute; top: 58px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
+            <div class="org-level org-level-5" style="position: absolute; top: 260px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
               <div class="org-position">HR</div>
               <div class="org-position">LEGAL</div>
               <div class="org-position">PROCUREMENT</div>
@@ -668,7 +668,7 @@
             </div>
             
             <!-- Level 6: Sub-departments -->
-            <div class="org-level org-level-6" style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
+            <div class="org-level org-level-6" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
               <!-- HR sub-departments -->
               <div class="sub-dept-group">
                 <div class="org-position">GA</div>
