@@ -647,6 +647,15 @@
               <line x1="80" y1="320" x2="80" y2="380" />
               <line x1="120" y1="320" x2="120" y2="380" />
               
+              <!-- Fork lines from QSHE to QC and HSE -->
+              <!-- Vertical line from QSHE down -->
+              <line x1="250" y1="300" x2="250" y2="320" />
+              <!-- Horizontal line connecting QC and HSE -->
+              <line x1="230" y1="320" x2="270" y2="320" />
+              <!-- Vertical lines down to QC and HSE -->
+              <line x1="230" y1="320" x2="230" y2="380" />
+              <line x1="270" y1="320" x2="270" y2="380" />
+              
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -1050,6 +1059,50 @@
           docControlVerticalLine.setAttribute('x2', docControlPos.x);
           docControlVerticalLine.setAttribute('y2', docControlPos.y - 20);
           svg.appendChild(docControlVerticalLine);
+        }
+      }
+      
+      // Fork lines from QSHE to QC and HSE
+      const qsheDept = positions.departments[3]; // QSHE is 4th department (index 3)
+      const qcSubDept = positions.subDepartments[2]; // QC is 3rd sub-department (index 2)
+      const hseSubDept = positions.subDepartments[3]; // HSE is 4th sub-department (index 3)
+      
+      if (qsheDept && qcSubDept && hseSubDept) {
+        const qshePos = getElementCenter(qsheDept);
+        const qcPos = getElementCenter(qcSubDept);
+        const hsePos = getElementCenter(hseSubDept);
+        
+        if (qshePos && qcPos && hsePos) {
+          // Vertical line from QSHE down
+          const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          verticalLine.setAttribute('x1', qshePos.x);
+          verticalLine.setAttribute('y1', qshePos.y + 20);
+          verticalLine.setAttribute('x2', qshePos.x);
+          verticalLine.setAttribute('y2', qshePos.y + 40);
+          svg.appendChild(verticalLine);
+          
+          // Horizontal line connecting QC and HSE
+          const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          horizontalLine.setAttribute('x1', qcPos.x);
+          horizontalLine.setAttribute('y1', qshePos.y + 40);
+          horizontalLine.setAttribute('x2', hsePos.x);
+          horizontalLine.setAttribute('y2', qshePos.y + 40);
+          svg.appendChild(horizontalLine);
+          
+          // Vertical lines down to QC and HSE
+          const qcVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          qcVerticalLine.setAttribute('x1', qcPos.x);
+          qcVerticalLine.setAttribute('y1', qshePos.y + 40);
+          qcVerticalLine.setAttribute('x2', qcPos.x);
+          qcVerticalLine.setAttribute('y2', qcPos.y - 20);
+          svg.appendChild(qcVerticalLine);
+          
+          const hseVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          hseVerticalLine.setAttribute('x1', hsePos.x);
+          hseVerticalLine.setAttribute('y1', qshePos.y + 40);
+          hseVerticalLine.setAttribute('x2', hsePos.x);
+          hseVerticalLine.setAttribute('y2', hsePos.y - 20);
+          svg.appendChild(hseVerticalLine);
         }
       }
       
