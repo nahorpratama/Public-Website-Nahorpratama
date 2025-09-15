@@ -618,27 +618,27 @@
               
               <!-- L-shaped lines from Director directly to departments -->
               <!-- Vertical line from Director down -->
-              <line x1="400" y1="180" x2="400" y2="280" />
+              <line x1="400" y1="180" x2="400" y2="240" />
               <!-- Horizontal line to first half departments -->
-              <line x1="100" y1="280" x2="300" y2="280" />
+              <line x1="100" y1="240" x2="300" y2="240" />
               <!-- Vertical lines down to departments -->
-              <line x1="100" y1="280" x2="100" y2="300" />
-              <line x1="150" y1="280" x2="150" y2="300" />
-              <line x1="200" y1="280" x2="200" y2="300" />
-              <line x1="250" y1="280" x2="250" y2="300" />
-              <line x1="300" y1="280" x2="300" y2="300" />
+              <line x1="100" y1="240" x2="100" y2="300" />
+              <line x1="150" y1="240" x2="150" y2="300" />
+              <line x1="200" y1="240" x2="200" y2="300" />
+              <line x1="250" y1="240" x2="250" y2="300" />
+              <line x1="300" y1="240" x2="300" y2="300" />
               
               <!-- Horizontal line to second half departments -->
-              <line x1="350" y1="280" x2="700" y2="280" />
+              <line x1="350" y1="240" x2="700" y2="240" />
               <!-- Vertical lines down to departments -->
-              <line x1="350" y1="280" x2="350" y2="300" />
-              <line x1="400" y1="280" x2="400" y2="300" />
-              <line x1="450" y1="280" x2="450" y2="300" />
-              <line x1="500" y1="280" x2="500" y2="300" />
-              <line x1="550" y1="280" x2="550" y2="300" />
-              <line x1="600" y1="280" x2="600" y2="300" />
-              <line x1="650" y1="280" x2="650" y2="300" />
-              <line x1="700" y1="280" x2="700" y2="300" />
+              <line x1="350" y1="240" x2="350" y2="300" />
+              <line x1="400" y1="240" x2="400" y2="300" />
+              <line x1="450" y1="240" x2="450" y2="300" />
+              <line x1="500" y1="240" x2="500" y2="300" />
+              <line x1="550" y1="240" x2="550" y2="300" />
+              <line x1="600" y1="240" x2="600" y2="300" />
+              <line x1="650" y1="240" x2="650" y2="300" />
+              <line x1="700" y1="240" x2="700" y2="300" />
               
               <!-- L-shaped lines from departments to sub-departments -->
               <!-- Vertical line from center of departments down -->
@@ -988,7 +988,7 @@
         directorVertical.setAttribute('x1', directorPos.x);
         directorVertical.setAttribute('y1', directorPos.y + 40);
         directorVertical.setAttribute('x2', directorPos.x);
-        directorVertical.setAttribute('y2', directorPos.y + 140);
+        directorVertical.setAttribute('y2', directorPos.y + 100);
         svg.appendChild(directorVertical);
         
         // Horizontal line for first half departments
@@ -1000,9 +1000,9 @@
           const lastDeptPos = getElementCenter(lastDept);
           if (firstDeptPos && lastDeptPos) {
             firstHorizontal.setAttribute('x1', firstDeptPos.x);
-            firstHorizontal.setAttribute('y1', directorPos.y + 140);
+            firstHorizontal.setAttribute('y1', directorPos.y + 100);
             firstHorizontal.setAttribute('x2', lastDeptPos.x);
-            firstHorizontal.setAttribute('y2', directorPos.y + 140);
+            firstHorizontal.setAttribute('y2', directorPos.y + 100);
             svg.appendChild(firstHorizontal);
           }
         }
@@ -1016,9 +1016,9 @@
           const lastDeptPos2 = getElementCenter(lastDept2);
           if (firstDeptPos2 && lastDeptPos2) {
             secondHorizontal.setAttribute('x1', firstDeptPos2.x);
-            secondHorizontal.setAttribute('y1', directorPos.y + 140);
+            secondHorizontal.setAttribute('y1', directorPos.y + 100);
             secondHorizontal.setAttribute('x2', lastDeptPos2.x);
-            secondHorizontal.setAttribute('y2', directorPos.y + 140);
+            secondHorizontal.setAttribute('y2', directorPos.y + 100);
             svg.appendChild(secondHorizontal);
           }
         }
@@ -1030,7 +1030,7 @@
         if (!deptPos) return;
         
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        const yPos = directorPos ? directorPos.y + 140 : 300;
+        const yPos = directorPos ? directorPos.y + 100 : 300;
         line.setAttribute('x1', deptPos.x);
         line.setAttribute('y1', yPos);
         line.setAttribute('x2', deptPos.x);
