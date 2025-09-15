@@ -132,19 +132,19 @@
     
     .org-chart-title {
       text-align: center;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
       color: #2c3e50;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
     
     .org-chart {
       position: relative;
       background: #ffffff;
-      padding: 20px;
+      padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      min-height: 700px;
+      min-height: 500px;
       width: 100%;
       max-width: 100%;
     }
@@ -153,21 +153,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin: 10px 0;
+      margin: 5px 0;
       width: 100%;
     }
     
     .org-position {
       background: linear-gradient(135deg, #8B4513, #A0522D);
       color: white;
-      padding: 10px 15px;
+      padding: 8px 12px;
       border-radius: 6px;
       text-align: center;
       font-weight: 600;
-      font-size: 12px;
-      min-width: 100px;
+      font-size: 10px;
+      min-width: 80px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       position: relative;
@@ -198,9 +198,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 5px;
       position: relative;
-      min-width: 60px;
+      min-width: 40px;
     }
     
     /* SVG Lines */
@@ -232,96 +232,59 @@
     /* Large Desktop (1200px+) */
     @media (min-width: 1200px) {
       .org-chart {
-        min-height: 700px;
-        padding: 30px;
+        min-height: 500px;
+        padding: 20px;
       }
       
       .org-position {
-        font-size: 12px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 10px;
+        padding: 8px 12px;
+        min-width: 80px;
       }
     }
     
     /* Desktop (992px - 1199px) */
     @media (max-width: 1199px) and (min-width: 992px) {
       .org-chart {
-        min-height: 650px;
-        padding: 25px;
+        min-height: 450px;
+        padding: 18px;
       }
       
       .org-position {
-        font-size: 11px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 9px;
+        padding: 7px 10px;
+        min-width: 70px;
       }
     }
     
     /* Tablet (768px - 991px) */
     @media (max-width: 991px) and (min-width: 768px) {
       .org-chart-container {
-        padding: 15px;
-      }
-      
-      .org-chart {
-        padding: 20px;
-        min-height: 600px;
-      }
-      
-      .org-level {
-        gap: 12px;
-        margin: 8px 0;
-        flex-wrap: wrap;
-      }
-      
-      .org-position {
-        font-size: 10px;
-        padding: 10px 15px;
-        min-width: 100px;
-      }
-      
-      .org-level-6 {
-        flex-direction: row;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 6px;
-        justify-content: center;
-        min-width: 50px;
-      }
-    }
-    
-    /* Mobile Large (576px - 767px) */
-    @media (max-width: 767px) and (min-width: 576px) {
-      .org-chart-container {
         padding: 10px;
       }
       
       .org-chart {
         padding: 15px;
-        min-height: 550px;
+        min-height: 400px;
       }
       
       .org-level {
-        gap: 10px;
-        margin: 8px 0;
+        gap: 8px;
+        margin: 4px 0;
         flex-wrap: wrap;
       }
       
       .org-position {
-        font-size: 9px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 8px;
+        padding: 6px 8px;
+        min-width: 60px;
       }
       
       .org-level-6 {
         flex-direction: row;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
+        justify-content: center;
       }
       
       .sub-dept-group {
@@ -332,32 +295,32 @@
       }
     }
     
-    /* Mobile Small (480px - 575px) */
-    @media (max-width: 575px) and (min-width: 480px) {
+    /* Mobile Large (576px - 767px) */
+    @media (max-width: 767px) and (min-width: 576px) {
       .org-chart-container {
         padding: 8px;
       }
       
       .org-chart {
         padding: 12px;
-        min-height: 500px;
+        min-height: 350px;
       }
       
       .org-level {
-        gap: 8px;
-        margin: 6px 0;
+        gap: 6px;
+        margin: 3px 0;
         flex-wrap: wrap;
       }
       
       .org-position {
-        font-size: 8px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 7px;
+        padding: 5px 6px;
+        min-width: 50px;
       }
       
       .org-level-6 {
         flex-direction: row;
-        gap: 8px;
+        gap: 6px;
         flex-wrap: wrap;
       }
       
@@ -365,36 +328,36 @@
         flex-direction: column;
         gap: 3px;
         justify-content: center;
-        min-width: 35px;
+        min-width: 30px;
       }
     }
     
-    /* Mobile Extra Small (320px - 479px) */
-    @media (max-width: 479px) {
+    /* Mobile Small (480px - 575px) */
+    @media (max-width: 575px) and (min-width: 480px) {
       .org-chart-container {
         padding: 5px;
       }
       
       .org-chart {
         padding: 10px;
-        min-height: 480px;
+        min-height: 300px;
       }
       
       .org-level {
-        gap: 6px;
-        margin: 5px 0;
+        gap: 5px;
+        margin: 2px 0;
         flex-wrap: wrap;
       }
       
       .org-position {
-        font-size: 7px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 6px;
+        padding: 4px 5px;
+        min-width: 40px;
       }
       
       .org-level-6 {
         flex-direction: row;
-        gap: 6px;
+        gap: 5px;
         flex-wrap: wrap;
       }
       
@@ -402,26 +365,63 @@
         flex-direction: column;
         gap: 2px;
         justify-content: center;
+        min-width: 25px;
+      }
+    }
+    
+    /* Mobile Extra Small (320px - 479px) */
+    @media (max-width: 479px) {
+      .org-chart-container {
+        padding: 3px;
+      }
+      
+      .org-chart {
+        padding: 8px;
+        min-height: 250px;
+      }
+      
+      .org-level {
+        gap: 4px;
+        margin: 2px 0;
+        flex-wrap: wrap;
+      }
+      
+      .org-position {
+        font-size: 5px;
+        padding: 3px 4px;
         min-width: 30px;
+      }
+      
+      .org-level-6 {
+        flex-direction: row;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      
+      .sub-dept-group {
+        flex-direction: column;
+        gap: 1px;
+        justify-content: center;
+        min-width: 20px;
       }
     }
     
     /* Landscape orientation for mobile */
     @media (max-height: 500px) and (orientation: landscape) {
       .org-chart {
-        min-height: 450px;
-        padding: 10px;
+        min-height: 300px;
+        padding: 8px;
       }
       
       .org-level {
-        margin: 5px 0;
-        gap: 8px;
+        margin: 2px 0;
+        gap: 5px;
       }
       
       .org-position {
-        font-size: 8px;
-        padding: 10px 15px;
-        min-width: 100px;
+        font-size: 6px;
+        padding: 4px 6px;
+        min-width: 40px;
       }
     }
     
@@ -550,93 +550,93 @@
         </div>
         <p class="paragraph-smallx">Professional organizational structure</p>
       </div>
-      <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org" style="padding: 20px 0; margin-top: 20px;">
+      <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org" style="padding: 10px 0; margin-top: 10px;">
         <div class="org-chart-container">
           <div class="org-chart">
             <!-- SVG Lines for perfect connections -->
-            <svg class="org-lines" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet">
+            <svg class="org-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
               <!-- Main vertical line from Commissioner to President Director -->
-              <line x1="400" y1="50" x2="400" y2="110" />
+              <line x1="400" y1="30" x2="400" y2="70" />
               
               <!-- Vertical line from President Director to Director -->
-              <line x1="400" y1="140" x2="400" y2="200" />
+              <line x1="400" y1="90" x2="400" y2="130" />
               
               <!-- Vertical line from Director to Branch Manager -->
-              <line x1="400" y1="260" x2="320" y2="320" />
+              <line x1="400" y1="170" x2="320" y2="210" />
               
               <!-- Vertical line from Director to Executive Secretary -->
-              <line x1="400" y1="260" x2="480" y2="320" />
+              <line x1="400" y1="170" x2="480" y2="210" />
               
               <!-- Horizontal line connecting Branch Manager and Executive Secretary -->
-              <line x1="320" y1="320" x2="480" y2="320" />
+              <line x1="320" y1="210" x2="480" y2="210" />
               
               <!-- Vertical lines from Branch Manager to departments -->
-              <line x1="320" y1="380" x2="100" y2="440" />
-              <line x1="320" y1="380" x2="150" y2="440" />
-              <line x1="320" y1="380" x2="200" y2="440" />
-              <line x1="320" y1="380" x2="250" y2="440" />
-              <line x1="320" y1="380" x2="300" y2="440" />
+              <line x1="320" y1="250" x2="100" y2="290" />
+              <line x1="320" y1="250" x2="150" y2="290" />
+              <line x1="320" y1="250" x2="200" y2="290" />
+              <line x1="320" y1="250" x2="250" y2="290" />
+              <line x1="320" y1="250" x2="300" y2="290" />
               
               <!-- Vertical lines from Executive Secretary to departments -->
-              <line x1="480" y1="380" x2="350" y2="440" />
-              <line x1="480" y1="380" x2="400" y2="440" />
-              <line x1="480" y1="380" x2="450" y2="440" />
-              <line x1="480" y1="380" x2="500" y2="440" />
-              <line x1="480" y1="380" x2="550" y2="440" />
-              <line x1="480" y1="380" x2="600" y2="440" />
-              <line x1="480" y1="380" x2="650" y2="440" />
-              <line x1="480" y1="380" x2="700" y2="440" />
+              <line x1="480" y1="250" x2="350" y2="290" />
+              <line x1="480" y1="250" x2="400" y2="290" />
+              <line x1="480" y1="250" x2="450" y2="290" />
+              <line x1="480" y1="250" x2="500" y2="290" />
+              <line x1="480" y1="250" x2="550" y2="290" />
+              <line x1="480" y1="250" x2="600" y2="290" />
+              <line x1="480" y1="250" x2="650" y2="290" />
+              <line x1="480" y1="250" x2="700" y2="290" />
               
               <!-- Horizontal line connecting all departments -->
-              <line x1="100" y1="440" x2="700" y2="440" />
+              <line x1="100" y1="290" x2="700" y2="290" />
               
               <!-- Vertical lines from departments to sub-departments -->
               <!-- HR to GA and DOCUMENT CONTROL -->
-              <line x1="100" y1="580" x2="80" y2="640" />
-              <line x1="100" y1="580" x2="120" y2="640" />
+              <line x1="100" y1="350" x2="80" y2="390" />
+              <line x1="100" y1="350" x2="120" y2="390" />
               
               <!-- QSHE to QC and HSE -->
-              <line x1="250" y1="580" x2="230" y2="640" />
-              <line x1="250" y1="580" x2="270" y2="640" />
+              <line x1="250" y1="350" x2="230" y2="390" />
+              <line x1="250" y1="350" x2="270" y2="390" />
               
               <!-- OPERATION to PROJECT, ACCOUNTING, OPERATOR -->
-              <line x1="400" y1="580" x2="350" y2="640" />
-              <line x1="400" y1="580" x2="400" y2="640" />
-              <line x1="400" y1="580" x2="450" y2="640" />
+              <line x1="400" y1="350" x2="350" y2="390" />
+              <line x1="400" y1="350" x2="400" y2="390" />
+              <line x1="400" y1="350" x2="450" y2="390" />
               
               <!-- FINANCE to ENGINEERING, TAX, MECHANIC -->
-              <line x1="500" y1="580" x2="480" y2="640" />
-              <line x1="500" y1="580" x2="500" y2="640" />
-              <line x1="500" y1="580" x2="520" y2="640" />
+              <line x1="500" y1="350" x2="480" y2="390" />
+              <line x1="500" y1="350" x2="500" y2="390" />
+              <line x1="500" y1="350" x2="520" y2="390" />
               
               <!-- HEAVY EQUIPMENT to OPERATOR and MECHANIC -->
-              <line x1="700" y1="580" x2="680" y2="640" />
-              <line x1="700" y1="580" x2="720" y2="640" />
+              <line x1="700" y1="350" x2="680" y2="390" />
+              <line x1="700" y1="350" x2="720" y2="390" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
-            <div class="org-level org-level-1" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-1" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">COMMISSIONER</div>
             </div>
             
             <!-- Level 2: PRESIDENT DIRECTOR -->
-            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-2" style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
             <!-- Level 3: DIRECTOR -->
-            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-3" style="position: absolute; top: 90px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">DIRECTOR</div>
             </div>
             
             <!-- Level 4: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-4" style="position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
+            <div class="org-level org-level-4" style="position: absolute; top: 130px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
               <div class="org-position">BRANCH MANAGER</div>
               <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
             <!-- Level 5: All departments -->
-            <div class="org-level org-level-5" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+            <div class="org-level org-level-5" style="position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;">
               <div class="org-position">HR</div>
               <div class="org-position">LEGAL</div>
               <div class="org-position">PROCUREMENT</div>
@@ -648,7 +648,7 @@
             </div>
             
             <!-- Level 6: Sub-departments -->
-            <div class="org-level org-level-6" style="position: absolute; top: 480px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+            <div class="org-level org-level-6" style="position: absolute; top: 300px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
               <!-- HR sub-departments -->
               <div class="sub-dept-group">
                 <div class="org-position">GA</div>
@@ -893,9 +893,9 @@
         if (commissionerPos && presidentPos) {
           const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line1.setAttribute('x1', commissionerPos.x);
-          line1.setAttribute('y1', commissionerPos.y + 30);
+          line1.setAttribute('y1', commissionerPos.y + 20);
           line1.setAttribute('x2', presidentPos.x);
-          line1.setAttribute('y2', presidentPos.y - 30);
+          line1.setAttribute('y2', presidentPos.y - 20);
           svg.appendChild(line1);
         }
         
@@ -903,9 +903,9 @@
         if (presidentPos && directorPos) {
           const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line2.setAttribute('x1', presidentPos.x);
-          line2.setAttribute('y1', presidentPos.y + 30);
+          line2.setAttribute('y1', presidentPos.y + 20);
           line2.setAttribute('x2', directorPos.x);
-          line2.setAttribute('y2', directorPos.y - 30);
+          line2.setAttribute('y2', directorPos.y - 20);
           svg.appendChild(line2);
         }
         
@@ -913,16 +913,16 @@
         if (directorPos && branchManagerPos && execSecretaryPos) {
           const line3 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line3.setAttribute('x1', directorPos.x);
-          line3.setAttribute('y1', directorPos.y + 30);
+          line3.setAttribute('y1', directorPos.y + 20);
           line3.setAttribute('x2', branchManagerPos.x);
-          line3.setAttribute('y2', branchManagerPos.y - 30);
+          line3.setAttribute('y2', branchManagerPos.y - 20);
           svg.appendChild(line3);
           
           const line4 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line4.setAttribute('x1', directorPos.x);
-          line4.setAttribute('y1', directorPos.y + 30);
+          line4.setAttribute('y1', directorPos.y + 20);
           line4.setAttribute('x2', execSecretaryPos.x);
-          line4.setAttribute('y2', execSecretaryPos.y - 30);
+          line4.setAttribute('y2', execSecretaryPos.y - 20);
           svg.appendChild(line4);
           
           // Horizontal line connecting Branch Manager and Executive Secretary
@@ -943,9 +943,9 @@
           if (index < 4 && branchManagerPos) {
             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
             line.setAttribute('x1', branchManagerPos.x);
-            line.setAttribute('y1', branchManagerPos.y + 30);
+            line.setAttribute('y1', branchManagerPos.y + 20);
             line.setAttribute('x2', deptPos.x);
-            line.setAttribute('y2', deptPos.y - 30);
+            line.setAttribute('y2', deptPos.y - 20);
             svg.appendChild(line);
           }
           
@@ -953,9 +953,9 @@
           if (index >= 4 && execSecretaryPos) {
             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
             line.setAttribute('x1', execSecretaryPos.x);
-            line.setAttribute('y1', execSecretaryPos.y + 30);
+            line.setAttribute('y1', execSecretaryPos.y + 20);
             line.setAttribute('x2', deptPos.x);
-            line.setAttribute('y2', deptPos.y - 30);
+            line.setAttribute('y2', deptPos.y - 20);
             svg.appendChild(line);
           }
         });
@@ -992,9 +992,9 @@
               if (deptPos) {
                 const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
                 line.setAttribute('x1', deptPos.x);
-                line.setAttribute('y1', deptPos.y + 30);
+                line.setAttribute('y1', deptPos.y + 20);
                 line.setAttribute('x2', subDeptPos.x);
-                line.setAttribute('y2', subDeptPos.y - 30);
+                line.setAttribute('y2', subDeptPos.y - 20);
                 svg.appendChild(line);
               }
             }
