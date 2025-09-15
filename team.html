@@ -640,8 +640,8 @@
               <line x1="650" y1="260" x2="650" y2="300" />
               <line x1="700" y1="260" x2="700" y2="300" />
               
-              <!-- Horizontal line connecting all departments at level 5 -->
-              <line x1="100" y1="300" x2="700" y2="300" />
+              <!-- Horizontal line in the middle between level 4 and 5 -->
+              <line x1="100" y1="260" x2="700" y2="260" />
               
               <!-- L-shaped lines from departments to sub-departments -->
               <!-- Vertical line from center of departments down -->
@@ -1041,25 +1041,6 @@
         svg.appendChild(line);
       });
       
-      // Horizontal line connecting all departments at level 5
-      if (positions.departments.length > 0) {
-        const firstDept = positions.departments[0];
-        const lastDept = positions.departments[positions.departments.length - 1];
-        
-        if (firstDept && lastDept) {
-          const firstDeptPos = getElementCenter(firstDept);
-          const lastDeptPos = getElementCenter(lastDept);
-          
-          if (firstDeptPos && lastDeptPos) {
-            const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            horizontalLine.setAttribute('x1', firstDeptPos.x);
-            horizontalLine.setAttribute('y1', firstDeptPos.y);
-            horizontalLine.setAttribute('x2', lastDeptPos.x);
-            horizontalLine.setAttribute('y2', lastDeptPos.y);
-            svg.appendChild(horizontalLine);
-          }
-        }
-      }
         
         
         // Simple lines from departments to sub-departments
