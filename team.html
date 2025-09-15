@@ -665,6 +665,15 @@
               <line x1="530" y1="320" x2="530" y2="380" />
               <line x1="570" y1="320" x2="570" y2="380" />
               
+              <!-- Fork lines from Finance to Accounting and Tax -->
+              <!-- Vertical line from Finance down -->
+              <line x1="600" y1="300" x2="600" y2="320" />
+              <!-- Horizontal line connecting Accounting and Tax -->
+              <line x1="580" y1="320" x2="620" y2="320" />
+              <!-- Vertical lines down to Accounting and Tax -->
+              <line x1="580" y1="320" x2="580" y2="380" />
+              <line x1="620" y1="320" x2="620" y2="380" />
+              
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -1156,6 +1165,50 @@
           engineeringVerticalLine.setAttribute('x2', engineeringPos.x);
           engineeringVerticalLine.setAttribute('y2', engineeringPos.y - 20);
           svg.appendChild(engineeringVerticalLine);
+        }
+      }
+      
+      // Fork lines from Finance to Accounting and Tax
+      const financeDept = positions.departments[6]; // Finance is 7th department (index 6)
+      const accountingSubDept = positions.subDepartments[6]; // Accounting is 7th sub-department (index 6)
+      const taxSubDept = positions.subDepartments[7]; // Tax is 8th sub-department (index 7)
+      
+      if (financeDept && accountingSubDept && taxSubDept) {
+        const financePos = getElementCenter(financeDept);
+        const accountingPos = getElementCenter(accountingSubDept);
+        const taxPos = getElementCenter(taxSubDept);
+        
+        if (financePos && accountingPos && taxPos) {
+          // Vertical line from Finance down
+          const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          verticalLine.setAttribute('x1', financePos.x);
+          verticalLine.setAttribute('y1', financePos.y + 20);
+          verticalLine.setAttribute('x2', financePos.x);
+          verticalLine.setAttribute('y2', financePos.y + 40);
+          svg.appendChild(verticalLine);
+          
+          // Horizontal line connecting Accounting and Tax
+          const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          horizontalLine.setAttribute('x1', accountingPos.x);
+          horizontalLine.setAttribute('y1', financePos.y + 40);
+          horizontalLine.setAttribute('x2', taxPos.x);
+          horizontalLine.setAttribute('y2', financePos.y + 40);
+          svg.appendChild(horizontalLine);
+          
+          // Vertical lines down to Accounting and Tax
+          const accountingVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          accountingVerticalLine.setAttribute('x1', accountingPos.x);
+          accountingVerticalLine.setAttribute('y1', financePos.y + 40);
+          accountingVerticalLine.setAttribute('x2', accountingPos.x);
+          accountingVerticalLine.setAttribute('y2', accountingPos.y - 20);
+          svg.appendChild(accountingVerticalLine);
+          
+          const taxVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          taxVerticalLine.setAttribute('x1', taxPos.x);
+          taxVerticalLine.setAttribute('y1', financePos.y + 40);
+          taxVerticalLine.setAttribute('x2', taxPos.x);
+          taxVerticalLine.setAttribute('y2', taxPos.y - 20);
+          svg.appendChild(taxVerticalLine);
         }
       }
       
