@@ -674,6 +674,15 @@
               <line x1="580" y1="320" x2="580" y2="380" />
               <line x1="620" y1="320" x2="620" y2="380" />
               
+              <!-- Fork lines from Heavy Equipment to Operator and Mechanic -->
+              <!-- Vertical line from Heavy Equipment down -->
+              <line x1="650" y1="300" x2="650" y2="320" />
+              <!-- Horizontal line connecting Operator and Mechanic -->
+              <line x1="630" y1="320" x2="670" y2="320" />
+              <!-- Vertical lines down to Operator and Mechanic -->
+              <line x1="630" y1="320" x2="630" y2="380" />
+              <line x1="670" y1="320" x2="670" y2="380" />
+              
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -1209,6 +1218,50 @@
           taxVerticalLine.setAttribute('x2', taxPos.x);
           taxVerticalLine.setAttribute('y2', taxPos.y - 20);
           svg.appendChild(taxVerticalLine);
+        }
+      }
+      
+      // Fork lines from Heavy Equipment to Operator and Mechanic
+      const heavyEquipmentDept = positions.departments[7]; // Heavy Equipment is 8th department (index 7)
+      const operatorSubDept = positions.subDepartments[8]; // Operator is 9th sub-department (index 8)
+      const mechanicSubDept = positions.subDepartments[9]; // Mechanic is 10th sub-department (index 9)
+      
+      if (heavyEquipmentDept && operatorSubDept && mechanicSubDept) {
+        const heavyEquipmentPos = getElementCenter(heavyEquipmentDept);
+        const operatorPos = getElementCenter(operatorSubDept);
+        const mechanicPos = getElementCenter(mechanicSubDept);
+        
+        if (heavyEquipmentPos && operatorPos && mechanicPos) {
+          // Vertical line from Heavy Equipment down
+          const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          verticalLine.setAttribute('x1', heavyEquipmentPos.x);
+          verticalLine.setAttribute('y1', heavyEquipmentPos.y + 20);
+          verticalLine.setAttribute('x2', heavyEquipmentPos.x);
+          verticalLine.setAttribute('y2', heavyEquipmentPos.y + 40);
+          svg.appendChild(verticalLine);
+          
+          // Horizontal line connecting Operator and Mechanic
+          const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          horizontalLine.setAttribute('x1', operatorPos.x);
+          horizontalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
+          horizontalLine.setAttribute('x2', mechanicPos.x);
+          horizontalLine.setAttribute('y2', heavyEquipmentPos.y + 40);
+          svg.appendChild(horizontalLine);
+          
+          // Vertical lines down to Operator and Mechanic
+          const operatorVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          operatorVerticalLine.setAttribute('x1', operatorPos.x);
+          operatorVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
+          operatorVerticalLine.setAttribute('x2', operatorPos.x);
+          operatorVerticalLine.setAttribute('y2', operatorPos.y - 20);
+          svg.appendChild(operatorVerticalLine);
+          
+          const mechanicVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          mechanicVerticalLine.setAttribute('x1', mechanicPos.x);
+          mechanicVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
+          mechanicVerticalLine.setAttribute('x2', mechanicPos.x);
+          mechanicVerticalLine.setAttribute('y2', mechanicPos.y - 20);
+          svg.appendChild(mechanicVerticalLine);
         }
       }
       
