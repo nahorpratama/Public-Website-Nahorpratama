@@ -640,6 +640,9 @@
               <line x1="650" y1="260" x2="650" y2="300" />
               <line x1="700" y1="260" x2="700" y2="300" />
               
+              <!-- Horizontal line at level 5 between QSHE and Business Development -->
+              <line x1="300" y1="300" x2="350" y2="300" />
+              
               <!-- L-shaped lines from departments to sub-departments -->
               <!-- Vertical line from center of departments down -->
               <line x1="400" y1="320" x2="400" y2="360" />
@@ -1037,6 +1040,26 @@
         line.setAttribute('y2', deptPos.y - 20);
         svg.appendChild(line);
       });
+      
+      // Horizontal line at level 5 between QSHE and Business Development
+      if (positions.departments.length >= 5) {
+        const qsheDept = positions.departments[3]; // QSHE is 4th department (index 3)
+        const businessDevDept = positions.departments[4]; // Business Development is 5th department (index 4)
+        
+        if (qsheDept && businessDevDept) {
+          const qshePos = getElementCenter(qsheDept);
+          const businessDevPos = getElementCenter(businessDevDept);
+          
+          if (qshePos && businessDevPos) {
+            const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            horizontalLine.setAttribute('x1', qshePos.x);
+            horizontalLine.setAttribute('y1', qshePos.y);
+            horizontalLine.setAttribute('x2', businessDevPos.x);
+            horizontalLine.setAttribute('y2', businessDevPos.y);
+            svg.appendChild(horizontalLine);
+          }
+        }
+      }
         
         
         // Simple lines from departments to sub-departments
