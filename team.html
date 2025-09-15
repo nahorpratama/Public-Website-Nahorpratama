@@ -638,6 +638,15 @@
               <line x1="650" y1="260" x2="650" y2="300" />
               <line x1="700" y1="260" x2="700" y2="300" />
               
+              <!-- Fork lines from HR to GA and Document Control -->
+              <!-- Vertical line from HR down -->
+              <line x1="100" y1="300" x2="100" y2="320" />
+              <!-- Horizontal line connecting GA and Document Control -->
+              <line x1="80" y1="320" x2="120" y2="320" />
+              <!-- Vertical lines down to GA and Document Control -->
+              <line x1="80" y1="320" x2="80" y2="380" />
+              <line x1="120" y1="320" x2="120" y2="380" />
+              
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -999,6 +1008,50 @@
         line.setAttribute('y2', deptPos.y - 20);
         svg.appendChild(line);
       });
+      
+      // Fork lines from HR to GA and Document Control
+      const hrDept = positions.departments[0]; // HR is first department
+      const gaSubDept = positions.subDepartments[0]; // GA is first sub-department
+      const docControlSubDept = positions.subDepartments[1]; // Document Control is second sub-department
+      
+      if (hrDept && gaSubDept && docControlSubDept) {
+        const hrPos = getElementCenter(hrDept);
+        const gaPos = getElementCenter(gaSubDept);
+        const docControlPos = getElementCenter(docControlSubDept);
+        
+        if (hrPos && gaPos && docControlPos) {
+          // Vertical line from HR down
+          const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          verticalLine.setAttribute('x1', hrPos.x);
+          verticalLine.setAttribute('y1', hrPos.y + 20);
+          verticalLine.setAttribute('x2', hrPos.x);
+          verticalLine.setAttribute('y2', hrPos.y + 40);
+          svg.appendChild(verticalLine);
+          
+          // Horizontal line connecting GA and Document Control
+          const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          horizontalLine.setAttribute('x1', gaPos.x);
+          horizontalLine.setAttribute('y1', hrPos.y + 40);
+          horizontalLine.setAttribute('x2', docControlPos.x);
+          horizontalLine.setAttribute('y2', hrPos.y + 40);
+          svg.appendChild(horizontalLine);
+          
+          // Vertical lines down to GA and Document Control
+          const gaVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          gaVerticalLine.setAttribute('x1', gaPos.x);
+          gaVerticalLine.setAttribute('y1', hrPos.y + 40);
+          gaVerticalLine.setAttribute('x2', gaPos.x);
+          gaVerticalLine.setAttribute('y2', gaPos.y - 20);
+          svg.appendChild(gaVerticalLine);
+          
+          const docControlVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          docControlVerticalLine.setAttribute('x1', docControlPos.x);
+          docControlVerticalLine.setAttribute('y1', hrPos.y + 40);
+          docControlVerticalLine.setAttribute('x2', docControlPos.x);
+          docControlVerticalLine.setAttribute('y2', docControlPos.y - 20);
+          svg.appendChild(docControlVerticalLine);
+        }
+      }
       
         
       });
