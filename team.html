@@ -215,8 +215,17 @@
       min-width: 70px;
     }
     
-    /* Level 5: Sub-departments */
+    /* Level 5: Departments */
     .org-level-5 .org-position {
+      background: linear-gradient(135deg, #D2691E, #F4A460);
+      color: #333;
+      font-size: 9px;
+      padding: 7px 12px;
+      min-width: 70px;
+    }
+    
+    /* Level 6: Sub-departments */
+    .org-level-6 .org-position {
       background: linear-gradient(135deg, #F4A460, #FFE4B5);
       color: #333;
       font-size: 8px;
@@ -225,7 +234,7 @@
     }
     
     /* Sub-departments layout */
-    .org-level-5 {
+    .org-level-6 {
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -311,6 +320,12 @@
         font-size: 9px;
         padding: 8px 12px;
         min-width: 70px;
+      }
+      
+      .org-level-6 .org-position {
+        font-size: 8px;
+        padding: 7px 11px;
+        min-width: 60px;
       }
     }
     
@@ -807,81 +822,89 @@
         <div class="org-chart-container">
           <div class="org-chart">
             <!-- SVG Lines for perfect connections -->
-            <svg class="org-lines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
-              <!-- Main vertical line from President Director to Director -->
-              <line x1="400" y1="80" x2="400" y2="140" />
+            <svg class="org-lines" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid meet">
+              <!-- Main vertical line from Commissioner to President Director -->
+              <line x1="400" y1="50" x2="400" y2="110" />
+              
+              <!-- Vertical line from President Director to Director -->
+              <line x1="400" y1="140" x2="400" y2="200" />
               
               <!-- Vertical line from Director to Branch Manager -->
-              <line x1="400" y1="200" x2="320" y2="260" />
+              <line x1="400" y1="260" x2="320" y2="320" />
               
               <!-- Vertical line from Director to Executive Secretary -->
-              <line x1="400" y1="200" x2="480" y2="260" />
+              <line x1="400" y1="260" x2="480" y2="320" />
               
               <!-- Horizontal line connecting Branch Manager and Executive Secretary -->
-              <line x1="320" y1="260" x2="480" y2="260" />
+              <line x1="320" y1="320" x2="480" y2="320" />
               
               <!-- Vertical lines from Branch Manager to departments -->
-              <line x1="320" y1="320" x2="100" y2="380" />
-              <line x1="320" y1="320" x2="150" y2="380" />
-              <line x1="320" y1="320" x2="200" y2="380" />
-              <line x1="320" y1="320" x2="250" y2="380" />
-              <line x1="320" y1="320" x2="300" y2="380" />
+              <line x1="320" y1="380" x2="100" y2="440" />
+              <line x1="320" y1="380" x2="150" y2="440" />
+              <line x1="320" y1="380" x2="200" y2="440" />
+              <line x1="320" y1="380" x2="250" y2="440" />
+              <line x1="320" y1="380" x2="300" y2="440" />
               
               <!-- Vertical lines from Executive Secretary to departments -->
-              <line x1="480" y1="320" x2="350" y2="380" />
-              <line x1="480" y1="320" x2="400" y2="380" />
-              <line x1="480" y1="320" x2="450" y2="380" />
-              <line x1="480" y1="320" x2="500" y2="380" />
-              <line x1="480" y1="320" x2="550" y2="380" />
-              <line x1="480" y1="320" x2="600" y2="380" />
-              <line x1="480" y1="320" x2="650" y2="380" />
-              <line x1="480" y1="320" x2="700" y2="380" />
+              <line x1="480" y1="380" x2="350" y2="440" />
+              <line x1="480" y1="380" x2="400" y2="440" />
+              <line x1="480" y1="380" x2="450" y2="440" />
+              <line x1="480" y1="380" x2="500" y2="440" />
+              <line x1="480" y1="380" x2="550" y2="440" />
+              <line x1="480" y1="380" x2="600" y2="440" />
+              <line x1="480" y1="380" x2="650" y2="440" />
+              <line x1="480" y1="380" x2="700" y2="440" />
               
               <!-- Horizontal line connecting all departments -->
-              <line x1="100" y1="380" x2="700" y2="380" />
+              <line x1="100" y1="440" x2="700" y2="440" />
               
               <!-- Vertical lines from departments to sub-departments -->
               <!-- HR to GA and DOCUMENT CONTROL -->
-              <line x1="100" y1="440" x2="80" y2="500" />
-              <line x1="100" y1="440" x2="120" y2="500" />
+              <line x1="100" y1="500" x2="80" y2="560" />
+              <line x1="100" y1="500" x2="120" y2="560" />
               
               <!-- QSHE to QC and HSE -->
-              <line x1="250" y1="440" x2="230" y2="500" />
-              <line x1="250" y1="440" x2="270" y2="500" />
+              <line x1="250" y1="500" x2="230" y2="560" />
+              <line x1="250" y1="500" x2="270" y2="560" />
               
               <!-- OPERATION to PROJECT, ACCOUNTING, OPERATOR -->
-              <line x1="400" y1="440" x2="350" y2="500" />
-              <line x1="400" y1="440" x2="400" y2="500" />
-              <line x1="400" y1="440" x2="450" y2="500" />
+              <line x1="400" y1="500" x2="350" y2="560" />
+              <line x1="400" y1="500" x2="400" y2="560" />
+              <line x1="400" y1="500" x2="450" y2="560" />
               
               <!-- FINANCE to ENGINEERING, TAX, MECHANIC -->
-              <line x1="500" y1="440" x2="480" y2="500" />
-              <line x1="500" y1="440" x2="500" y2="500" />
-              <line x1="500" y1="440" x2="520" y2="500" />
+              <line x1="500" y1="500" x2="480" y2="560" />
+              <line x1="500" y1="500" x2="500" y2="560" />
+              <line x1="500" y1="500" x2="520" y2="560" />
               
               <!-- HEAVY EQUIPMENT to OPERATOR and MECHANIC -->
-              <line x1="700" y1="440" x2="680" y2="500" />
-              <line x1="700" y1="440" x2="720" y2="500" />
+              <line x1="700" y1="500" x2="680" y2="560" />
+              <line x1="700" y1="500" x2="720" y2="560" />
             </svg>
             
-            <!-- Level 1: PRESIDENT DIRECTOR -->
+            <!-- Level 1: COMMISSIONER -->
             <div class="org-level org-level-1" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+              <div class="org-position">COMMISSIONER</div>
+            </div>
+            
+            <!-- Level 2: PRESIDENT DIRECTOR -->
+            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
-            <!-- Level 2: DIRECTOR -->
-            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
+            <!-- Level 3: DIRECTOR -->
+            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">DIRECTOR</div>
             </div>
             
-            <!-- Level 3: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
+            <!-- Level 4: BRANCH MANAGER and EXECUTIVE SECRETARY -->
+            <div class="org-level org-level-4" style="position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
               <div class="org-position">BRANCH MANAGER</div>
               <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
-            <!-- Level 4: All departments -->
-            <div class="org-level org-level-4" style="position: absolute; top: 280px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+            <!-- Level 5: All departments -->
+            <div class="org-level org-level-5" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
               <div class="org-position">HR</div>
               <div class="org-position">LEGAL</div>
               <div class="org-position">PROCUREMENT</div>
@@ -892,8 +915,8 @@
               <div class="org-position">HEAVY EQUIPMENT</div>
             </div>
             
-            <!-- Level 5: Sub-departments -->
-            <div class="org-level org-level-5" style="position: absolute; top: 360px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+            <!-- Level 6: Sub-departments -->
+            <div class="org-level org-level-6" style="position: absolute; top: 400px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
               <!-- HR sub-departments -->
               <div class="sub-dept-group">
                 <div class="org-position">GA</div>
@@ -1101,12 +1124,13 @@
         
         // Get all position elements
         const positions = {
-          president: document.querySelector('.org-level-1 .org-position'),
-          director: document.querySelector('.org-level-2 .org-position'),
-          branchManager: document.querySelector('.org-level-3 .org-position:first-child'),
-          execSecretary: document.querySelector('.org-level-3 .org-position:last-child'),
-          departments: document.querySelectorAll('.org-level-4 .org-position'),
-          subDepartments: document.querySelectorAll('.org-level-5 .org-position')
+          commissioner: document.querySelector('.org-level-1 .org-position'),
+          president: document.querySelector('.org-level-2 .org-position'),
+          director: document.querySelector('.org-level-3 .org-position'),
+          branchManager: document.querySelector('.org-level-4 .org-position:first-child'),
+          execSecretary: document.querySelector('.org-level-4 .org-position:last-child'),
+          departments: document.querySelectorAll('.org-level-5 .org-position'),
+          subDepartments: document.querySelectorAll('.org-level-6 .org-position')
         };
         
         // Function to get element center position
@@ -1127,44 +1151,55 @@
         lines.forEach(line => line.remove());
         
         // Create new lines based on actual positions
+        const commissionerPos = getElementCenter(positions.commissioner);
         const presidentPos = getElementCenter(positions.president);
         const directorPos = getElementCenter(positions.director);
         const branchManagerPos = getElementCenter(positions.branchManager);
         const execSecretaryPos = getElementCenter(positions.execSecretary);
         
-        // Main vertical line from President Director to Director
-        if (presidentPos && directorPos) {
+        // Main vertical line from Commissioner to President Director
+        if (commissionerPos && presidentPos) {
           const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line1.setAttribute('x1', presidentPos.x);
-          line1.setAttribute('y1', presidentPos.y + 30);
-          line1.setAttribute('x2', directorPos.x);
-          line1.setAttribute('y2', directorPos.y - 30);
+          line1.setAttribute('x1', commissionerPos.x);
+          line1.setAttribute('y1', commissionerPos.y + 30);
+          line1.setAttribute('x2', presidentPos.x);
+          line1.setAttribute('y2', presidentPos.y - 30);
           svg.appendChild(line1);
+        }
+        
+        // Vertical line from President Director to Director
+        if (presidentPos && directorPos) {
+          const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line2.setAttribute('x1', presidentPos.x);
+          line2.setAttribute('y1', presidentPos.y + 30);
+          line2.setAttribute('x2', directorPos.x);
+          line2.setAttribute('y2', directorPos.y - 30);
+          svg.appendChild(line2);
         }
         
         // Vertical lines from Director to Branch Manager and Executive Secretary
         if (directorPos && branchManagerPos && execSecretaryPos) {
-          const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line2.setAttribute('x1', directorPos.x);
-          line2.setAttribute('y1', directorPos.y + 30);
-          line2.setAttribute('x2', branchManagerPos.x);
-          line2.setAttribute('y2', branchManagerPos.y - 30);
-          svg.appendChild(line2);
-          
           const line3 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line3.setAttribute('x1', directorPos.x);
           line3.setAttribute('y1', directorPos.y + 30);
-          line3.setAttribute('x2', execSecretaryPos.x);
-          line3.setAttribute('y2', execSecretaryPos.y - 30);
+          line3.setAttribute('x2', branchManagerPos.x);
+          line3.setAttribute('y2', branchManagerPos.y - 30);
           svg.appendChild(line3);
           
-          // Horizontal line connecting Branch Manager and Executive Secretary
           const line4 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line4.setAttribute('x1', branchManagerPos.x);
-          line4.setAttribute('y1', branchManagerPos.y);
+          line4.setAttribute('x1', directorPos.x);
+          line4.setAttribute('y1', directorPos.y + 30);
           line4.setAttribute('x2', execSecretaryPos.x);
-          line4.setAttribute('y2', execSecretaryPos.y);
+          line4.setAttribute('y2', execSecretaryPos.y - 30);
           svg.appendChild(line4);
+          
+          // Horizontal line connecting Branch Manager and Executive Secretary
+          const line5 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line5.setAttribute('x1', branchManagerPos.x);
+          line5.setAttribute('y1', branchManagerPos.y);
+          line5.setAttribute('x2', execSecretaryPos.x);
+          line5.setAttribute('y2', execSecretaryPos.y);
+          svg.appendChild(line5);
         }
         
         // Lines from Branch Manager and Executive Secretary to departments
