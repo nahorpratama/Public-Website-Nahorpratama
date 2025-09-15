@@ -553,7 +553,7 @@
       <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org" style="padding: 10px 0; margin-top: 10px;">
         <div class="org-chart-container">
           <div class="org-chart">
-            <!-- SVG Lines for perfect connections -->
+            <!-- SVG Lines for clean L-shaped connections -->
             <svg class="org-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
               <!-- Main vertical line from Commissioner to President Director -->
               <line x1="400" y1="30" x2="400" y2="70" />
@@ -561,57 +561,77 @@
               <!-- Vertical line from President Director to Director -->
               <line x1="400" y1="90" x2="400" y2="130" />
               
-              <!-- Vertical line from Director to Branch Manager -->
-              <line x1="400" y1="170" x2="320" y2="210" />
+              <!-- L-shaped lines from Director to Branch Manager and Executive Secretary -->
+              <!-- Vertical line from Director down -->
+              <line x1="400" y1="170" x2="400" y2="190" />
+              <!-- Horizontal line connecting to Branch Manager -->
+              <line x1="400" y1="190" x2="320" y2="190" />
+              <!-- Vertical line down to Branch Manager -->
+              <line x1="320" y1="190" x2="320" y2="210" />
+              <!-- Horizontal line connecting to Executive Secretary -->
+              <line x1="400" y1="190" x2="480" y2="190" />
+              <!-- Vertical line down to Executive Secretary -->
+              <line x1="480" y1="190" x2="480" y2="210" />
               
-              <!-- Vertical line from Director to Executive Secretary -->
-              <line x1="400" y1="170" x2="480" y2="210" />
+              <!-- L-shaped lines from Branch Manager to departments -->
+              <!-- Vertical line from Branch Manager down -->
+              <line x1="320" y1="250" x2="320" y2="270" />
+              <!-- Horizontal line to first half departments -->
+              <line x1="100" y1="270" x2="300" y2="270" />
+              <!-- Vertical lines down to departments -->
+              <line x1="100" y1="270" x2="100" y2="290" />
+              <line x1="150" y1="270" x2="150" y2="290" />
+              <line x1="200" y1="270" x2="200" y2="290" />
+              <line x1="250" y1="270" x2="250" y2="290" />
+              <line x1="300" y1="270" x2="300" y2="290" />
               
-              <!-- Horizontal line connecting Branch Manager and Executive Secretary -->
-              <line x1="320" y1="210" x2="480" y2="210" />
+              <!-- L-shaped lines from Executive Secretary to departments -->
+              <!-- Vertical line from Executive Secretary down -->
+              <line x1="480" y1="250" x2="480" y2="270" />
+              <!-- Horizontal line to second half departments -->
+              <line x1="350" y1="270" x2="700" y2="270" />
+              <!-- Vertical lines down to departments -->
+              <line x1="350" y1="270" x2="350" y2="290" />
+              <line x1="400" y1="270" x2="400" y2="290" />
+              <line x1="450" y1="270" x2="450" y2="290" />
+              <line x1="500" y1="270" x2="500" y2="290" />
+              <line x1="550" y1="270" x2="550" y2="290" />
+              <line x1="600" y1="270" x2="600" y2="290" />
+              <line x1="650" y1="270" x2="650" y2="290" />
+              <line x1="700" y1="270" x2="700" y2="290" />
               
-              <!-- Vertical lines from Branch Manager to departments -->
-              <line x1="320" y1="250" x2="100" y2="290" />
-              <line x1="320" y1="250" x2="150" y2="290" />
-              <line x1="320" y1="250" x2="200" y2="290" />
-              <line x1="320" y1="250" x2="250" y2="290" />
-              <line x1="320" y1="250" x2="300" y2="290" />
-              
-              <!-- Vertical lines from Executive Secretary to departments -->
-              <line x1="480" y1="250" x2="350" y2="290" />
-              <line x1="480" y1="250" x2="400" y2="290" />
-              <line x1="480" y1="250" x2="450" y2="290" />
-              <line x1="480" y1="250" x2="500" y2="290" />
-              <line x1="480" y1="250" x2="550" y2="290" />
-              <line x1="480" y1="250" x2="600" y2="290" />
-              <line x1="480" y1="250" x2="650" y2="290" />
-              <line x1="480" y1="250" x2="700" y2="290" />
-              
-              <!-- Horizontal line connecting all departments -->
-              <line x1="100" y1="290" x2="700" y2="290" />
-              
-              <!-- Vertical lines from departments to sub-departments -->
+              <!-- L-shaped lines from departments to sub-departments -->
               <!-- HR to GA and DOCUMENT CONTROL -->
-              <line x1="100" y1="350" x2="80" y2="390" />
-              <line x1="100" y1="350" x2="120" y2="390" />
+              <line x1="100" y1="350" x2="100" y2="370" />
+              <line x1="80" y1="370" x2="120" y2="370" />
+              <line x1="80" y1="370" x2="80" y2="390" />
+              <line x1="120" y1="370" x2="120" y2="390" />
               
               <!-- QSHE to QC and HSE -->
-              <line x1="250" y1="350" x2="230" y2="390" />
-              <line x1="250" y1="350" x2="270" y2="390" />
+              <line x1="250" y1="350" x2="250" y2="370" />
+              <line x1="230" y1="370" x2="270" y2="370" />
+              <line x1="230" y1="370" x2="230" y2="390" />
+              <line x1="270" y1="370" x2="270" y2="390" />
               
               <!-- OPERATION to PROJECT, ACCOUNTING, OPERATOR -->
-              <line x1="400" y1="350" x2="350" y2="390" />
-              <line x1="400" y1="350" x2="400" y2="390" />
-              <line x1="400" y1="350" x2="450" y2="390" />
+              <line x1="400" y1="350" x2="400" y2="370" />
+              <line x1="350" y1="370" x2="450" y2="370" />
+              <line x1="350" y1="370" x2="350" y2="390" />
+              <line x1="400" y1="370" x2="400" y2="390" />
+              <line x1="450" y1="370" x2="450" y2="390" />
               
               <!-- FINANCE to ENGINEERING, TAX, MECHANIC -->
-              <line x1="500" y1="350" x2="480" y2="390" />
-              <line x1="500" y1="350" x2="500" y2="390" />
-              <line x1="500" y1="350" x2="520" y2="390" />
+              <line x1="500" y1="350" x2="500" y2="370" />
+              <line x1="480" y1="370" x2="520" y2="370" />
+              <line x1="480" y1="370" x2="480" y2="390" />
+              <line x1="500" y1="370" x2="500" y2="390" />
+              <line x1="520" y1="370" x2="520" y2="390" />
               
               <!-- HEAVY EQUIPMENT to OPERATOR and MECHANIC -->
-              <line x1="700" y1="350" x2="680" y2="390" />
-              <line x1="700" y1="350" x2="720" y2="390" />
+              <line x1="700" y1="350" x2="700" y2="370" />
+              <line x1="680" y1="370" x2="720" y2="370" />
+              <line x1="680" y1="370" x2="680" y2="390" />
+              <line x1="720" y1="370" x2="720" y2="390" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -909,73 +929,118 @@
           svg.appendChild(line2);
         }
         
-        // Vertical lines from Director to Branch Manager and Executive Secretary
+        // L-shaped lines from Director to Branch Manager and Executive Secretary
         if (directorPos && branchManagerPos && execSecretaryPos) {
+          // Vertical line from Director down
           const line3 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line3.setAttribute('x1', directorPos.x);
           line3.setAttribute('y1', directorPos.y + 20);
-          line3.setAttribute('x2', branchManagerPos.x);
-          line3.setAttribute('y2', branchManagerPos.y - 20);
+          line3.setAttribute('x2', directorPos.x);
+          line3.setAttribute('y2', directorPos.y + 40);
           svg.appendChild(line3);
           
+          // Horizontal line to Branch Manager
           const line4 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line4.setAttribute('x1', directorPos.x);
-          line4.setAttribute('y1', directorPos.y + 20);
-          line4.setAttribute('x2', execSecretaryPos.x);
-          line4.setAttribute('y2', execSecretaryPos.y - 20);
+          line4.setAttribute('y1', directorPos.y + 40);
+          line4.setAttribute('x2', branchManagerPos.x);
+          line4.setAttribute('y2', directorPos.y + 40);
           svg.appendChild(line4);
           
-          // Horizontal line connecting Branch Manager and Executive Secretary
+          // Vertical line down to Branch Manager
           const line5 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line5.setAttribute('x1', branchManagerPos.x);
-          line5.setAttribute('y1', branchManagerPos.y);
-          line5.setAttribute('x2', execSecretaryPos.x);
-          line5.setAttribute('y2', execSecretaryPos.y);
+          line5.setAttribute('y1', directorPos.y + 40);
+          line5.setAttribute('x2', branchManagerPos.x);
+          line5.setAttribute('y2', branchManagerPos.y - 20);
           svg.appendChild(line5);
+          
+          // Horizontal line to Executive Secretary
+          const line6 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line6.setAttribute('x1', directorPos.x);
+          line6.setAttribute('y1', directorPos.y + 40);
+          line6.setAttribute('x2', execSecretaryPos.x);
+          line6.setAttribute('y2', directorPos.y + 40);
+          svg.appendChild(line6);
+          
+          // Vertical line down to Executive Secretary
+          const line7 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line7.setAttribute('x1', execSecretaryPos.x);
+          line7.setAttribute('y1', directorPos.y + 40);
+          line7.setAttribute('x2', execSecretaryPos.x);
+          line7.setAttribute('y2', execSecretaryPos.y - 20);
+          svg.appendChild(line7);
         }
         
-        // Lines from Branch Manager and Executive Secretary to departments
+        // L-shaped lines from Branch Manager and Executive Secretary to departments
+        if (branchManagerPos) {
+          // Vertical line from Branch Manager down
+          const branchVertical = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          branchVertical.setAttribute('x1', branchManagerPos.x);
+          branchVertical.setAttribute('y1', branchManagerPos.y + 20);
+          branchVertical.setAttribute('x2', branchManagerPos.x);
+          branchVertical.setAttribute('y2', branchManagerPos.y + 40);
+          svg.appendChild(branchVertical);
+          
+          // Horizontal line for first half departments
+          const branchHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          const firstDept = positions.departments[0];
+          const lastDept = positions.departments[3];
+          if (firstDept && lastDept) {
+            const firstDeptPos = getElementCenter(firstDept);
+            const lastDeptPos = getElementCenter(lastDept);
+            if (firstDeptPos && lastDeptPos) {
+              branchHorizontal.setAttribute('x1', firstDeptPos.x);
+              branchHorizontal.setAttribute('y1', branchManagerPos.y + 40);
+              branchHorizontal.setAttribute('x2', lastDeptPos.x);
+              branchHorizontal.setAttribute('y2', branchManagerPos.y + 40);
+              svg.appendChild(branchHorizontal);
+            }
+          }
+        }
+        
+        if (execSecretaryPos) {
+          // Vertical line from Executive Secretary down
+          const execVertical = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          execVertical.setAttribute('x1', execSecretaryPos.x);
+          execVertical.setAttribute('y1', execSecretaryPos.y + 20);
+          execVertical.setAttribute('x2', execSecretaryPos.x);
+          execVertical.setAttribute('y2', execSecretaryPos.y + 40);
+          svg.appendChild(execVertical);
+          
+          // Horizontal line for second half departments
+          const execHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          const firstDept = positions.departments[4];
+          const lastDept = positions.departments[positions.departments.length - 1];
+          if (firstDept && lastDept) {
+            const firstDeptPos = getElementCenter(firstDept);
+            const lastDeptPos = getElementCenter(lastDept);
+            if (firstDeptPos && lastDeptPos) {
+              execHorizontal.setAttribute('x1', firstDeptPos.x);
+              execHorizontal.setAttribute('y1', execSecretaryPos.y + 40);
+              execHorizontal.setAttribute('x2', lastDeptPos.x);
+              execHorizontal.setAttribute('y2', execSecretaryPos.y + 40);
+              svg.appendChild(execHorizontal);
+            }
+          }
+        }
+        
+        // Vertical lines down to each department
         positions.departments.forEach((dept, index) => {
           const deptPos = getElementCenter(dept);
           if (!deptPos) return;
           
-          // Connect to Branch Manager for first half of departments
-          if (index < 4 && branchManagerPos) {
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', branchManagerPos.x);
-            line.setAttribute('y1', branchManagerPos.y + 20);
-            line.setAttribute('x2', deptPos.x);
-            line.setAttribute('y2', deptPos.y - 20);
-            svg.appendChild(line);
-          }
-          
-          // Connect to Executive Secretary for second half of departments
-          if (index >= 4 && execSecretaryPos) {
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', execSecretaryPos.x);
-            line.setAttribute('y1', execSecretaryPos.y + 20);
-            line.setAttribute('x2', deptPos.x);
-            line.setAttribute('y2', deptPos.y - 20);
-            svg.appendChild(line);
-          }
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          const yPos = index < 4 ? branchManagerPos.y + 40 : execSecretaryPos.y + 40;
+          line.setAttribute('x1', deptPos.x);
+          line.setAttribute('y1', yPos);
+          line.setAttribute('x2', deptPos.x);
+          line.setAttribute('y2', deptPos.y - 20);
+          svg.appendChild(line);
         });
         
-        // Horizontal line connecting all departments
-        if (positions.departments.length > 0) {
-          const firstDeptPos = getElementCenter(positions.departments[0]);
-          const lastDeptPos = getElementCenter(positions.departments[positions.departments.length - 1]);
-          
-          if (firstDeptPos && lastDeptPos) {
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', firstDeptPos.x);
-            line.setAttribute('y1', firstDeptPos.y);
-            line.setAttribute('x2', lastDeptPos.x);
-            line.setAttribute('y2', lastDeptPos.y);
-            svg.appendChild(line);
-          }
-        }
         
-        // Lines from departments to sub-departments
+        // L-shaped lines from departments to sub-departments
         positions.subDepartments.forEach(subDept => {
           const subDeptPos = getElementCenter(subDept);
           if (!subDeptPos) return;
@@ -990,12 +1055,29 @@
             if (correspondingDept) {
               const deptPos = getElementCenter(correspondingDept);
               if (deptPos) {
-                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                line.setAttribute('x1', deptPos.x);
-                line.setAttribute('y1', deptPos.y + 20);
-                line.setAttribute('x2', subDeptPos.x);
-                line.setAttribute('y2', subDeptPos.y - 20);
-                svg.appendChild(line);
+                // Vertical line from department down
+                const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                verticalLine.setAttribute('x1', deptPos.x);
+                verticalLine.setAttribute('y1', deptPos.y + 20);
+                verticalLine.setAttribute('x2', deptPos.x);
+                verticalLine.setAttribute('y2', deptPos.y + 40);
+                svg.appendChild(verticalLine);
+                
+                // Horizontal line to sub-department
+                const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                horizontalLine.setAttribute('x1', deptPos.x);
+                horizontalLine.setAttribute('y1', deptPos.y + 40);
+                horizontalLine.setAttribute('x2', subDeptPos.x);
+                horizontalLine.setAttribute('y2', deptPos.y + 40);
+                svg.appendChild(horizontalLine);
+                
+                // Vertical line down to sub-department
+                const finalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                finalLine.setAttribute('x1', subDeptPos.x);
+                finalLine.setAttribute('y1', deptPos.y + 40);
+                finalLine.setAttribute('x2', subDeptPos.x);
+                finalLine.setAttribute('y2', subDeptPos.y - 20);
+                svg.appendChild(finalLine);
               }
             }
           }
