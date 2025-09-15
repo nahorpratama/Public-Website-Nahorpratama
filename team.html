@@ -619,18 +619,16 @@
               <!-- L-shaped lines from Director directly to departments -->
               <!-- Vertical line from Director down to horizontal line -->
               <line x1="400" y1="180" x2="400" y2="260" />
-              <!-- Horizontal line to first half departments (middle of level 4 and 5) -->
-              <line x1="100" y1="260" x2="300" y2="260" />
+              
+              <!-- Horizontal line in the middle between level 4 and 5 -->
+              <line x1="100" y1="260" x2="700" y2="260" />
+              
               <!-- Vertical lines down to departments -->
               <line x1="100" y1="260" x2="100" y2="300" />
               <line x1="150" y1="260" x2="150" y2="300" />
               <line x1="200" y1="260" x2="200" y2="300" />
               <line x1="250" y1="260" x2="250" y2="300" />
               <line x1="300" y1="260" x2="300" y2="300" />
-              
-              <!-- Horizontal line to second half departments (middle of level 4 and 5) -->
-              <line x1="350" y1="260" x2="700" y2="260" />
-              <!-- Vertical lines down to departments -->
               <line x1="350" y1="260" x2="350" y2="300" />
               <line x1="400" y1="260" x2="400" y2="300" />
               <line x1="450" y1="260" x2="450" y2="300" />
@@ -639,9 +637,6 @@
               <line x1="600" y1="260" x2="600" y2="300" />
               <line x1="650" y1="260" x2="650" y2="300" />
               <line x1="700" y1="260" x2="700" y2="300" />
-              
-              <!-- Horizontal line in the middle between level 4 and 5 -->
-              <line x1="100" y1="260" x2="700" y2="260" />
               
               <!-- L-shaped lines from departments to sub-departments -->
               <!-- Vertical line from center of departments down -->
@@ -994,35 +989,19 @@
         directorVertical.setAttribute('y2', directorPos.y + 120);
         svg.appendChild(directorVertical);
         
-        // Horizontal line for first half departments (middle of level 4 and 5)
-        const firstHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        // Horizontal line connecting all departments (middle of level 4 and 5)
         const firstDept = positions.departments[0];
-        const lastDept = positions.departments[3];
+        const lastDept = positions.departments[positions.departments.length - 1];
         if (firstDept && lastDept) {
           const firstDeptPos = getElementCenter(firstDept);
           const lastDeptPos = getElementCenter(lastDept);
           if (firstDeptPos && lastDeptPos) {
-            firstHorizontal.setAttribute('x1', firstDeptPos.x);
-            firstHorizontal.setAttribute('y1', directorPos.y + 120);
-            firstHorizontal.setAttribute('x2', lastDeptPos.x);
-            firstHorizontal.setAttribute('y2', directorPos.y + 120);
-            svg.appendChild(firstHorizontal);
-          }
-        }
-        
-        // Horizontal line for second half departments (middle of level 4 and 5)
-        const secondHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        const firstDept2 = positions.departments[4];
-        const lastDept2 = positions.departments[positions.departments.length - 1];
-        if (firstDept2 && lastDept2) {
-          const firstDeptPos2 = getElementCenter(firstDept2);
-          const lastDeptPos2 = getElementCenter(lastDept2);
-          if (firstDeptPos2 && lastDeptPos2) {
-            secondHorizontal.setAttribute('x1', firstDeptPos2.x);
-            secondHorizontal.setAttribute('y1', directorPos.y + 120);
-            secondHorizontal.setAttribute('x2', lastDeptPos2.x);
-            secondHorizontal.setAttribute('y2', directorPos.y + 120);
-            svg.appendChild(secondHorizontal);
+            const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            horizontalLine.setAttribute('x1', firstDeptPos.x);
+            horizontalLine.setAttribute('y1', directorPos.y + 120);
+            horizontalLine.setAttribute('x2', lastDeptPos.x);
+            horizontalLine.setAttribute('y2', directorPos.y + 120);
+            svg.appendChild(horizontalLine);
           }
         }
       }
