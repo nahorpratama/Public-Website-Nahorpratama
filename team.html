@@ -165,6 +165,32 @@
       width: 100%;
     }
     
+    .org-level-6 {
+      flex-wrap: nowrap !important;
+      gap: 10px !important;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding: 0 20px;
+    }
+    
+    .org-level-6::-webkit-scrollbar {
+      height: 6px;
+    }
+    
+    .org-level-6::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 3px;
+    }
+    
+    .org-level-6::-webkit-scrollbar-thumb {
+      background: #8B4513;
+      border-radius: 3px;
+    }
+    
+    .org-level-6::-webkit-scrollbar-thumb:hover {
+      background: #A0522D;
+    }
+    
     .org-position {
       background: linear-gradient(135deg, #8B4513, #A0522D);
       color: white;
@@ -189,16 +215,6 @@
     
     /* All levels use the same styling defined in .org-position */
     
-    /* Sub-departments layout */
-    .org-level-6 {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 15px;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 100%;
-    }
     
     
     /* SVG Lines */
@@ -296,7 +312,13 @@
         min-width: 60px;
       }
       
-      
+      .org-level-6 {
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 15px;
+      }
     }
     
     /* Mobile Large (576px - 767px) */
@@ -328,7 +350,13 @@
         min-width: 50px;
       }
       
-      
+      .org-level-6 {
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 10px;
+      }
     }
     
     /* Mobile Small (480px - 575px) */
@@ -360,7 +388,13 @@
         min-width: 40px;
       }
       
-      
+      .org-level-6 {
+        flex-wrap: nowrap !important;
+        gap: 5px !important;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 8px;
+      }
     }
     
     /* Mobile Extra Small (320px - 479px) */
@@ -392,7 +426,13 @@
         min-width: 30px;
       }
       
-      
+      .org-level-6 {
+        flex-wrap: nowrap !important;
+        gap: 4px !important;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 5px;
+      }
     }
     
     /* Landscape orientation for mobile */
@@ -417,6 +457,14 @@
         font-size: 6px;
         padding: 5px 12px;
         min-width: 40px;
+      }
+      
+      .org-level-6 {
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 10px;
       }
     }
     
@@ -596,26 +644,25 @@
               <line x1="700" y1="300" x2="700" y2="320" />
               
               <!-- L-shaped lines from departments to sub-departments -->
-              <!-- Vertical line from departments down -->
+              <!-- Vertical line from center of departments down -->
               <line x1="400" y1="360" x2="400" y2="380" />
               <!-- Horizontal line connecting all sub-departments -->
               <line x1="50" y1="380" x2="750" y2="380" />
-              <!-- Vertical lines down to sub-departments -->
-              <line x1="50" y1="380" x2="50" y2="400" />
-              <line x1="100" y1="380" x2="100" y2="400" />
-              <line x1="150" y1="380" x2="150" y2="400" />
-              <line x1="200" y1="380" x2="200" y2="400" />
-              <line x1="250" y1="380" x2="250" y2="400" />
-              <line x1="300" y1="380" x2="300" y2="400" />
-              <line x1="350" y1="380" x2="350" y2="400" />
-              <line x1="400" y1="380" x2="400" y2="400" />
-              <line x1="450" y1="380" x2="450" y2="400" />
-              <line x1="500" y1="380" x2="500" y2="400" />
-              <line x1="550" y1="380" x2="550" y2="400" />
-              <line x1="600" y1="380" x2="600" y2="400" />
-              <line x1="650" y1="380" x2="650" y2="400" />
-              <line x1="700" y1="380" x2="700" y2="400" />
-              <line x1="750" y1="380" x2="750" y2="400" />
+              <!-- Vertical lines down to sub-departments (evenly spaced) -->
+              <line x1="80" y1="380" x2="80" y2="400" />
+              <line x1="130" y1="380" x2="130" y2="400" />
+              <line x1="180" y1="380" x2="180" y2="400" />
+              <line x1="230" y1="380" x2="230" y2="400" />
+              <line x1="280" y1="380" x2="280" y2="400" />
+              <line x1="330" y1="380" x2="330" y2="400" />
+              <line x1="380" y1="380" x2="380" y2="400" />
+              <line x1="430" y1="380" x2="430" y2="400" />
+              <line x1="480" y1="380" x2="480" y2="400" />
+              <line x1="530" y1="380" x2="530" y2="400" />
+              <line x1="580" y1="380" x2="580" y2="400" />
+              <line x1="630" y1="380" x2="630" y2="400" />
+              <line x1="680" y1="380" x2="680" y2="400" />
+              <line x1="730" y1="380" x2="730" y2="400" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -652,7 +699,7 @@
             </div>
             
             <!-- Level 6: Sub-departments -->
-            <div class="org-level org-level-6" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+            <div class="org-level org-level-6" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: nowrap; gap: 10px; overflow-x: auto;">
               <div class="org-position">GA</div>
               <div class="org-position">DOCUMENT CONTROL</div>
               <div class="org-position">QC</div>
