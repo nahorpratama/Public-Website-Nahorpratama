@@ -638,26 +638,6 @@
               <line x1="650" y1="260" x2="650" y2="300" />
               <line x1="700" y1="260" x2="700" y2="300" />
               
-              <!-- L-shaped lines from departments to sub-departments -->
-              <!-- Vertical line from center of departments down -->
-              <line x1="400" y1="320" x2="400" y2="360" />
-              <!-- Horizontal line connecting all sub-departments -->
-              <line x1="50" y1="360" x2="750" y2="360" />
-              <!-- Vertical lines down to sub-departments (evenly spaced) -->
-              <line x1="80" y1="360" x2="80" y2="380" />
-              <line x1="130" y1="360" x2="130" y2="380" />
-              <line x1="180" y1="360" x2="180" y2="380" />
-              <line x1="230" y1="360" x2="230" y2="380" />
-              <line x1="280" y1="360" x2="280" y2="380" />
-              <line x1="330" y1="360" x2="330" y2="380" />
-              <line x1="380" y1="360" x2="380" y2="380" />
-              <line x1="430" y1="360" x2="430" y2="380" />
-              <line x1="480" y1="360" x2="480" y2="380" />
-              <line x1="530" y1="360" x2="530" y2="380" />
-              <line x1="580" y1="360" x2="580" y2="380" />
-              <line x1="630" y1="360" x2="630" y2="380" />
-              <line x1="680" y1="360" x2="680" y2="380" />
-              <line x1="730" y1="360" x2="730" y2="380" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -1021,45 +1001,6 @@
       });
       
         
-        
-        // Simple lines from departments to sub-departments
-        if (positions.subDepartments.length > 0) {
-          // Vertical line from center of departments down
-          const centerDept = positions.departments[Math.floor(positions.departments.length / 2)];
-          if (centerDept) {
-            const centerPos = getElementCenter(centerDept);
-            if (centerPos) {
-              // Vertical line from departments down
-              const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-              verticalLine.setAttribute('x1', centerPos.x);
-              verticalLine.setAttribute('y1', centerPos.y + 20);
-              verticalLine.setAttribute('x2', centerPos.x);
-              verticalLine.setAttribute('y2', centerPos.y + 40);
-              svg.appendChild(verticalLine);
-              
-              // Horizontal line connecting all sub-departments
-              const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-              horizontalLine.setAttribute('x1', '50');
-              horizontalLine.setAttribute('y1', centerPos.y + 40);
-              horizontalLine.setAttribute('x2', '750');
-              horizontalLine.setAttribute('y2', centerPos.y + 40);
-              svg.appendChild(horizontalLine);
-              
-              // Vertical lines down to each sub-department
-              positions.subDepartments.forEach((subDept, index) => {
-                const subDeptPos = getElementCenter(subDept);
-                if (subDeptPos) {
-                  const finalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                  finalLine.setAttribute('x1', subDeptPos.x);
-                  finalLine.setAttribute('y1', centerPos.y + 40);
-                  finalLine.setAttribute('x2', subDeptPos.x);
-                  finalLine.setAttribute('y2', subDeptPos.y - 20);
-                  svg.appendChild(finalLine);
-                }
-              });
-            }
-          }
-        }
       });
     }
     
