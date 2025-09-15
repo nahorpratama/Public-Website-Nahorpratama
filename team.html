@@ -200,14 +200,6 @@
       max-width: 100%;
     }
     
-    .sub-dept-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      position: relative;
-      min-width: 40px;
-    }
     
     /* SVG Lines */
     .org-lines {
@@ -304,19 +296,7 @@
         min-width: 60px;
       }
       
-      .org-level-6 {
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
       
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        min-width: 40px;
-      }
     }
     
     /* Mobile Large (576px - 767px) */
@@ -348,18 +328,7 @@
         min-width: 50px;
       }
       
-      .org-level-6 {
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
       
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        min-width: 30px;
-      }
     }
     
     /* Mobile Small (480px - 575px) */
@@ -391,18 +360,7 @@
         min-width: 40px;
       }
       
-      .org-level-6 {
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
       
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        min-width: 25px;
-      }
     }
     
     /* Mobile Extra Small (320px - 479px) */
@@ -434,18 +392,7 @@
         min-width: 30px;
       }
       
-      .org-level-6 {
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
       
-      .sub-dept-group {
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        min-width: 20px;
-      }
     }
     
     /* Landscape orientation for mobile */
@@ -649,37 +596,26 @@
               <line x1="700" y1="300" x2="700" y2="320" />
               
               <!-- L-shaped lines from departments to sub-departments -->
-              <!-- HR to GA and DOCUMENT CONTROL -->
-              <line x1="100" y1="360" x2="100" y2="380" />
-              <line x1="80" y1="380" x2="120" y2="380" />
-              <line x1="80" y1="380" x2="80" y2="400" />
-              <line x1="120" y1="380" x2="120" y2="400" />
-              
-              <!-- QSHE to QC and HSE -->
-              <line x1="250" y1="360" x2="250" y2="380" />
-              <line x1="230" y1="380" x2="270" y2="380" />
-              <line x1="230" y1="380" x2="230" y2="400" />
-              <line x1="270" y1="380" x2="270" y2="400" />
-              
-              <!-- OPERATION to PROJECT, ACCOUNTING, OPERATOR -->
+              <!-- Vertical line from departments down -->
               <line x1="400" y1="360" x2="400" y2="380" />
-              <line x1="350" y1="380" x2="450" y2="380" />
+              <!-- Horizontal line connecting all sub-departments -->
+              <line x1="50" y1="380" x2="750" y2="380" />
+              <!-- Vertical lines down to sub-departments -->
+              <line x1="50" y1="380" x2="50" y2="400" />
+              <line x1="100" y1="380" x2="100" y2="400" />
+              <line x1="150" y1="380" x2="150" y2="400" />
+              <line x1="200" y1="380" x2="200" y2="400" />
+              <line x1="250" y1="380" x2="250" y2="400" />
+              <line x1="300" y1="380" x2="300" y2="400" />
               <line x1="350" y1="380" x2="350" y2="400" />
               <line x1="400" y1="380" x2="400" y2="400" />
               <line x1="450" y1="380" x2="450" y2="400" />
-              
-              <!-- FINANCE to ENGINEERING, TAX, MECHANIC -->
-              <line x1="500" y1="360" x2="500" y2="380" />
-              <line x1="480" y1="380" x2="520" y2="380" />
-              <line x1="480" y1="380" x2="480" y2="400" />
               <line x1="500" y1="380" x2="500" y2="400" />
-              <line x1="520" y1="380" x2="520" y2="400" />
-              
-              <!-- HEAVY EQUIPMENT to OPERATOR and MECHANIC -->
-              <line x1="700" y1="360" x2="700" y2="380" />
-              <line x1="680" y1="380" x2="720" y2="380" />
-              <line x1="680" y1="380" x2="680" y2="400" />
-              <line x1="720" y1="380" x2="720" y2="400" />
+              <line x1="550" y1="380" x2="550" y2="400" />
+              <line x1="600" y1="380" x2="600" y2="400" />
+              <line x1="650" y1="380" x2="650" y2="400" />
+              <line x1="700" y1="380" x2="700" y2="400" />
+              <line x1="750" y1="380" x2="750" y2="400" />
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
@@ -717,37 +653,18 @@
             
             <!-- Level 6: Sub-departments -->
             <div class="org-level org-level-6" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
-              <!-- HR sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">GA</div>
-                <div class="org-position">DOCUMENT CONTROL</div>
-              </div>
-              
-              <!-- QSHE sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">QC</div>
-                <div class="org-position">HSE</div>
-              </div>
-              
-              <!-- OPERATION sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">PROJECT</div>
-                <div class="org-position">ACCOUNTING</div>
-                <div class="org-position">OPERATOR</div>
-              </div>
-              
-              <!-- FINANCE sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">ENGINEERING</div>
-                <div class="org-position">TAX</div>
-                <div class="org-position">MECHANIC</div>
-              </div>
-              
-              <!-- HEAVY EQUIPMENT sub-departments -->
-              <div class="sub-dept-group">
-                <div class="org-position">OPERATOR</div>
-                <div class="org-position">MECHANIC</div>
-              </div>
+              <div class="org-position">GA</div>
+              <div class="org-position">DOCUMENT CONTROL</div>
+              <div class="org-position">QC</div>
+              <div class="org-position">HSE</div>
+              <div class="org-position">PROJECT</div>
+              <div class="org-position">ACCOUNTING</div>
+              <div class="org-position">OPERATOR</div>
+              <div class="org-position">ENGINEERING</div>
+              <div class="org-position">TAX</div>
+              <div class="org-position">MECHANIC</div>
+              <div class="org-position">OPERATOR</div>
+              <div class="org-position">MECHANIC</div>
             </div>
           </div>
         </div>
@@ -1088,48 +1005,44 @@
         });
         
         
-        // L-shaped lines from departments to sub-departments
-        positions.subDepartments.forEach(subDept => {
-          const subDeptPos = getElementCenter(subDept);
-          if (!subDeptPos) return;
-          
-          const parentGroup = subDept.closest('.sub-dept-group');
-          
-          if (parentGroup) {
-            // Find the corresponding department
-            const groupIndex = Array.from(document.querySelectorAll('.sub-dept-group')).indexOf(parentGroup);
-            const correspondingDept = positions.departments[groupIndex];
-            
-            if (correspondingDept) {
-              const deptPos = getElementCenter(correspondingDept);
-              if (deptPos) {
-                // Vertical line from department down
-                const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                verticalLine.setAttribute('x1', deptPos.x);
-                verticalLine.setAttribute('y1', deptPos.y + 20);
-                verticalLine.setAttribute('x2', deptPos.x);
-                verticalLine.setAttribute('y2', deptPos.y + 40);
-                svg.appendChild(verticalLine);
-                
-                // Horizontal line to sub-department
-                const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                horizontalLine.setAttribute('x1', deptPos.x);
-                horizontalLine.setAttribute('y1', deptPos.y + 40);
-                horizontalLine.setAttribute('x2', subDeptPos.x);
-                horizontalLine.setAttribute('y2', deptPos.y + 40);
-                svg.appendChild(horizontalLine);
-                
-                // Vertical line down to sub-department
-                const finalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                finalLine.setAttribute('x1', subDeptPos.x);
-                finalLine.setAttribute('y1', deptPos.y + 40);
-                finalLine.setAttribute('x2', subDeptPos.x);
-                finalLine.setAttribute('y2', subDeptPos.y - 20);
-                svg.appendChild(finalLine);
-              }
+        // Simple lines from departments to sub-departments
+        if (positions.subDepartments.length > 0) {
+          // Vertical line from center of departments down
+          const centerDept = positions.departments[Math.floor(positions.departments.length / 2)];
+          if (centerDept) {
+            const centerPos = getElementCenter(centerDept);
+            if (centerPos) {
+              // Vertical line from departments down
+              const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+              verticalLine.setAttribute('x1', centerPos.x);
+              verticalLine.setAttribute('y1', centerPos.y + 20);
+              verticalLine.setAttribute('x2', centerPos.x);
+              verticalLine.setAttribute('y2', centerPos.y + 40);
+              svg.appendChild(verticalLine);
+              
+              // Horizontal line connecting all sub-departments
+              const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+              horizontalLine.setAttribute('x1', '50');
+              horizontalLine.setAttribute('y1', centerPos.y + 40);
+              horizontalLine.setAttribute('x2', '750');
+              horizontalLine.setAttribute('y2', centerPos.y + 40);
+              svg.appendChild(horizontalLine);
+              
+              // Vertical lines down to each sub-department
+              positions.subDepartments.forEach((subDept, index) => {
+                const subDeptPos = getElementCenter(subDept);
+                if (subDeptPos) {
+                  const finalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                  finalLine.setAttribute('x1', subDeptPos.x);
+                  finalLine.setAttribute('y1', centerPos.y + 40);
+                  finalLine.setAttribute('x2', subDeptPos.x);
+                  finalLine.setAttribute('y2', subDeptPos.y - 20);
+                  svg.appendChild(finalLine);
+                }
+              });
             }
           }
-        });
+        }
       });
     }
     
