@@ -616,9 +616,9 @@
               <!-- Vertical line down to Executive Secretary -->
               <line x1="480" y1="220" x2="480" y2="240" />
               
-              <!-- L-shaped lines from Branch Manager to departments -->
-              <!-- Vertical line from Branch Manager down -->
-              <line x1="320" y1="280" x2="320" y2="300" />
+              <!-- L-shaped lines from Director directly to departments -->
+              <!-- Vertical line from Director down -->
+              <line x1="400" y1="280" x2="400" y2="300" />
               <!-- Horizontal line to first half departments -->
               <line x1="100" y1="300" x2="300" y2="300" />
               <!-- Vertical lines down to departments -->
@@ -628,9 +628,6 @@
               <line x1="250" y1="300" x2="250" y2="320" />
               <line x1="300" y1="300" x2="300" y2="320" />
               
-              <!-- L-shaped lines from Executive Secretary to departments -->
-              <!-- Vertical line from Executive Secretary down -->
-              <line x1="480" y1="280" x2="480" y2="300" />
               <!-- Horizontal line to second half departments -->
               <line x1="350" y1="300" x2="700" y2="300" />
               <!-- Vertical lines down to departments -->
@@ -984,55 +981,45 @@
           svg.appendChild(line7);
         }
         
-        // L-shaped lines from Branch Manager and Executive Secretary to departments
-        if (branchManagerPos) {
-          // Vertical line from Branch Manager down
-          const branchVertical = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          branchVertical.setAttribute('x1', branchManagerPos.x);
-          branchVertical.setAttribute('y1', branchManagerPos.y + 20);
-          branchVertical.setAttribute('x2', branchManagerPos.x);
-          branchVertical.setAttribute('y2', branchManagerPos.y + 40);
-          svg.appendChild(branchVertical);
+        // L-shaped lines from Director directly to departments
+        if (directorPos) {
+          // Vertical line from Director down
+          const directorVertical = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          directorVertical.setAttribute('x1', directorPos.x);
+          directorVertical.setAttribute('y1', directorPos.y + 100);
+          directorVertical.setAttribute('x2', directorPos.x);
+          directorVertical.setAttribute('y2', directorPos.y + 120);
+          svg.appendChild(directorVertical);
           
           // Horizontal line for first half departments
-          const branchHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          const firstHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           const firstDept = positions.departments[0];
           const lastDept = positions.departments[3];
           if (firstDept && lastDept) {
             const firstDeptPos = getElementCenter(firstDept);
             const lastDeptPos = getElementCenter(lastDept);
             if (firstDeptPos && lastDeptPos) {
-              branchHorizontal.setAttribute('x1', firstDeptPos.x);
-              branchHorizontal.setAttribute('y1', branchManagerPos.y + 40);
-              branchHorizontal.setAttribute('x2', lastDeptPos.x);
-              branchHorizontal.setAttribute('y2', branchManagerPos.y + 40);
-              svg.appendChild(branchHorizontal);
+              firstHorizontal.setAttribute('x1', firstDeptPos.x);
+              firstHorizontal.setAttribute('y1', directorPos.y + 120);
+              firstHorizontal.setAttribute('x2', lastDeptPos.x);
+              firstHorizontal.setAttribute('y2', directorPos.y + 120);
+              svg.appendChild(firstHorizontal);
             }
           }
-        }
-        
-        if (execSecretaryPos) {
-          // Vertical line from Executive Secretary down
-          const execVertical = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          execVertical.setAttribute('x1', execSecretaryPos.x);
-          execVertical.setAttribute('y1', execSecretaryPos.y + 20);
-          execVertical.setAttribute('x2', execSecretaryPos.x);
-          execVertical.setAttribute('y2', execSecretaryPos.y + 40);
-          svg.appendChild(execVertical);
           
           // Horizontal line for second half departments
-          const execHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          const firstDept = positions.departments[4];
-          const lastDept = positions.departments[positions.departments.length - 1];
-          if (firstDept && lastDept) {
-            const firstDeptPos = getElementCenter(firstDept);
-            const lastDeptPos = getElementCenter(lastDept);
-            if (firstDeptPos && lastDeptPos) {
-              execHorizontal.setAttribute('x1', firstDeptPos.x);
-              execHorizontal.setAttribute('y1', execSecretaryPos.y + 40);
-              execHorizontal.setAttribute('x2', lastDeptPos.x);
-              execHorizontal.setAttribute('y2', execSecretaryPos.y + 40);
-              svg.appendChild(execHorizontal);
+          const secondHorizontal = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          const firstDept2 = positions.departments[4];
+          const lastDept2 = positions.departments[positions.departments.length - 1];
+          if (firstDept2 && lastDept2) {
+            const firstDeptPos2 = getElementCenter(firstDept2);
+            const lastDeptPos2 = getElementCenter(lastDept2);
+            if (firstDeptPos2 && lastDeptPos2) {
+              secondHorizontal.setAttribute('x1', firstDeptPos2.x);
+              secondHorizontal.setAttribute('y1', directorPos.y + 120);
+              secondHorizontal.setAttribute('x2', lastDeptPos2.x);
+              secondHorizontal.setAttribute('y2', directorPos.y + 120);
+              svg.appendChild(secondHorizontal);
             }
           }
         }
@@ -1043,7 +1030,7 @@
           if (!deptPos) return;
           
           const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          const yPos = index < 4 ? branchManagerPos.y + 40 : execSecretaryPos.y + 40;
+          const yPos = directorPos ? directorPos.y + 120 : 300;
           line.setAttribute('x1', deptPos.x);
           line.setAttribute('y1', yPos);
           line.setAttribute('x2', deptPos.x);
