@@ -683,12 +683,12 @@
               
               <!-- Fork lines from Heavy Equipment to Operator and Mechanic -->
               <!-- Vertical line from Heavy Equipment down -->
-              <line x1="650" y1="300" x2="650" y2="340" />
+              <line x1="650" y1="300" x2="650" y2="320" />
               <!-- Horizontal line connecting Operator and Mechanic -->
-              <line x1="600" y1="340" x2="700" y2="340" />
+              <line x1="630" y1="320" x2="670" y2="320" />
               <!-- Vertical lines down to Operator and Mechanic -->
-              <line x1="600" y1="340" x2="600" y2="380" />
-              <line x1="700" y1="340" x2="700" y2="380" />
+              <line x1="630" y1="320" x2="630" y2="380" />
+              <line x1="670" y1="320" x2="670" y2="380" />
               
             </svg>
             
@@ -1246,28 +1246,28 @@
           verticalLine.setAttribute('x1', heavyEquipmentPos.x);
           verticalLine.setAttribute('y1', heavyEquipmentPos.y + 20);
           verticalLine.setAttribute('x2', heavyEquipmentPos.x);
-          verticalLine.setAttribute('y2', heavyEquipmentPos.y + 60);
+          verticalLine.setAttribute('y2', heavyEquipmentPos.y + 40);
           svg.appendChild(verticalLine);
           
           // Horizontal line connecting Operator and Mechanic
           const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           horizontalLine.setAttribute('x1', operatorPos.x);
-          horizontalLine.setAttribute('y1', heavyEquipmentPos.y + 60);
+          horizontalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
           horizontalLine.setAttribute('x2', mechanicPos.x);
-          horizontalLine.setAttribute('y2', heavyEquipmentPos.y + 60);
+          horizontalLine.setAttribute('y2', heavyEquipmentPos.y + 40);
           svg.appendChild(horizontalLine);
           
           // Vertical lines down to Operator and Mechanic
           const operatorVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           operatorVerticalLine.setAttribute('x1', operatorPos.x);
-          operatorVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 60);
+          operatorVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
           operatorVerticalLine.setAttribute('x2', operatorPos.x);
           operatorVerticalLine.setAttribute('y2', operatorPos.y - 20);
           svg.appendChild(operatorVerticalLine);
           
           const mechanicVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           mechanicVerticalLine.setAttribute('x1', mechanicPos.x);
-          mechanicVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 60);
+          mechanicVerticalLine.setAttribute('y1', heavyEquipmentPos.y + 40);
           mechanicVerticalLine.setAttribute('x2', mechanicPos.x);
           mechanicVerticalLine.setAttribute('y2', mechanicPos.y - 20);
           svg.appendChild(mechanicVerticalLine);
