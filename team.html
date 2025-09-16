@@ -144,13 +144,13 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      min-height: 560px;
+      min-height: 600px;
       width: 100%;
       max-width: 100%;
     }
     
     .section-body-org {
-      min-height: 660px;
+      min-height: 700px;
       padding: 20px 0;
       margin-top: 20px;
     }
@@ -165,12 +165,19 @@
       width: 100%;
     }
     
-    .org-level-6 {
+    .org-level-6-row1, .org-level-6-row2 {
       flex-wrap: nowrap !important;
-      gap: 10px !important;
-      overflow-x: auto;
-      justify-content: flex-start;
+      gap: 15px !important;
+      justify-content: center;
       padding: 0 20px;
+    }
+    
+    .org-level-6-row1 {
+      top: 380px;
+    }
+    
+    .org-level-6-row2 {
+      top: 420px;
     }
     
     .org-level-6::-webkit-scrollbar {
@@ -597,7 +604,7 @@
         <div class="org-chart-container">
           <div class="org-chart">
             <!-- SVG Lines for clean L-shaped connections -->
-            <svg class="org-lines" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid meet">
+            <svg class="org-lines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
               <!-- Main vertical line from Commissioner to President Director -->
               <line x1="400" y1="40" x2="400" y2="100" />
               
@@ -718,18 +725,22 @@
               <div class="org-position">HEAVY EQUIPMENT</div>
             </div>
             
-            <!-- Level 6: Sub-departments -->
-            <div class="org-level org-level-6" style="position: absolute; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: nowrap; gap: 10px; overflow-x: auto;">
+            <!-- Level 6: Sub-departments - Row 1 -->
+            <div class="org-level org-level-6-row1" style="position: absolute; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
               <div class="org-position">GA</div>
               <div class="org-position">DOCUMENT CONTROL</div>
-              <div class="org-position">QC</div>
-              <div class="org-position">HSE</div>
               <div class="org-position">PROJECT</div>
               <div class="org-position">ENGINEERING</div>
-              <div class="org-position">ACCOUNTING</div>
-              <div class="org-position">TAX</div>
               <div class="org-position">OPERATOR</div>
               <div class="org-position">MECHANIC</div>
+            </div>
+            
+            <!-- Level 6: Sub-departments - Row 2 -->
+            <div class="org-level org-level-6-row2" style="position: absolute; top: 420px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
+              <div class="org-position">QC</div>
+              <div class="org-position">HSE</div>
+              <div class="org-position">ACCOUNTING</div>
+              <div class="org-position">TAX</div>
             </div>
           </div>
         </div>
@@ -1089,8 +1100,8 @@
       
       // Fork lines from QSHE to QC and HSE
       const qsheDept = positions.departments[3]; // QSHE is 4th department (index 3)
-      const qcSubDept = positions.subDepartments[2]; // QC is 3rd sub-department (index 2)
-      const hseSubDept = positions.subDepartments[3]; // HSE is 4th sub-department (index 3)
+      const qcSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(1)'); // QC is first in row 2
+      const hseSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(2)'); // HSE is second in row 2
       
       if (qsheDept && qcSubDept && hseSubDept) {
         const qshePos = getElementCenter(qsheDept);
@@ -1133,8 +1144,8 @@
       
       // Fork lines from Operation to Project and Engineering
       const operationDept = positions.departments[5]; // Operation is 6th department (index 5)
-      const projectSubDept = positions.subDepartments[4]; // Project is 5th sub-department (index 4)
-      const engineeringSubDept = positions.subDepartments[5]; // Engineering is 6th sub-department (index 5)
+      const projectSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(3)'); // Project is third in row 1
+      const engineeringSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(4)'); // Engineering is fourth in row 1
       
       if (operationDept && projectSubDept && engineeringSubDept) {
         const operationPos = getElementCenter(operationDept);
@@ -1177,8 +1188,8 @@
       
       // Fork lines from Finance to Accounting and Tax
       const financeDept = positions.departments[6]; // Finance is 7th department (index 6)
-      const accountingSubDept = positions.subDepartments[6]; // Accounting is 7th sub-department (index 6)
-      const taxSubDept = positions.subDepartments[7]; // Tax is 8th sub-department (index 7)
+      const accountingSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(3)'); // Accounting is third in row 2
+      const taxSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(4)'); // Tax is fourth in row 2
       
       if (financeDept && accountingSubDept && taxSubDept) {
         const financePos = getElementCenter(financeDept);
@@ -1221,8 +1232,8 @@
       
       // Fork lines from Heavy Equipment to Operator and Mechanic
       const heavyEquipmentDept = positions.departments[7]; // Heavy Equipment is 8th department (index 7)
-      const operatorSubDept = positions.subDepartments[8]; // Operator is 9th sub-department (index 8)
-      const mechanicSubDept = positions.subDepartments[9]; // Mechanic is 10th sub-department (index 9)
+      const operatorSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(5)'); // Operator is fifth in row 1
+      const mechanicSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(6)'); // Mechanic is sixth in row 1
       
       if (heavyEquipmentDept && operatorSubDept && mechanicSubDept) {
         const heavyEquipmentPos = getElementCenter(heavyEquipmentDept);
