@@ -731,12 +731,8 @@
             <div class="org-level org-level-6-row1" style="position: absolute; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: nowrap; gap: 10px; overflow-x: auto;">
               <div class="org-position">GA</div>
               <div class="org-position">DOCUMENT CONTROL</div>
-              <div class="org-position">QC</div>
-              <div class="org-position">HSE</div>
               <div class="org-position">PROJECT</div>
               <div class="org-position">ENGINEERING</div>
-              <div class="org-position">ACCOUNTING</div>
-              <div class="org-position">TAX</div>
               <div class="org-position">OPERATOR</div>
               <div class="org-position">MECHANIC</div>
             </div>
@@ -1150,8 +1146,8 @@
       
       // Fork lines from Operation to Project and Engineering
       const operationDept = positions.departments[5]; // Operation is 6th department (index 5)
-      const projectSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(5)'); // Project is fifth in row 1
-      const engineeringSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(6)'); // Engineering is sixth in row 1
+      const projectSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(3)'); // Project is third in row 1
+      const engineeringSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(4)'); // Engineering is fourth in row 1
       
       if (operationDept && projectSubDept && engineeringSubDept) {
         const operationPos = getElementCenter(operationDept);
@@ -1238,8 +1234,8 @@
       
       // Fork lines from Heavy Equipment to Operator and Mechanic
       const heavyEquipmentDept = positions.departments[7]; // Heavy Equipment is 8th department (index 7)
-      const operatorSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(9)'); // Operator is ninth in row 1
-      const mechanicSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(10)'); // Mechanic is tenth in row 1
+      const operatorSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(5)'); // Operator is fifth in row 1
+      const mechanicSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(6)'); // Mechanic is sixth in row 1
       
       if (heavyEquipmentDept && operatorSubDept && mechanicSubDept) {
         const heavyEquipmentPos = getElementCenter(heavyEquipmentDept);
