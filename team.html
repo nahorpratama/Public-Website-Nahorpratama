@@ -1217,19 +1217,19 @@
           horizontalLine.setAttribute('y2', financePos.y + 40);
           svg.appendChild(horizontalLine);
           
-          // Vertical lines down to Accounting and Tax
+          // Vertical lines down to Accounting and Tax (shorter like QC)
           const accountingVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           accountingVerticalLine.setAttribute('x1', accountingPos.x);
           accountingVerticalLine.setAttribute('y1', financePos.y + 40);
           accountingVerticalLine.setAttribute('x2', accountingPos.x);
-          accountingVerticalLine.setAttribute('y2', accountingPos.y - 20);
+          accountingVerticalLine.setAttribute('y2', accountingPos.y - 10);
           svg.appendChild(accountingVerticalLine);
           
           const taxVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           taxVerticalLine.setAttribute('x1', taxPos.x);
           taxVerticalLine.setAttribute('y1', financePos.y + 40);
           taxVerticalLine.setAttribute('x2', taxPos.x);
-          taxVerticalLine.setAttribute('y2', taxPos.y - 20);
+          taxVerticalLine.setAttribute('y2', taxPos.y - 10);
           svg.appendChild(taxVerticalLine);
         }
       }
