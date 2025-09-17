@@ -1217,19 +1217,19 @@
           horizontalLine.setAttribute('y2', financePos.y + 120);
           svg.appendChild(horizontalLine);
           
-          // Vertical lines down to Accounting and Tax (shorter legs)
+          // Vertical lines down to Accounting and Tax (just touching the boxes)
           const accountingVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           accountingVerticalLine.setAttribute('x1', accountingPos.x);
           accountingVerticalLine.setAttribute('y1', financePos.y + 120);
           accountingVerticalLine.setAttribute('x2', accountingPos.x);
-          accountingVerticalLine.setAttribute('y2', accountingPos.y - 15);
+          accountingVerticalLine.setAttribute('y2', accountingPos.y - 25);
           svg.appendChild(accountingVerticalLine);
           
           const taxVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           taxVerticalLine.setAttribute('x1', taxPos.x);
           taxVerticalLine.setAttribute('y1', financePos.y + 120);
           taxVerticalLine.setAttribute('x2', taxPos.x);
-          taxVerticalLine.setAttribute('y2', taxPos.y - 15);
+          taxVerticalLine.setAttribute('y2', taxPos.y - 25);
           svg.appendChild(taxVerticalLine);
         }
       }
