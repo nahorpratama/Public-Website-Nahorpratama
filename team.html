@@ -144,13 +144,64 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      min-height: 600px;
+      min-height: 500px;
+      max-height: 80vh;
       width: 100%;
       max-width: 100%;
+      overflow: hidden;
+    }
+    
+    .org-chart-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-origin: center center;
+      transition: transform 0.3s ease;
+    }
+    
+    .org-chart-scalable {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+      transform: scale(0.75);
+      transform-origin: center center;
+    }
+    
+    /* Responsive scaling for different screen sizes */
+    @media (max-width: 1200px) {
+      .org-chart-scalable {
+        transform: scale(0.7);
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .org-chart-scalable {
+        transform: scale(0.6);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .org-chart-scalable {
+        transform: scale(0.5);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .org-chart-scalable {
+        transform: scale(0.4);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .org-chart-scalable {
+        transform: scale(0.35);
+      }
     }
     
     .section-body-org {
-      min-height: 700px;
+      min-height: 600px;
+      max-height: 85vh;
       padding: 20px 0;
       margin-top: 20px;
     }
@@ -607,6 +658,7 @@
       <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org">
         <div class="org-chart-container">
           <div class="org-chart">
+            <div class="org-chart-scalable">
             <!-- SVG Lines for clean L-shaped connections -->
             <svg class="org-lines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
               <!-- Main vertical line from Commissioner to President Director -->
@@ -697,28 +749,28 @@
             </svg>
             
             <!-- Level 1: COMMISSIONER -->
-            <div class="org-level org-level-1" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-1" style="position: relative; top: 20px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">COMMISSIONER</div>
             </div>
             
             <!-- Level 2: PRESIDENT DIRECTOR -->
-            <div class="org-level org-level-2" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-2" style="position: relative; top: 80px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">PRESIDENT DIRECTOR</div>
             </div>
             
             <!-- Level 3: DIRECTOR -->
-            <div class="org-level org-level-3" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%);">
+            <div class="org-level org-level-3" style="position: relative; top: 140px; left: 50%; transform: translateX(-50%);">
               <div class="org-position">DIRECTOR</div>
             </div>
             
             <!-- Level 4: BRANCH MANAGER and EXECUTIVE SECRETARY -->
-            <div class="org-level org-level-4" style="position: absolute; top: 220px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
+            <div class="org-level org-level-4" style="position: relative; top: 220px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; justify-content: space-between;">
               <div class="org-position">BRANCH MANAGER</div>
               <div class="org-position">EXECUTIVE SECRETARY</div>
             </div>
             
             <!-- Level 5: All departments -->
-            <div class="org-level org-level-5" style="position: absolute; top: 300px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+            <div class="org-level org-level-5" style="position: relative; top: 300px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
               <div class="org-position">HR</div>
               <div class="org-position">LEGAL</div>
               <div class="org-position">PROCUREMENT</div>
@@ -730,7 +782,7 @@
             </div>
             
             <!-- Level 6: Sub-departments - Row 1 (All sub-departments) -->
-            <div class="org-level org-level-6-row1" style="position: absolute; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
+            <div class="org-level org-level-6-row1" style="position: relative; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
               <div class="org-position" style="position: relative; left: -100px;">GA</div>
               <div class="org-position" style="position: relative; left: -100px;">DOCUMENT CONTROL</div>
               <div class="org-position" style="position: relative; left: -25px;">QC</div>
@@ -742,9 +794,10 @@
             </div>
             
             <!-- Level 6: Sub-departments - Row 3 (Finance pairs) -->
-            <div class="org-level org-level-6-row3" style="position: absolute; top: 460px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
+            <div class="org-level org-level-6-row3" style="position: relative; top: 460px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
               <div class="org-position" style="position: relative; left: 250px;">ACCOUNTING</div>
               <div class="org-position" style="position: relative; left: 250px;">TAX</div>
+            </div>
             </div>
           </div>
         </div>
@@ -1411,6 +1464,47 @@
     if (!('ResizeObserver' in window)) {
       window.addEventListener('resize', debouncedUpdate);
     }
+    
+    // Dynamic scaling function
+    function updateChartScale() {
+      const chartContainer = document.querySelector('.org-chart');
+      const scalableChart = document.querySelector('.org-chart-scalable');
+      
+      if (!chartContainer || !scalableChart) return;
+      
+      const containerWidth = chartContainer.offsetWidth;
+      const containerHeight = chartContainer.offsetHeight;
+      const chartWidth = 800;
+      const chartHeight = 600;
+      
+      // Calculate scale based on container size
+      const scaleX = containerWidth / chartWidth;
+      const scaleY = containerHeight / chartHeight;
+      const scale = Math.min(scaleX, scaleY, 1); // Don't scale up beyond 100%
+      
+      // Apply scale
+      scalableChart.style.transform = `scale(${scale})`;
+      
+      // Center the chart
+      const scaledWidth = chartWidth * scale;
+      const scaledHeight = chartHeight * scale;
+      const offsetX = (containerWidth - scaledWidth) / 2;
+      const offsetY = (containerHeight - scaledHeight) / 2;
+      
+      scalableChart.style.marginLeft = `${offsetX}px`;
+      scalableChart.style.marginTop = `${offsetY}px`;
+    }
+    
+    // Update scale on load and resize
+    updateChartScale();
+    window.addEventListener('resize', updateChartScale);
+    
+    // Update scale when chart updates
+    const originalUpdateOrgChart = updateOrgChart;
+    updateOrgChart = function() {
+      originalUpdateOrgChart();
+      setTimeout(updateChartScale, 100);
+    };
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
