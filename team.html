@@ -1201,33 +1201,33 @@
         const taxPos = getElementCenter(taxSubDept);
         
         if (financePos && accountingPos && taxPos) {
-          // Vertical line from Finance down
+          // Vertical line from Finance down (longer to pass row 2)
           const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           verticalLine.setAttribute('x1', financePos.x);
           verticalLine.setAttribute('y1', financePos.y + 20);
           verticalLine.setAttribute('x2', financePos.x);
-          verticalLine.setAttribute('y2', financePos.y + 40);
+          verticalLine.setAttribute('y2', financePos.y + 100);
           svg.appendChild(verticalLine);
           
-          // Horizontal line connecting Accounting and Tax
+          // Horizontal line connecting Accounting and Tax (at row 3 level)
           const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           horizontalLine.setAttribute('x1', accountingPos.x);
-          horizontalLine.setAttribute('y1', financePos.y + 40);
+          horizontalLine.setAttribute('y1', financePos.y + 100);
           horizontalLine.setAttribute('x2', taxPos.x);
-          horizontalLine.setAttribute('y2', financePos.y + 40);
+          horizontalLine.setAttribute('y2', financePos.y + 100);
           svg.appendChild(horizontalLine);
           
-          // Vertical lines down to Accounting and Tax (shorter like QC)
+          // Vertical lines down to Accounting and Tax (from new horizontal position)
           const accountingVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           accountingVerticalLine.setAttribute('x1', accountingPos.x);
-          accountingVerticalLine.setAttribute('y1', financePos.y + 40);
+          accountingVerticalLine.setAttribute('y1', financePos.y + 100);
           accountingVerticalLine.setAttribute('x2', accountingPos.x);
           accountingVerticalLine.setAttribute('y2', accountingPos.y - 10);
           svg.appendChild(accountingVerticalLine);
           
           const taxVerticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           taxVerticalLine.setAttribute('x1', taxPos.x);
-          taxVerticalLine.setAttribute('y1', financePos.y + 40);
+          taxVerticalLine.setAttribute('y1', financePos.y + 100);
           taxVerticalLine.setAttribute('x2', taxPos.x);
           taxVerticalLine.setAttribute('y2', taxPos.y - 10);
           svg.appendChild(taxVerticalLine);
