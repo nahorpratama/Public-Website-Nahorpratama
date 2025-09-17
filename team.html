@@ -180,6 +180,10 @@
       top: 420px;
     }
     
+    .org-level-6-row3 {
+      top: 460px;
+    }
+    
     .org-level-6::-webkit-scrollbar {
       height: 6px;
     }
@@ -253,7 +257,7 @@
     /* Large Desktop (1200px+) */
     @media (min-width: 1200px) {
       .org-chart {
-        min-height: 560px;
+        min-height: 600px;
         padding: 20px;
       }
       
@@ -737,8 +741,8 @@
               <div class="org-position" style="position: relative; left: 150px;">MECHANIC</div>
             </div>
             
-            <!-- Level 6: Sub-departments - Row 2 (Finance pairs) -->
-            <div class="org-level org-level-6-row2" style="position: absolute; top: 420px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
+            <!-- Level 6: Sub-departments - Row 3 (Finance pairs) -->
+            <div class="org-level org-level-6-row3" style="position: absolute; top: 460px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
               <div class="org-position">ACCOUNTING</div>
               <div class="org-position">TAX</div>
             </div>
@@ -1188,8 +1192,8 @@
       
       // Fork lines from Finance to Accounting and Tax
       const financeDept = positions.departments[6]; // Finance is 7th department (index 6)
-      const accountingSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(1)'); // Accounting is first in row 2
-      const taxSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(2)'); // Tax is second in row 2
+      const accountingSubDept = document.querySelector('.org-level-6-row3 .org-position:nth-child(1)'); // Accounting is first in row 3
+      const taxSubDept = document.querySelector('.org-level-6-row3 .org-position:nth-child(2)'); // Tax is second in row 3
       
       if (financeDept && accountingSubDept && taxSubDept) {
         const financePos = getElementCenter(financeDept);
