@@ -725,20 +725,20 @@
               <div class="org-position">HEAVY EQUIPMENT</div>
             </div>
             
-            <!-- Level 6: Sub-departments - Row 1 (HR, Operation, Heavy Equipment pairs) -->
+            <!-- Level 6: Sub-departments - Row 1 (All sub-departments) -->
             <div class="org-level org-level-6-row1" style="position: absolute; top: 380px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
               <div class="org-position" style="position: relative; left: -200px;">GA</div>
               <div class="org-position" style="position: relative; left: -200px;">DOCUMENT CONTROL</div>
+              <div class="org-position" style="position: relative; left: -100px;">QC</div>
+              <div class="org-position" style="position: relative; left: -100px;">HSE</div>
       <div class="org-position" style="position: relative; left: 120px;">PROJECT</div>
       <div class="org-position" style="position: relative; left: 120px;">ENGINEERING</div>
               <div class="org-position" style="position: relative; left: 150px;">OPERATOR</div>
               <div class="org-position" style="position: relative; left: 150px;">MECHANIC</div>
             </div>
             
-            <!-- Level 6: Sub-departments - Row 2 (QSHE & Finance pairs) -->
+            <!-- Level 6: Sub-departments - Row 2 (Finance pairs) -->
             <div class="org-level org-level-6-row2" style="position: absolute; top: 420px; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: center; gap: 15px;">
-              <div class="org-position">QC</div>
-              <div class="org-position">HSE</div>
               <div class="org-position">ACCOUNTING</div>
               <div class="org-position">TAX</div>
             </div>
@@ -1100,8 +1100,8 @@
       
       // Fork lines from QSHE to QC and HSE
       const qsheDept = positions.departments[3]; // QSHE is 4th department (index 3)
-      const qcSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(1)'); // QC is first in row 2
-      const hseSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(2)'); // HSE is second in row 2
+      const qcSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(3)'); // QC is third in row 1
+      const hseSubDept = document.querySelector('.org-level-6-row1 .org-position:nth-child(4)'); // HSE is fourth in row 1
       
       if (qsheDept && qcSubDept && hseSubDept) {
         const qshePos = getElementCenter(qsheDept);
@@ -1188,8 +1188,8 @@
       
       // Fork lines from Finance to Accounting and Tax
       const financeDept = positions.departments[6]; // Finance is 7th department (index 6)
-      const accountingSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(3)'); // Accounting is third in row 2
-      const taxSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(4)'); // Tax is fourth in row 2
+      const accountingSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(1)'); // Accounting is first in row 2
+      const taxSubDept = document.querySelector('.org-level-6-row2 .org-position:nth-child(2)'); // Tax is second in row 2
       
       if (financeDept && accountingSubDept && taxSubDept) {
         const financePos = getElementCenter(financeDept);
