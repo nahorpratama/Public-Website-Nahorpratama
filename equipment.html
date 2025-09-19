@@ -239,6 +239,82 @@
       font-weight: 600;
     }
     
+    /* Equipment List Styling */
+    .equipment-list {
+      margin-top: 20px;
+      max-height: 500px;
+      overflow-y: auto;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    
+    .equipment-entry {
+      padding: 15px 20px;
+      border-bottom: 1px solid #f1f3f4;
+      transition: background-color 0.2s ease;
+    }
+    
+    .equipment-entry:last-child {
+      border-bottom: none;
+    }
+    
+    .equipment-entry:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .equipment-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2c5aa0;
+      margin-bottom: 8px;
+    }
+    
+    .equipment-details-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .manufacture {
+      font-size: 14px;
+      color: #495057;
+      font-weight: 500;
+    }
+    
+    .model {
+      font-size: 14px;
+      color: #6c757d;
+      font-style: italic;
+    }
+    
+    .quantity {
+      font-size: 14px;
+      color: #2c5aa0;
+      font-weight: 600;
+      background: #e3f2fd;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 60px;
+    }
+    
+    @media (max-width: 768px) {
+      .equipment-details-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      
+      .quantity {
+        justify-self: start;
+      }
+      
+      .equipment-list {
+        max-height: 400px;
+      }
+    }
+    
     /* Equipment Maintenance Section */
     .equipment-maintenance-section {
       padding: 60px 0;
@@ -474,11 +550,134 @@
                 <div class="equipment-item">
                   <h3>Light Vehicles</h3>
                   <p>Passenger cars, pickup trucks, and utility vehicles for site transportation and personnel mobility.</p>
-                  <ul>
-                    <li><strong>Pickup Trucks:</strong> 4WD capability, payload 1-2 tons</li>
-                    <li><strong>Passenger Cars:</strong> Sedan and SUV for management visits</li>
-                    <li><strong>Utility Vehicles:</strong> ATV and UTV for rough terrain access</li>
-                  </ul>
+                  
+                  <div class="equipment-list">
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Double Cabin</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">TOYOTA Hilux</span>
+                        <span class="model">Hilux Double Cabin 4X4</span>
+                        <span class="quantity">Qty: 8</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Double Cabin</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">MITSUBISHI Triton</span>
+                        <span class="model">Hilux Double Cabin 4X4</span>
+                        <span class="quantity">Qty: 2</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Single Cabin</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">MITSUBISHI Triton</span>
+                        <span class="model">Single Cabin</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Micro Bus</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">ISUZU</span>
+                        <span class="model">Micro Bus</span>
+                        <span class="quantity">Qty: 3</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Open Cargo Truck/Pick Up</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">HINO</span>
+                        <span class="model">Open Cargo Truck/Pick Up</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Open Cargo Truck/Pick Up</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">HINO Dutro</span>
+                        <span class="model">Open Cargo Truck/Pick Up</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Open Cargo Truck/Pick Up</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">MITSUBISHI L300</span>
+                        <span class="model">Open Cargo Truck/Pick Up</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Toyota Inova</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 2</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Mazda MX 5 AT</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Mazda 3 Hatchback</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Xpander Cross</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Honda HRV</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">MPV</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Toyota Rush</span>
+                        <span class="model">-</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                    
+                    <div class="equipment-entry">
+                      <div class="equipment-name">Sepeda Motor</div>
+                      <div class="equipment-details-row">
+                        <span class="manufacture">Kawasaki</span>
+                        <span class="model">Motor Trail R2</span>
+                        <span class="quantity">Qty: 1</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
