@@ -134,6 +134,118 @@
       color: #666;
       line-height: 1.6;
     }
+    .equipment-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .equipment-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .equipment-specs {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .equipment-specs h4 {
+      color: #2c5aa0;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .equipment-specs ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    .equipment-specs li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .equipment-specs li:last-child {
+      border-bottom: none;
+    }
+    .equipment-specs strong {
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    .equipment-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .feature-tag {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Equipment Maintenance Section */
+    .equipment-maintenance-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    .maintenance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .maintenance-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .maintenance-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+    .maintenance-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .maintenance-card h3 {
+      color: #2c5aa0;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .maintenance-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+    .maintenance-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+    }
+    .maintenance-card li:last-child {
+      border-bottom: none;
+    }
+    .maintenance-card li:before {
+      content: "✓";
+      color: #27ae60;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
     @media (max-width: 768px) {
       .intro-header-equipment {
         height: 60vh;
@@ -154,6 +266,13 @@
       .equipment-categories {
         grid-template-columns: 1fr;
         gap: 20px;
+      }
+      .maintenance-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .maintenance-card {
+        padding: 25px;
       }
     }
   </style>
@@ -213,34 +332,188 @@
           </div>
           <div class="equipment-categories">
             <div class="equipment-category">
+              <div class="equipment-icon">🏗️</div>
               <h3>Alat Berat Konstruksi</h3>
-              <p>Excavator, bulldozer, crane, dan alat berat lainnya untuk pekerjaan konstruksi dan penggalian.</p>
+              <p class="equipment-description">Excavator, bulldozer, crane, dan alat berat lainnya untuk pekerjaan konstruksi dan penggalian.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Excavator:</strong> Kapasitas 20-50 ton, kedalaman galian hingga 8 meter</li>
+                  <li><strong>Bulldozer:</strong> Tenaga 200-400 HP, blade kapasitas 3-8 m³</li>
+                  <li><strong>Crane:</strong> Kapasitas angkat 25-100 ton, jangkauan hingga 50 meter</li>
+                  <li><strong>Wheel Loader:</strong> Kapasitas bucket 2-5 m³, tenaga 150-300 HP</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">ISO 9001</span>
+                  <span class="feature-tag">Rutin Maintenance</span>
+                  <span class="feature-tag">Operator Certified</span>
+                </div>
+              </div>
             </div>
+            
             <div class="equipment-category">
+              <div class="equipment-icon">🔧</div>
               <h3>Peralatan Piping</h3>
-              <p>Mesin las, cutting tools, bending machine, dan peralatan khusus untuk instalasi pipa.</p>
+              <p class="equipment-description">Mesin las, cutting tools, bending machine, dan peralatan khusus untuk instalasi pipa.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Welding Machine:</strong> Arus 200-600A, untuk pipa diameter 2"-48"</li>
+                  <li><strong>Pipe Cutting Tools:</strong> Plasma cutter, oxy-fuel cutting, precision cutting</li>
+                  <li><strong>Bending Machine:</strong> Kapasitas pipa hingga 24", radius bending 1.5D-5D</li>
+                  <li><strong>Pipe Beveling:</strong> Automatic beveling untuk sambungan las</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">ASME B31.3</span>
+                  <span class="feature-tag">API 1104</span>
+                  <span class="feature-tag">AWS Certified</span>
+                </div>
+              </div>
             </div>
+            
             <div class="equipment-category">
+              <div class="equipment-icon">📊</div>
               <h3>Alat Ukur & Testing</h3>
-              <p>Pressure gauge, flow meter, radiography equipment, dan peralatan pengujian lainnya.</p>
+              <p class="equipment-description">Pressure gauge, flow meter, radiography equipment, dan peralatan pengujian lainnya.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Pressure Gauge:</strong> Range 0-1000 bar, akurasi ±0.1%</li>
+                  <li><strong>Flow Meter:</strong> Ultrasonic, electromagnetic, accuracy ±0.5%</li>
+                  <li><strong>Radiography Equipment:</strong> X-ray, gamma ray, digital radiography</li>
+                  <li><strong>NDT Equipment:</strong> Ultrasonic testing, magnetic particle, dye penetrant</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">Calibrated</span>
+                  <span class="feature-tag">ISO 17025</span>
+                  <span class="feature-tag">Traceable</span>
+                </div>
+              </div>
             </div>
+            
             <div class="equipment-category">
+              <div class="equipment-icon">🛡️</div>
               <h3>Peralatan Keselamatan</h3>
-              <p>Safety equipment, protective gear, dan peralatan keselamatan kerja sesuai standar industri.</p>
+              <p class="equipment-description">Safety equipment, protective gear, dan peralatan keselamatan kerja sesuai standar industri.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Safety Harness:</strong> EN 361 certified, kapasitas 100kg</li>
+                  <li><strong>Hard Hat:</strong> ANSI Z89.1 Type I & II, Class E</li>
+                  <li><strong>Safety Shoes:</strong> EN ISO 20345, steel toe, slip resistant</li>
+                  <li><strong>Gas Detector:</strong> Multi-gas detector, 4-gas monitoring</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">OSHA Compliant</span>
+                  <span class="feature-tag">ANSI Standard</span>
+                  <span class="feature-tag">Regular Inspection</span>
+                </div>
+              </div>
             </div>
+            
             <div class="equipment-category">
+              <div class="equipment-icon">⚡</div>
               <h3>Generator & Power Tools</h3>
-              <p>Generator listrik, power tools, dan peralatan pendukung untuk operasional proyek.</p>
+              <p class="equipment-description">Generator listrik, power tools, dan peralatan pendukung untuk operasional proyek.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Generator:</strong> 50-500 kVA, diesel powered, automatic transfer</li>
+                  <li><strong>Power Tools:</strong> Cordless drill, impact wrench, grinder</li>
+                  <li><strong>Compressor:</strong> 100-1000 CFM, pressure 7-10 bar</li>
+                  <li><strong>Welding Generator:</strong> 300-600A output, portable design</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">Fuel Efficient</span>
+                  <span class="feature-tag">Low Noise</span>
+                  <span class="feature-tag">Maintenance Free</span>
+                </div>
+              </div>
             </div>
+            
             <div class="equipment-category">
+              <div class="equipment-icon">🚛</div>
               <h3>Transportasi & Logistik</h3>
-              <p>Kendaraan transportasi, forklift, dan peralatan logistik untuk mobilitas material.</p>
+              <p class="equipment-description">Kendaraan transportasi, forklift, dan peralatan logistik untuk mobilitas material.</p>
+              <div class="equipment-specs">
+                <h4>Spesifikasi Utama:</h4>
+                <ul>
+                  <li><strong>Forklift:</strong> Kapasitas 2-10 ton, tinggi angkat 6 meter</li>
+                  <li><strong>Flatbed Truck:</strong> Kapasitas 10-40 ton, panjang 12-20 meter</li>
+                  <li><strong>Crane Truck:</strong> Kapasitas 8-50 ton, jangkauan 20-40 meter</li>
+                  <li><strong>Trailer:</strong> Lowbed trailer, container trailer, tanker</li>
+                </ul>
+                <div class="equipment-features">
+                  <span class="feature-tag">Road Legal</span>
+                  <span class="feature-tag">GPS Tracking</span>
+                  <span class="feature-tag">Regular Service</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- Equipment Maintenance & Safety Section -->
+  <div class="content-section">
+    <div class="equipment-maintenance-section">
+      <div class="equipment-categories-container">
+        <div class="about-story-wrap">
+          <h2 class="h2-headings" style="text-align: center; margin-bottom: 20px;">PEMELIHARAAN & KESELAMATAN PERALATAN</h2>
+          <p class="paragraph-smallx" style="text-align: center; margin-bottom: 40px;">Komitmen kami dalam menjaga standar keselamatan dan performa peralatan terbaik</p>
+        </div>
+        
+        <div class="maintenance-grid">
+          <div class="maintenance-card">
+            <div class="maintenance-icon">🔧</div>
+            <h3>Rutin Maintenance</h3>
+            <ul>
+              <li>Inspeksi harian sebelum operasi</li>
+              <li>Servis berkala setiap 250 jam operasi</li>
+              <li>Overhaul major setiap 10,000 jam</li>
+              <li>Kalibrasi alat ukur setiap 6 bulan</li>
+            </ul>
+          </div>
+          
+          <div class="maintenance-card">
+            <div class="maintenance-icon">🛡️</div>
+            <h3>Safety Standards</h3>
+            <ul>
+              <li>OSHA 29 CFR 1926 compliance</li>
+              <li>ANSI/ASME safety standards</li>
+              <li>Regular safety training untuk operator</li>
+              <li>Emergency response procedures</li>
+            </ul>
+          </div>
+          
+          <div class="maintenance-card">
+            <div class="maintenance-icon">📋</div>
+            <h3>Certifications</h3>
+            <ul>
+              <li>ISO 9001:2015 Quality Management</li>
+              <li>ISO 14001 Environmental Management</li>
+              <li>OHSAS 18001 Safety Management</li>
+              <li>API Q1 Quality Management System</li>
+            </ul>
+          </div>
+          
+          <div class="maintenance-card">
+            <div class="maintenance-icon">📊</div>
+            <h3>Performance Monitoring</h3>
+            <ul>
+              <li>Real-time equipment monitoring</li>
+              <li>Predictive maintenance analytics</li>
+              <li>Fuel consumption tracking</li>
+              <li>Downtime analysis & reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="intro-section cc-cta">
     <div class="cta-container">
       <div class="cta-wrap">
