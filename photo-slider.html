@@ -13,7 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #ffffff;
         }
 
         .slider-container {
@@ -29,6 +29,7 @@
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
         }
 
         .slides {
@@ -58,7 +59,7 @@
         }
 
         .slide.layout-1 .top-section {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             display: flex;
@@ -67,6 +68,24 @@
             font-size: 16px;
             color: #6c757d;
             min-height: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-1 .top-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-1 .top-section > * {
+            position: relative;
+            z-index: 2;
         }
 
         .slide.layout-1 .middle-section {
@@ -104,7 +123,7 @@
         }
 
         .slide.layout-1 .small-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             flex: 1;
@@ -114,6 +133,24 @@
             font-size: 12px;
             color: #6c757d;
             min-height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-1 .small-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-1 .small-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         .slide.layout-1 .bottom-section {
@@ -150,7 +187,7 @@
         }
 
         .slide.layout-1 .bottom-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             display: flex;
@@ -159,6 +196,24 @@
             font-size: 14px;
             color: #6c757d;
             min-height: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-1 .bottom-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-1 .bottom-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         /* Layout Gambar Kedua - Slide 2, 4, 6 */
@@ -170,7 +225,7 @@
         }
 
         .slide.layout-2 .top-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             display: flex;
@@ -179,6 +234,24 @@
             font-size: 16px;
             color: #6c757d;
             min-height: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-2 .top-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-2 .top-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         .slide.layout-2 .middle-section {
@@ -194,7 +267,7 @@
         }
 
         .slide.layout-2 .square-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             flex: 1;
@@ -204,6 +277,24 @@
             font-size: 12px;
             color: #6c757d;
             min-height: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-2 .square-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-2 .square-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         .slide.layout-2 .right-text {
@@ -235,7 +326,7 @@
         }
 
         .slide.layout-2 .medium-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             display: flex;
@@ -244,6 +335,24 @@
             font-size: 14px;
             color: #6c757d;
             min-height: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-2 .medium-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-2 .medium-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         .slide.layout-2 .info-lines {
@@ -274,7 +383,7 @@
         }
 
         .slide.layout-2 .bottom-image {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             border: 2px dashed #dee2e6;
             border-radius: 8px;
             display: flex;
@@ -283,6 +392,24 @@
             font-size: 14px;
             color: #6c757d;
             min-height: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.layout-2 .bottom-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .slide.layout-2 .bottom-image > * {
+            position: relative;
+            z-index: 2;
         }
 
         .controls {
