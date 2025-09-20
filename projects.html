@@ -364,12 +364,12 @@
 
     .zone-1,
     .zone-3 {
-      flex: 0 0 15%;
+      flex: 0 0 20%;
       margin: 0 10px;
     }
 
     .zone-2 {
-      flex: 0 0 70%;
+      flex: 0 0 60%;
       margin: 10px;
       display: flex;
       gap: 12px;
@@ -401,7 +401,7 @@
     }
 
     .layout-1 .text-block {
-      flex: 0 0 70%;
+      flex: 0 0 45%;
       background-color: #f8f9fa;
       border-radius: 10px;
       padding: 20px;
@@ -409,10 +409,14 @@
     }
 
     .layout-1 .image-stack {
-      flex: 0 0 30%;
+      flex: 0 0 20%;
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+
+    .layout-1 .spacer {
+      flex: 0 0 35%;
     }
 
     .layout-1 .small-image {
@@ -433,7 +437,7 @@
     }
 
     .layout-2 .image-stack {
-      flex: 0 0 30%;
+      flex: 0 0 20%;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -452,11 +456,15 @@
     }
 
     .layout-2 .text-block {
-      flex: 0 0 70%;
+      flex: 0 0 45%;
       background-color: #f8f9fa;
       border-radius: 10px;
       padding: 20px;
       border: 2px solid #e9ecef;
+    }
+
+    .layout-2 .spacer {
+      flex: 0 0 35%;
     }
 
     /* Mobile Responsive */
@@ -515,12 +523,12 @@
 
       .zone-1,
       .zone-3 {
-        flex: 0 0 10%;
+        flex: 0 0 15%;
         margin: 0 8px;
       }
 
       .zone-2 {
-        flex: 0 0 80%;
+        flex: 0 0 70%;
         margin: 8px;
         gap: 10px;
       }
@@ -580,12 +588,12 @@
 
       .zone-1,
       .zone-3 {
-        flex: 0 0 5%;
+        flex: 0 0 10%;
         margin: 0 6px;
       }
 
       .zone-2 {
-        flex: 0 0 90%;
+        flex: 0 0 80%;
         margin: 6px;
         gap: 6px;
         flex-direction: column;
@@ -1470,7 +1478,7 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <!-- Zona 2: Split Layout 45:35:20 (Teks kiri, Spacer, Gambar kanan) -->
               <div class="zone-2">
                 <div class="text-block">
                   <div class="project-header">
@@ -1498,6 +1506,7 @@
                     <span class="status-badge completed">Completed</span>
                   </div>
                 </div>
+                <div class="spacer"></div>
                 <div class="image-stack">
                   <div class="small-image">Detail Image 1</div>
                   <div class="small-image">Detail Image 2</div>
@@ -1521,12 +1530,13 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <!-- Zona 2: Split Layout 20:35:45 (Gambar kiri, Spacer, Teks kanan) -->
               <div class="zone-2">
                 <div class="image-stack">
                   <div class="small-image">Detail Image 1</div>
                   <div class="small-image">Detail Image 2</div>
                 </div>
+                <div class="spacer"></div>
                 <div class="text-block">
                   <div class="project-header">
                     <h3>Duri Production Facility</h3>
@@ -1572,7 +1582,7 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <!-- Zona 2: Split Layout 45:35:20 (Teks kiri, Spacer, Gambar kanan) -->
               <div class="zone-2">
                 <div class="text-block">
                   <div class="project-header">
@@ -1600,6 +1610,7 @@
                     <span class="status-badge in-progress">In Progress</span>
                   </div>
                 </div>
+                <div class="spacer"></div>
                 <div class="image-stack">
                   <div class="small-image">Technical Diagram 1</div>
                   <div class="small-image">Technical Diagram 2</div>
@@ -1623,12 +1634,13 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <!-- Zona 2: Split Layout 20:35:45 (Gambar kiri, Spacer, Teks kanan) -->
               <div class="zone-2">
                 <div class="image-stack">
                   <div class="small-image">Infrastructure Image 1</div>
                   <div class="small-image">Infrastructure Image 2</div>
                 </div>
+                <div class="spacer"></div>
                 <div class="text-block">
                   <div class="project-header">
                     <h3>Jakarta Infrastructure Hub</h3>
@@ -1674,7 +1686,7 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <!-- Zona 2: Split Layout 45:35:20 (Teks kiri, Spacer, Gambar kanan) -->
               <div class="zone-2">
                 <div class="text-block">
                   <div class="project-header">
@@ -1702,6 +1714,7 @@
                     <span class="status-badge planning">Planning</span>
                   </div>
                 </div>
+                <div class="spacer"></div>
                 <div class="image-stack">
                   <div class="small-image">Industrial Design 1</div>
                   <div class="small-image">Industrial Design 2</div>
@@ -1725,12 +1738,13 @@
                 </div>
               </div>
               
-              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <!-- Zona 2: Split Layout 20:35:45 (Gambar kiri, Spacer, Teks kanan) -->
               <div class="zone-2">
                 <div class="image-stack">
                   <div class="small-image">Energy System 1</div>
                   <div class="small-image">Energy System 2</div>
                 </div>
+                <div class="spacer"></div>
                 <div class="text-block">
                   <div class="project-header">
                     <h3>Medan Energy Plant</h3>
