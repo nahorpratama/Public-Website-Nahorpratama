@@ -184,10 +184,33 @@
       min-width: 100%;
       min-height: 140vh;
       padding: 2vh;
-      background-color: #ffffff;
+      background-color: #ffffff !important;
       background-image: none !important;
+      background: #ffffff !important;
       border: none;
       box-sizing: border-box;
+    }
+
+    .slide * {
+      background-image: none !important;
+    }
+
+    /* Force remove all background images from slide sections */
+    .slide,
+    .slide *,
+    .slide::before,
+    .slide::after,
+    .slide *::before,
+    .slide *::after {
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    /* Override any external CSS that might add background images */
+    .photo-slider-section .slide,
+    .photo-slider-section .slide * {
+      background-image: none !important;
+      background: #ffffff !important;
     }
 
     .slide-content {
@@ -363,12 +386,21 @@
       padding: 0;
       background-color: #ffffff !important;
       background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .slide.layout-1 *,
+    .slide.layout-2 * {
+      background-image: none !important;
     }
 
     .zone-1,
     .zone-3 {
       flex: 0 0 20%;
       margin: 0 10px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
     }
 
     .zone-2 {
@@ -376,6 +408,15 @@
       margin: 10px;
       display: flex;
       gap: 12px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .zone-1 *,
+    .zone-2 *,
+    .zone-3 * {
+      background-image: none !important;
     }
 
     .hero-image,
