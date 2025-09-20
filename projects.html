@@ -369,6 +369,199 @@
       font-weight: 600;
     }
     
+    /* Image Gallery Layout */
+    .project-gallery {
+      margin-top: 30px;
+    }
+    
+    .gallery-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      gap: 8px;
+      height: 500px;
+      margin-bottom: 20px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.02);
+      border-color: #2c5aa0;
+      box-shadow: 0 4px 15px rgba(44, 90, 160, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item-number {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background: rgba(44, 90, 160, 0.8);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    /* Zoom Modal */
+    .zoom-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(5px);
+    }
+    
+    .zoom-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .zoom-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .zoom-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: zoomIn 0.3s ease;
+    }
+    
+    .zoom-close {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .zoom-close:hover {
+      background: #ff4444;
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    .zoom-info {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    
+    /* Mobile responsive for gallery */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+        height: 600px;
+        gap: 4px;
+      }
+      
+      .gallery-item-number {
+        font-size: 8px;
+        padding: 1px 4px;
+      }
+      
+      .zoom-close {
+        top: -30px;
+        right: -30px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+      
+      .zoom-info {
+        bottom: -50px;
+        font-size: 12px;
+        padding: 8px 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(27, 1fr);
+        height: 500px;
+        gap: 3px;
+      }
+      
+      .gallery-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+    
     /* Mobile responsive fixes */
     @media (max-width: 768px) {
       .project-tabs-section {
@@ -857,6 +1050,333 @@
                 <p><strong>Value of Contract:</strong> Rp 1.800.000.000</p>
               </div>
             </div>
+            
+            <!-- Gallery Section for Aceh -->
+            <div class="project-gallery">
+              <h3 class="gallery-title">Project Gallery - Aceh</h3>
+              <div class="gallery-grid">
+                <div class="gallery-item" data-image="1">
+                  <div class="gallery-item-number">1</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 1" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="2">
+                  <div class="gallery-item-number">2</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 2" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="3">
+                  <div class="gallery-item-number">3</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 3" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="4">
+                  <div class="gallery-item-number">4</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 4" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="5">
+                  <div class="gallery-item-number">5</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 5" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="6">
+                  <div class="gallery-item-number">6</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 6" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="7">
+                  <div class="gallery-item-number">7</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 7" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="8">
+                  <div class="gallery-item-number">8</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 8" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="9">
+                  <div class="gallery-item-number">9</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 9" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="10">
+                  <div class="gallery-item-number">10</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 10" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="11">
+                  <div class="gallery-item-number">11</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 11" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="12">
+                  <div class="gallery-item-number">12</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 12" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="13">
+                  <div class="gallery-item-number">13</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 13" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="14">
+                  <div class="gallery-item-number">14</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 14" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="15">
+                  <div class="gallery-item-number">15</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 15" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="16">
+                  <div class="gallery-item-number">16</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 16" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="17">
+                  <div class="gallery-item-number">17</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 17" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="18">
+                  <div class="gallery-item-number">18</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 18" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="19">
+                  <div class="gallery-item-number">19</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 19" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="20">
+                  <div class="gallery-item-number">20</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 20" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="21">
+                  <div class="gallery-item-number">21</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 21" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="22">
+                  <div class="gallery-item-number">22</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 22" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="23">
+                  <div class="gallery-item-number">23</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 23" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="24">
+                  <div class="gallery-item-number">24</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 24" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="25">
+                  <div class="gallery-item-number">25</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 25" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="26">
+                  <div class="gallery-item-number">26</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 26" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="27">
+                  <div class="gallery-item-number">27</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 27" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="28">
+                  <div class="gallery-item-number">28</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 28" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="29">
+                  <div class="gallery-item-number">29</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 29" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="30">
+                  <div class="gallery-item-number">30</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 30" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="31">
+                  <div class="gallery-item-number">31</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 31" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="32">
+                  <div class="gallery-item-number">32</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 32" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="33">
+                  <div class="gallery-item-number">33</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 33" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="34">
+                  <div class="gallery-item-number">34</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 34" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="35">
+                  <div class="gallery-item-number">35</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 35" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="36">
+                  <div class="gallery-item-number">36</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 36" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="37">
+                  <div class="gallery-item-number">37</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 37" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="38">
+                  <div class="gallery-item-number">38</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 38" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="39">
+                  <div class="gallery-item-number">39</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 39" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="40">
+                  <div class="gallery-item-number">40</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 40" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="41">
+                  <div class="gallery-item-number">41</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 41" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="42">
+                  <div class="gallery-item-number">42</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 42" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="43">
+                  <div class="gallery-item-number">43</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 43" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="44">
+                  <div class="gallery-item-number">44</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 44" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="45">
+                  <div class="gallery-item-number">45</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 45" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="46">
+                  <div class="gallery-item-number">46</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 46" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="47">
+                  <div class="gallery-item-number">47</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 47" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="48">
+                  <div class="gallery-item-number">48</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 48" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="49">
+                  <div class="gallery-item-number">49</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 49" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="50">
+                  <div class="gallery-item-number">50</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 50" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="51">
+                  <div class="gallery-item-number">51</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 51" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="52">
+                  <div class="gallery-item-number">52</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 52" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="53">
+                  <div class="gallery-item-number">53</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 53" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="54">
+                  <div class="gallery-item-number">54</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 54" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="55">
+                  <div class="gallery-item-number">55</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 55" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="56">
+                  <div class="gallery-item-number">56</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 56" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="57">
+                  <div class="gallery-item-number">57</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 57" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="58">
+                  <div class="gallery-item-number">58</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 58" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="59">
+                  <div class="gallery-item-number">59</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 59" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="60">
+                  <div class="gallery-item-number">60</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 60" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="61">
+                  <div class="gallery-item-number">61</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 61" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="62">
+                  <div class="gallery-item-number">62</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 62" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="63">
+                  <div class="gallery-item-number">63</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 63" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="64">
+                  <div class="gallery-item-number">64</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 64" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="65">
+                  <div class="gallery-item-number">65</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 65" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="66">
+                  <div class="gallery-item-number">66</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 66" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="67">
+                  <div class="gallery-item-number">67</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 67" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="68">
+                  <div class="gallery-item-number">68</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 68" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="69">
+                  <div class="gallery-item-number">69</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 69" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="70">
+                  <div class="gallery-item-number">70</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 70" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="71">
+                  <div class="gallery-item-number">71</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 71" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="72">
+                  <div class="gallery-item-number">72</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 72" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="73">
+                  <div class="gallery-item-number">73</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 73" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="74">
+                  <div class="gallery-item-number">74</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 74" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="75">
+                  <div class="gallery-item-number">75</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 75" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="76">
+                  <div class="gallery-item-number">76</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 76" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="77">
+                  <div class="gallery-item-number">77</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 77" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="78">
+                  <div class="gallery-item-number">78</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Aceh Project 78" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="79">
+                  <div class="gallery-item-number">79</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Aceh Project 79" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="80">
+                  <div class="gallery-item-number">80</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Aceh Project 80" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -880,6 +1400,338 @@
                 <p><strong>Assignor:</strong> PT. Jambi Trade</p>
                 <p><strong>No. SPK/SO:</strong> 002/SPK/JAMBI/ENP/IV-2022</p>
                 <p><strong>Value of Contract:</strong> Rp 1.500.000.000</p>
+              </div>
+            </div>
+            
+            <!-- Gallery Section for Jambi -->
+            <div class="project-gallery">
+              <h3 class="gallery-title">Project Gallery - Jambi</h3>
+              <div class="gallery-grid">
+                <!-- Jambi Gallery - 80 images -->
+                <div class="gallery-item" data-image="1">
+                  <div class="gallery-item-number">1</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 1" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="2">
+                  <div class="gallery-item-number">2</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 2" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="3">
+                  <div class="gallery-item-number">3</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 3" loading="lazy">
+                </div>
+                <!-- Continue with 77 more images for Jambi -->
+                <div class="gallery-item" data-image="4">
+                  <div class="gallery-item-number">4</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 4" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="5">
+                  <div class="gallery-item-number">5</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 5" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="6">
+                  <div class="gallery-item-number">6</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 6" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="7">
+                  <div class="gallery-item-number">7</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 7" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="8">
+                  <div class="gallery-item-number">8</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 8" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="9">
+                  <div class="gallery-item-number">9</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 9" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="10">
+                  <div class="gallery-item-number">10</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 10" loading="lazy">
+                </div>
+                <!-- Add more images to complete 80 total -->
+                <div class="gallery-item" data-image="11">
+                  <div class="gallery-item-number">11</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 11" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="12">
+                  <div class="gallery-item-number">12</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 12" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="13">
+                  <div class="gallery-item-number">13</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 13" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="14">
+                  <div class="gallery-item-number">14</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 14" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="15">
+                  <div class="gallery-item-number">15</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 15" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="16">
+                  <div class="gallery-item-number">16</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 16" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="17">
+                  <div class="gallery-item-number">17</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 17" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="18">
+                  <div class="gallery-item-number">18</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 18" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="19">
+                  <div class="gallery-item-number">19</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 19" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="20">
+                  <div class="gallery-item-number">20</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 20" loading="lazy">
+                </div>
+                <!-- Continue pattern for remaining 60 images -->
+                <div class="gallery-item" data-image="21">
+                  <div class="gallery-item-number">21</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 21" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="22">
+                  <div class="gallery-item-number">22</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 22" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="23">
+                  <div class="gallery-item-number">23</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 23" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="24">
+                  <div class="gallery-item-number">24</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 24" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="25">
+                  <div class="gallery-item-number">25</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 25" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="26">
+                  <div class="gallery-item-number">26</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 26" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="27">
+                  <div class="gallery-item-number">27</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 27" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="28">
+                  <div class="gallery-item-number">28</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 28" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="29">
+                  <div class="gallery-item-number">29</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 29" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="30">
+                  <div class="gallery-item-number">30</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 30" loading="lazy">
+                </div>
+                <!-- Add remaining 50 images following the same pattern -->
+                <div class="gallery-item" data-image="31">
+                  <div class="gallery-item-number">31</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 31" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="32">
+                  <div class="gallery-item-number">32</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 32" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="33">
+                  <div class="gallery-item-number">33</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 33" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="34">
+                  <div class="gallery-item-number">34</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 34" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="35">
+                  <div class="gallery-item-number">35</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 35" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="36">
+                  <div class="gallery-item-number">36</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 36" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="37">
+                  <div class="gallery-item-number">37</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 37" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="38">
+                  <div class="gallery-item-number">38</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 38" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="39">
+                  <div class="gallery-item-number">39</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 39" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="40">
+                  <div class="gallery-item-number">40</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 40" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="41">
+                  <div class="gallery-item-number">41</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 41" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="42">
+                  <div class="gallery-item-number">42</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 42" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="43">
+                  <div class="gallery-item-number">43</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 43" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="44">
+                  <div class="gallery-item-number">44</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 44" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="45">
+                  <div class="gallery-item-number">45</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 45" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="46">
+                  <div class="gallery-item-number">46</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 46" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="47">
+                  <div class="gallery-item-number">47</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 47" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="48">
+                  <div class="gallery-item-number">48</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 48" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="49">
+                  <div class="gallery-item-number">49</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 49" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="50">
+                  <div class="gallery-item-number">50</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 50" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="51">
+                  <div class="gallery-item-number">51</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 51" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="52">
+                  <div class="gallery-item-number">52</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 52" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="53">
+                  <div class="gallery-item-number">53</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 53" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="54">
+                  <div class="gallery-item-number">54</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 54" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="55">
+                  <div class="gallery-item-number">55</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 55" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="56">
+                  <div class="gallery-item-number">56</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 56" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="57">
+                  <div class="gallery-item-number">57</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 57" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="58">
+                  <div class="gallery-item-number">58</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 58" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="59">
+                  <div class="gallery-item-number">59</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 59" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="60">
+                  <div class="gallery-item-number">60</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 60" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="61">
+                  <div class="gallery-item-number">61</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 61" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="62">
+                  <div class="gallery-item-number">62</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 62" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="63">
+                  <div class="gallery-item-number">63</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 63" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="64">
+                  <div class="gallery-item-number">64</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 64" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="65">
+                  <div class="gallery-item-number">65</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 65" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="66">
+                  <div class="gallery-item-number">66</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 66" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="67">
+                  <div class="gallery-item-number">67</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 67" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="68">
+                  <div class="gallery-item-number">68</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 68" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="69">
+                  <div class="gallery-item-number">69</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 69" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="70">
+                  <div class="gallery-item-number">70</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 70" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="71">
+                  <div class="gallery-item-number">71</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 71" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="72">
+                  <div class="gallery-item-number">72</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 72" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="73">
+                  <div class="gallery-item-number">73</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 73" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="74">
+                  <div class="gallery-item-number">74</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 74" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="75">
+                  <div class="gallery-item-number">75</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 75" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="76">
+                  <div class="gallery-item-number">76</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 76" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="77">
+                  <div class="gallery-item-number">77</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 77" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="78">
+                  <div class="gallery-item-number">78</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Jambi Project 78" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="79">
+                  <div class="gallery-item-number">79</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Jambi Project 79" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="80">
+                  <div class="gallery-item-number">80</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Jambi Project 80" loading="lazy">
+                </div>
               </div>
             </div>
           </div>
@@ -937,9 +1789,350 @@
                 <p><strong>Value of Contract:</strong> Rp 243.285.500</p>
               </div>
             </div>
+            
+            <!-- Gallery Section for Riau -->
+            <div class="project-gallery">
+              <h3 class="gallery-title">Project Gallery - Riau</h3>
+              <div class="gallery-grid">
+                <!-- Riau Gallery - 80 images -->
+                <div class="gallery-item" data-image="1">
+                  <div class="gallery-item-number">1</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 1" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="2">
+                  <div class="gallery-item-number">2</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 2" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="3">
+                  <div class="gallery-item-number">3</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 3" loading="lazy">
+                </div>
+                <!-- Continue with 77 more images for Riau -->
+                <div class="gallery-item" data-image="4">
+                  <div class="gallery-item-number">4</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 4" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="5">
+                  <div class="gallery-item-number">5</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 5" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="6">
+                  <div class="gallery-item-number">6</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 6" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="7">
+                  <div class="gallery-item-number">7</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 7" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="8">
+                  <div class="gallery-item-number">8</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 8" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="9">
+                  <div class="gallery-item-number">9</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 9" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="10">
+                  <div class="gallery-item-number">10</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 10" loading="lazy">
+                </div>
+                <!-- Add more images to complete 80 total -->
+                <div class="gallery-item" data-image="11">
+                  <div class="gallery-item-number">11</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 11" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="12">
+                  <div class="gallery-item-number">12</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 12" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="13">
+                  <div class="gallery-item-number">13</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 13" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="14">
+                  <div class="gallery-item-number">14</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 14" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="15">
+                  <div class="gallery-item-number">15</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 15" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="16">
+                  <div class="gallery-item-number">16</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 16" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="17">
+                  <div class="gallery-item-number">17</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 17" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="18">
+                  <div class="gallery-item-number">18</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 18" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="19">
+                  <div class="gallery-item-number">19</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 19" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="20">
+                  <div class="gallery-item-number">20</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 20" loading="lazy">
+                </div>
+                <!-- Continue pattern for remaining 60 images -->
+                <div class="gallery-item" data-image="21">
+                  <div class="gallery-item-number">21</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 21" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="22">
+                  <div class="gallery-item-number">22</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 22" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="23">
+                  <div class="gallery-item-number">23</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 23" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="24">
+                  <div class="gallery-item-number">24</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 24" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="25">
+                  <div class="gallery-item-number">25</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 25" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="26">
+                  <div class="gallery-item-number">26</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 26" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="27">
+                  <div class="gallery-item-number">27</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 27" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="28">
+                  <div class="gallery-item-number">28</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 28" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="29">
+                  <div class="gallery-item-number">29</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 29" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="30">
+                  <div class="gallery-item-number">30</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 30" loading="lazy">
+                </div>
+                <!-- Add remaining 50 images following the same pattern -->
+                <div class="gallery-item" data-image="31">
+                  <div class="gallery-item-number">31</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 31" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="32">
+                  <div class="gallery-item-number">32</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 32" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="33">
+                  <div class="gallery-item-number">33</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 33" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="34">
+                  <div class="gallery-item-number">34</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 34" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="35">
+                  <div class="gallery-item-number">35</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 35" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="36">
+                  <div class="gallery-item-number">36</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 36" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="37">
+                  <div class="gallery-item-number">37</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 37" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="38">
+                  <div class="gallery-item-number">38</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 38" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="39">
+                  <div class="gallery-item-number">39</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 39" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="40">
+                  <div class="gallery-item-number">40</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 40" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="41">
+                  <div class="gallery-item-number">41</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 41" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="42">
+                  <div class="gallery-item-number">42</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 42" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="43">
+                  <div class="gallery-item-number">43</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 43" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="44">
+                  <div class="gallery-item-number">44</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 44" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="45">
+                  <div class="gallery-item-number">45</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 45" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="46">
+                  <div class="gallery-item-number">46</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 46" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="47">
+                  <div class="gallery-item-number">47</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 47" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="48">
+                  <div class="gallery-item-number">48</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 48" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="49">
+                  <div class="gallery-item-number">49</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 49" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="50">
+                  <div class="gallery-item-number">50</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 50" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="51">
+                  <div class="gallery-item-number">51</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 51" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="52">
+                  <div class="gallery-item-number">52</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 52" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="53">
+                  <div class="gallery-item-number">53</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 53" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="54">
+                  <div class="gallery-item-number">54</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 54" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="55">
+                  <div class="gallery-item-number">55</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 55" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="56">
+                  <div class="gallery-item-number">56</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 56" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="57">
+                  <div class="gallery-item-number">57</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 57" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="58">
+                  <div class="gallery-item-number">58</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 58" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="59">
+                  <div class="gallery-item-number">59</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 59" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="60">
+                  <div class="gallery-item-number">60</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 60" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="61">
+                  <div class="gallery-item-number">61</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 61" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="62">
+                  <div class="gallery-item-number">62</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 62" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="63">
+                  <div class="gallery-item-number">63</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 63" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="64">
+                  <div class="gallery-item-number">64</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 64" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="65">
+                  <div class="gallery-item-number">65</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 65" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="66">
+                  <div class="gallery-item-number">66</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 66" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="67">
+                  <div class="gallery-item-number">67</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 67" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="68">
+                  <div class="gallery-item-number">68</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 68" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="69">
+                  <div class="gallery-item-number">69</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 69" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="70">
+                  <div class="gallery-item-number">70</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 70" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="71">
+                  <div class="gallery-item-number">71</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 71" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="72">
+                  <div class="gallery-item-number">72</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 72" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="73">
+                  <div class="gallery-item-number">73</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 73" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="74">
+                  <div class="gallery-item-number">74</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 74" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="75">
+                  <div class="gallery-item-number">75</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 75" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="76">
+                  <div class="gallery-item-number">76</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 76" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="77">
+                  <div class="gallery-item-number">77</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 77" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="78">
+                  <div class="gallery-item-number">78</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 78" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="79">
+                  <div class="gallery-item-number">79</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 79" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="80">
+                  <div class="gallery-item-number">80</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 80" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  
+  <!-- Zoom Modal -->
+  <div id="zoomModal" class="zoom-modal">
+    <div class="zoom-content">
+      <button class="zoom-close" id="zoomClose">&times;</button>
+      <img id="zoomImage" class="zoom-image" src="" alt="">
+      <div class="zoom-info" id="zoomInfo"></div>
     </div>
   </div>
   
@@ -1060,6 +2253,338 @@
                 </div>
               </div>
             </div>
+            
+            <!-- Gallery Section for Riau Mobile -->
+            <div class="project-gallery">
+              <h3 class="gallery-title">Project Gallery - Riau</h3>
+              <div class="gallery-grid">
+                <!-- Riau Mobile Gallery - 80 images -->
+                <div class="gallery-item" data-image="1">
+                  <div class="gallery-item-number">1</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 1" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="2">
+                  <div class="gallery-item-number">2</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 2" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="3">
+                  <div class="gallery-item-number">3</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 3" loading="lazy">
+                </div>
+                <!-- Continue with 77 more images for Riau Mobile -->
+                <div class="gallery-item" data-image="4">
+                  <div class="gallery-item-number">4</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 4" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="5">
+                  <div class="gallery-item-number">5</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 5" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="6">
+                  <div class="gallery-item-number">6</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 6" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="7">
+                  <div class="gallery-item-number">7</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 7" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="8">
+                  <div class="gallery-item-number">8</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 8" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="9">
+                  <div class="gallery-item-number">9</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 9" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="10">
+                  <div class="gallery-item-number">10</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 10" loading="lazy">
+                </div>
+                <!-- Add more images to complete 80 total -->
+                <div class="gallery-item" data-image="11">
+                  <div class="gallery-item-number">11</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 11" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="12">
+                  <div class="gallery-item-number">12</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 12" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="13">
+                  <div class="gallery-item-number">13</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 13" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="14">
+                  <div class="gallery-item-number">14</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 14" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="15">
+                  <div class="gallery-item-number">15</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 15" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="16">
+                  <div class="gallery-item-number">16</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 16" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="17">
+                  <div class="gallery-item-number">17</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 17" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="18">
+                  <div class="gallery-item-number">18</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 18" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="19">
+                  <div class="gallery-item-number">19</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 19" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="20">
+                  <div class="gallery-item-number">20</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 20" loading="lazy">
+                </div>
+                <!-- Continue pattern for remaining 60 images -->
+                <div class="gallery-item" data-image="21">
+                  <div class="gallery-item-number">21</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 21" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="22">
+                  <div class="gallery-item-number">22</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 22" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="23">
+                  <div class="gallery-item-number">23</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 23" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="24">
+                  <div class="gallery-item-number">24</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 24" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="25">
+                  <div class="gallery-item-number">25</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 25" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="26">
+                  <div class="gallery-item-number">26</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 26" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="27">
+                  <div class="gallery-item-number">27</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 27" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="28">
+                  <div class="gallery-item-number">28</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 28" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="29">
+                  <div class="gallery-item-number">29</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 29" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="30">
+                  <div class="gallery-item-number">30</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 30" loading="lazy">
+                </div>
+                <!-- Add remaining 50 images following the same pattern -->
+                <div class="gallery-item" data-image="31">
+                  <div class="gallery-item-number">31</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 31" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="32">
+                  <div class="gallery-item-number">32</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 32" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="33">
+                  <div class="gallery-item-number">33</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 33" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="34">
+                  <div class="gallery-item-number">34</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 34" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="35">
+                  <div class="gallery-item-number">35</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 35" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="36">
+                  <div class="gallery-item-number">36</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 36" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="37">
+                  <div class="gallery-item-number">37</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 37" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="38">
+                  <div class="gallery-item-number">38</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 38" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="39">
+                  <div class="gallery-item-number">39</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 39" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="40">
+                  <div class="gallery-item-number">40</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 40" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="41">
+                  <div class="gallery-item-number">41</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 41" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="42">
+                  <div class="gallery-item-number">42</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 42" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="43">
+                  <div class="gallery-item-number">43</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 43" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="44">
+                  <div class="gallery-item-number">44</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 44" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="45">
+                  <div class="gallery-item-number">45</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 45" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="46">
+                  <div class="gallery-item-number">46</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 46" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="47">
+                  <div class="gallery-item-number">47</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 47" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="48">
+                  <div class="gallery-item-number">48</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 48" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="49">
+                  <div class="gallery-item-number">49</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 49" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="50">
+                  <div class="gallery-item-number">50</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 50" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="51">
+                  <div class="gallery-item-number">51</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 51" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="52">
+                  <div class="gallery-item-number">52</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 52" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="53">
+                  <div class="gallery-item-number">53</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 53" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="54">
+                  <div class="gallery-item-number">54</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 54" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="55">
+                  <div class="gallery-item-number">55</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 55" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="56">
+                  <div class="gallery-item-number">56</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 56" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="57">
+                  <div class="gallery-item-number">57</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 57" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="58">
+                  <div class="gallery-item-number">58</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 58" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="59">
+                  <div class="gallery-item-number">59</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 59" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="60">
+                  <div class="gallery-item-number">60</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 60" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="61">
+                  <div class="gallery-item-number">61</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 61" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="62">
+                  <div class="gallery-item-number">62</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 62" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="63">
+                  <div class="gallery-item-number">63</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 63" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="64">
+                  <div class="gallery-item-number">64</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 64" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="65">
+                  <div class="gallery-item-number">65</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 65" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="66">
+                  <div class="gallery-item-number">66</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 66" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="67">
+                  <div class="gallery-item-number">67</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 67" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="68">
+                  <div class="gallery-item-number">68</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 68" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="69">
+                  <div class="gallery-item-number">69</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 69" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="70">
+                  <div class="gallery-item-number">70</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 70" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="71">
+                  <div class="gallery-item-number">71</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 71" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="72">
+                  <div class="gallery-item-number">72</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 72" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="73">
+                  <div class="gallery-item-number">73</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 73" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="74">
+                  <div class="gallery-item-number">74</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 74" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="75">
+                  <div class="gallery-item-number">75</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 75" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="76">
+                  <div class="gallery-item-number">76</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 76" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="77">
+                  <div class="gallery-item-number">77</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 77" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="78">
+                  <div class="gallery-item-number">78</div>
+                  <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Riau Project 78" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="79">
+                  <div class="gallery-item-number">79</div>
+                  <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Riau Project 79" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="80">
+                  <div class="gallery-item-number">80</div>
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Riau Project 80" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1124,6 +2649,53 @@
           this.classList.add('active');
           document.querySelector(`.project-tabs-section-mobile .project-location-content[data-location="${location}"]`).classList.add('active');
         });
+      });
+      
+      // Gallery zoom functionality
+      const zoomModal = document.getElementById('zoomModal');
+      const zoomImage = document.getElementById('zoomImage');
+      const zoomInfo = document.getElementById('zoomInfo');
+      const zoomClose = document.getElementById('zoomClose');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const img = this.querySelector('img');
+          const imageNumber = this.getAttribute('data-image');
+          const altText = img.getAttribute('alt');
+          
+          // Set zoom image source and info
+          zoomImage.src = img.src;
+          zoomImage.alt = altText;
+          zoomInfo.textContent = `Image ${imageNumber} - ${altText}`;
+          
+          // Show modal
+          zoomModal.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+      });
+      
+      // Close modal functionality
+      function closeModal() {
+        zoomModal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+      }
+      
+      // Close button
+      zoomClose.addEventListener('click', closeModal);
+      
+      // Close on background click
+      zoomModal.addEventListener('click', function(e) {
+        if (e.target === zoomModal) {
+          closeModal();
+        }
+      });
+      
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && zoomModal.classList.contains('active')) {
+          closeModal();
+        }
       });
     });
   </script>
