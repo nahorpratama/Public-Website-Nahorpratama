@@ -186,8 +186,72 @@
     .gallery-slider-nav {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 30px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      overflow-x: auto;
+      padding: 0 20px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    .gallery-slider-nav::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for dots navigation */
+    .gallery-slider-nav {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    .gallery-slider-nav::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Ensure dots don't scroll */
+    .gallery-slider-nav {
+      overflow-x: hidden;
+    }
+    
+    /* Responsive dots layout */
+    @media (max-width: 1200px) {
+      .gallery-slider-nav {
+        gap: 6px;
+      }
+    }
+    
+    @media (max-width: 900px) {
+      .gallery-slider-nav {
+        gap: 5px;
+      }
+    }
+    
+    /* Ensure dots fit on screen */
+    @media (max-width: 600px) {
+      .gallery-slider-nav {
+        gap: 4px;
+        padding: 0 5px;
+      }
+      
+      .gallery-slider-dot {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    
+    /* Very small screens */
+    @media (max-width: 400px) {
+      .gallery-slider-nav {
+        gap: 3px;
+        padding: 0 2px;
+      }
+      
+      .gallery-slider-dot {
+        width: 6px;
+        height: 6px;
+      }
     }
     
     .gallery-slider-dot {
@@ -197,6 +261,7 @@
       background: rgba(44, 62, 80, 0.3);
       cursor: pointer;
       transition: all 0.3s ease;
+      flex-shrink: 0;
     }
     
     .gallery-slider-dot.w-active {
@@ -672,6 +737,23 @@
       .gallery-arrow-icon {
         font-size: 20px;
       }
+      
+      .gallery-slider-nav {
+        gap: 7px;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 0 15px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      
+      .gallery-slider-nav::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .gallery-slider-dot {
+        flex-shrink: 0;
+      }
     }
     
     @media (max-width: 768px) {
@@ -779,11 +861,22 @@
       
       .gallery-slider-nav {
         margin-top: 20px;
+        gap: 6px;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 0 10px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      
+      .gallery-slider-nav::-webkit-scrollbar {
+        display: none;
       }
       
       .gallery-slider-dot {
         width: 10px;
         height: 10px;
+        flex-shrink: 0;
       }
     }
     
@@ -933,6 +1026,198 @@
             </div>
           </div>
           
+          <!-- Slide 3 - Gas Processing Facility Project (Duplicate) -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage">
+              <div class="gallery-container">
+                <!-- Top wide image -->
+                <div class="gallery-top-image">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Work" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column">
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Storage Tanks" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Construction Work" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block">
+                  <div class="gallery-project-title">
+                    <h2>Pipeline Infrastructure Development with Advanced Gas Processing Technology (Pipeline 16" 5000 Meter's Project)</h2>
+                  </div>
+                  <div class="gallery-project-details">
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📍</span>
+                      <span class="detail-text">Medan, North Sumatra</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📅</span>
+                      <span class="detail-text">October 2024</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">⚙️</span>
+                      <span class="detail-text">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide image -->
+                <div class="gallery-bottom-image">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction View" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 4 - Site Construction Services (Duplicate) -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage-2">
+              <div class="gallery-container-2">
+                <!-- Top wide image -->
+                <div class="gallery-top-image-2">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Overview" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column-2">
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Concrete Pouring Operation" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Completed Foundation" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block-2">
+                  <div class="gallery-project-title-2">
+                    <h2>Industrial Plant Construction<br>untuk Proyek<br>Pembangunan Fasilitas<br>Pengolahan Minyak<br>Processing Plant<br>Kapasitas 100,000 BPD</h2>
+                  </div>
+                  <div class="gallery-project-details-2">
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📍</span>
+                      <span class="detail-text-2">Balikpapan, East Kalimantan</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📅</span>
+                      <span class="detail-text-2">November 2024 - March 2026</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">⚙️</span>
+                      <span class="detail-text-2">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide aerial image -->
+                <div class="gallery-bottom-image-2">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction Site View" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 5 - Gas Processing Facility Project (Duplicate) -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage">
+              <div class="gallery-container">
+                <!-- Top wide image -->
+                <div class="gallery-top-image">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Work" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column">
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Storage Tanks" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Construction Work" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block">
+                  <div class="gallery-project-title">
+                    <h2>Refinery Modernization and Expansion Project with Enhanced Safety Systems (Pipeline 20" 8000 Meter's Installation)</h2>
+                  </div>
+                  <div class="gallery-project-details">
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📍</span>
+                      <span class="detail-text">Cilacap, Central Java</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📅</span>
+                      <span class="detail-text">December 2024</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">⚙️</span>
+                      <span class="detail-text">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide image -->
+                <div class="gallery-bottom-image">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction View" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 6 - Site Construction Services (Duplicate) -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage-2">
+              <div class="gallery-container-2">
+                <!-- Top wide image -->
+                <div class="gallery-top-image-2">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Overview" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column-2">
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Concrete Pouring Operation" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Completed Foundation" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block-2">
+                  <div class="gallery-project-title-2">
+                    <h2>Power Plant Construction<br>untuk Proyek<br>Pembangunan Pembangkit<br>Listrik Tenaga Gas<br>Power Plant<br>Kapasitas 500 MW</h2>
+                  </div>
+                  <div class="gallery-project-details-2">
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📍</span>
+                      <span class="detail-text-2">Surabaya, East Java</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📅</span>
+                      <span class="detail-text-2">January 2025 - June 2026</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">⚙️</span>
+                      <span class="detail-text-2">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide aerial image -->
+                <div class="gallery-bottom-image-2">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction Site View" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
         
         <!-- Navigation Arrows -->
@@ -946,6 +1231,10 @@
         <!-- Navigation Dots -->
         <div class="gallery-slider-nav w-slider-nav w-round">
           <div class="gallery-slider-dot w-slider-dot w-active"></div>
+          <div class="gallery-slider-dot w-slider-dot"></div>
+          <div class="gallery-slider-dot w-slider-dot"></div>
+          <div class="gallery-slider-dot w-slider-dot"></div>
+          <div class="gallery-slider-dot w-slider-dot"></div>
           <div class="gallery-slider-dot w-slider-dot"></div>
         </div>
       </div>
