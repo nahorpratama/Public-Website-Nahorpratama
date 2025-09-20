@@ -352,6 +352,112 @@
       opacity: 0.7;
     }
 
+    /* Layout 1 & 2 Styling */
+    .slide.layout-1,
+    .slide.layout-2 {
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      padding: 0;
+    }
+
+    .zone-1,
+    .zone-3 {
+      flex: 0 0 25%;
+      margin: 0 20px;
+    }
+
+    .zone-2 {
+      flex: 0 0 50%;
+      margin: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .hero-image,
+    .bottom-image {
+      width: 100%;
+      height: 100%;
+      background-color: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    .image-placeholder {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Layout 1: Teks kiri, Gambar kanan (60:40) */
+    .layout-1 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-1 .text-block {
+      flex: 0 0 60%;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 30px;
+      border: 2px solid #e9ecef;
+    }
+
+    .layout-1 .image-stack {
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .layout-1 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    /* Layout 2: Gambar kiri, Teks kanan (40:60) */
+    .layout-2 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-2 .image-stack {
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .layout-2 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    .layout-2 .text-block {
+      flex: 0 0 60%;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 30px;
+      border: 2px solid #e9ecef;
+    }
+
     /* Mobile Responsive */
     @media (max-width: 768px) {
       .photo-slider-section {
@@ -398,6 +504,43 @@
         margin-top: 20px;
         gap: 8px;
       }
+
+      /* Layout responsive */
+      .slide.layout-1,
+      .slide.layout-2 {
+        height: 500px;
+      }
+
+      .zone-1,
+      .zone-3 {
+        flex: 0 0 20%;
+        margin: 0 15px;
+      }
+
+      .zone-2 {
+        flex: 0 0 60%;
+        margin: 15px;
+        gap: 15px;
+      }
+
+      .layout-1 .text-block,
+      .layout-2 .text-block {
+        padding: 20px;
+      }
+
+      .layout-1 .image-stack,
+      .layout-2 .image-stack {
+        gap: 10px;
+      }
+
+      .hero-image,
+      .bottom-image {
+        font-size: 12px;
+      }
+
+      .small-image {
+        font-size: 10px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -424,6 +567,49 @@
       .slider-btn {
         width: 35px;
         height: 35px;
+      }
+
+      /* Layout mobile responsive */
+      .slide.layout-1,
+      .slide.layout-2 {
+        height: 400px;
+      }
+
+      .zone-1,
+      .zone-3 {
+        flex: 0 0 15%;
+        margin: 0 10px;
+      }
+
+      .zone-2 {
+        flex: 0 0 70%;
+        margin: 10px;
+        gap: 10px;
+        flex-direction: column;
+      }
+
+      .layout-1 .text-block,
+      .layout-2 .text-block {
+        flex: none;
+        padding: 15px;
+      }
+
+      .layout-1 .image-stack,
+      .layout-2 .image-stack {
+        flex: none;
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      .layout-1 .small-image,
+      .layout-2 .small-image {
+        flex: 1;
+        font-size: 8px;
+      }
+
+      .hero-image,
+      .bottom-image {
+        font-size: 10px;
       }
     }
       background-color: #ffffff;
@@ -1271,182 +1457,308 @@
       <div class="photo-slider">
         <div class="slider-container" id="sliderContainer">
           <div class="slides" id="slides">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Dumai Gas Plant Project</h3>
-                  <span class="project-year">2024</span>
+            <!-- Slide 1 - Layout 1 -->
+            <div class="slide layout-1">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Dumai Gas Plant</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Dumai, Riau</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <div class="zone-2">
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Dumai Gas Plant Project</h3>
+                    <span class="project-year">2024</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">EPCI Gas Plant</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Dumai, Riau</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">EPCI Gas Plant</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">18 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">18 Months</span>
+                  <div class="project-description">
+                    <p>Comprehensive EPCI project for gas processing facility including engineering design, procurement, construction, and installation of critical infrastructure components.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Comprehensive EPCI project for gas processing facility including engineering design, procurement, construction, and installation of critical infrastructure components.</p>
+                <div class="image-stack">
+                  <div class="small-image">Detail Image 1</div>
+                  <div class="small-image">Detail Image 2</div>
                 </div>
-                <div class="project-status">
-                  <span class="status-badge completed">Completed</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Project Overview</div>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Duri Production Facility</h3>
-                  <span class="project-year">2023</span>
+            <!-- Slide 2 - Layout 2 -->
+            <div class="slide layout-2">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Duri Production Facility</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Duri, Riau</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <div class="zone-2">
+                <div class="image-stack">
+                  <div class="small-image">Detail Image 1</div>
+                  <div class="small-image">Detail Image 2</div>
+                </div>
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Duri Production Facility</h3>
+                    <span class="project-year">2023</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">Production Facility</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Duri, Riau</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">Production Facility</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">12 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">12 Months</span>
+                  <div class="project-description">
+                    <p>Modern production facility development with advanced automation systems and sustainable energy solutions for enhanced operational efficiency.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Modern production facility development with advanced automation systems and sustainable energy solutions for enhanced operational efficiency.</p>
-                </div>
-                <div class="project-status">
-                  <span class="status-badge completed">Completed</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Facility Overview</div>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Kerinci Engineering Solutions</h3>
-                  <span class="project-year">2024</span>
+            <!-- Slide 3 - Layout 1 -->
+            <div class="slide layout-1">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Kerinci Engineering</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Kerinci, Jambi</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <div class="zone-2">
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Kerinci Engineering Solutions</h3>
+                    <span class="project-year">2024</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">Engineering Design</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Kerinci, Jambi</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">Engineering Design</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">8 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">8 Months</span>
+                  <div class="project-description">
+                    <p>Advanced engineering solutions for complex infrastructure challenges including structural analysis, system integration, and innovative design implementation.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge in-progress">In Progress</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Advanced engineering solutions for complex infrastructure challenges including structural analysis, system integration, and innovative design implementation.</p>
+                <div class="image-stack">
+                  <div class="small-image">Technical Diagram 1</div>
+                  <div class="small-image">Technical Diagram 2</div>
                 </div>
-                <div class="project-status">
-                  <span class="status-badge in-progress">In Progress</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Engineering Overview</div>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 4 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Jakarta Infrastructure Hub</h3>
-                  <span class="project-year">2023</span>
+            <!-- Slide 4 - Layout 2 -->
+            <div class="slide layout-2">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Jakarta Infrastructure</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Jakarta, DKI</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <div class="zone-2">
+                <div class="image-stack">
+                  <div class="small-image">Infrastructure Image 1</div>
+                  <div class="small-image">Infrastructure Image 2</div>
+                </div>
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Jakarta Infrastructure Hub</h3>
+                    <span class="project-year">2023</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">Infrastructure Development</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Jakarta, DKI</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">Infrastructure Development</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">24 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">24 Months</span>
+                  <div class="project-description">
+                    <p>Large-scale infrastructure development project focusing on urban connectivity, sustainable transportation systems, and modern facility construction.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Large-scale infrastructure development project focusing on urban connectivity, sustainable transportation systems, and modern facility construction.</p>
-                </div>
-                <div class="project-status">
-                  <span class="status-badge completed">Completed</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Infrastructure Overview</div>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 5 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Surabaya Industrial Complex</h3>
-                  <span class="project-year">2024</span>
+            <!-- Slide 5 - Layout 1 -->
+            <div class="slide layout-1">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Surabaya Industrial</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Surabaya, East Java</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) -->
+              <div class="zone-2">
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Surabaya Industrial Complex</h3>
+                    <span class="project-year">2024</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">Industrial Construction</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Surabaya, East Java</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">Industrial Construction</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">15 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">15 Months</span>
+                  <div class="project-description">
+                    <p>Comprehensive industrial complex development with state-of-the-art manufacturing facilities, logistics centers, and integrated support systems.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge planning">Planning</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Comprehensive industrial complex development with state-of-the-art manufacturing facilities, logistics centers, and integrated support systems.</p>
+                <div class="image-stack">
+                  <div class="small-image">Industrial Design 1</div>
+                  <div class="small-image">Industrial Design 2</div>
                 </div>
-                <div class="project-status">
-                  <span class="status-badge planning">Planning</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Industrial Overview</div>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 6 -->
-            <div class="slide">
-              <div class="slide-content">
-                <div class="project-header">
-                  <h3>Medan Energy Plant</h3>
-                  <span class="project-year">2024</span>
+            <!-- Slide 6 - Layout 2 -->
+            <div class="slide layout-2">
+              <!-- Zona 1: Gambar horizontal full-width -->
+              <div class="zone-1">
+                <div class="hero-image">
+                  <div class="image-placeholder">Hero Image - Medan Energy Plant</div>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="label">Location:</span>
-                    <span class="value">Medan, North Sumatra</span>
+              </div>
+              
+              <!-- Zona 2: Split Layout 40:60 (Gambar kiri, Teks kanan) -->
+              <div class="zone-2">
+                <div class="image-stack">
+                  <div class="small-image">Energy System 1</div>
+                  <div class="small-image">Energy System 2</div>
+                </div>
+                <div class="text-block">
+                  <div class="project-header">
+                    <h3>Medan Energy Plant</h3>
+                    <span class="project-year">2024</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Type:</span>
-                    <span class="value">Energy Infrastructure</span>
+                  <div class="project-details">
+                    <div class="detail-item">
+                      <span class="label">Location:</span>
+                      <span class="value">Medan, North Sumatra</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Type:</span>
+                      <span class="value">Energy Infrastructure</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="label">Duration:</span>
+                      <span class="value">20 Months</span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="label">Duration:</span>
-                    <span class="value">20 Months</span>
+                  <div class="project-description">
+                    <p>Renewable energy plant construction featuring solar and wind power integration, energy storage systems, and smart grid technology implementation.</p>
+                  </div>
+                  <div class="project-status">
+                    <span class="status-badge in-progress">In Progress</span>
                   </div>
                 </div>
-                <div class="project-description">
-                  <p>Renewable energy plant construction featuring solar and wind power integration, energy storage systems, and smart grid technology implementation.</p>
-                </div>
-                <div class="project-status">
-                  <span class="status-badge in-progress">In Progress</span>
+              </div>
+              
+              <!-- Zona 3: Gambar horizontal full-width -->
+              <div class="zone-3">
+                <div class="bottom-image">
+                  <div class="image-placeholder">Context Image - Energy Overview</div>
                 </div>
               </div>
             </div>
