@@ -43,42 +43,236 @@
             height: 100%;
             background-color: white;
             display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Layout Gambar Pertama - Slide 1, 3, 5 */
+        .slide.layout-1 {
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-1 .top-section {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .slide.layout-1 .middle-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-1 .text-block {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6c757d;
             position: relative;
         }
 
-        .slide::before {
-            content: '';
+        .slide.layout-1 .text-block::before {
+            content: 'Text Block';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            border: 2px dashed #ccc;
+            top: 10px;
+            left: 10px;
+            font-size: 10px;
+            color: #adb5bd;
+        }
+
+        .slide.layout-1 .image-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .slide.layout-1 .small-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        .slide.layout-1 .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-1 .info-block {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .slide.layout-1 .info-line {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        .slide.layout-1 .info-icon {
+            width: 12px;
+            height: 12px;
+            background-color: #dee2e6;
             border-radius: 50%;
-            background: transparent;
+            margin-right: 8px;
         }
 
-        .slide::after {
-            content: '+';
+        .slide.layout-1 .bottom-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        /* Layout Gambar Kedua - Slide 2, 4, 6 */
+        .slide.layout-2 {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-2 .top-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .slide.layout-2 .middle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-2 .left-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .slide.layout-2 .square-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        .slide.layout-2 .right-text {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6c757d;
+            position: relative;
+        }
+
+        .slide.layout-2 .right-text::before {
+            content: 'Text Content';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #ccc;
-            font-weight: bold;
+            top: 10px;
+            left: 10px;
+            font-size: 10px;
+            color: #adb5bd;
         }
 
-        .slide:nth-child(1)::after { content: '1'; }
-        .slide:nth-child(2)::after { content: '2'; }
-        .slide:nth-child(3)::after { content: '3'; }
-        .slide:nth-child(4)::after { content: '4'; }
-        .slide:nth-child(5)::after { content: '5'; }
-        .slide:nth-child(6)::after { content: '6'; }
+        .slide.layout-2 .lower-middle {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+
+        .slide.layout-2 .medium-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .slide.layout-2 .info-lines {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .slide.layout-2 .info-line {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        .slide.layout-2 .info-icon {
+            width: 12px;
+            height: 12px;
+            background-color: #dee2e6;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .slide.layout-2 .bottom-image {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
 
         .controls {
             display: flex;
@@ -131,13 +325,49 @@
                 height: 300px;
             }
             
-            .slide::before {
-                width: 40px;
-                height: 40px;
+            .slide {
+                padding: 10px;
             }
             
-            .slide::after {
-                font-size: 18px;
+            .slide.layout-1 {
+                grid-template-rows: 0.8fr 1.5fr 0.8fr;
+                gap: 10px;
+            }
+            
+            .slide.layout-2 {
+                grid-template-rows: 0.8fr 1.2fr 0.8fr;
+                gap: 10px;
+            }
+            
+            .slide.layout-1 .middle-section,
+            .slide.layout-2 .middle-section {
+                gap: 10px;
+            }
+            
+            .slide.layout-1 .bottom-section,
+            .slide.layout-2 .lower-middle {
+                gap: 10px;
+            }
+            
+            .slide.layout-1 .text-block,
+            .slide.layout-2 .right-text {
+                font-size: 10px;
+            }
+            
+            .slide.layout-1 .small-image,
+            .slide.layout-2 .square-image {
+                font-size: 8px;
+            }
+            
+            .slide.layout-1 .info-line,
+            .slide.layout-2 .info-line {
+                font-size: 8px;
+            }
+            
+            .slide.layout-1 .info-icon,
+            .slide.layout-2 .info-icon {
+                width: 8px;
+                height: 8px;
             }
         }
     </style>
@@ -146,12 +376,182 @@
     <div class="slider-container">
         <div class="slider">
             <div class="slides" id="slides">
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
+                <!-- Slide 1 - Layout Gambar Pertama -->
+                <div class="slide layout-1">
+                    <div class="top-section">Top Image Area</div>
+                    <div class="middle-section">
+                        <div class="text-block">Large Text Block</div>
+                        <div class="image-stack">
+                            <div class="small-image">Small Image 1</div>
+                            <div class="small-image">Small Image 2</div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="info-block">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Location Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Date Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>List Info</span>
+                            </div>
+                        </div>
+                        <div class="bottom-image">Bottom Image</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Layout Gambar Kedua -->
+                <div class="slide layout-2">
+                    <div class="top-image">Top Landscape Image</div>
+                    <div class="middle-section">
+                        <div class="left-images">
+                            <div class="square-image">Square Image 1</div>
+                            <div class="square-image">Square Image 2</div>
+                        </div>
+                        <div class="right-text">Large Text Content</div>
+                    </div>
+                    <div class="lower-middle">
+                        <div class="medium-image">Medium Image</div>
+                        <div class="info-lines">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 1</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 2</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-image">Bottom Aerial Image</div>
+                </div>
+
+                <!-- Slide 3 - Layout Gambar Pertama -->
+                <div class="slide layout-1">
+                    <div class="top-section">Top Image Area</div>
+                    <div class="middle-section">
+                        <div class="text-block">Large Text Block</div>
+                        <div class="image-stack">
+                            <div class="small-image">Small Image 1</div>
+                            <div class="small-image">Small Image 2</div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="info-block">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Location Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Date Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>List Info</span>
+                            </div>
+                        </div>
+                        <div class="bottom-image">Bottom Image</div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 - Layout Gambar Kedua -->
+                <div class="slide layout-2">
+                    <div class="top-image">Top Landscape Image</div>
+                    <div class="middle-section">
+                        <div class="left-images">
+                            <div class="square-image">Square Image 1</div>
+                            <div class="square-image">Square Image 2</div>
+                        </div>
+                        <div class="right-text">Large Text Content</div>
+                    </div>
+                    <div class="lower-middle">
+                        <div class="medium-image">Medium Image</div>
+                        <div class="info-lines">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 1</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 2</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-image">Bottom Aerial Image</div>
+                </div>
+
+                <!-- Slide 5 - Layout Gambar Pertama -->
+                <div class="slide layout-1">
+                    <div class="top-section">Top Image Area</div>
+                    <div class="middle-section">
+                        <div class="text-block">Large Text Block</div>
+                        <div class="image-stack">
+                            <div class="small-image">Small Image 1</div>
+                            <div class="small-image">Small Image 2</div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="info-block">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Location Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Date Info</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>List Info</span>
+                            </div>
+                        </div>
+                        <div class="bottom-image">Bottom Image</div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 - Layout Gambar Kedua -->
+                <div class="slide layout-2">
+                    <div class="top-image">Top Landscape Image</div>
+                    <div class="middle-section">
+                        <div class="left-images">
+                            <div class="square-image">Square Image 1</div>
+                            <div class="square-image">Square Image 2</div>
+                        </div>
+                        <div class="right-text">Large Text Content</div>
+                    </div>
+                    <div class="lower-middle">
+                        <div class="medium-image">Medium Image</div>
+                        <div class="info-lines">
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 1</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 2</span>
+                            </div>
+                            <div class="info-line">
+                                <div class="info-icon"></div>
+                                <span>Info Line 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-image">Bottom Aerial Image</div>
+                </div>
             </div>
         </div>
         
