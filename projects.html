@@ -1051,37 +1051,6 @@
         <div class="slider-container" id="sliderContainer">
           <!-- Slider 1: Layout sesuai analisis gambar -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
-              </div>
-            </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
-                </div>
-                <div class="image-secondary">
-                </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
-              </div>
-            </div>
           </div>
           
           <!-- Slider 2: Layout 2 - Grid 4 Zona -->
@@ -1121,37 +1090,6 @@
           
           <!-- Slider 3: Layout sesuai analisis gambar -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
-              </div>
-            </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
-                </div>
-                <div class="image-secondary">
-                </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
-              </div>
-            </div>
           </div>
           
           <!-- Slider 4: Layout 2 - Grid 4 Zona -->
@@ -1191,37 +1129,6 @@
           
           <!-- Slider 5: Layout sesuai analisis gambar -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
-              </div>
-            </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
-                </div>
-                <div class="image-secondary">
-                </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
-              </div>
-            </div>
           </div>
           
           <!-- Slider 6: Layout 2 - Grid 4 Zona -->
@@ -1264,12 +1171,9 @@
         <button class="slider-nav next" onclick="changeSlide(1)">›</button>
         
         <div class="slider-dots">
-          <span class="dot active" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot active" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
         </div>
       </div>
     </div>
@@ -1364,6 +1268,10 @@
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     const totalSlides = slides.length;
+    
+    // Array untuk slide yang memiliki konten (slide 2, 4, 6)
+    const activeSlides = [1, 3, 5]; // Indeks 0-based untuk slide 2, 4, 6
+    let currentActiveIndex = 0; // Indeks untuk activeSlides array
 
     function showSlide(index) {
       const sliderContainer = document.getElementById('sliderContainer');
@@ -1371,21 +1279,28 @@
       
       // Update dots
       dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
+        dot.classList.toggle('active', i === currentActiveIndex);
       });
     }
 
     function changeSlide(direction) {
-      currentSlideIndex += direction;
-      if (currentSlideIndex >= totalSlides) currentSlideIndex = 0;
-      if (currentSlideIndex < 0) currentSlideIndex = totalSlides - 1;
+      currentActiveIndex += direction;
+      if (currentActiveIndex >= activeSlides.length) currentActiveIndex = 0;
+      if (currentActiveIndex < 0) currentActiveIndex = activeSlides.length - 1;
+      
+      currentSlideIndex = activeSlides[currentActiveIndex];
       showSlide(currentSlideIndex);
     }
 
     function currentSlide(index) {
-      currentSlideIndex = index - 1;
+      currentActiveIndex = index - 1;
+      currentSlideIndex = activeSlides[currentActiveIndex];
       showSlide(currentSlideIndex);
     }
+    
+    // Set slide awal ke slide 2 (indeks 1)
+    currentSlideIndex = activeSlides[0];
+    showSlide(currentSlideIndex);
 
     // Auto-play slider
     setInterval(() => {
