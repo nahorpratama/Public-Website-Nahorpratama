@@ -119,11 +119,100 @@
       box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
     }
     
-    /* Gallery Photo Collage Layout Styles */
-    .gallery-photo-collage {
+    /* Gallery Slider Container */
+    .gallery-slider-container {
       background-color: #f8f9fa;
       padding: 60px 20px;
       margin: 40px 0;
+      position: relative;
+    }
+    
+    .gallery-slider {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .gallery-slider-mask {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-slide {
+      min-width: 100%;
+      flex-shrink: 0;
+    }
+    
+    /* Navigation Arrows */
+    .gallery-slider-arrow-left,
+    .gallery-slider-arrow-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(44, 62, 80, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-slider-arrow-left {
+      left: 20px;
+    }
+    
+    .gallery-slider-arrow-right {
+      right: 20px;
+    }
+    
+    .gallery-slider-arrow-left:hover,
+    .gallery-slider-arrow-right:hover {
+      background: rgba(44, 62, 80, 1);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .gallery-arrow-icon {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    
+    /* Navigation Dots */
+    .gallery-slider-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    
+    .gallery-slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(44, 62, 80, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .gallery-slider-dot.w-active {
+      background: #2c3e50;
+      transform: scale(1.2);
+    }
+    
+    .gallery-slider-dot:hover {
+      background: rgba(44, 62, 80, 0.6);
+    }
+    
+    /* Gallery Photo Collage Layout Styles */
+    .gallery-photo-collage {
+      background-color: #f8f9fa;
+      padding: 0;
+      margin: 0;
     }
     
     .gallery-container {
@@ -566,6 +655,23 @@
         grid-row: 4;
         height: 220px;
       }
+      
+      /* Slider Navigation Responsive */
+      .gallery-slider-arrow-left {
+        left: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .gallery-slider-arrow-right {
+        right: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .gallery-arrow-icon {
+        font-size: 20px;
+      }
     }
     
     @media (max-width: 768px) {
@@ -653,6 +759,32 @@
       .gallery-bottom-image-2 {
         height: 150px;
       }
+      
+      /* Mobile Slider Navigation */
+      .gallery-slider-arrow-left {
+        left: 5px;
+        width: 35px;
+        height: 35px;
+      }
+      
+      .gallery-slider-arrow-right {
+        right: 5px;
+        width: 35px;
+        height: 35px;
+      }
+      
+      .gallery-arrow-icon {
+        font-size: 18px;
+      }
+      
+      .gallery-slider-nav {
+        margin-top: 20px;
+      }
+      
+      .gallery-slider-dot {
+        width: 10px;
+        height: 10px;
+      }
     }
     
   </style>
@@ -700,94 +832,121 @@
       <h1 class="h4-heading">GALLERY PHOTOGRAPH</h1>
     </div>
     
-    <!-- New Gallery Photo Collage Layout -->
-    <div class="gallery-photo-collage">
-      <div class="gallery-container">
-        <!-- Top wide image -->
-        <div class="gallery-top-image">
-          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Work" loading="lazy">
-        </div>
-        
-        <!-- Left column with two stacked images -->
-        <div class="gallery-left-column">
-          <div class="gallery-small-image">
-            <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Storage Tanks" loading="lazy">
-          </div>
-          <div class="gallery-small-image">
-            <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Construction Work" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Right side text block with curved corner -->
-        <div class="gallery-text-block">
-          <div class="gallery-project-title">
-            <h2>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h2>
-          </div>
-          <div class="gallery-project-details">
-            <div class="project-detail-item">
-              <span class="detail-icon">📍</span>
-              <span class="detail-text">Lhoksomawe, Aceh</span>
-            </div>
-            <div class="project-detail-item">
-              <span class="detail-icon">📅</span>
-              <span class="detail-text">September 2024</span>
-            </div>
-            <div class="project-detail-item">
-              <span class="detail-icon">⚙️</span>
-              <span class="detail-text">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Bottom wide image -->
-        <div class="gallery-bottom-image">
-          <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction View" loading="lazy">
-        </div>
-      </div>
-    </div>
-    
-    <!-- Second Gallery Layout - Site Construction Services -->
-    <div class="gallery-photo-collage-2">
-      <div class="gallery-container-2">
-        <!-- Top wide image -->
-        <div class="gallery-top-image-2">
-          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Overview" loading="lazy">
-        </div>
-        
-        <!-- Left column with two stacked images -->
-        <div class="gallery-left-column-2">
-          <div class="gallery-small-image-2">
-            <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Concrete Pouring Operation" loading="lazy">
-          </div>
-          <div class="gallery-small-image-2">
-            <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Completed Foundation" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Right side text block with curved corner -->
-        <div class="gallery-text-block-2">
-          <div class="gallery-project-title-2">
-            <h2>Site Construction Services<br>untuk Proyek<br>Pembangunan Jasa<br>Penyediaan Sewa Gas<br>Processing Facility<br>Kapasitas 45 MMSCFD</h2>
-          </div>
-          <div class="gallery-project-details-2">
-            <div class="project-detail-item-2">
-              <span class="detail-icon-2">📍</span>
-              <span class="detail-text-2">Lhoksukon, Aceh</span>
-            </div>
-            <div class="project-detail-item-2">
-              <span class="detail-icon-2">📅</span>
-              <span class="detail-text-2">August 2024 - December 2025</span>
-            </div>
-            <div class="project-detail-item-2">
-              <span class="detail-icon-2">⚙️</span>
-              <span class="detail-text-2">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
+    <!-- Gallery Photo Slider -->
+    <div class="gallery-slider-container">
+      <div class="gallery-slider w-slider" data-autoplay="true" data-easing="ease" data-duration="500" data-infinite="true">
+        <div class="gallery-slider-mask w-slider-mask">
+          
+          <!-- Slide 1 - Gas Processing Facility Project -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage">
+              <div class="gallery-container">
+                <!-- Top wide image -->
+                <div class="gallery-top-image">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Work" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column">
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Storage Tanks" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Construction Work" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block">
+                  <div class="gallery-project-title">
+                    <h2>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h2>
+                  </div>
+                  <div class="gallery-project-details">
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📍</span>
+                      <span class="detail-text">Lhoksomawe, Aceh</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">📅</span>
+                      <span class="detail-text">September 2024</span>
+                    </div>
+                    <div class="project-detail-item">
+                      <span class="detail-icon">⚙️</span>
+                      <span class="detail-text">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide image -->
+                <div class="gallery-bottom-image">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction View" loading="lazy">
+                </div>
+              </div>
             </div>
           </div>
+          
+          <!-- Slide 2 - Site Construction Services -->
+          <div class="gallery-slide w-slide">
+            <div class="gallery-photo-collage-2">
+              <div class="gallery-container-2">
+                <!-- Top wide image -->
+                <div class="gallery-top-image-2">
+                  <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Overview" loading="lazy">
+                </div>
+                
+                <!-- Left column with two stacked images -->
+                <div class="gallery-left-column-2">
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Concrete Pouring Operation" loading="lazy">
+                  </div>
+                  <div class="gallery-small-image-2">
+                    <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Completed Foundation" loading="lazy">
+                  </div>
+                </div>
+                
+                <!-- Right side text block with curved corner -->
+                <div class="gallery-text-block-2">
+                  <div class="gallery-project-title-2">
+                    <h2>Site Construction Services<br>untuk Proyek<br>Pembangunan Jasa<br>Penyediaan Sewa Gas<br>Processing Facility<br>Kapasitas 45 MMSCFD</h2>
+                  </div>
+                  <div class="gallery-project-details-2">
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📍</span>
+                      <span class="detail-text-2">Lhoksukon, Aceh</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">📅</span>
+                      <span class="detail-text-2">August 2024 - December 2025</span>
+                    </div>
+                    <div class="project-detail-item-2">
+                      <span class="detail-icon-2">⚙️</span>
+                      <span class="detail-text-2">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bottom wide aerial image -->
+                <div class="gallery-bottom-image-2">
+                  <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction Site View" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
         
-        <!-- Bottom wide aerial image -->
-        <div class="gallery-bottom-image-2">
-          <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction Site View" loading="lazy">
+        <!-- Navigation Arrows -->
+        <div class="gallery-slider-arrow-left w-slider-arrow-left">
+          <div class="gallery-arrow-icon">‹</div>
+        </div>
+        <div class="gallery-slider-arrow-right w-slider-arrow-right">
+          <div class="gallery-arrow-icon">›</div>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="gallery-slider-nav w-slider-nav w-round">
+          <div class="gallery-slider-dot w-slider-dot w-active"></div>
+          <div class="gallery-slider-dot w-slider-dot"></div>
         </div>
       </div>
     </div>
@@ -1371,5 +1530,104 @@
       </div>
     </div>
   </div>
+  
+  <!-- Gallery Slider JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.querySelector('.gallery-slider');
+      const mask = document.querySelector('.gallery-slider-mask');
+      const slides = document.querySelectorAll('.gallery-slide');
+      const leftArrow = document.querySelector('.gallery-slider-arrow-left');
+      const rightArrow = document.querySelector('.gallery-slider-arrow-right');
+      const dots = document.querySelectorAll('.gallery-slider-dot');
+      
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      
+      // Update slider position
+      function updateSlider() {
+        const translateX = -currentSlide * 100;
+        mask.style.transform = `translateX(${translateX}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('w-active', index === currentSlide);
+        });
+      }
+      
+      // Next slide
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+      
+      // Previous slide
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+      
+      // Go to specific slide
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+      }
+      
+      // Event listeners
+      leftArrow.addEventListener('click', prevSlide);
+      rightArrow.addEventListener('click', nextSlide);
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+      });
+      
+      // Touch/swipe support
+      let startX = 0;
+      let endX = 0;
+      
+      mask.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+      
+      mask.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+      
+      function handleSwipe() {
+        const threshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      }
+      
+      // Auto-play (optional)
+      let autoPlayInterval;
+      
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+      }
+      
+      function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+      }
+      
+      // Start auto-play
+      startAutoPlay();
+      
+      // Pause on hover
+      slider.addEventListener('mouseenter', stopAutoPlay);
+      slider.addEventListener('mouseleave', startAutoPlay);
+      
+      // Initialize
+      updateSlider();
+    });
+  </script>
 </body>
 </html>
