@@ -119,6 +119,203 @@
       box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
     }
     
+    /* Fix visibility issues */
+    .section-project-photograph {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .timeline_component {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .body-content-mobile {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Ensure all sections are visible */
+    .intro-section, .section-project-photograph, .timeline_component, .body-content-mobile, .section-desktop-timeline {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Fix any hidden elements */
+    * {
+      visibility: visible !important;
+    }
+    
+    /* Ensure proper spacing between sections */
+    .section-project-photograph {
+      margin: 40px 0 !important;
+      padding: 40px 20px !important;
+    }
+    
+    .section-desktop-timeline {
+      margin: 40px 0 !important;
+    }
+    
+    .body-content-mobile {
+      margin: 40px 0 !important;
+      padding: 40px 20px !important;
+    }
+    
+    /* Fix timeline layout */
+    .timeline_item {
+      display: flex !important;
+      align-items: center !important;
+      margin-bottom: 30px !important;
+      padding: 20px 0 !important;
+    }
+    
+    .timeline_left, .timeline_right, .timeline_leftx {
+      flex: 1 !important;
+      padding: 0 20px !important;
+    }
+    
+    .timeline_centre {
+      width: 20px !important;
+      height: 20px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    .timeline_circle {
+      width: 20px !important;
+      height: 20px !important;
+      background-color: #3498db !important;
+      border-radius: 50% !important;
+    }
+    
+    .h1-heading-timeline {
+      font-size: 24px !important;
+      font-weight: bold !important;
+      color: #2c3e50 !important;
+      margin: 0 !important;
+    }
+    
+    /* Fix slider visibility */
+    .w-slider {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .w-slide {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .slide-project1, .slide-project2 {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      padding: 20px !important;
+    }
+    
+    .h5-heading {
+      font-size: 24px !important;
+      font-weight: bold !important;
+      color: #2c3e50 !important;
+      margin-bottom: 20px !important;
+    }
+    
+    .list-text-slide {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    
+    .list-item-text-slide-1 {
+      font-size: 16px !important;
+      color: #555 !important;
+      margin-bottom: 10px !important;
+      padding: 5px 0 !important;
+    }
+    
+    /* Desktop Timeline Styling */
+    .section-desktop-timeline {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .timeline-desktop {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .timeline-desktop .timeline_item {
+      display: flex !important;
+      align-items: flex-start !important;
+      margin-bottom: 40px !important;
+      padding: 20px 0 !important;
+      border-bottom: 1px solid #e0e0e0 !important;
+    }
+    
+    .timeline-desktop .timeline_left {
+      flex: 0 0 150px !important;
+      text-align: center !important;
+      padding-right: 20px !important;
+    }
+    
+    .timeline-desktop .timeline_right {
+      flex: 1 !important;
+      padding-left: 20px !important;
+    }
+    
+    .timeline-desktop .timeline_centre {
+      flex: 0 0 20px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 10px !important;
+    }
+    
+    /* Mobile responsive fixes */
+    @media (max-width: 768px) {
+      .section-desktop-timeline {
+        display: none !important;
+      }
+      
+      .body-content-mobile {
+        display: block !important;
+      }
+      
+      .timeline_item {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+      
+      .timeline_left, .timeline_right, .timeline_leftx {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+      }
+      
+      .timeline_centre {
+        order: 2 !important;
+        margin: 10px 0 !important;
+      }
+    }
+    
+    @media (min-width: 769px) {
+      .body-content-mobile {
+        display: none !important;
+      }
+      
+      .section-desktop-timeline {
+        display: block !important;
+      }
+    }
+    
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -153,17 +350,17 @@
   </div>
   <div class="intro-section cc-home-wrap">
     <div class="intro-header-project">
-      <div data-w-id="a8d60f8e-6e85-32a9-556d-4c7df1461f7e" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="intro-content">
+      <div data-w-id="a8d60f8e-6e85-32a9-556d-4c7df1461f7e" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1" class="intro-content">
         <h1 class="h1-headtext">OUR GALLERY</h1>
         <h4 class="sub-heading-light2">To have a successful gallery, plan well, communicate effectively, <br>and execute efficiently. </h4>
       </div>
     </div>
   </div>
   <div class="section-project-photograph">
-    <div data-w-id="25c6a5db-b497-a39b-a589-7e5a26315ddd" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading-project-photogaph">
+    <div data-w-id="25c6a5db-b497-a39b-a589-7e5a26315ddd" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1" class="heading-project-photogaph">
       <h1 class="h4-heading">GALLERY PHOTOGRAPH</h1>
     </div>
-    <div data-delay="2500" data-animation="slide" class="slider-2 w-slider" data-autoplay="true" data-easing="ease" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" data-hide-arrows="false" data-disable-swipe="false" data-w-id="eb741e77-52b3-099c-573b-35df480fb96b" data-autoplay-limit="0" data-nav-spacing="2" data-duration="500" data-infinite="true">
+    <div data-delay="2500" data-animation="slide" class="slider-2 w-slider" data-autoplay="true" data-easing="ease" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1" data-hide-arrows="false" data-disable-swipe="false" data-w-id="eb741e77-52b3-099c-573b-35df480fb96b" data-autoplay-limit="0" data-nav-spacing="2" data-duration="500" data-infinite="true">
       <div class="mask-2 w-slider-mask">
         <div class="slide-project1 w-slide">
           <div class="w-layout-grid grid-slide-project1">
@@ -171,11 +368,11 @@
               <div class="detailed-project-slide-1">
                 <div class="text-slide">
                   <div class="margin-bottom-xlarge">
-                    <h1 class="h5-heading">Modification Line Piping Discharge Gas Compressor</h1>
+                    <h1 class="h5-heading">Featured Projects Gallery</h1>
                   </div>
                   <div class="margi-bottom-list">
                     <ul role="list" class="list-text-slide">
-                      <li class="list-item-text-slide-1"><strong>Location : </strong>Pekanbaru, Riau.</li>
+                      <li class="list-item-text-slide-1"><strong>Location : </strong>Various locations across Riau, Indonesia</li>
           <div class="margin-botom-text">
             <div class="margin-bottom-xlarge">
               <p class="paragraph-smallx"><strong>EPCI BGP MODIFICATION FOR GAS PLANT.</strong></p>
@@ -437,11 +634,154 @@
             </div>
           </div>
         </div>
+        
+        <div class="slide-project2 w-slide">
+          <div class="w-layout-grid grid-slide-project1">
+            <div class="section-project1a">
+              <div class="detailed-project-slide-1">
+                <div class="text-slide">
+                  <div class="margin-bottom-xlarge">
+                    <h1 class="h5-heading">Construction & EPCI Projects</h1>
+                  </div>
+                  <div class="margi-bottom-list">
+                    <ul role="list" class="list-text-slide">
+                      <li class="list-item-text-slide-1"><strong>Services : </strong>Engineering, Procurement, Construction & Installation</li>
+                      <li class="list-item-text-slide-1"><strong>Specialization : </strong>Oil & Gas, Infrastructure, Industrial Projects</li>
+                      <li class="list-item-text-slide-1"><strong>Experience : </strong>Over 3 years of successful project delivery</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="fade-bottom"></div>
       <div class="fade-top"></div>
     </div>
   </div>
+  
+  <!-- Desktop Timeline Section -->
+  <div class="section-desktop-timeline" style="display: block; padding: 60px 20px; background-color: #f8f9fa;">
+    <div class="timeline-container" style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="text-align: center; font-size: 36px; color: #2c3e50; margin-bottom: 50px;">PROJECT TIMELINE</h2>
+      <div class="timeline-desktop">
+        <div class="timeline_item">
+          <div class="timeline_left">
+            <h1 class="h1-heading-timeline">2021</h1>
+          </div>
+          <div class="timeline_centre">
+            <div class="timeline_circle"></div>
+          </div>
+          <div class="timeline_right">
+            <div class="margin-botom-text">
+              <div class="margin-bottom-xlarge">
+                <p class="paragraph-smallx"><strong>EPCI BGP MODIFICATION FOR GAS PLANT.</strong></p>
+              </div>
+              <div class="margin-bottom-medium">
+                <h6 class="sub-heading-light-3"><strong><em>Pekanbaru, Riau.</em></strong></h6>
+              </div>
+              <div class="margi-bottom-list">
+                <ul role="list" class="list-2">
+                  <li class="list-item-5"><strong>Owner </strong>: PT. EMP (Energi Mega Persada)</li>
+                  <li class="list-item-6"><strong>Pemberi tugas </strong>: PT. Petroflexx Prima Daya</li>
+                  <li class="list-item-7"><strong>Nomor SPK/SO </strong>: 003/SO/P0404/PPD-ENP/X-2021</li>
+                  <li class="list-item-8"><strong>Nilai Kontrak </strong>: Rp 5.585.381.250,00.-</li>
+                </ul>
+              </div>
+            </div>
+            <div class="margin-botom-text">
+              <div class="margin-bottom-xlarge">
+                <p class="paragraph-smallx"><strong>S.SEGAT PRODUCTION FACILITY DEV.MODIF.</strong></p>
+              </div>
+              <div class="margin-bottom-medium">
+                <h6 class="sub-heading-light-3"><strong><em>Langgam, Riau.</em></strong></h6>
+              </div>
+              <div class="margi-bottom-list">
+                <ul role="list" class="list-2">
+                  <li class="list-item-5"><strong>Owner </strong>: PT. EMP (Energi Mega Persada)</li>
+                  <li class="list-item-6"><strong>Pemberi tugas </strong>: PT. Petroflexx Prima Daya</li>
+                  <li class="list-item-7"><strong>Nomor SPK/SO </strong>: 002/SO/R0403/PPD-ENP/X-2021</li>
+                  <li class="list-item-8"><strong>Nilai Kontrak </strong>: Rp 337.335.500,00.-</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline_item">
+          <div class="timeline_left">
+            <h1 class="h1-heading-timeline">2022</h1>
+          </div>
+          <div class="timeline_centre">
+            <div class="timeline_circle"></div>
+          </div>
+          <div class="timeline_right">
+            <div class="margin-botom-text">
+              <div class="margin-bottom-xlarge">
+                <p class="paragraph-smallx"><strong>JASA ANGKUTAN MATTERIAL TANAH URUG 50.000 m3.</strong></p>
+              </div>
+              <div class="margin-bottom-medium">
+                <h6 class="sub-heading-light-3"><strong><em>Dumai, Riau.</em></strong></h6>
+              </div>
+              <div class="margi-bottom-list">
+                <ul role="list" class="list-2">
+                  <li class="list-item-5"><strong>Owner </strong>: PT. WILMAR</li>
+                  <li class="list-item-6"><strong>Pemberi tugas </strong>: PT. Putra Tunggal Mandiritama / PT. Mitika Denta Abadi</li>
+                  <li class="list-item-7"><strong>Nomor SPK/SO </strong>: 002/SO/MDA-ENP/I-2022</li>
+                  <li class="list-item-8"><strong>Nilai Kontrak </strong>: Rp 1.500.000.000,00.-</li>
+                </ul>
+              </div>
+            </div>
+            <div class="margin-botom-text">
+              <div class="margin-bottom-xlarge">
+                <p class="paragraph-smallx"><strong>NEW PIPE LINE RAPP 10 Inch SECTION SGP TO KP20.</strong></p>
+              </div>
+              <div class="margin-bottom-medium">
+                <h6 class="sub-heading-light-3"><strong><em>Kerinci, Riau.</em></strong></h6>
+              </div>
+              <div class="margi-bottom-list">
+                <ul role="list" class="list-2">
+                  <li class="list-item-5"><strong>Owner </strong>: PT. RAPP</li>
+                  <li class="list-item-6"><strong>Pemberi tugas </strong>: PT. Takisama Prada International</li>
+                  <li class="list-item-7"><strong>Nomor SPK/SO </strong>: TPI-LTR/020/IV-2022</li>
+                  <li class="list-item-8"><strong>Nilai Kontrak </strong>: Rp 38.781.737.583,00.-</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline_item">
+          <div class="timeline_left">
+            <h1 class="h1-heading-timeline">2023</h1>
+          </div>
+          <div class="timeline_centre">
+            <div class="timeline_circle"></div>
+          </div>
+          <div class="timeline_right">
+            <div class="margin-botom-text">
+              <div class="margin-bottom-xlarge">
+                <p class="paragraph-smallx"><strong>REPAIR AND INSTALLATION DIESEL FUEL TANK.</strong></p>
+              </div>
+              <div class="margin-bottom-medium">
+                <h6 class="sub-heading-light-3"><strong><em>Duri, Riau.</em></strong></h6>
+              </div>
+              <div class="margi-bottom-list">
+                <ul role="list" class="list-2">
+                  <li class="list-item-5"><strong>Owner </strong>: PT. Petroflexx Prima Daya</li>
+                  <li class="list-item-6"><strong>Pemberi tugas </strong>: PT. Petroflexx Prima Daya</li>
+                  <li class="list-item-7"><strong>Nomor SPK/SO </strong>: 003/SO/M0501/PPD-ENP/I-2023</li>
+                  <li class="list-item-8"><strong>Nilai Kontrak </strong>: Rp 243.285.500,00.-</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div id="Body-Pages" class="body-content-mobile">
     <div data-w-id="e48c39c5-6bb5-0459-09be-e90ec9249cb2" class="timeline_component">
       <div class="timeline_progress">
