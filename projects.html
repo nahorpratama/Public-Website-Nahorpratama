@@ -199,7 +199,7 @@
       margin-top: 30px;
       flex-wrap: wrap;
       max-width: 100%;
-      overflow-x: auto;
+      overflow-x: hidden;
       padding: 0 20px;
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -207,21 +207,6 @@
     
     .gallery-slider-nav::-webkit-scrollbar {
       display: none;
-    }
-    
-    /* Hide scrollbar for dots navigation */
-    .gallery-slider-nav {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    
-    .gallery-slider-nav::-webkit-scrollbar {
-      display: none;
-    }
-    
-    /* Ensure dots don't scroll */
-    .gallery-slider-nav {
-      overflow-x: hidden;
     }
     
     /* Responsive dots layout */
@@ -804,7 +789,7 @@
       .gallery-slider-nav {
         gap: 7px;
         max-width: 100%;
-        overflow-x: auto;
+        overflow-x: hidden;
         padding: 0 15px;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -926,7 +911,7 @@
         margin-top: 20px;
         gap: 6px;
         max-width: 100%;
-        overflow-x: auto;
+        overflow-x: hidden;
         padding: 0 10px;
         scrollbar-width: none;
         -ms-overflow-style: none;
