@@ -119,6 +119,542 @@
       box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
     }
     
+    /* Gallery Photo Collage Layout Styles */
+    .gallery-photo-collage {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      margin: 40px 0;
+    }
+    
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      position: relative;
+    }
+    
+    .gallery-top-image {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-top-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-top-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-left-column {
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .gallery-small-image {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-small-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-small-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-text-block {
+      grid-column: 2;
+      grid-row: 2;
+      background: linear-gradient(135deg, #e8f4f8 0%, #d1e7dd 100%);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      position: relative;
+      margin-left: -20px;
+      z-index: 2;
+    }
+    
+    .gallery-text-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: #f8f9fa;
+      border-radius: 0 0 20px 0;
+    }
+    
+    .gallery-project-title h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      line-height: 1.3;
+      font-style: italic;
+    }
+    
+    .gallery-project-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .project-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .detail-icon {
+      font-size: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    
+    .detail-text {
+      font-size: 16px;
+      color: #2c3e50;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    
+    .gallery-bottom-image {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin-top: 20px;
+    }
+    
+    .gallery-bottom-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-bottom-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Responsive Design for Gallery */
+    @media (max-width: 1024px) {
+      .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      .gallery-top-image {
+        grid-column: 1;
+        grid-row: 1;
+        height: 250px;
+      }
+      
+      .gallery-left-column {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: row;
+        gap: 15px;
+      }
+      
+      .gallery-small-image {
+        flex: 1;
+        height: 180px;
+      }
+      
+      .gallery-text-block {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 30px;
+      }
+      
+      .gallery-bottom-image {
+        grid-column: 1;
+        grid-row: 4;
+        height: 200px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .gallery-photo-collage {
+        padding: 40px 15px;
+        margin: 30px 0;
+      }
+      
+      .gallery-container {
+        gap: 12px;
+      }
+      
+      .gallery-top-image {
+        height: 200px;
+      }
+      
+      .gallery-left-column {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .gallery-small-image {
+        height: 150px;
+      }
+      
+      .gallery-text-block {
+        padding: 25px;
+        margin-top: 15px;
+      }
+      
+      .gallery-project-title h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .detail-text {
+        font-size: 14px;
+      }
+      
+      .gallery-bottom-image {
+        height: 180px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .gallery-photo-collage {
+        padding: 30px 10px;
+        margin: 20px 0;
+      }
+      
+      .gallery-container {
+        gap: 10px;
+      }
+      
+      .gallery-top-image {
+        height: 180px;
+      }
+      
+      .gallery-small-image {
+        height: 120px;
+      }
+      
+      .gallery-text-block {
+        padding: 20px;
+        margin-top: 10px;
+      }
+      
+      .gallery-project-title h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      
+      .project-detail-item {
+        gap: 8px;
+      }
+      
+      .detail-icon {
+        font-size: 16px;
+      }
+      
+      .detail-text {
+        font-size: 13px;
+      }
+      
+      .gallery-bottom-image {
+        height: 150px;
+      }
+    }
+    
+    /* Second Gallery Layout Styles */
+    .gallery-photo-collage-2 {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      margin: 40px 0;
+    }
+    
+    .gallery-container-2 {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      position: relative;
+    }
+    
+    .gallery-top-image-2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      height: 320px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-top-image-2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-top-image-2:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-left-column-2 {
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .gallery-small-image-2 {
+      height: 220px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-small-image-2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-small-image-2:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-text-block-2 {
+      grid-column: 2;
+      grid-row: 2;
+      background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      position: relative;
+      margin-left: -20px;
+      z-index: 2;
+    }
+    
+    .gallery-text-block-2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: #ffffff;
+      border-radius: 0 0 20px 0;
+    }
+    
+    .gallery-project-title-2 h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      line-height: 1.3;
+      text-align: left;
+    }
+    
+    .gallery-project-details-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .project-detail-item-2 {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .detail-icon-2 {
+      font-size: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    
+    .detail-text-2 {
+      font-size: 16px;
+      color: #2c3e50;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    
+    .gallery-bottom-image-2 {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      height: 280px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin-top: 20px;
+    }
+    
+    .gallery-bottom-image-2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-bottom-image-2:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Responsive Design for Second Gallery */
+    @media (max-width: 1024px) {
+      .gallery-container-2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      .gallery-top-image-2 {
+        grid-column: 1;
+        grid-row: 1;
+        height: 280px;
+      }
+      
+      .gallery-left-column-2 {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: row;
+        gap: 15px;
+      }
+      
+      .gallery-small-image-2 {
+        flex: 1;
+        height: 200px;
+      }
+      
+      .gallery-text-block-2 {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 30px;
+      }
+      
+      .gallery-bottom-image-2 {
+        grid-column: 1;
+        grid-row: 4;
+        height: 220px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .gallery-photo-collage-2 {
+        padding: 40px 15px;
+        margin: 30px 0;
+      }
+      
+      .gallery-container-2 {
+        gap: 12px;
+      }
+      
+      .gallery-top-image-2 {
+        height: 220px;
+      }
+      
+      .gallery-left-column-2 {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .gallery-small-image-2 {
+        height: 160px;
+      }
+      
+      .gallery-text-block-2 {
+        padding: 25px;
+        margin-top: 15px;
+      }
+      
+      .gallery-project-title-2 h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .detail-text-2 {
+        font-size: 14px;
+      }
+      
+      .gallery-bottom-image-2 {
+        height: 180px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .gallery-photo-collage-2 {
+        padding: 30px 10px;
+        margin: 20px 0;
+      }
+      
+      .gallery-container-2 {
+        gap: 10px;
+      }
+      
+      .gallery-top-image-2 {
+        height: 180px;
+      }
+      
+      .gallery-small-image-2 {
+        height: 130px;
+      }
+      
+      .gallery-text-block-2 {
+        padding: 20px;
+        margin-top: 10px;
+      }
+      
+      .gallery-project-title-2 h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      
+      .project-detail-item-2 {
+        gap: 8px;
+      }
+      
+      .detail-icon-2 {
+        font-size: 16px;
+      }
+      
+      .detail-text-2 {
+        font-size: 13px;
+      }
+      
+      .gallery-bottom-image-2 {
+        height: 150px;
+      }
+    }
+    
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -162,6 +698,98 @@
   <div class="section-project-photograph">
     <div data-w-id="25c6a5db-b497-a39b-a589-7e5a26315ddd" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading-project-photogaph">
       <h1 class="h4-heading">GALLERY PHOTOGRAPH</h1>
+    </div>
+    
+    <!-- New Gallery Photo Collage Layout -->
+    <div class="gallery-photo-collage">
+      <div class="gallery-container">
+        <!-- Top wide image -->
+        <div class="gallery-top-image">
+          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Work" loading="lazy">
+        </div>
+        
+        <!-- Left column with two stacked images -->
+        <div class="gallery-left-column">
+          <div class="gallery-small-image">
+            <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Storage Tanks" loading="lazy">
+          </div>
+          <div class="gallery-small-image">
+            <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Construction Work" loading="lazy">
+          </div>
+        </div>
+        
+        <!-- Right side text block with curved corner -->
+        <div class="gallery-text-block">
+          <div class="gallery-project-title">
+            <h2>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h2>
+          </div>
+          <div class="gallery-project-details">
+            <div class="project-detail-item">
+              <span class="detail-icon">📍</span>
+              <span class="detail-text">Lhoksomawe, Aceh</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="detail-icon">📅</span>
+              <span class="detail-text">September 2024</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="detail-icon">⚙️</span>
+              <span class="detail-text">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bottom wide image -->
+        <div class="gallery-bottom-image">
+          <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction View" loading="lazy">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second Gallery Layout - Site Construction Services -->
+    <div class="gallery-photo-collage-2">
+      <div class="gallery-container-2">
+        <!-- Top wide image -->
+        <div class="gallery-top-image-2">
+          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Construction Site Overview" loading="lazy">
+        </div>
+        
+        <!-- Left column with two stacked images -->
+        <div class="gallery-left-column-2">
+          <div class="gallery-small-image-2">
+            <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Concrete Pouring Operation" loading="lazy">
+          </div>
+          <div class="gallery-small-image-2">
+            <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Completed Foundation" loading="lazy">
+          </div>
+        </div>
+        
+        <!-- Right side text block with curved corner -->
+        <div class="gallery-text-block-2">
+          <div class="gallery-project-title-2">
+            <h2>Site Construction Services<br>untuk Proyek<br>Pembangunan Jasa<br>Penyediaan Sewa Gas<br>Processing Facility<br>Kapasitas 45 MMSCFD</h2>
+          </div>
+          <div class="gallery-project-details-2">
+            <div class="project-detail-item-2">
+              <span class="detail-icon-2">📍</span>
+              <span class="detail-text-2">Lhoksukon, Aceh</span>
+            </div>
+            <div class="project-detail-item-2">
+              <span class="detail-icon-2">📅</span>
+              <span class="detail-text-2">August 2024 - December 2025</span>
+            </div>
+            <div class="project-detail-item-2">
+              <span class="detail-icon-2">⚙️</span>
+              <span class="detail-text-2">Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bottom wide aerial image -->
+        <div class="gallery-bottom-image-2">
+          <img src="images/Copy-of-ENP-WEB-4.jpg" alt="Aerial Construction Site View" loading="lazy">
+        </div>
+      </div>
     </div>
     <div data-delay="2500" data-animation="slide" class="slider-2 w-slider" data-autoplay="true" data-easing="ease" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" data-hide-arrows="false" data-disable-swipe="false" data-w-id="eb741e77-52b3-099c-573b-35df480fb96b" data-autoplay-limit="0" data-nav-spacing="2" data-duration="500" data-infinite="true">
       <div class="mask-2 w-slider-mask">
