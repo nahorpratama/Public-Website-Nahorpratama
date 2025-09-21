@@ -354,6 +354,66 @@
       min-width: 5px;
     }
 
+    /* Navigation Controls */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(44, 90, 160, 0.8);
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .slider-btn:hover {
+      background: rgba(44, 90, 160, 1);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev-btn {
+      left: 20px;
+    }
+
+    .next-btn {
+      right: 20px;
+    }
+
+    /* Dots Indicator */
+    .slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: #2c5aa0;
+      transform: scale(1.2);
+    }
+
+    .dot:hover {
+      background-color: #2c5aa0;
+      opacity: 0.7;
+    }
+
     /* Gallery Section */
     .gallery-section {
       background-color: #f8f9fa;
@@ -709,7 +769,193 @@
       
       <div class="slider-container">
         <div class="slides">
-          <!-- Slides will be added here -->
+          <!-- Slide 1 -->
+          <div class="slide layout-1">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 1 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 1</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 1</p>
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 1 - Context Image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide layout-2">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 2 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 2</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 2 - Context Image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide layout-1">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 3 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 3</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 3</p>
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 3 - Context Image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide layout-2">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 4 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 4</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 4</p>
+                </div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 4 - Context Image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="slide layout-1">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 5 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 5</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 5</p>
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 5 - Context Image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="slide layout-2">
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 6 - Hero Image</div>
+              </div>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 6</h3>
+                </div>
+                <div class="project-description">
+                  <p>Description for Project 6</p>
+                </div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 6 - Context Image</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+        <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
+        
+        <!-- Dots Indicator -->
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
         </div>
       </div>
     </div>
@@ -834,5 +1080,44 @@
       }
     });
   </script>
-</body>
+  <script>
+    let currentSlideIndex = 0;
+    const totalSlides = 6;
+
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const dots = document.querySelectorAll('.dot');
+      
+      // Update slide position
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      
+      currentSlideIndex = index;
+    }
+
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function prevSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(index) {
+      showSlide(index - 1);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize first slide
+    showSlide(0);
+  </script>
+  </body>
 </html>
