@@ -129,6 +129,229 @@
     }
 
 
+    /* Photo Slider Section */
+    .photo-slider-section {
+      background-color: #ffffff;
+      padding: 80px 0;
+      margin: 0;
+    }
+
+    .photo-slider-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .photo-slider-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .photo-slider-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .photo-slider-title p {
+      font-size: 18px;
+      color: #6c757d;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      min-height: 140vh;
+      padding: 2vh;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    .slide * {
+      background-image: none !important;
+    }
+
+    /* Force remove all background images from slide sections */
+    .slide,
+    .slide *,
+    .slide::before,
+    .slide::after,
+    .slide *::before,
+    .slide *::after {
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    /* Override any external CSS that might add background images */
+    .photo-slider-section .slide,
+    .photo-slider-section .slide * {
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .slide.layout-1,
+    .slide.layout-2 {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .zone-1, .zone-2, .zone-3 {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .hero-image, .bottom-image, .small-image {
+      background-image: none !important;
+    }
+
+    .slide.layout-1 *,
+    .slide.layout-2 * {
+      background-image: none !important;
+    }
+
+    .zone-1,
+    .zone-3 {
+      flex: 0 0 20%;
+      margin: 5px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .zone-2 {
+      flex: 0 0 60%;
+      margin: 5px;
+      display: flex;
+      gap: 5px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .zone-1 *,
+    .zone-2 *,
+    .zone-3 * {
+      background-image: none !important;
+    }
+
+    .hero-image,
+    .bottom-image {
+      width: 100%;
+      height: 100%;
+      background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    .image-placeholder {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Layout 1: Teks kiri, Gambar kanan (65:35) */
+    .layout-1 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-1 .text-block {
+      flex: 0 0 70%;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      border: 2px solid #e9ecef;
+    }
+
+    .layout-1 .image-stack {
+      flex: 0 0 25%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .layout-1 .spacer {
+      flex: 0 0 5px;
+      min-width: 5px;
+    }
+
+    .layout-1 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    /* Layout 2: Gambar kiri, Teks kanan (35:65) */
+    .layout-2 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-2 .image-stack {
+      flex: 0 0 25%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .layout-2 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    .layout-2 .text-block {
+      flex: 0 0 70%;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      border: 2px solid #e9ecef;
+    }
+
+    .layout-2 .spacer {
+      flex: 0 0 5px;
+      min-width: 5px;
+    }
+
     /* Gallery Section */
     .gallery-section {
       background-color: #f8f9fa;
@@ -473,6 +696,64 @@
     </div>
   </div>
 
+
+  <!-- Photo Slider Section -->
+  <div class="photo-slider-section">
+    <div class="photo-slider-container">
+      <div class="photo-slider-title">
+        <h2>Project Showcase</h2>
+        <p>Explore our featured construction projects and achievements</p>
+      </div>
+      
+      <div class="slider-container">
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide layout-1">
+            <!-- Zona 1: Gambar horizontal full-width -->
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Hero Image - Dumai Gas Plant</div>
+              </div>
+            </div>
+            
+            <!-- Zona 2: Split Layout 60:40 (Teks kiri, Gambar kanan) dengan gap -->
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Dumai Gas Plant Project</h3>
+                </div>
+                <div class="project-details">
+                  <div class="detail-item">
+                    <span class="label">Location:</span>
+                    <span class="value">Dumai, Riau</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="label">Status:</span>
+                    <span class="value">Completed</span>
+                  </div>
+                </div>
+                <div class="project-description">
+                  <p>Comprehensive EPCI project for gas processing facility including engineering design, procurement, construction, and installation of critical infrastructure components. This project involved the development of a state-of-the-art gas processing plant with advanced separation technology, environmental compliance systems, and integrated safety protocols. The facility processes natural gas from local fields and delivers clean energy to regional distribution networks.</p>
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail Image 1</div>
+                <div class="small-image">Detail Image 2</div>
+              </div>
+            </div>
+            
+            <!-- Zona 3: Gambar horizontal full-width -->
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Context Image - Project Overview</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Gallery Section -->
   <div class="gallery-section">
