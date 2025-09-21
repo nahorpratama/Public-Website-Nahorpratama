@@ -109,8 +109,165 @@
       margin-top: 4px;
     }
     
+    /* Organization Structure Section */
+    .organization-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
     
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
     
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #6c757d;
+      margin: 0;
+    }
+    
+    .org-structure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .org-level {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .org-level.executive {
+      margin-bottom: 20px;
+    }
+    
+    .org-level.management {
+      margin-bottom: 20px;
+    }
+    
+    .org-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 25px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+      min-width: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .org-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .org-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .org-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .org-card.ceo {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      min-width: 250px;
+    }
+    
+    .org-card.ceo:hover {
+      background: linear-gradient(135deg, #34495e, #2c3e50);
+    }
+    
+    .org-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .org-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: inherit;
+    }
+    
+    .org-card p {
+      font-size: 0.95rem;
+      margin: 0;
+      opacity: 0.8;
+      color: inherit;
+    }
+    
+    .org-card.ceo h3 {
+      font-size: 1.5rem;
+    }
+    
+    .org-card.ceo .org-icon {
+      font-size: 3rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .organization-section {
+        padding: 60px 0;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .org-level {
+        gap: 20px;
+      }
+      
+      .org-card {
+        min-width: 160px;
+        padding: 25px 20px;
+      }
+      
+      .org-card.ceo {
+        min-width: 200px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .org-level {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .org-card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
     
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -151,6 +308,68 @@
       </div>
     </div>
   </div>
+  
+  <!-- Organization Structure Section -->
+  <div class="organization-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Organization Structure</h2>
+        <p class="section-subtitle">Meet the team behind our success</p>
+      </div>
+      
+      <div class="org-structure">
+        <div class="org-level executive">
+          <div class="org-card ceo">
+            <div class="org-icon">👑</div>
+            <h3>Chief Executive Officer</h3>
+            <p>Strategic Leadership</p>
+          </div>
+        </div>
+        
+        <div class="org-level management">
+          <div class="org-card">
+            <div class="org-icon">⚙️</div>
+            <h3>Operations</h3>
+            <p>Project Management</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">💰</div>
+            <h3>Finance</h3>
+            <p>Financial Planning</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">🔧</div>
+            <h3>Engineering</h3>
+            <p>Technical Excellence</p>
+          </div>
+        </div>
+        
+        <div class="org-level departments">
+          <div class="org-card">
+            <div class="org-icon">👥</div>
+            <h3>Human Resources</h3>
+            <p>Team Development</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">📊</div>
+            <h3>Quality Assurance</h3>
+            <p>Standards & Compliance</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">🛡️</div>
+            <h3>Safety & Security</h3>
+            <p>Workplace Safety</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">📈</div>
+            <h3>Business Development</h3>
+            <p>Growth Strategy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="partner-section">
     <div data-w-id="09ac9c0b-ca03-b423-63eb-69d71abe19d6" class="partner-section-text">
       <div class="margin-partner-text">
