@@ -189,6 +189,26 @@
       display: flex;
       flex-direction: row;
       gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ensure all slides have consistent container styling */
+    .slide.layout-1,
+    .slide.layout-2 {
+      min-width: 100%;
+      min-height: 100vh;
+      padding: 30px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      border: none;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
     }
 
     .slide * {
@@ -242,6 +262,10 @@
       background-color: #ffffff !important;
       background-image: none !important;
       background: #ffffff !important;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .zone-2 {
@@ -252,6 +276,8 @@
       background-color: #ffffff !important;
       background-image: none !important;
       background: #ffffff !important;
+      box-sizing: border-box;
+      position: relative;
     }
 
     .zone-1 *,
