@@ -113,9 +113,95 @@
     
     
     .section-body-org {
-      height: 100vh;
       padding: 25px 20px;
       margin-top: 20px;
+      min-height: 400px;
+    }
+    
+    .org-chart-container {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e9ecef;
+    }
+    
+    .org-placeholder {
+      text-align: center;
+    }
+    
+    .org-placeholder-content h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    
+    .org-placeholder-content p {
+      color: #6c757d;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+    .org-levels {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .org-level {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .org-box {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px 25px;
+      min-width: 120px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+      transition: all 0.3s ease;
+    }
+    
+    .org-box:hover {
+      background: #e9ecef;
+      border-color: #adb5bd;
+      transform: translateY(-2px);
+    }
+    
+    .ceo-level .org-box {
+      background: #2c3e50;
+      color: white;
+      border-color: #2c3e50;
+    }
+    
+    .ceo-level .org-box:hover {
+      background: #34495e;
+    }
+    
+    .management-level .org-box {
+      background: #3498db;
+      color: white;
+      border-color: #3498db;
+    }
+    
+    .management-level .org-box:hover {
+      background: #2980b9;
+    }
+    
+    .staff-level .org-box {
+      background: #95a5a6;
+      color: white;
+      border-color: #95a5a6;
+    }
+    
+    .staff-level .org-box:hover {
+      background: #7f8c8d;
     }
     
   </style>
@@ -160,14 +246,34 @@
   </div>
   <div class="intro-section">
     <div class="footer-orgnization-container">
-      <div data-w-id="c28cc763-f708-1e61-f196-6bd9fce98034" style="opacity:0" class="section-heading-org">
+      <div class="section-heading-org">
         <div class="heading-text">
           <h1 class="h2-headings">Our Structure Organization</h1>
         </div>
         <p class="paragraph-smallx">Professional organizational structure</p>
       </div>
-      <div data-w-id="d93f00ca-3aeb-a1a9-2888-81fc0599ad86" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section-body-org">
-        <div style="height: 100vh; padding: 25px 20px; background: #f8f9fa; border-radius: 12px;">
+      <div class="section-body-org">
+        <div class="org-chart-container">
+          <div class="org-placeholder">
+            <div class="org-placeholder-content">
+              <h3>Organizational Chart</h3>
+              <p>Company structure will be displayed here</p>
+              <div class="org-levels">
+                <div class="org-level ceo-level">
+                  <div class="org-box">CEO</div>
+                </div>
+                <div class="org-level management-level">
+                  <div class="org-box">Management</div>
+                  <div class="org-box">Operations</div>
+                </div>
+                <div class="org-level staff-level">
+                  <div class="org-box">Engineering</div>
+                  <div class="org-box">Finance</div>
+                  <div class="org-box">HR</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
