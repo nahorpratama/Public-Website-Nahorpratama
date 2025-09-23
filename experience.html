@@ -585,17 +585,18 @@
       }
     }
     
-    /* CTA Section Button - Apply Gallery Section styling with black light color */
+    /* CTA Section Button - Apply cc-jumbo-black styling as main standard */
     .cta-container .button.cc-jumbo-button {
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
-      color: white !important;
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
       padding: 15px 35px !important;
       border-radius: 8px !important;
       text-decoration: none !important;
       font-weight: 600 !important;
       font-size: 16px !important;
-      transition: all 0.3s ease !important;
-      box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3) !important;
       letter-spacing: 0.2px !important;
       display: inline-flex !important;
       align-items: center !important;
@@ -605,8 +606,14 @@
     }
     
     .cta-container .button.cc-jumbo-button:hover {
-      transform: translateY(-3px) !important;
-      box-shadow: 0 15px 40px rgba(44, 62, 80, 0.4) !important;
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:active {
+      background-color: #1a1a1a !important;
     }
     
     /* Ensure text centering on all devices */
