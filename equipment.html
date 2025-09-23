@@ -490,6 +490,53 @@
         padding: 20px;
       }
     }
+    
+    /* CTA Section Button - Apply Gallery Section styling with black light color */
+    .cta-container .button.cc-jumbo-button {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+      color: white !important;
+      padding: 15px 35px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3) !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 15px 40px rgba(44, 62, 80, 0.4) !important;
+    }
+    
+    /* Ensure text centering on all devices */
+    @media (max-width: 768px) {
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 50px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 48px !important;
+        font-size: 14px !important;
+        padding: 12px 25px !important;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
