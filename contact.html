@@ -156,6 +156,35 @@
     .location-container .h1-headtext {
       color: white !important;
     }
+    
+    /* Interactive Location Styling */
+    .clickable-location {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    .clickable-location:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .clickable-location.active-location {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid #ffffff;
+    }
+    
+    .clickable-location h1,
+    .clickable-location h3 {
+      transition: color 0.3s ease;
+    }
+    
+    .clickable-location:hover h1,
+    .clickable-location:hover h3 {
+      color: #ffffff !important;
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -259,11 +288,11 @@
           <h1 data-w-id="77ea44e3-c499-f7ad-8d88-62e30ad98eba" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="h1-headtext">LOCATION</h1>
         </div>
         <div class="section-block">
-          <div data-w-id="f260838e-e665-438d-95c7-95dbd7f03a5b" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="location-detail"><img src="images/pinpng.com-dot-icon-png-2086901.png" loading="lazy" width="30" height="45" srcset="images/pinpng.com-dot-icon-png-2086901-p-500.png 500w, images/pinpng.com-dot-icon-png-2086901.png 656w" sizes="(max-width: 1279px) 29.999998092651367px, (max-width: 1919px) 2vw, 29.999998092651367px" alt="" class="image-23">
+          <div data-w-id="f260838e-e665-438d-95c7-95dbd7f03a5b" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="location-detail clickable-location active-location" data-location="head-office"><img src="images/pinpng.com-dot-icon-png-2086901.png" loading="lazy" width="30" height="45" srcset="images/pinpng.com-dot-icon-png-2086901-p-500.png 500w, images/pinpng.com-dot-icon-png-2086901.png 656w" sizes="(max-width: 1279px) 29.999998092651367px, (max-width: 1919px) 2vw, 29.999998092651367px" alt="" class="image-23">
             <h1 class="h2-headings">HEAD OFFICE</h1>
             <h3 class="sub-heading-3"><strong>BOGOR, JAWA BARAT</strong></h3>
           </div>
-          <div data-w-id="1b94a23a-6add-bb43-7f5e-a78400f4a209" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="location-detail"><img src="images/pinpng.com-dot-icon-png-2086901.png" loading="lazy" width="30" height="45" srcset="images/pinpng.com-dot-icon-png-2086901-p-500.png 500w, images/pinpng.com-dot-icon-png-2086901.png 656w" sizes="(max-width: 1279px) 29.999998092651367px, (max-width: 1919px) 2vw, 29.999998092651367px" alt="" class="image-24">
+          <div data-w-id="1b94a23a-6add-bb43-7f5e-a78400f4a209" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="location-detail clickable-location" data-location="branch-office"><img src="images/pinpng.com-dot-icon-png-2086901.png" loading="lazy" width="30" height="45" srcset="images/pinpng.com-dot-icon-png-2086901-p-500.png 500w, images/pinpng.com-dot-icon-png-2086901.png 656w" sizes="(max-width: 1279px) 29.999998092651367px, (max-width: 1919px) 2vw, 29.999998092651367px" alt="" class="image-24">
             <h1 class="h2-headings">BRANCH OFFICE</h1>
             <h3 class="sub-heading-3"><strong>PEKANBARU, RIAU</strong></h3>
           </div>
@@ -273,7 +302,7 @@
   </div>
   <div class="maps-google-api">
     <div class="map-section">
-      <div class="html-embed w-embed w-iframe"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3358139042784!2d106.95927571427003!3d-6.350549963896051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699485f2919417%3A0x6f13ca7656457042!2sGBI%20Madison%20Square!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="html-embed w-embed w-iframe"><iframe id="google-maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3358139042784!2d106.95927571427003!3d-6.350549963896051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699485f2919417%3A0x6f13ca7656457042!2sGBI%20Madison%20Square!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </div>
   <div class="intro-section cc-cta">
@@ -347,6 +376,35 @@
           'transform': 'translate3d(0, 0, 0)'
         });
       }, 300);
+      
+      // Interactive Location Maps
+      const locationMaps = {
+        'head-office': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3358139042784!2d106.95927571427003!3d-6.350549963896051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699485f2919417%3A0x6f13ca7656457042!2sGBI%20Madison%20Square!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid',
+        'branch-office': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1234567890!2d101.1234567890!3d0.1234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a1234567890%3A0x1234567890abcdef!2sPerkantoran%20Permata%20Hijau!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid'
+      };
+      
+      // Location click handler
+      $('.clickable-location').on('click', function() {
+        const locationType = $(this).data('location');
+        const mapsIframe = $('#google-maps-iframe');
+        
+        // Remove active class from all locations
+        $('.clickable-location').removeClass('active-location');
+        
+        // Add active class to clicked location
+        $(this).addClass('active-location');
+        
+        // Update Google Maps iframe
+        if (locationMaps[locationType]) {
+          mapsIframe.attr('src', locationMaps[locationType]);
+          
+          // Add loading effect
+          mapsIframe.css('opacity', '0.5');
+          setTimeout(function() {
+            mapsIframe.css('opacity', '1');
+          }, 500);
+        }
+      });
     });
   </script>
 </body>
