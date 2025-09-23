@@ -118,7 +118,12 @@
       text-decoration: none !important;
       font-weight: 600 !important;
       font-size: 16px !important;
-      display: inline-block !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
     }
     
     .button.cc-jumbo-button.cc-jumbo-black:hover {
@@ -126,6 +131,10 @@
       transform: translateY(-2px) !important;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
       border-color: #333333 !important;
+    }
+    
+    .button.cc-jumbo-button.cc-jumbo-black:active {
+      background-color: #1a1a1a !important;
     }
 
 
@@ -858,7 +867,8 @@
     
     /* Ensure text centering on all devices */
     @media (max-width: 768px) {
-      .cta-container .button.cc-jumbo-button {
+      .cta-container .button.cc-jumbo-button,
+      .button.cc-jumbo-button.cc-jumbo-black {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -868,7 +878,8 @@
     }
     
     @media (max-width: 480px) {
-      .cta-container .button.cc-jumbo-button {
+      .cta-container .button.cc-jumbo-button,
+      .button.cc-jumbo-button.cc-jumbo-black {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1299,7 +1310,7 @@
         <div class="cta-paragraph">
           <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
         </div>
-        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button w-inline-block">
+        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button cc-jumbo-black w-inline-block">
           <div class="text-block-2">Start Now</div>
         </a>
       </div>
