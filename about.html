@@ -250,7 +250,144 @@
       background-color: #2c3e50;
     }
     
+    /* Certificate Modal Styles */
+    .certificate-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s ease-in-out;
+    }
     
+    .modal-content {
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: color 0.3s ease;
+    }
+    
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+    
+    .modal-image {
+      max-width: 100%;
+      max-height: 70vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .modal-image:hover {
+      transform: scale(1.02);
+    }
+    
+    .modal-info {
+      margin-top: 20px;
+      color: white;
+    }
+    
+    .modal-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    .modal-description {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin: 0;
+      line-height: 1.5;
+    }
+    
+    /* Certificate image hover effect */
+    .certificate-image {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .certificate-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Responsive modal adjustments */
+    @media (max-width: 768px) {
+      .modal-content {
+        width: 95%;
+        padding: 15px;
+      }
+      
+      .close-btn {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+      }
+      
+      .modal-image {
+        max-height: 60vh;
+      }
+      
+      .modal-title {
+        font-size: 1.5rem;
+      }
+      
+      .modal-description {
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .modal-content {
+        width: 98%;
+        padding: 10px;
+      }
+      
+      .close-btn {
+        top: 5px;
+        right: 15px;
+        font-size: 25px;
+      }
+      
+      .modal-image {
+        max-height: 50vh;
+      }
+      
+      .modal-title {
+        font-size: 1.3rem;
+      }
+      
+      .modal-description {
+        font-size: 0.95rem;
+      }
+    }
     
     /* Responsive height adjustments */
     @media (max-width: 768px) {
@@ -586,7 +723,7 @@
           <div class="certificate-slide">
             <div class="certificate-item">
               <div class="certificate-image-container">
-                <img src="images/Certificate-EMP-p-500.png" alt="EMP Certificate" class="certificate-image">
+                <img src="images/Certificate-EMP-p-500.png" alt="EMP Certificate" class="certificate-image" onclick="openCertificateModal('images/Certificate-EMP-p-500.png', 'EMP Certificate', 'Energy Mega Persada Partnership')">
               </div>
               <div class="certificate-content">
                 <h3 class="certificate-name">EMP Certificate</h3>
@@ -842,6 +979,53 @@
     // Make functions globally available
     window.changeSlide = changeSlide;
     window.currentSlide = currentSlide;
+    
+    // Certificate Modal Functions
+    function openCertificateModal(imageSrc, title, description) {
+      const modal = document.getElementById('certificateModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDescription = document.getElementById('modalDescription');
+      
+      if (modal && modalImage && modalTitle && modalDescription) {
+        modalImage.src = imageSrc;
+        modalImage.alt = title;
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'block';
+        
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function closeCertificateModal() {
+      const modal = document.getElementById('certificateModal');
+      if (modal) {
+        modal.style.display = 'none';
+        // Restore body scroll
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('certificateModal');
+      if (event.target === modal) {
+        closeCertificateModal();
+      }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeCertificateModal();
+      }
+    });
+    
+    // Make modal functions globally available
+    window.openCertificateModal = openCertificateModal;
+    window.closeCertificateModal = closeCertificateModal;
   </script>
 </body>
 </html>
