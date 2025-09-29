@@ -273,6 +273,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
     .close-btn {
@@ -302,6 +306,8 @@
       border-radius: 8px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
     }
     
     .modal-image:hover {
@@ -311,6 +317,8 @@
     .modal-info {
       margin-top: 20px;
       color: white;
+      text-align: center;
+      width: 100%;
     }
     
     .modal-title {
@@ -319,6 +327,7 @@
       color: #ffffff;
       margin-bottom: 10px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
     }
     
     .modal-description {
@@ -326,6 +335,7 @@
       color: #e0e0e0;
       margin: 0;
       line-height: 1.5;
+      text-align: center;
     }
     
     /* Certificate image hover effect */
@@ -344,6 +354,13 @@
       .modal-content {
         width: 95%;
         padding: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       
       .close-btn {
@@ -354,14 +371,17 @@
       
       .modal-image {
         max-height: 60vh;
+        margin: 0 auto;
       }
       
       .modal-title {
         font-size: 1.5rem;
+        text-align: center;
       }
       
       .modal-description {
         font-size: 1rem;
+        text-align: center;
       }
     }
     
@@ -369,6 +389,13 @@
       .modal-content {
         width: 98%;
         padding: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       
       .close-btn {
@@ -379,14 +406,17 @@
       
       .modal-image {
         max-height: 50vh;
+        margin: 0 auto;
       }
       
       .modal-title {
         font-size: 1.3rem;
+        text-align: center;
       }
       
       .modal-description {
         font-size: 0.95rem;
+        text-align: center;
       }
     }
     
