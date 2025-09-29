@@ -270,7 +270,8 @@
       width: 90%;
       max-width: 800px;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
     }
     
@@ -996,6 +997,24 @@
         
         // Prevent body scroll when modal is open
         document.body.style.overflow = 'hidden';
+        
+        // Wait for image to load, then adjust for portrait
+        modalImage.onload = function() {
+          if (modalImage.naturalHeight > modalImage.naturalWidth) {
+            // Portrait image - make it smaller and more centered
+            modalImage.style.maxWidth = '60vw';
+            modalImage.style.maxHeight = '75vh';
+          }
+          // Landscape images keep their original size
+        };
+        
+        // If image is already cached, adjust immediately
+        if (modalImage.complete) {
+          if (modalImage.naturalHeight > modalImage.naturalWidth) {
+            modalImage.style.maxWidth = '60vw';
+            modalImage.style.maxHeight = '75vh';
+          }
+        }
       }
     }
     
