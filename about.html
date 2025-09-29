@@ -91,6 +91,28 @@
       background-attachment: fixed;
     }
     
+    /* Improve Certification Section padding and margin */
+    .intro-section:has(.heading-certificate) {
+      padding: 60px 40px;
+      margin-bottom: 80px;
+    }
+    
+    .heading-certificate {
+      margin-bottom: 40px;
+      padding: 20px 0;
+    }
+    
+    .certificate-section {
+      margin: 0 auto;
+      padding: 20px 0;
+      max-width: 1200px;
+    }
+    
+    .footer-certificate {
+      margin-top: 40px;
+      padding: 20px 0;
+    }
+    
     /* Responsive height adjustments */
     @media (max-width: 768px) {
       .intro-section.cc-cta {
@@ -98,6 +120,26 @@
       }
       .mid-section, .mid-section-web {
         margin-bottom: 45px !important;
+      }
+      
+      /* Certification Section responsive adjustments */
+      .intro-section:has(.heading-certificate) {
+        padding: 40px 20px;
+        margin-bottom: 60px;
+      }
+      
+      .heading-certificate {
+        margin-bottom: 30px;
+        padding: 15px 0;
+      }
+      
+      .certificate-section {
+        padding: 15px 0;
+      }
+      
+      .footer-certificate {
+        margin-top: 30px;
+        padding: 15px 0;
       }
     }
     
@@ -107,6 +149,26 @@
       }
       .mid-section, .mid-section-web {
         margin-bottom: 35px !important;
+      }
+      
+      /* Certification Section mobile adjustments */
+      .intro-section:has(.heading-certificate) {
+        padding: 30px 15px;
+        margin-bottom: 50px;
+      }
+      
+      .heading-certificate {
+        margin-bottom: 25px;
+        padding: 10px 0;
+      }
+      
+      .certificate-section {
+        padding: 10px 0;
+      }
+      
+      .footer-certificate {
+        margin-top: 25px;
+        padding: 10px 0;
       }
     }
     .paragraphx {
