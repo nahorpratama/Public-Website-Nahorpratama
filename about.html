@@ -135,10 +135,12 @@
       overflow: hidden;
       border-radius: 16px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      width: 100%;
     }
     
     .certificate-slide {
       min-width: 100%;
+      flex-shrink: 0;
       transition: transform 0.5s ease-in-out;
     }
     
@@ -756,11 +758,26 @@
     let currentSlideIndex = 0;
     const totalSlides = 5;
     let autoSlideInterval;
+    let slider;
+    let dots;
+    
+    function initSlider() {
+      slider = document.getElementById('certificateSlider');
+      dots = document.querySelectorAll('.dot');
+      
+      if (!slider || !dots.length) {
+        console.error('Slider elements not found');
+        return;
+      }
+      
+      console.log('Slider initialized with', totalSlides, 'slides');
+      showSlide(0);
+    }
     
     function showSlide(index) {
-      const slider = document.getElementById('certificateSlider');
-      const dots = document.querySelectorAll('.dot');
+      if (!slider) return;
       
+      // Ensure index is within bounds
       if (index >= totalSlides) {
         currentSlideIndex = 0;
       } else if (index < 0) {
@@ -769,8 +786,11 @@
         currentSlideIndex = index;
       }
       
+      console.log('Showing slide:', currentSlideIndex);
+      
       // Move slider
-      slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+      const translateX = -currentSlideIndex * 100;
+      slider.style.transform = `translateX(${translateX}%)`;
       
       // Update dots
       dots.forEach((dot, i) => {
@@ -779,7 +799,8 @@
     }
     
     function changeSlide(direction) {
-      showSlide(currentSlideIndex + direction);
+      const newIndex = currentSlideIndex + direction;
+      showSlide(newIndex);
     }
     
     function currentSlide(index) {
@@ -787,25 +808,38 @@
     }
     
     function startAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+      }
       autoSlideInterval = setInterval(() => {
         changeSlide(1);
-      }, 4000); // Change slide every 4 seconds
+      }, 4000);
     }
     
     function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
     }
     
-    // Initialize slider
+    // Initialize slider when DOM is ready
     document.addEventListener('DOMContentLoaded', function() {
-      showSlide(0);
+      console.log('DOM loaded, initializing slider...');
+      initSlider();
       startAutoSlide();
       
       // Pause auto-slide on hover
       const sliderContainer = document.querySelector('.certificate-slider-container');
-      sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-      sliderContainer.addEventListener('mouseleave', startAutoSlide);
+      if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+      }
     });
+    
+    // Make functions globally available
+    window.changeSlide = changeSlide;
+    window.currentSlide = currentSlide;
   </script>
 </body>
 </html>
