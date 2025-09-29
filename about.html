@@ -155,6 +155,64 @@
       padding-bottom: 0 !important;
     }
     
+    /* Optimize logo-head for responsive display */
+    .logo-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .logo-head .logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-head .logo img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    
+    /* Desktop: Show 3 logos per slide */
+    @media (min-width: 768px) {
+      .logo-head {
+        gap: 30px;
+      }
+      
+      .logo-head .logo {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: 200px;
+      }
+    }
+    
+    /* Mobile: Show 2 logos per slide */
+    @media (max-width: 767px) {
+      .logo-head {
+        gap: 15px;
+      }
+      
+      .logo-head .logo {
+        flex: 0 0 calc(50% - 7.5px);
+        max-width: 150px;
+      }
+    }
+    
+    /* Very small screens: Show 1 logo per slide */
+    @media (max-width: 480px) {
+      .logo-head {
+        gap: 10px;
+      }
+      
+      .logo-head .logo {
+        flex: 0 0 100%;
+        max-width: 120px;
+      }
+    }
+    
     /* Ensure text centering on all devices */
     @media (max-width: 768px) {
       .cta-container .button.cc-jumbo-button {
@@ -263,38 +321,42 @@
       <div class="w-slider-mask">
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-eb0a3aba-5074-5587-03b8-8c904ba98a33-5499a8e2" class="logo"><img width="100" height="60" src="images/Energi_Mega_Persada_-_Green.png" loading="lazy" alt="" class="image-13"></div>
-            <div id="w-node-_7c015f5c-60b7-1c1b-2df2-c624ab44761e-5499a8e2" class="logo"><img width="120" height="60" src="images/Logo-sucofindo.png" loading="lazy" srcset="images/Logo-sucofindo-p-500.png 500w, images/Logo-sucofindo-p-800.png 800w, images/Logo-sucofindo-p-1080.png 1080w, images/Logo-sucofindo-p-1600.png 1600w, images/Logo-sucofindo.png 1842w" sizes="100vw" alt="" class="image-12"></div>
+            <div class="logo"><img width="100" height="60" src="images/Energi_Mega_Persada_-_Green.png" loading="lazy" alt="" class="image-13"></div>
+            <div class="logo"><img width="120" height="60" src="images/Logo-sucofindo.png" loading="lazy" srcset="images/Logo-sucofindo-p-500.png 500w, images/Logo-sucofindo-p-800.png 800w, images/Logo-sucofindo-p-1080.png 1080w, images/Logo-sucofindo-p-1600.png 1600w, images/Logo-sucofindo.png 1842w" sizes="(max-width: 479px) 95px, (max-width: 767px) 20vw, 119px" alt="" class="image-12"></div>
+            <div class="logo"><img width="150" height="60" src="images/Takisama-Logo.jpeg" loading="lazy" alt="" class="image-15"></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-_5bb70d92-d89a-d878-9f38-607d8cd5f9f4-5499a8e2" class="logo"><img width="120" height="60" src="images/Logo-ISA.png" loading="lazy" alt="" class="image-14"></div>
-            <div class="logo"><img width="120" height="60" src="images/Mandiri.svg.png" loading="lazy" srcset="images/Mandiri.svg-p-500.png 500w, images/Mandiri.svg-p-800.png 800w, images/Mandiri.svg-p-1080.png 1080w, images/Mandiri.svg.png 1200w" sizes="100vw" alt="" class="image-10"></div>
+            <div class="logo"><img width="120" height="60" src="images/Logo-ISA.png" loading="lazy" alt="" class="image-14"></div>
+            <div class="logo"><img width="120" height="60" src="images/rapp.jpeg" loading="lazy" alt="" class="image-19"></div>
+            <div class="logo"><img width="120" height="60" src="images/Mandiri.svg.png" loading="lazy" srcset="images/Mandiri.svg-p-500.png 500w, images/Mandiri.svg-p-800.png 800w, images/Mandiri.svg-p-1080.png 1080w, images/Mandiri.svg.png 1200w" sizes="(max-width: 479px) 98px, (max-width: 767px) 21vw, 120px" alt="" class="image-10"></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae726-5499a8e2" class="logo"><img width="180" height="60" src="images/Pertamina-Hulu-Rokan.jpg" loading="lazy" alt="" class="image-16"></div>
-            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae728-5499a8e2" class="logo"><img width="150" height="60" src="images/logo-BASADO.jpg" loading="lazy" alt=""></div>
+            <div class="logo"><img width="180" height="60" src="images/Pertamina-Hulu-Rokan.jpg" loading="lazy" alt="" class="image-16"></div>
+            <div class="logo"><img width="120" height="60" src="images/Logo-Mitika.jpeg" loading="lazy" alt="" class="image-11"></div>
+            <div class="logo"><img width="200" height="60" src="images/logo-BASADO.jpg" loading="lazy" alt=""></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72c-5499a8e2" class="logo"><img width="200" height="60" src="images/logo-RITU.jpg" loading="lazy" srcset="images/logo-RITU-p-500.jpg 500w, images/logo-RITU-p-800.jpg 800w, images/logo-RITU.jpg 934w" sizes="100vw" alt="" class="image-17"></div>
-            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72a-5499a8e2" class="logo"><img width="300" height="60" src="images/logo-multi-teraindo.png" loading="lazy" srcset="images/logo-multi-teraindo-p-500.png 500w, images/logo-multi-teraindo.png 600w" sizes="100vw" alt=""></div>
+            <div class="logo"><img width="300" height="60" src="images/logo-RITU.jpg" loading="lazy" srcset="images/logo-RITU-p-500.jpg 500w, images/logo-RITU-p-800.jpg 800w, images/logo-RITU.jpg 934w" sizes="(max-width: 479px) 162px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, (max-width: 1279px) 27vw, 300px" alt="" class="image-17"></div>
+            <div class="logo"><img width="300" height="60" src="images/logo-multi-teraindo.png" loading="lazy" srcset="images/logo-multi-teraindo-p-500.png 500w, images/logo-multi-teraindo.png 600w" sizes="(max-width: 479px) 162px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, (max-width: 1279px) 27vw, 300px" alt=""></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-_844fc78a-9911-7b15-f825-b810a3b17168-5499a8e2" class="logo"><img width="120" height="60" src="images/JSI.png" loading="lazy" alt="" class="image-21"></div>
-            <div class="logo"><img width="120" height="60" src="images/logo-PTM.png" loading="lazy" srcset="images/logo-PTM-p-500.png 500w, images/logo-PTM.png 504w" sizes="100vw" alt="" class="image-20"></div>
+            <div class="logo"><img width="120" height="60" src="images/Wilmar.png" loading="lazy" srcset="images/Wilmar-p-500.png 500w, images/Wilmar-p-800.png 800w, images/Wilmar-p-1080.png 1080w, images/Wilmar.png 1200w" sizes="(max-width: 479px) 98px, (max-width: 767px) 21vw, 120px" alt="" class="image-9"></div>
+            <div class="logo"><img width="120" height="60" src="images/JSI.png" loading="lazy" alt="" class="image-21"></div>
+            <div class="logo"><img width="120" height="60" src="images/logo-PTM.png" loading="lazy" srcset="images/logo-PTM-p-500.png 500w, images/logo-PTM.png 504w" sizes="(max-width: 479px) 98px, (max-width: 767px) 21vw, 120px" alt="" class="image-20"></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72e-5499a8e2" class="logo"><img width="280" height="60" src="images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg" loading="lazy" srcset="images/WhatsApp-Image-2023-02-02-at-08.31.20-p-500.jpeg 500w, images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg 780w" sizes="100vw" alt="" class="image-18"></div>
-            <div class="logo"><img width="120" height="60" src="images/Petroflexx.png" loading="lazy" srcset="images/Petroflexx-p-500.png 500w, images/Petroflexx-p-800.png 800w, images/Petroflexx-p-1080.png 1080w, images/Petroflexx.png 1536w" sizes="100vw" alt="" class="image-18"></div>
+            <div class="logo"><img width="280" height="60" src="images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg" loading="lazy" srcset="images/WhatsApp-Image-2023-02-02-at-08.31.20-p-500.jpeg 500w, images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg 780w" sizes="(max-width: 479px) 226px, (max-width: 767px) 48vw, 280px" alt="" class="image-18"></div>
+            <div class="logo"><img width="120" height="60" src="images/Petroflexx.png" loading="lazy" srcset="images/Petroflexx-p-500.png 500w, images/Petroflexx-p-800.png 800w, images/Petroflexx-p-1080.png 1080w, images/Petroflexx.png 1536w" sizes="(max-width: 479px) 97px, (max-width: 767px) 20vw, 120px" alt="" class="image-18"></div>
           </div>
         </div>
         <div class="w-slide">
@@ -307,59 +369,6 @@
           <div class="logo-head">
             <div class="logo"><img width="120" height="60" src="images/Takisama-Logo.jpeg" loading="lazy" alt="" class="image-15"></div>
             <div class="logo"><img width="120" height="60" src="images/rapp.jpeg" loading="lazy" alt="" class="image-19"></div>
-          </div>
-        </div>
-      </div>
-      <div class="left-arrow w-slider-arrow-left">
-        <div class="icon-4 w-icon-slider-left"></div>
-      </div>
-      <div class="right-arrow w-slider-arrow-right">
-        <div class="icon-5 w-icon-slider-right"></div>
-      </div>
-      <div class="slide-nav-2 w-slider-nav"></div>
-    </div>
-  </div>
-  <div class="mid-section-web">
-    <div data-delay="2000" data-animation="outin" class="slider4 w-slider" data-autoplay="true" data-easing="ease-in" data-hide-arrows="false" data-disable-swipe="true" data-w-id="53ad0f0c-c7bd-ea54-ffe6-5d7c61eba862" data-autoplay-limit="0" data-nav-spacing="2" data-duration="150" data-infinite="true">
-      <div class="w-slider-mask">
-        <div class="w-slide">
-          <div class="logo-head">
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba866-7682ee28" class="logo"><img width="100" height="60" src="images/Energi_Mega_Persada_-_Green.png" loading="lazy" alt="" class="image-13"></div>
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba868-7682ee28" class="logo"><img width="120" height="60" src="images/Logo-sucofindo.png" loading="lazy" srcset="images/Logo-sucofindo-p-500.png 500w, images/Logo-sucofindo-p-800.png 800w, images/Logo-sucofindo-p-1080.png 1080w, images/Logo-sucofindo-p-1600.png 1600w, images/Logo-sucofindo.png 1842w" sizes="(max-width: 479px) 95.11363220214844px, (max-width: 767px) 20vw, 119.99999237060547px" alt="" class="image-12"></div>
-            <div class="logo"><img width="150" height="60" src="images/Takisama-Logo.jpeg" loading="lazy" alt="" class="image-15"></div>
-          </div>
-        </div>
-        <div class="w-slide">
-          <div class="logo-head">
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba86c-7682ee28" class="logo"><img width="120" height="60" src="images/Logo-ISA.png" loading="lazy" alt="" class="image-14"></div>
-            <div class="logo"><img width="120" height="60" src="images/rapp.jpeg" loading="lazy" alt="" class="image-19"></div>
-            <div class="logo"><img width="120" height="60" src="images/Mandiri.svg.png" loading="lazy" srcset="images/Mandiri.svg-p-500.png 500w, images/Mandiri.svg-p-800.png 800w, images/Mandiri.svg-p-1080.png 1080w, images/Mandiri.svg.png 1200w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-10"></div>
-          </div>
-        </div>
-        <div class="w-slide">
-          <div class="logo-head">
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba872-7682ee28" class="logo"><img width="180" height="60" src="images/Pertamina-Hulu-Rokan.jpg" loading="lazy" alt="" class="image-16"></div>
-            <div class="logo"><img width="120" height="60" src="images/Logo-Mitika.jpeg" loading="lazy" alt="" class="image-11"></div>
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba874-7682ee28" class="logo"><img width="200" height="60" src="images/logo-BASADO.jpg" loading="lazy" alt=""></div>
-          </div>
-        </div>
-        <div class="w-slide">
-          <div class="logo-head">
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba878-7682ee28" class="logo"><img width="300" height="60" src="images/logo-RITU.jpg" loading="lazy" srcset="images/logo-RITU-p-500.jpg 500w, images/logo-RITU-p-800.jpg 800w, images/logo-RITU.jpg 934w" sizes="(max-width: 479px) 161.63351440429688px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, (max-width: 1279px) 27vw, 300px" alt="" class="image-17"></div>
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba87a-7682ee28" class="logo"><img width="300" height="60" src="images/logo-multi-teraindo.png" loading="lazy" srcset="images/logo-multi-teraindo-p-500.png 500w, images/logo-multi-teraindo.png 600w" sizes="(max-width: 479px) 161.63351440429688px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, (max-width: 1279px) 27vw, 300px" alt=""></div>
-          </div>
-        </div>
-        <div class="w-slide">
-          <div class="logo-head">
-            <div class="logo"><img width="120" height="60" src="images/Wilmar.png" loading="lazy" srcset="images/Wilmar-p-500.png 500w, images/Wilmar-p-800.png 800w, images/Wilmar-p-1080.png 1080w, images/Wilmar.png 1200w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-9"></div>
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba87e-7682ee28" class="logo"><img width="120" height="60" src="images/JSI.png" loading="lazy" alt="" class="image-21"></div>
-            <div class="logo"><img width="120" height="60" src="images/logo-PTM.png" loading="lazy" srcset="images/logo-PTM-p-500.png 500w, images/logo-PTM.png 504w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-20"></div>
-          </div>
-        </div>
-        <div class="w-slide">
-          <div class="logo-head">
-            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba884-7682ee28" class="logo"><img width="280" height="60" src="images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg" loading="lazy" srcset="images/WhatsApp-Image-2023-02-02-at-08.31.20-p-500.jpeg 500w, images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg 780w" sizes="(max-width: 479px) 226.2926025390625px, (max-width: 767px) 48vw, 280px" alt="" class="image-18"></div>
-            <div class="logo"><img width="120" height="60" src="images/Petroflexx.png" loading="lazy" srcset="images/Petroflexx-p-500.png 500w, images/Petroflexx-p-800.png 800w, images/Petroflexx-p-1080.png 1080w, images/Petroflexx.png 1536w" sizes="(max-width: 479px) 96.97442626953125px, (max-width: 767px) 20vw, 119.99999237060547px" alt="" class="image-18"></div>
           </div>
         </div>
       </div>
