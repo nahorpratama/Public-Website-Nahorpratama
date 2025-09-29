@@ -1445,6 +1445,27 @@
       document.getElementById(tabName).classList.add("active");
       evt.currentTarget.classList.add("active");
     }
+
+    // Handle URL hash navigation to specific tabs
+    function handleHashNavigation() {
+      const hash = window.location.hash.substring(1); // Remove the # symbol
+      if (hash && (hash === 'aceh' || hash === 'jambi' || hash === 'riau')) {
+        // Find the corresponding tab button and click it
+        const tabButtons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabButtons.length; i++) {
+          if (tabButtons[i].textContent.toLowerCase() === hash) {
+            tabButtons[i].click();
+            break;
+          }
+        }
+      }
+    }
+
+    // Run hash navigation when page loads
+    document.addEventListener('DOMContentLoaded', handleHashNavigation);
+    
+    // Also run when hash changes (for back/forward navigation)
+    window.addEventListener('hashchange', handleHashNavigation);
   </script>
   </body>
 </html>
