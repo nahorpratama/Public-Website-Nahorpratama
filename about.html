@@ -538,7 +538,7 @@
           <div class="certificate-slide">
             <div class="certificate-item">
               <div class="certificate-image-container">
-                <img src="images/CERTIFICATE-SNI-ISO-45001-.2018-p-800.png" alt="ISO 9001:2015 Quality Management System" class="certificate-image">
+                <img src="images/CERTIFICATE-SNI-ISO-45001-.2018-p-800.png" alt="ISO 9001:2015 Quality Management System" class="certificate-image" onclick="openCertificateModal('images/CERTIFICATE-SNI-ISO-45001-.2018-p-800.png', 'ISO 9001:2015', 'Quality Management System')">
               </div>
               <div class="certificate-content">
                 <h3 class="certificate-name">ISO 9001:2015</h3>
@@ -550,7 +550,7 @@
           <div class="certificate-slide">
             <div class="certificate-item">
               <div class="certificate-image-container">
-                <img src="images/CERTIFICATE-SNI-ISO-14001.-2015-p-800.png" alt="ISO 14001:2015 Environmental Management System" class="certificate-image">
+                <img src="images/CERTIFICATE-SNI-ISO-14001.-2015-p-800.png" alt="ISO 14001:2015 Environmental Management System" class="certificate-image" onclick="openCertificateModal('images/CERTIFICATE-SNI-ISO-14001.-2015-p-800.png', 'ISO 14001:2015', 'Environmental Management System')">
               </div>
               <div class="certificate-content">
                 <h3 class="certificate-name">ISO 14001:2015</h3>
@@ -562,7 +562,7 @@
           <div class="certificate-slide">
             <div class="certificate-item">
               <div class="certificate-image-container">
-                <img src="images/CERTIFICATE-SNI-ISO-9001--.2015-p-800.png" alt="ISO 45001:2018 Occupational Health and Safety Management" class="certificate-image">
+                <img src="images/CERTIFICATE-SNI-ISO-9001--.2015-p-800.png" alt="ISO 45001:2018 Occupational Health and Safety Management" class="certificate-image" onclick="openCertificateModal('images/CERTIFICATE-SNI-ISO-9001--.2015-p-800.png', 'ISO 45001:2018', 'Occupational Health & Safety Management')">
               </div>
               <div class="certificate-content">
                 <h3 class="certificate-name">ISO 45001:2018</h3>
@@ -574,7 +574,7 @@
           <div class="certificate-slide">
             <div class="certificate-item">
               <div class="certificate-image-container">
-                <img src="images/SERTIFIKAT-ISO-37001-2016-p-800.jpeg" alt="ISO 37001:2016 Anti-Bribery Management System" class="certificate-image">
+                <img src="images/SERTIFIKAT-ISO-37001-2016-p-800.jpeg" alt="ISO 37001:2016 Anti-Bribery Management System" class="certificate-image" onclick="openCertificateModal('images/SERTIFIKAT-ISO-37001-2016-p-800.jpeg', 'ISO 37001:2016', 'Anti-Bribery Management System')">
               </div>
               <div class="certificate-content">
                 <h3 class="certificate-name">ISO 37001:2016</h3>
@@ -608,6 +608,18 @@
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Certificate Zoom Modal -->
+  <div id="certificateModal" class="certificate-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeCertificateModal()">&times;</span>
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <p id="modalDescription" class="modal-description"></p>
       </div>
     </div>
   </div>
