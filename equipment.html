@@ -395,14 +395,15 @@
     
     .equipment-modal .modal-content {
       position: relative;
-      margin: 5% auto;
+      margin: 2% auto;
       padding: 0;
-      width: 90%;
-      max-width: 800px;
+      width: 95%;
+      max-width: 1200px;
       background: white;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       animation: modalFadeIn 0.3s ease;
+      overflow: hidden;
     }
     
     @keyframes modalFadeIn {
@@ -437,14 +438,15 @@
     
     .equipment-modal .modal-image {
       width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
+      height: 85vh;
+      object-fit: cover;
       border-radius: 15px 15px 0 0;
     }
     
     .equipment-modal .modal-info {
-      padding: 20px 30px;
+      padding: 15px 30px;
       text-align: center;
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     }
     
     .equipment-modal .modal-title {
@@ -685,16 +687,16 @@
       }
       
       .equipment-modal .modal-content {
-        width: 95%;
-        margin: 10% auto;
+        width: 98%;
+        margin: 5% auto;
       }
       
       .equipment-modal .modal-image {
-        max-height: 60vh;
+        height: 80vh;
       }
       
       .equipment-modal .modal-info {
-        padding: 15px 20px;
+        padding: 12px 20px;
       }
       
       .equipment-modal .modal-title {
@@ -722,12 +724,15 @@
       }
       
       .equipment-modal .modal-content {
-        width: 98%;
-        margin: 15% auto;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
       }
       
       .equipment-modal .modal-image {
-        max-height: 50vh;
+        height: 85vh;
+        border-radius: 0;
       }
       
       .equipment-modal .modal-info {
