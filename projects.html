@@ -1536,13 +1536,11 @@
     // Gallery Zoom Modal Functionality
     const zoomModal = document.getElementById('zoomModal');
     const zoomImage = document.getElementById('zoomImage');
-    const zoomInfo = document.getElementById('zoomInfo');
     const zoomClose = document.getElementById('zoomClose');
 
     function openModal(imageSrc, imageInfo) {
       zoomImage.src = imageSrc;
       zoomImage.alt = imageInfo;
-      zoomInfo.textContent = imageInfo;
       zoomModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
