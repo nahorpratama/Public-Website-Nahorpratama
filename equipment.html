@@ -181,21 +181,88 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    .equipment-grid {
+    /* Project Grid - Vertical List with Scroll (sama seperti Experience) */
+    .project-grid {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
+      padding: 20px 0;
+      max-height: 600px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #2c5aa0 #f1f3f4;
     }
     
-    .equipment-item {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 40px;
-      text-align: left;
-      border: 1px solid #e9ecef;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      width: 100%;
+    /* Custom scrollbar for webkit browsers */
+    .project-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .project-grid::-webkit-scrollbar-track {
+      background: #f1f3f4;
+      border-radius: 4px;
+    }
+    
+    .project-grid::-webkit-scrollbar-thumb {
+      background: #2c5aa0;
+      border-radius: 4px;
+    }
+    
+    .project-grid::-webkit-scrollbar-thumb:hover {
+      background: #1e3a5f;
+    }
+    
+    /* Scroll indicator */
+    .project-grid::after {
+      content: '';
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+      pointer-events: none;
+    }
+    
+    .project-item {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project-info p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .project-info strong {
+      color: #2c5aa0;
+      font-weight: 600;
+      min-width: 120px;
+      display: inline-block;
     }
     
     .equipment-item:hover {
@@ -332,6 +399,15 @@
         padding: 20px 15px;
       }
       
+      .project-grid {
+        gap: 15px;
+        max-height: 500px;
+      }
+
+      .project-item {
+        padding: 20px;
+      }
+      
       .equipment-item {
         padding: 30px 20px;
       }
@@ -372,6 +448,15 @@
       
       .tab-content-inner {
         padding: 15px 10px;
+      }
+      
+      .project-grid {
+        max-height: 400px;
+        gap: 12px;
+      }
+      
+      .project-item {
+        padding: 15px;
       }
       
       .equipment-item {
@@ -749,256 +834,14 @@
       </div>
     </div>
   </div>
-            </div>
-          </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Heavy Trucks Tab -->
-          <div id="heavy-trucks" class="tab-pane">
-            <div class="tab-content-inner">
-              <div class="equipment-grid">
-                <div class="equipment-item">
-              <h3>Heavy Trucks</h3>
-              <p>Heavy-duty trucks and trailers for transporting materials and equipment across project sites.</p>
-              <div class="equipment-list">
-                <div class="equipment-entry">
-                  <div class="equipment-name">Dump Truck</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">HD325-7</span>
-                    <span class="quantity">Qty: 2</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Low Bed Trailer</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Low Bed Trailer</span>
-                    <span class="quantity">Qty: 2</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Flat Bed Trailer</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Flat Bed Trailer</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Container Trailer</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Container Trailer</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Fuel Tanker</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Fuel Tanker</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Water Tanker</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Water Tanker</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Heavy Equipment Tab -->
-          <div id="heavy-equipment" class="tab-pane">
-            <div class="tab-content-inner">
-              <div class="equipment-grid">
-                <div class="equipment-item">
-              <h3>Heavy Equipment</h3>
-              <p>Heavy machinery and equipment for major construction and EPCI projects, ensuring maximum efficiency and safety.</p>
-              <div class="equipment-list">
-                <div class="equipment-entry">
-                  <div class="equipment-name">Excavator</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">PC200-8M0</span>
-                    <span class="quantity">Qty: 3</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Bulldozer</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">D65PX-18</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Wheel Loader</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">WA200-8</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Motor Grader</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">GD655-5</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Vibratory Roller</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">SV512D-5</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Crane</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">Crawler Crane 25 Ton</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Forklift</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">KOMATSU</span>
-                    <span class="model">FD25T-16</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Mobile Crane</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Mobile Crane</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Manlift</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Manlift</span>
-                    <span class="quantity">Qty: 1</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Tools Tab -->
-          <div id="tools" class="tab-pane">
-            <div class="tab-content-inner">
-              <div class="equipment-grid">
-                <div class="equipment-item">
-              <h3>Tools</h3>
-              <p>Essential supporting equipment and tools that complement our main machinery for complete project execution.</p>
-              <div class="equipment-list">
-                <div class="equipment-entry">
-                  <div class="equipment-name">Generator Set</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Generator Set</span>
-                    <span class="quantity">Qty: 3</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Air Compressor</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Air Compressor</span>
-                    <span class="quantity">Qty: 2</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Welding Machine</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Welding Machine</span>
-                    <span class="quantity">Qty: 5</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Water Pump</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Water Pump</span>
-                    <span class="quantity">Qty: 3</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Lighting Tower</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Lighting Tower</span>
-                    <span class="quantity">Qty: 2</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Portable Toilet</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Portable Toilet</span>
-                    <span class="quantity">Qty: 4</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Safety Equipment</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Safety Equipment</span>
-                    <span class="quantity">Qty: 10</span>
-                  </div>
-                </div>
-                <div class="equipment-entry">
-                  <div class="equipment-name">Measuring Tools</div>
-                  <div class="equipment-details-row">
-                    <span class="manufacture">Various</span>
-                    <span class="model">Measuring Tools</span>
-                    <span class="quantity">Qty: 15</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   
   <div class="intro-section cc-cta">
     <div class="cta-container">
-      <div class="cta-wrap">
-        <div data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f163" class="cta-text">
-          <h1 class="h2-headingscta">We construct for you</h1>
-        </div>
-        <div class="cta-paragraph">
-          <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
-        </div>
-        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button w-inline-block">
-          <div class="text-block-2">Start Now</div>
-        </a>
-      </div>
+      <h2>Ready to Discuss Your Project?</h2>
+      <p>Get in touch with our team to learn more about our services and how we can support your business.</p>
+      <a href="contact.html" class="button cc-jumbo-button w-inline-block">
+        <div>Contact Us Today</div>
+      </a>
     </div>
   </div>
   
