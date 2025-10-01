@@ -86,6 +86,291 @@
       background-color: #2c3e50;
       color: #ffffff;
     }
+    
+    /* Equipment List Section */
+    .equipment-list-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+    
+    .equipment-list-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-heading .h2-headings {
+      color: #2c3e50;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .section-heading .paragraph-smallx {
+      color: #6c757d;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .equipment-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .equipment-tab {
+      background: #ffffff;
+      border: 2px solid #e9ecef;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #6c757d;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 150px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .equipment-tab:hover {
+      color: #2c5aa0;
+      background-color: #e3f2fd;
+      border-color: #2c5aa0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.15);
+    }
+    
+    .equipment-tab.active {
+      color: #ffffff;
+      border-color: #2c5aa0;
+      background-color: #2c5aa0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(44, 90, 160, 0.25);
+    }
+    
+    .equipment-content {
+      position: relative;
+      min-height: 400px;
+    }
+    
+    .equipment-category-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .equipment-category-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .equipment-details {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .equipment-item {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: left;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+    
+    .equipment-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: #2c5aa0;
+    }
+    
+    .equipment-item h3 {
+      color: #2c5aa0;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #2c5aa0;
+      position: relative;
+    }
+    
+    .equipment-item h3::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: #2c5aa0;
+    }
+    
+    .equipment-item p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: 500;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #2c5aa0;
+    }
+    
+    .equipment-list {
+      margin-top: 25px;
+      max-height: 600px;
+      overflow-y: auto;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      background: #f8f9fa;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .equipment-entry {
+      padding: 15px 20px;
+      border-bottom: 1px solid #f1f3f4;
+      transition: background-color 0.2s ease;
+    }
+    
+    .equipment-entry:last-child {
+      border-bottom: none;
+    }
+    
+    .equipment-entry:hover {
+      background-color: #ffffff;
+    }
+    
+    .equipment-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2c5aa0;
+      margin-bottom: 8px;
+    }
+    
+    .equipment-details-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .manufacture {
+      font-size: 14px;
+      color: #495057;
+      font-weight: 500;
+    }
+    
+    .model {
+      font-size: 14px;
+      color: #6c757d;
+      font-style: italic;
+    }
+    
+    .quantity {
+      font-size: 14px;
+      color: #2c5aa0;
+      font-weight: 600;
+      background: #e3f2fd;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 60px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .equipment-list-section {
+        padding: 40px 0;
+      }
+      
+      .equipment-list-container {
+        padding: 0 15px;
+      }
+      
+      .section-heading .h2-headings {
+        font-size: 28px;
+      }
+      
+      .section-heading .paragraph-smallx {
+        font-size: 16px;
+      }
+      
+      .equipment-tabs {
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+      
+      .equipment-tab {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 120px;
+      }
+      
+      .equipment-item {
+        padding: 30px 20px;
+      }
+      
+      .equipment-item h3 {
+        font-size: 24px;
+      }
+      
+      .equipment-item p {
+        font-size: 16px;
+        padding: 15px;
+      }
+      
+      .equipment-details-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      
+      .quantity {
+        justify-self: start;
+      }
+      
+      .equipment-list {
+        max-height: 400px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .equipment-tabs {
+        gap: 8px;
+      }
+      
+      .equipment-tab {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 100px;
+      }
+      
+      .equipment-item {
+        padding: 20px 15px;
+      }
+      
+      .equipment-item h3 {
+        font-size: 20px;
+      }
+    }
+    
     .cta-container {
       background-color: #2c3e50;
       color: #ffffff;
@@ -211,6 +496,300 @@
     </div>
   </div>
   
+  <div class="equipment-list-section">
+    <div class="equipment-list-container">
+      <div class="section-heading">
+        <h2 class="h2-headings">Equipment List</h2>
+        <p class="paragraph-smallx">Our comprehensive range of equipment for construction and EPCI projects</p>
+      </div>
+      
+      <div class="equipment-tabs">
+        <button class="equipment-tab active" data-category="light-vehicles">Light Vehicles</button>
+        <button class="equipment-tab" data-category="heavy-trucks">Heavy Trucks</button>
+        <button class="equipment-tab" data-category="heavy-equipment">Heavy Equipment</button>
+        <button class="equipment-tab" data-category="tools">Tools</button>
+      </div>
+      
+      <div class="equipment-content">
+        <div class="equipment-category-content active" data-category="light-vehicles">
+          <div class="equipment-details">
+            <div class="equipment-item">
+              <h3>Light Vehicles</h3>
+              <p>Passenger cars, pickup trucks, and utility vehicles for site transportation and personnel mobility.</p>
+              <div class="equipment-list">
+                <div class="equipment-entry">
+                  <div class="equipment-name">Double Cabin</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">TOYOTA Hilux</span>
+                    <span class="model">Hilux Double Cabin 4X4</span>
+                    <span class="quantity">Qty: 8</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Double Cabin</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">MITSUBISHI Triton</span>
+                    <span class="model">Triton Double Cabin 4X4</span>
+                    <span class="quantity">Qty: 2</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Single Cabin</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">MITSUBISHI Triton</span>
+                    <span class="model">Single Cabin</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">SUV</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">TOYOTA Fortuner</span>
+                    <span class="model">Fortuner 4X4</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Van</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">TOYOTA Hiace</span>
+                    <span class="model">Hiace Van</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Motorcycle</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">HONDA</span>
+                    <span class="model">Various Models</span>
+                    <span class="quantity">Qty: 3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="equipment-category-content" data-category="heavy-trucks">
+          <div class="equipment-details">
+            <div class="equipment-item">
+              <h3>Heavy Trucks</h3>
+              <p>Heavy-duty trucks and trailers for transporting materials and equipment across project sites.</p>
+              <div class="equipment-list">
+                <div class="equipment-entry">
+                  <div class="equipment-name">Dump Truck</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">HD325-7</span>
+                    <span class="quantity">Qty: 2</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Low Bed Trailer</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Low Bed Trailer</span>
+                    <span class="quantity">Qty: 2</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Flat Bed Trailer</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Flat Bed Trailer</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Container Trailer</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Container Trailer</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Fuel Tanker</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Fuel Tanker</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Water Tanker</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Water Tanker</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="equipment-category-content" data-category="heavy-equipment">
+          <div class="equipment-details">
+            <div class="equipment-item">
+              <h3>Heavy Equipment</h3>
+              <p>Heavy machinery and equipment for major construction and EPCI projects, ensuring maximum efficiency and safety.</p>
+              <div class="equipment-list">
+                <div class="equipment-entry">
+                  <div class="equipment-name">Excavator</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">PC200-8M0</span>
+                    <span class="quantity">Qty: 3</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Bulldozer</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">D65PX-18</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Wheel Loader</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">WA200-8</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Motor Grader</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">GD655-5</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Vibratory Roller</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">SV512D-5</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Crane</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">Crawler Crane 25 Ton</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Forklift</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">KOMATSU</span>
+                    <span class="model">FD25T-16</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Mobile Crane</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Mobile Crane</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Manlift</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Manlift</span>
+                    <span class="quantity">Qty: 1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="equipment-category-content" data-category="tools">
+          <div class="equipment-details">
+            <div class="equipment-item">
+              <h3>Tools</h3>
+              <p>Essential supporting equipment and tools that complement our main machinery for complete project execution.</p>
+              <div class="equipment-list">
+                <div class="equipment-entry">
+                  <div class="equipment-name">Generator Set</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Generator Set</span>
+                    <span class="quantity">Qty: 3</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Air Compressor</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Air Compressor</span>
+                    <span class="quantity">Qty: 2</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Welding Machine</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Welding Machine</span>
+                    <span class="quantity">Qty: 5</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Water Pump</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Water Pump</span>
+                    <span class="quantity">Qty: 3</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Lighting Tower</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Lighting Tower</span>
+                    <span class="quantity">Qty: 2</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Portable Toilet</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Portable Toilet</span>
+                    <span class="quantity">Qty: 4</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Safety Equipment</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Safety Equipment</span>
+                    <span class="quantity">Qty: 10</span>
+                  </div>
+                </div>
+                <div class="equipment-entry">
+                  <div class="equipment-name">Measuring Tools</div>
+                  <div class="equipment-details-row">
+                    <span class="manufacture">Various</span>
+                    <span class="model">Measuring Tools</span>
+                    <span class="quantity">Qty: 15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="intro-section cc-cta">
     <div class="cta-container">
       <div class="cta-wrap">
@@ -234,5 +813,26 @@
       </div>
     </div>
   </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.equipment-tab');
+      const contents = document.querySelectorAll('.equipment-category-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active');
+          document.querySelector(`.equipment-category-content[data-category="${category}"]`).classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
