@@ -118,56 +118,53 @@
       margin: 0 auto;
     }
     
-    .equipment-tabs {
+    /* Tab Container */
+    .tab-container {
+      margin: 40px 0;
+    }
+
+    .tab-header {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-      gap: 15px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e9ecef;
     }
-    
-    .equipment-tab {
-      background: #ffffff;
-      border: 2px solid #e9ecef;
-      padding: 12px 24px;
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 15px 30px;
+      margin: 0 5px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
       color: #6c757d;
-      border-radius: 50px;
       cursor: pointer;
+      border-bottom: 3px solid transparent;
       transition: all 0.3s ease;
-      text-align: center;
-      min-width: 150px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    
-    .equipment-tab:hover {
+
+    .tab-btn:hover {
       color: #2c5aa0;
-      background-color: #e3f2fd;
-      border-color: #2c5aa0;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.15);
+      background-color: #f8f9fa;
     }
-    
-    .equipment-tab.active {
-      color: #ffffff;
-      border-color: #2c5aa0;
-      background-color: #2c5aa0;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(44, 90, 160, 0.25);
+
+    .tab-btn.active {
+      color: #2c5aa0;
+      border-bottom-color: #2c5aa0;
+      background-color: #ffffff;
     }
-    
-    .equipment-content {
+
+    .tab-content {
       position: relative;
       min-height: 400px;
     }
-    
-    .equipment-category-content {
+
+    .tab-pane {
       display: none;
       animation: fadeIn 0.5s ease-in-out;
     }
-    
-    .equipment-category-content.active {
+
+    .tab-pane.active {
       display: block;
     }
     
@@ -503,15 +500,17 @@
         <p class="paragraph-smallx">Our comprehensive range of equipment for construction and EPCI projects</p>
       </div>
       
-      <div class="equipment-tabs">
-        <button class="equipment-tab active" data-category="light-vehicles">Light Vehicles</button>
-        <button class="equipment-tab" data-category="heavy-trucks">Heavy Trucks</button>
-        <button class="equipment-tab" data-category="heavy-equipment">Heavy Equipment</button>
-        <button class="equipment-tab" data-category="tools">Tools</button>
-      </div>
-      
-      <div class="equipment-content">
-        <div class="equipment-category-content active" data-category="light-vehicles">
+      <div class="tab-container">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="openTab(event, 'light-vehicles')">Light Vehicles</button>
+          <button class="tab-btn" onclick="openTab(event, 'heavy-trucks')">Heavy Trucks</button>
+          <button class="tab-btn" onclick="openTab(event, 'heavy-equipment')">Heavy Equipment</button>
+          <button class="tab-btn" onclick="openTab(event, 'tools')">Tools</button>
+        </div>
+        
+        <div class="tab-content">
+          <!-- Light Vehicles Tab -->
+          <div id="light-vehicles" class="tab-pane active">
           <div class="equipment-details">
             <div class="equipment-item">
               <h3>Light Vehicles</h3>
@@ -568,9 +567,10 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="equipment-category-content" data-category="heavy-trucks">
+          </div>
+          
+          <!-- Heavy Trucks Tab -->
+          <div id="heavy-trucks" class="tab-pane">
           <div class="equipment-details">
             <div class="equipment-item">
               <h3>Heavy Trucks</h3>
@@ -627,9 +627,10 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="equipment-category-content" data-category="heavy-equipment">
+          </div>
+          
+          <!-- Heavy Equipment Tab -->
+          <div id="heavy-equipment" class="tab-pane">
           <div class="equipment-details">
             <div class="equipment-item">
               <h3>Heavy Equipment</h3>
@@ -710,9 +711,10 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="equipment-category-content" data-category="tools">
+          </div>
+          
+          <!-- Tools Tab -->
+          <div id="tools" class="tab-pane">
           <div class="equipment-details">
             <div class="equipment-item">
               <h3>Tools</h3>
@@ -785,6 +787,7 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
@@ -815,24 +818,25 @@
   </div>
   
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.equipment-tab');
-      const contents = document.querySelectorAll('.equipment-category-content');
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
       
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-          const category = this.getAttribute('data-category');
-          
-          // Remove active class from all tabs and contents
-          tabs.forEach(t => t.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-          
-          // Add active class to clicked tab and corresponding content
-          this.classList.add('active');
-          document.querySelector(`.equipment-category-content[data-category="${category}"]`).classList.add('active');
-        });
-      });
-    });
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName("tab-pane");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      
+      // Remove active class from all tab buttons
+      tablinks = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      
+      // Show the selected tab content and mark button as active
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
   </script>
 </body>
 </html>
