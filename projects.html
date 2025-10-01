@@ -677,20 +677,21 @@
 
     .zoom-content {
       position: relative;
-      max-width: 90%;
-      max-height: 90%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 70%;
+      max-width: 1000px;
+      height: 80vh;
+      margin: 5% auto;
+      display: block;
     }
 
     .zoom-image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       animation: zoomIn 0.3s ease;
+      display: block;
     }
 
     .zoom-close {
@@ -719,19 +720,6 @@
       transform: scale(1.1);
     }
 
-    .zoom-info {
-      position: absolute;
-      bottom: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 14px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
 
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -799,6 +787,12 @@
         height: 180px;
       }
 
+      .zoom-content {
+        width: 85%;
+        height: 70vh;
+        margin: 8% auto;
+      }
+      
       .zoom-close {
         top: -30px;
         right: -30px;
@@ -807,11 +801,6 @@
         font-size: 18px;
       }
 
-      .zoom-info {
-        bottom: -50px;
-        font-size: 12px;
-        padding: 8px 15px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -851,6 +840,12 @@
 
       .tab-content-inner .gallery-item {
         height: 150px;
+      }
+      
+      .zoom-content {
+        width: 95%;
+        height: 60vh;
+        margin: 10% auto;
       }
     }
     
@@ -1531,7 +1526,6 @@
     <div class="zoom-content">
       <img id="zoomImage" class="zoom-image" src="" alt="">
       <button id="zoomClose" class="zoom-close">&times;</button>
-      <div id="zoomInfo" class="zoom-info"></div>
     </div>
   </div>
 
