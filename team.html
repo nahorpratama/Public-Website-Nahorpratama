@@ -87,26 +87,69 @@
       color: #ffffff;
     }
     
-    /* Remove spacing above CTA section */
+    /* AGGRESSIVE: Remove ALL spacing above CTA section */
+    .intro-section.cc-cta,
+    div[class*="intro-section"][class*="cc-cta"],
+    .intro-section.cc-cta *,
+    div[class*="intro-section"][class*="cc-cta"] * {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Force remove spacing from ALL possible selectors */
+    .intro-section.cc-cta,
+    .intro-section.cc-cta .cta-container,
+    .intro-section.cc-cta .cta-wrap,
+    .intro-section.cc-cta .cta-text,
+    .intro-section.cc-cta .cta-paragraph,
+    .intro-section.cc-cta .button {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Nuclear option: Target by data attributes */
+    div[data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f163"] {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    /* Override any Webflow inline styles */
+    .intro-section.cc-cta[style*="margin"],
+    .intro-section.cc-cta[style*="padding"] {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* NUCLEAR OPTION: Target everything around CTA */
+    .mid-section-web + .intro-section,
+    .mid-section + .intro-section,
+    .partner-section + .intro-section,
+    .organization-section + .intro-section {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    /* Force negative margin to pull CTA up */
     .intro-section.cc-cta {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      margin-top: -20px !important;
+      transform: translateY(-20px) !important;
     }
     
-    /* Force remove any spacing from Webflow defaults */
-    div[class*="intro-section"][class*="cc-cta"] {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-      margin: 0 !important;
-      padding: 0 !important;
+    /* Target any element that might add spacing */
+    * {
+      box-sizing: border-box !important;
     }
     
-    /* Target the specific CTA section */
-    .intro-section.cc-cta .cta-container {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
+    /* Remove any line-height spacing */
+    .intro-section.cc-cta,
+    .intro-section.cc-cta * {
+      line-height: 1 !important;
     }
     .paragraphx {
       color: #2c3e50;
