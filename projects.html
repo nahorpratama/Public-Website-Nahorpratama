@@ -90,21 +90,33 @@
     }
     
     .button.cc-jumbo-button {
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+      background-color: #000000 !important;
       color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
       padding: 15px 35px !important;
-      border-radius: 50px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
       font-weight: 600 !important;
       font-size: 16px !important;
-      transition: all 0.3s ease !important;
-      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3) !important;
-      display: inline-block !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
     }
     
     .button.cc-jumbo-button:hover {
-      transform: translateY(-3px) !important;
-      box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .button.cc-jumbo-button:active {
+      background-color: #1a1a1a !important;
     }
 
     .button.cc-jumbo-button.cc-jumbo-black {
@@ -118,7 +130,12 @@
       text-decoration: none !important;
       font-weight: 600 !important;
       font-size: 16px !important;
-      display: inline-block !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
     }
     
     .button.cc-jumbo-button.cc-jumbo-black:hover {
@@ -127,16 +144,21 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
       border-color: #333333 !important;
     }
+    
+    .button.cc-jumbo-button.cc-jumbo-black:active {
+      background-color: #1a1a1a !important;
+    }
+
 
     /* Photo Slider Section */
     .photo-slider-section {
-      background-color: #f8f9fa;
+      background-color: #ffffff;
       padding: 80px 0;
       margin: 0;
     }
 
     .photo-slider-container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -147,7 +169,7 @@
     }
 
     .photo-slider-title h2 {
-      font-size: 42px;
+      font-size: 36px;
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 15px;
@@ -156,325 +178,278 @@
 
     .photo-slider-title p {
       font-size: 18px;
-      color: #666;
+      color: #6c757d;
       line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .photo-slider {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-      background-color: #ffffff;
+      margin-bottom: 40px;
+      opacity: 0.9;
     }
 
     .slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 25px 20px;
+      height: 100vh;
+    }
+
+    .slides {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease-in-out;
     }
 
     .slide {
       min-width: 100%;
-      position: relative;
-      display: flex;
-      align-items: stretch;
-      min-height: 500px;
-      padding: 30px;
-    }
-
-    /* Layout 1 - Asimetris 60:40 - Improved */
-    .slide.layout-1 {
-      display: flex;
-      gap: 30px;
-      align-items: stretch;
-      min-height: 550px;
-    }
-
-    .slide-content-left {
-      flex: 0 0 58%;
-      padding: 20px;
+      height: 100vh;
+      padding: 20px 30px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      border: none;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-      border-radius: 15px 15px 15px 15px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      gap: 5px;
       position: relative;
-    }
-
-    /* Rounded bottom-right corner effect - sesuai analisis gambar */
-    .slide-content-left {
-      border-radius: 15px 15px 15px 15px;
       overflow: hidden;
     }
 
-    .slide-content-left::before {
-      content: '';
-      position: absolute;
-      bottom: -30px;
-      right: -30px;
-      width: 80px;
-      height: 80px;
-      background: #f8f9fa;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .slide-content-left .project-title,
-    .slide-content-left .project-details {
-      position: relative;
-      z-index: 2;
-    }
-
-    .slide-content-right {
-      flex: 0 0 42%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project-title {
-      background: linear-gradient(135deg, #2c5aa0 0%, #3498db 100%);
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 25px;
-      box-shadow: 0 6px 20px rgba(44, 90, 160, 0.2);
-    }
-
-    .project-title h3 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0;
-      line-height: 1.4;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-details {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      flex: 1;
-    }
-
-    .detail-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 15px;
-      color: #2c3e50;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(44, 90, 160, 0.1);
-    }
-
-    .detail-item:last-child {
-      border-bottom: none;
-    }
-
-    .detail-item .icon {
-      font-size: 18px;
-      margin-top: 2px;
-      color: #2c5aa0;
-      min-width: 20px;
-    }
-
-    .detail-item span:last-child {
-      font-weight: 500;
-      line-height: 1.5;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 15px;
-      height: 450px;
-      width: 100%;
-    }
-
-    .image-main {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
-      border-radius: 15px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .image-secondary {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      border-radius: 15px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .image-tertiary {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      border-radius: 15px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .image-wide {
-      grid-column: 1 / 3;
-      grid-row: 3 / 4;
-      margin-top: 15px;
-      border-radius: 15px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-
-    /* Layout 2 - Grid 4 Zona */
+    /* Ensure all slides have consistent container styling */
+    .slide.layout-1,
     .slide.layout-2 {
+      min-width: 100%;
+      height: 100vh;
+      padding: 20px 30px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      border: none;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      padding: 20px;
-      min-height: 450px;
+      gap: 5px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .image-top {
+    .slide * {
+      background-image: none !important;
+    }
+
+    /* Force remove all background images from slide sections */
+    .slide,
+    .slide *,
+    .slide::before,
+    .slide::after,
+    .slide *::before,
+    .slide *::after {
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    /* Override any external CSS that might add background images */
+    .photo-slider-section .slide,
+    .photo-slider-section .slide * {
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .slide.layout-1,
+    .slide.layout-2 {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .zone-1, .zone-2, .zone-3 {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+    }
+
+    .hero-image, .bottom-image, .small-image {
+      background-image: none !important;
+    }
+
+    .slide.layout-1 *,
+    .slide.layout-2 * {
+      background-image: none !important;
+    }
+
+    .zone-1,
+    .zone-3 {
+      flex: 0 0 30%;
+      padding: 0px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .zone-2 {
+      flex: 0 0 30%;
+      padding: 0px;
+      display: flex;
+      gap: 0px;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      background: #ffffff !important;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .zone-1 *,
+    .zone-2 *,
+    .zone-3 * {
+      background-image: none !important;
+    }
+
+    .hero-image,
+    .bottom-image {
       width: 100%;
-      height: 150px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .content-middle {
-      display: flex;
-      gap: 15px;
-      flex: 1;
-    }
-
-    .images-left {
-      flex: 0 0 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .image-upper,
-    .image-lower {
-      flex: 1;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .text-right {
-      flex: 0 0 50%;
-      padding: 15px;
+      height: 100%;
       background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
       border-radius: 12px;
-    }
-
-    .text-right .project-title {
-      background-color: transparent;
-      padding: 0;
-      margin-bottom: 15px;
-    }
-
-    .text-right .project-title h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #2c3e50;
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    .text-right .project-details {
-      gap: 10px;
-    }
-
-    .text-right .detail-item {
-      font-size: 13px;
-    }
-
-    .image-bottom {
-      width: 100%;
-      height: 120px;
-      background-color: #ffffff;
-      border: 2px solid #f0f0f0;
-      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      font-size: 14px;
+      color: #6c757d;
+      font-weight: 500;
     }
 
-    .slider-nav {
+    .image-placeholder {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Layout 1: Teks kiri, Gambar kanan (65:35) */
+    .layout-1 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-1 .text-block {
+      flex: 3;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 12px;
+      border: 2px solid #e9ecef;
+    }
+
+    .layout-1 .image-stack {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .layout-1 .spacer {
+      flex: 0 0 5px;
+      min-width: 5px;
+    }
+
+    .layout-1 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    /* Layout 2: Gambar kiri, Teks kanan (35:65) */
+    .layout-2 .zone-2 {
+      flex-direction: row;
+    }
+
+    .layout-2 .image-stack {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .layout-2 .small-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      background-image: none !important;
+      border: 2px dashed #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    .layout-2 .text-block {
+      flex: 3;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 12px;
+      border: 2px solid #e9ecef;
+    }
+
+    .layout-2 .spacer {
+      flex: 0 0 5px;
+      min-width: 5px;
+    }
+
+    /* Navigation Controls */
+    .slider-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(44, 90, 160, 0.8);
+      color: white;
       border: none;
       width: 50px;
       height: 50px;
       border-radius: 50%;
+      font-size: 24px;
       cursor: pointer;
-      font-size: 20px;
-      color: #2c3e50;
+      z-index: 10;
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .slider-nav:hover {
-      background: #2c5aa0;
-      color: white;
+    .slider-btn:hover {
+      background: rgba(44, 90, 160, 1);
       transform: translateY(-50%) scale(1.1);
     }
 
-    .slider-nav.prev {
+    .prev-btn {
       left: 20px;
     }
 
-    .slider-nav.next {
+    .next-btn {
       right: 20px;
     }
 
+    /* Dots Indicator */
     .slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      justify-content: center;
-      margin-top: 30px;
       gap: 10px;
+      z-index: 10;
     }
 
     .dot {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: #ddd;
+      background: rgba(255, 255, 255, 0.5);
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -484,18 +459,82 @@
       transform: scale(1.2);
     }
 
+    .dot:hover {
+      background-color: #2c5aa0;
+      opacity: 0.7;
+    }
+
+    /* Desktop Focus - No Responsive Design */
+
     /* Gallery Section */
     .gallery-section {
-      background-color: #ffffff;
+      background-color: #f8f9fa;
       padding: 80px 0;
       margin: 0;
+      min-height: 500px;
+    }
+
+    /* Tab Container */
+    .tab-container {
+      margin: 40px 0;
+    }
+
+    .tab-header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 15px 30px;
+      margin: 0 5px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #6c757d;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      color: #2c5aa0;
+      background-color: #f8f9fa;
+    }
+
+    .tab-btn.active {
+      color: #2c5aa0;
+      border-bottom-color: #2c5aa0;
+      background-color: #ffffff;
+    }
+
+    .tab-content {
+      position: relative;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    .tab-content-inner {
+      padding: 25px 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .gallery-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 30px;
     }
+    
 
     .gallery-title {
       text-align: center;
@@ -523,6 +562,48 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       margin-bottom: 40px;
+    }
+
+    /* Gallery Grid inside tab container - respect padding */
+    .tab-content-inner .gallery-grid {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-height: 600px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: #2c5aa0 #f1f1f1;
+    }
+
+    /* Vertical scrollbar for webkit browsers */
+    .tab-content-inner .gallery-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .tab-content-inner .gallery-grid::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    .tab-content-inner .gallery-grid::-webkit-scrollbar-thumb {
+      background: #2c5aa0;
+      border-radius: 4px;
+    }
+
+    .tab-content-inner .gallery-grid::-webkit-scrollbar-thumb:hover {
+      background: #1e3d6f;
+    }
+
+    /* Gallery items in tab container - normal grid sizing */
+    .tab-content-inner .gallery-item {
+      width: 100%;
+      height: 200px;
     }
 
     .gallery-item {
@@ -663,250 +744,39 @@
     }
 
     /* CTA Section */
-    .cta-section {
+    .cta-container {
       background-color: #2c3e50;
       color: #ffffff;
-      padding: 80px 0;
-      margin: 0;
     }
+    
 
-    .cta-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .cta-content h2 {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-
-    .cta-content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      opacity: 0.9;
-    }
 
     /* Footer Section */
     .footer-section {
       background-color: #2c3e50;
       color: #ffffff;
-      padding: 20px 0;
-      margin: 0;
     }
+    
 
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .footer-content p {
-      margin: 0;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    /* Large Screen Responsive */
-    @media (min-width: 1600px) {
-      .photo-slider-container {
-        max-width: 1600px;
-      }
-      
-      .slide {
-        min-height: 600px;
-      }
-      
-      .photo-slider-title h2 {
-        font-size: 48px;
-      }
-      
-      .photo-slider-title p {
-        font-size: 20px;
-      }
-    }
-
-    /* Tablet Responsive */
-    @media (max-width: 1024px) {
-      .photo-slider-container {
-        max-width: 100%;
-        padding: 0 15px;
-      }
-      
-      .slide {
-        min-height: 500px;
-        padding: 25px;
-      }
-      
-      .slide.layout-1 {
-        gap: 25px;
-        min-height: 500px;
-      }
-      
-      .slide-content-left {
-        flex: 0 0 55%;
-        padding: 18px;
-      }
-      
-      .slide-content-right {
-        flex: 0 0 45%;
-      }
-      
-      .project-title h3 {
-        font-size: 20px;
-      }
-      
-      .detail-item {
-        font-size: 14px;
-        gap: 10px;
-      }
-      
-      .image-grid {
-        height: 400px;
-        gap: 12px;
-      }
-      
-      .photo-slider-title h2 {
-        font-size: 36px;
-      }
-      
-      .photo-slider-title p {
-        font-size: 17px;
-      }
-    }
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
-      .photo-slider-section,
       .gallery-section,
       .cta-section {
         padding: 60px 0;
       }
+      
+      .gallery-container,
+      .cta-container {
+        padding: 0 20px;
+      }
 
-      .photo-slider-title h2,
-      .gallery-title h2,
-      .cta-content h2 {
+      .gallery-title h2 {
         font-size: 32px;
       }
 
-      .photo-slider-title p,
-      .gallery-title p,
-      .cta-content p {
+      .gallery-title p {
         font-size: 16px;
-      }
-
-      .slide {
-        min-height: auto;
-        padding: 15px;
-        flex-direction: column;
-      }
-      
-      .slide.layout-1 {
-        gap: 20px;
-        min-height: auto;
-      }
-      
-      .slide-content-left {
-        flex: none;
-        order: 2;
-        padding: 15px;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        overflow: visible;
-      }
-
-      .slide-content-left::before {
-        display: none; /* Hide rounded corner effect on mobile */
-      }
-      
-      .slide-content-right {
-        flex: none;
-        order: 1;
-      }
-      
-      .project-title {
-        padding: 15px;
-        margin-bottom: 20px;
-      }
-      
-      .project-title h3 {
-        font-size: 18px;
-        line-height: 1.3;
-      }
-      
-      .detail-item {
-        font-size: 14px;
-        gap: 10px;
-        padding: 6px 0;
-      }
-      
-      .detail-item .icon {
-        font-size: 16px;
-      }
-      
-      .image-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 10px;
-        height: auto;
-      }
-      
-      .image-main {
-        grid-column: 1 / 3;
-        grid-row: 1;
-        height: 200px;
-      }
-      
-      .image-secondary {
-        grid-column: 1;
-        grid-row: 2;
-        height: 120px;
-      }
-      
-      .image-tertiary {
-        grid-column: 2;
-        grid-row: 2;
-        height: 120px;
-      }
-      
-      .image-wide {
-        grid-column: 1 / 3;
-        grid-row: 3;
-        height: 120px;
-        margin-top: 10px;
-      }
-      
-      .slide.layout-2 {
-        gap: 12px;
-      }
-      
-      .content-middle {
-        flex-direction: column;
-        gap: 12px;
-      }
-      
-      .images-left {
-        flex: none;
-        order: 2;
-      }
-      
-      .text-right {
-        flex: none;
-        order: 1;
-      }
-      
-      .image-top {
-        height: 120px;
-      }
-      
-      .image-bottom {
-        height: 100px;
       }
 
       .gallery-grid {
@@ -914,18 +784,15 @@
         gap: 15px;
       }
 
-      .slider-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+      /* Gallery Grid inside tab container - tablet */
+      .tab-content-inner .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-height: 500px;
       }
 
-      .slider-nav.prev {
-        left: 10px;
-      }
-
-      .slider-nav.next {
-        right: 10px;
+      .tab-content-inner .gallery-item {
+        height: 180px;
       }
 
       .zoom-close {
@@ -944,57 +811,94 @@
     }
 
     @media (max-width: 480px) {
-      .photo-slider-section,
       .gallery-section,
       .cta-section {
         padding: 40px 0;
       }
+      
+      .gallery-container,
+      .cta-container {
+        padding: 0 15px;
+      }
 
-      .photo-slider-title h2,
-      .gallery-title h2,
-      .cta-content h2 {
+      .gallery-title h2 {
         font-size: 28px;
       }
 
-      .photo-slider-title p,
-      .gallery-title p,
-      .cta-content p {
+      .gallery-title p {
         font-size: 14px;
-      }
-
-      .slide {
-        padding: 12px;
-      }
-
-      .project-title h3 {
-        font-size: 16px;
-      }
-
-      .detail-item {
-        font-size: 12px;
-      }
-
-      .image-main {
-        height: 130px;
-      }
-      
-      .image-secondary,
-      .image-tertiary,
-      .image-wide {
-        height: 100px;
-      }
-
-      .image-top {
-        height: 100px;
-      }
-      
-      .image-bottom {
-        height: 80px;
       }
 
       .gallery-grid {
         grid-template-columns: 1fr;
         gap: 10px;
+      }
+
+      /* Gallery Grid inside tab container - mobile */
+      .tab-content-inner .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-height: 400px;
+      }
+
+      .tab-content-inner .gallery-item {
+        height: 150px;
+      }
+    }
+    
+    /* CTA Section Button - Apply cc-jumbo-black styling as main standard */
+    .cta-container .button.cc-jumbo-button {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
+      padding: 15px 35px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:hover {
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:active {
+      background-color: #1a1a1a !important;
+    }
+    
+    /* Ensure text centering on all devices */
+    @media (max-width: 768px) {
+      .cta-container .button.cc-jumbo-button,
+      .button.cc-jumbo-button.cc-jumbo-black {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 50px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .cta-container .button.cc-jumbo-button,
+      .button.cc-jumbo-button.cc-jumbo-black {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 48px !important;
+        font-size: 14px !important;
+        padding: 12px 25px !important;
       }
     }
   </style>
@@ -1039,230 +943,197 @@
     </div>
   </div>
 
+
   <!-- Photo Slider Section -->
   <div class="photo-slider-section">
     <div class="photo-slider-container">
       <div class="photo-slider-title">
-        <h2>Featured Projects</h2>
-        <p>Discover our most successful construction and EPCI projects across Indonesia</p>
+        <h2>Project Showcase</h2>
+        <p>Explore our featured construction projects and achievements</p>
       </div>
       
-      <div class="photo-slider">
-        <div class="slider-container" id="sliderContainer">
-          <!-- Slider 1: Layout sesuai analisis gambar -->
+      <div class="slider-container">
+        <div class="slides">
+          <!-- Slide 1 - Layout 1 -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 1 - Hero Image</div>
               </div>
             </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 1</h3>
                 </div>
-                <div class="image-secondary">
+                <div class="project-description">
+                  <p>Description for Project 1</p>
                 </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 1 - Context Image</div>
               </div>
             </div>
           </div>
-          
-          <!-- Slider 2: Layout 2 - Grid 4 Zona -->
+
+          <!-- Slide 2 - Layout 2 -->
           <div class="slide layout-2">
-            <div class="image-top">
-            </div>
-            <div class="content-middle">
-              <div class="images-left">
-                <div class="image-upper">
-                </div>
-                <div class="image-lower">
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 2 - Hero Image</div>
               </div>
-              <div class="text-right">
-                <div class="project-title">
-                  <h3>Site Construction Services untuk Proyek Pembangunan Jasa Penyediaan Sewa Gas Processing Facility Kapasitas 45 MMSCFD</h3>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 2</h3>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="icon">📍</span>
-                    <span>Lhoksukon, Aceh</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">📅</span>
-                    <span>August 2024 - December 2025</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">⚙️</span>
-                    <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
-                  </div>
+                <div class="project-description">
+                  <p>Description for Project 2</p>
                 </div>
               </div>
             </div>
-            <div class="image-bottom">
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 2 - Context Image</div>
+              </div>
             </div>
           </div>
-          
-          <!-- Slider 3: Layout sesuai analisis gambar -->
+
+          <!-- Slide 3 - Layout 1 -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 3 - Hero Image</div>
               </div>
             </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 3</h3>
                 </div>
-                <div class="image-secondary">
+                <div class="project-description">
+                  <p>Description for Project 3</p>
                 </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 3 - Context Image</div>
               </div>
             </div>
           </div>
-          
-          <!-- Slider 4: Layout 2 - Grid 4 Zona -->
+
+          <!-- Slide 4 - Layout 2 -->
           <div class="slide layout-2">
-            <div class="image-top">
-            </div>
-            <div class="content-middle">
-              <div class="images-left">
-                <div class="image-upper">
-                </div>
-                <div class="image-lower">
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 4 - Hero Image</div>
               </div>
-              <div class="text-right">
-                <div class="project-title">
-                  <h3>Site Construction Services untuk Proyek Pembangunan Jasa Penyediaan Sewa Gas Processing Facility Kapasitas 45 MMSCFD</h3>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 4</h3>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="icon">📍</span>
-                    <span>Lhoksukon, Aceh</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">📅</span>
-                    <span>August 2024 - December 2025</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">⚙️</span>
-                    <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
-                  </div>
+                <div class="project-description">
+                  <p>Description for Project 4</p>
                 </div>
               </div>
             </div>
-            <div class="image-bottom">
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 4 - Context Image</div>
+              </div>
             </div>
           </div>
-          
-          <!-- Slider 5: Layout sesuai analisis gambar -->
+
+          <!-- Slide 5 - Layout 1 -->
           <div class="slide layout-1">
-            <div class="slide-content-left">
-              <div class="project-title">
-                <h3>Development of Gas Processing Facility Rental Provision Services with a Capacity of 45 MMSCFD (Pipeline 12" 3500 Meter's Job)</h3>
-              </div>
-              <div class="project-details">
-                <div class="detail-item">
-                  <span class="icon">📍</span>
-                  <span>Lhoksomawe, Aceh</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">📅</span>
-                  <span>September 2024</span>
-                </div>
-                <div class="detail-item">
-                  <span class="icon">⚙️</span>
-                  <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrument Installation</span>
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 5 - Hero Image</div>
               </div>
             </div>
-            <div class="slide-content-right">
-              <div class="image-grid">
-                <div class="image-main">
+            <div class="zone-2">
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 5</h3>
                 </div>
-                <div class="image-secondary">
+                <div class="project-description">
+                  <p>Description for Project 5</p>
                 </div>
-                <div class="image-tertiary">
-                </div>
-                <div class="image-wide">
-                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+            </div>
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 5 - Context Image</div>
               </div>
             </div>
           </div>
-          
-          <!-- Slider 6: Layout 2 - Grid 4 Zona -->
+
+          <!-- Slide 6 - Layout 2 -->
           <div class="slide layout-2">
-            <div class="image-top">
-            </div>
-            <div class="content-middle">
-              <div class="images-left">
-                <div class="image-upper">
-                </div>
-                <div class="image-lower">
-                </div>
+            <div class="zone-1">
+              <div class="hero-image">
+                <div class="image-placeholder">Slide 6 - Hero Image</div>
               </div>
-              <div class="text-right">
-                <div class="project-title">
-                  <h3>Site Construction Services untuk Proyek Pembangunan Jasa Penyediaan Sewa Gas Processing Facility Kapasitas 45 MMSCFD</h3>
+            </div>
+            <div class="zone-2">
+              <div class="image-stack">
+                <div class="small-image">Detail 1</div>
+                <div class="small-image">Detail 2</div>
+              </div>
+              <div class="spacer"></div>
+              <div class="text-block">
+                <div class="project-header">
+                  <h3>Project 6</h3>
                 </div>
-                <div class="project-details">
-                  <div class="detail-item">
-                    <span class="icon">📍</span>
-                    <span>Lhoksukon, Aceh</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">📅</span>
-                    <span>August 2024 - December 2025</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="icon">⚙️</span>
-                    <span>Civil & Structure, Piping Installation, Mechanical Installation, Electrical & Instrumen Installation</span>
-                  </div>
+                <div class="project-description">
+                  <p>Description for Project 6</p>
                 </div>
               </div>
             </div>
-            <div class="image-bottom">
+            <div class="zone-3">
+              <div class="bottom-image">
+                <div class="image-placeholder">Slide 6 - Context Image</div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Navigation Controls -->
+        <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+        <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
         
-        <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
-        <button class="slider-nav next" onclick="changeSlide(1)">›</button>
-        
+        <!-- Dots Indicator -->
         <div class="slider-dots">
           <span class="dot active" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
@@ -1283,54 +1154,355 @@
         <p>Explore our comprehensive collection of construction projects and achievements</p>
       </div>
       
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-7.jpg', 'Dumai Project - EPCI BGP Modification')">
-          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Dumai Project 1" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
+      <!-- Tab Container -->
+      <div class="tab-container">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="openTab(event, 'aceh')">Aceh</button>
+          <button class="tab-btn" onclick="openTab(event, 'jambi')">Jambi</button>
+          <button class="tab-btn" onclick="openTab(event, 'riau')">Riau</button>
         </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-8_1.jpg', 'Duri Project - Production Facility')">
-          <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Duri Project 1" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-9.jpg', 'Kerinci Project - Engineering Solutions')">
-          <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Kerinci Project 1" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-7.jpg', 'Dumai Project - Gas Plant Construction')">
-          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Dumai Project 2" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-8_1.jpg', 'Duri Project - Facility Development')">
-          <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Duri Project 2" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-9.jpg', 'Kerinci Project - Advanced Construction')">
-          <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Kerinci Project 2" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-7.jpg', 'Dumai Project - Industrial Development')">
-          <img src="images/Copy-of-ENP-WEB-7.jpg" alt="Dumai Project 3" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-8_1.jpg', 'Duri Project - Infrastructure Solutions')">
-          <img src="images/Copy-of-ENP-WEB-8_1.jpg" alt="Duri Project 3" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
-        </div>
-        <div class="gallery-item" onclick="openModal('images/Copy-of-ENP-WEB-9.jpg', 'Kerinci Project - Modern Engineering')">
-          <img src="images/Copy-of-ENP-WEB-9.jpg" alt="Kerinci Project 3" loading="lazy">
-          <div class="gallery-item-overlay">View Details</div>
+        
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Aceh Tab -->
+          <div id="aceh" class="tab-pane active">
+            <div class="tab-content-inner">
+              <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/Aceh/1puAKVwx1ncUjSlbpurD_GVXMx4TjaQrj=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - EPCI BGP Modification')">
+                  <img src="images/Aceh/1puAKVwx1ncUjSlbpurD_GVXMx4TjaQrj=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 1" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1QgLieBbcG82jtw6-H3N8Pd-vtxyYpWq1=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Production Facility')">
+                  <img src="images/Aceh/1QgLieBbcG82jtw6-H3N8Pd-vtxyYpWq1=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 2" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1qn_PQwjTmKtQHJy_4IlZxDcQ_b9ivQQh=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Engineering Solutions')">
+                  <img src="images/Aceh/1qn_PQwjTmKtQHJy_4IlZxDcQ_b9ivQQh=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 3" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Qru48SDCIQxhHMyb9lHHmm4WYijpk6gf=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Infrastructure Development')">
+                  <img src="images/Aceh/1Qru48SDCIQxhHMyb9lHHmm4WYijpk6gf=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 4" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1qV3T5biBojxooKz2xDEXSspPeNj_dSSq=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Construction Excellence')">
+                  <img src="images/Aceh/1qV3T5biBojxooKz2xDEXSspPeNj_dSSq=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 5" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1r8g8g_JepsWEjAIdIH4kf-BhmTGJ9duy=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Technical Innovation')">
+                  <img src="images/Aceh/1r8g8g_JepsWEjAIdIH4kf-BhmTGJ9duy=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 6" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1RfqY7AxIr1W9T3Rar10c1U0Se-WEo6e_=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Advanced Engineering')">
+                  <img src="images/Aceh/1RfqY7AxIr1W9T3Rar10c1U0Se-WEo6e_=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 7" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1sIFA1I9vNFXnRLrC1a5XNVK4d_ATXlCI=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Modern Construction')">
+                  <img src="images/Aceh/1sIFA1I9vNFXnRLrC1a5XNVK4d_ATXlCI=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 8" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Wgg3OOSpWX0NLGtWH2KXddkVWbyytrlj=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Industrial Solutions')">
+                  <img src="images/Aceh/1Wgg3OOSpWX0NLGtWH2KXddkVWbyytrlj=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 9" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1wqaJQtKsM2rPlkFmMTKEMMelQSKhWG7Y=w548-h410-p-k-nu-iv2.jpg', 'Aceh Project - Infrastructure Excellence')">
+                  <img src="images/Aceh/1wqaJQtKsM2rPlkFmMTKEMMelQSKhWG7Y=w548-h410-p-k-nu-iv2.jpg" alt="Aceh Project 10" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1wwpKrD6D1uAXBlMGoqGuuzqpMJpXLaiL=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Quality Assurance')">
+                  <img src="images/Aceh/1wwpKrD6D1uAXBlMGoqGuuzqpMJpXLaiL=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 11" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1XmxelJjPO8_z1Flt68Oxqqa-3fru4EOW=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Safety Standards')">
+                  <img src="images/Aceh/1XmxelJjPO8_z1Flt68Oxqqa-3fru4EOW=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 12" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1xY7UAKl60p6n6yeQNWM1pghd_4rDURXV=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Project Management')">
+                  <img src="images/Aceh/1xY7UAKl60p6n6yeQNWM1pghd_4rDURXV=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 13" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1ysvJN3mPyxUDc0YkvjLTXylIoL17jRa-=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Environmental Compliance')">
+                  <img src="images/Aceh/1ysvJN3mPyxUDc0YkvjLTXylIoL17jRa-=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 14" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Z7piwO8b1D0uBzIoNuopTR0Nb7qvVuNV=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Equipment Installation')">
+                  <img src="images/Aceh/1Z7piwO8b1D0uBzIoNuopTR0Nb7qvVuNV=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 15" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1z8WmirESevoqvSBjZwJE43NeIckVi83Z=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Process Optimization')">
+                  <img src="images/Aceh/1z8WmirESevoqvSBjZwJE43NeIckVi83Z=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 16" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1zGt0xpFqSqFh3f5N0T8iXcr-jEWfjcu-=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - System Integration')">
+                  <img src="images/Aceh/1zGt0xpFqSqFh3f5N0T8iXcr-jEWfjcu-=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 17" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Zn1K5O7c5P8DN48w32JGi5gs--OZmiN0=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Maintenance Excellence')">
+                  <img src="images/Aceh/1Zn1K5O7c5P8DN48w32JGi5gs--OZmiN0=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 18" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Zpsj5gPtNK-Ryo_Yz8ZUTnHf2fm1H_ur=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Innovation Hub')">
+                  <img src="images/Aceh/1Zpsj5gPtNK-Ryo_Yz8ZUTnHf2fm1H_ur=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 19" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1ZQqR0TMSMZl6h2M2SgzoHTDOyqpJQuhG=w548-h410-p-k-nu-iv2.jpg', 'Aceh Project - Technology Advancement')">
+                  <img src="images/Aceh/1ZQqR0TMSMZl6h2M2SgzoHTDOyqpJQuhG=w548-h410-p-k-nu-iv2.jpg" alt="Aceh Project 20" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1Zv6_9GuB2nBmNIPYe2_dXKL9f-9FfhuF=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Operational Excellence')">
+                  <img src="images/Aceh/1Zv6_9GuB2nBmNIPYe2_dXKL9f-9FfhuF=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 21" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1_KgAGzChsS02HgkCzT5i9B9J5q8m9qbc=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Resource Management')">
+                  <img src="images/Aceh/1_KgAGzChsS02HgkCzT5i9B9J5q8m9qbc=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 22" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1-0go2dD9_Ux7clLQkzZVypTX4Xvq1sN-=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Performance Monitoring')">
+                  <img src="images/Aceh/1-0go2dD9_Ux7clLQkzZVypTX4Xvq1sN-=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 23" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/1-IE9KQz2H3qhdq-elTEbZHrGj-XA6axo=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Strategic Development')">
+                  <img src="images/Aceh/1-IE9KQz2H3qhdq-elTEbZHrGj-XA6axo=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 24" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Aceh/10QrUFmvFR4oIfxVRtoH6s4dCDHQZrl-Y=w548-h410-p-k-nu-iv1.jpg', 'Aceh Project - Future Innovation')">
+                  <img src="images/Aceh/10QrUFmvFR4oIfxVRtoH6s4dCDHQZrl-Y=w548-h410-p-k-nu-iv1.jpg" alt="Aceh Project 25" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Jambi Tab -->
+          <div id="jambi" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/Jambi/1-L1RPp7Uq4W4wyjr4Cu3nkfWITbNrHes=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - EPCI BGP Modification')">
+                  <img src="images/Jambi/1-L1RPp7Uq4W4wyjr4Cu3nkfWITbNrHes=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 1" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/1-yrQYeTRXhGbNHyOQPNlSPwNhT3sCwwD=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Production Facility')">
+                  <img src="images/Jambi/1-yrQYeTRXhGbNHyOQPNlSPwNhT3sCwwD=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 2" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/1-zyBBEPVp24UXfmjwhRHWQYrQP07P4y7=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Engineering Solutions')">
+                  <img src="images/Jambi/1-zyBBEPVp24UXfmjwhRHWQYrQP07P4y7=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 3" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/10jEDMFTpIRusqXBoAMqG4Wr5b9N48Dvv=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Infrastructure Development')">
+                  <img src="images/Jambi/10jEDMFTpIRusqXBoAMqG4Wr5b9N48Dvv=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 4" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/10SQL5qm2bbW0bu15qgNiascRgBFrf22C=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Construction Excellence')">
+                  <img src="images/Jambi/10SQL5qm2bbW0bu15qgNiascRgBFrf22C=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 5" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/1233r8ScHGqgVTz737CMb_Hq7_Pyoe0TH=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Technical Innovation')">
+                  <img src="images/Jambi/1233r8ScHGqgVTz737CMb_Hq7_Pyoe0TH=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 6" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/12c49rAOZIo2UyTsBw_jZr0fdLKRmNFgY=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Advanced Engineering')">
+                  <img src="images/Jambi/12c49rAOZIo2UyTsBw_jZr0fdLKRmNFgY=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 7" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/12jlFz9A8N27Nuqw4X6uF2ZLy8A87UJcH=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Modern Construction')">
+                  <img src="images/Jambi/12jlFz9A8N27Nuqw4X6uF2ZLy8A87UJcH=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 8" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/12R9c4G_X97QZQ5ef5Jowp2Z1LnFIkXLd=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Industrial Solutions')">
+                  <img src="images/Jambi/12R9c4G_X97QZQ5ef5Jowp2Z1LnFIkXLd=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 9" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/13_b_OEn_9mXjzEXLe3NRqsu_QP3r5Y8S=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Infrastructure Excellence')">
+                  <img src="images/Jambi/13_b_OEn_9mXjzEXLe3NRqsu_QP3r5Y8S=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 10" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/132VORVHQt_z76aBc9uBNXEm0PqvvS8Y4=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Quality Assurance')">
+                  <img src="images/Jambi/132VORVHQt_z76aBc9uBNXEm0PqvvS8Y4=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 11" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/138L-JYeSTM5hF6WuUBKdllzBsZzskxNm=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Safety Standards')">
+                  <img src="images/Jambi/138L-JYeSTM5hF6WuUBKdllzBsZzskxNm=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 12" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/13aeofe5jVX_oZs3HJBcSt5GblEfx4weR=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Project Management')">
+                  <img src="images/Jambi/13aeofe5jVX_oZs3HJBcSt5GblEfx4weR=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 13" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/13e3_5NC5bBDuoK1kpVaBdY0S-R4kRsEX=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Environmental Compliance')">
+                  <img src="images/Jambi/13e3_5NC5bBDuoK1kpVaBdY0S-R4kRsEX=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 14" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/149X884KBScO_eOTLxpgzEFDGqiATa67d=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Equipment Installation')">
+                  <img src="images/Jambi/149X884KBScO_eOTLxpgzEFDGqiATa67d=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 15" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/14PnGqc3LipZF1c5RDJCqeFvWCE8DeZ44=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Process Optimization')">
+                  <img src="images/Jambi/14PnGqc3LipZF1c5RDJCqeFvWCE8DeZ44=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 16" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/14qq58VHF5C6TiygMRfV2fKP8sA82dkTz=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - System Integration')">
+                  <img src="images/Jambi/14qq58VHF5C6TiygMRfV2fKP8sA82dkTz=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 17" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/15-wNY2Obvl8plbRJb0rzLdj-q-MOI04K=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Maintenance Excellence')">
+                  <img src="images/Jambi/15-wNY2Obvl8plbRJb0rzLdj-q-MOI04K=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 18" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/15fTa56geVuT44GVGo8HU2_5YUTcbXGyd=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Innovation Hub')">
+                  <img src="images/Jambi/15fTa56geVuT44GVGo8HU2_5YUTcbXGyd=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 19" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/15I_4fUGyKrIP4vG21D5azYY3eWpxOWq7=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Technology Advancement')">
+                  <img src="images/Jambi/15I_4fUGyKrIP4vG21D5azYY3eWpxOWq7=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 20" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/15VqpBZAzIaTSZCYY6aqLsdkFHPojYvKI=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Operational Excellence')">
+                  <img src="images/Jambi/15VqpBZAzIaTSZCYY6aqLsdkFHPojYvKI=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 21" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/164slmwT6al7xJT6y0SbaAIVuTANIgjy-=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Resource Management')">
+                  <img src="images/Jambi/164slmwT6al7xJT6y0SbaAIVuTANIgjy-=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 22" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/16uF20_VUbgnTgeQl17Se4XDIgA3vxz2e=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Performance Monitoring')">
+                  <img src="images/Jambi/16uF20_VUbgnTgeQl17Se4XDIgA3vxz2e=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 23" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/16WMsRsDqtnLXVha0WiGVNZLvHltLOF1X=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Strategic Development')">
+                  <img src="images/Jambi/16WMsRsDqtnLXVha0WiGVNZLvHltLOF1X=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 24" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Jambi/173LEmPIW5Si7E6pNOGJ5b-NIXTRorT9n=w548-h410-p-k-nu-iv1.jpg', 'Jambi Project - Future Innovation')">
+                  <img src="images/Jambi/173LEmPIW5Si7E6pNOGJ5b-NIXTRorT9n=w548-h410-p-k-nu-iv1.jpg" alt="Jambi Project 25" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Riau Tab -->
+          <div id="riau" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/Riau/1-lOeCIqOfQn36mQKBzmnD0OzYobYl2iV=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - EPCI BGP Modification')">
+                  <img src="images/Riau/1-lOeCIqOfQn36mQKBzmnD0OzYobYl2iV=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 1" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/11_AqW69RhmlhygQOdu0qIEqbtal7IvA7=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Production Facility')">
+                  <img src="images/Riau/11_AqW69RhmlhygQOdu0qIEqbtal7IvA7=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 2" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/11qYXkGacP_LKBwSFBOb5cSvKmsi-HEPa=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Engineering Solutions')">
+                  <img src="images/Riau/11qYXkGacP_LKBwSFBOb5cSvKmsi-HEPa=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 3" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/13ePCm16xOAQtLWrFmlxWuBEKyROJS3Pk=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Infrastructure Development')">
+                  <img src="images/Riau/13ePCm16xOAQtLWrFmlxWuBEKyROJS3Pk=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 4" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/13M1H0x_ZkXdyDVFo_wmPGTa7UyFx4LFo=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Construction Excellence')">
+                  <img src="images/Riau/13M1H0x_ZkXdyDVFo_wmPGTa7UyFx4LFo=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 5" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/14pDwuiFPKWc5HF-lOpRLz-jIJP0dnWqR=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Technical Innovation')">
+                  <img src="images/Riau/14pDwuiFPKWc5HF-lOpRLz-jIJP0dnWqR=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 6" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/14tkUEXQIkFixZ1psMoB6EnJwm-wlsIvk=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Advanced Engineering')">
+                  <img src="images/Riau/14tkUEXQIkFixZ1psMoB6EnJwm-wlsIvk=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 7" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/16W0ISViW_UDjDNj78C08XiqWtZjBbLXC=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Modern Construction')">
+                  <img src="images/Riau/16W0ISViW_UDjDNj78C08XiqWtZjBbLXC=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 8" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/16YgKF1O3RzFC3X9RS7IP3cwYcfyghgMp=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Industrial Solutions')">
+                  <img src="images/Riau/16YgKF1O3RzFC3X9RS7IP3cwYcfyghgMp=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 9" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/17pttUawrM_eO42jigbnI8NZes0D15inA=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Infrastructure Excellence')">
+                  <img src="images/Riau/17pttUawrM_eO42jigbnI8NZes0D15inA=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 10" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/18PN11GjNhpzntwg3xYjS6H3xc0ZOOqPS=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Quality Assurance')">
+                  <img src="images/Riau/18PN11GjNhpzntwg3xYjS6H3xc0ZOOqPS=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 11" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/19fMrazqvSuy1Awy5PiI0arWHQv0VMOoe=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Safety Standards')">
+                  <img src="images/Riau/19fMrazqvSuy1Awy5PiI0arWHQv0VMOoe=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 12" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1aBhrysY5fU17VQcyM4c2hlrJn0QwSt6F=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Project Management')">
+                  <img src="images/Riau/1aBhrysY5fU17VQcyM4c2hlrJn0QwSt6F=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 13" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1agwjcqUd3Fn-Jwjoyw7pwoZL5sh34C1e=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Environmental Compliance')">
+                  <img src="images/Riau/1agwjcqUd3Fn-Jwjoyw7pwoZL5sh34C1e=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 14" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1akpE0SCcg0jOQ295BtHBIw_rwMJNP7E2=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Equipment Installation')">
+                  <img src="images/Riau/1akpE0SCcg0jOQ295BtHBIw_rwMJNP7E2=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 15" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1awvs33Zp3OXOdaJTJaaPGtIkDojfc6ae=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Process Optimization')">
+                  <img src="images/Riau/1awvs33Zp3OXOdaJTJaaPGtIkDojfc6ae=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 16" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1b7vlo5h-4cEb1ju4MgwCoZ31nZSPfh4g=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - System Integration')">
+                  <img src="images/Riau/1b7vlo5h-4cEb1ju4MgwCoZ31nZSPfh4g=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 17" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1bcvZs8NdSeJd5zIWmcVsVnIHF1xUzsGe=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Maintenance Excellence')">
+                  <img src="images/Riau/1bcvZs8NdSeJd5zIWmcVsVnIHF1xUzsGe=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 18" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1biMSpsDj7DyA-XHP4N6jBwwPK5VfUdOg=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Innovation Hub')">
+                  <img src="images/Riau/1biMSpsDj7DyA-XHP4N6jBwwPK5VfUdOg=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 19" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1BNhaYpIwDIC4dvP44Eumbqik-b4BEK1v=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Technology Advancement')">
+                  <img src="images/Riau/1BNhaYpIwDIC4dvP44Eumbqik-b4BEK1v=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 20" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1bvZkLlqyADEdUJ7MsxqiByCrH9zGI4JR=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Operational Excellence')">
+                  <img src="images/Riau/1bvZkLlqyADEdUJ7MsxqiByCrH9zGI4JR=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 21" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1bXLn7eR5mq-m7V3EbV8VioUccE258Z6H=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Resource Management')">
+                  <img src="images/Riau/1bXLn7eR5mq-m7V3EbV8VioUccE258Z6H=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 22" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1dGxUCcoQB_jTjqtJcSLK90-Cn4H3PCck=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Performance Monitoring')">
+                  <img src="images/Riau/1dGxUCcoQB_jTjqtJcSLK90-Cn4H3PCck=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 23" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1e_5fWS9fuPdPI8cuBsDNN8y2v1x1iGR9=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Strategic Development')">
+                  <img src="images/Riau/1e_5fWS9fuPdPI8cuBsDNN8y2v1x1iGR9=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 24" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/Riau/1ECpNhH6GxwxINe0A2ouzDtgjMfi9cKRb=w548-h410-p-k-nu-iv1.jpg', 'Riau Project - Future Innovation')">
+                  <img src="images/Riau/1ECpNhH6GxwxINe0A2ouzDtgjMfi9cKRb=w548-h410-p-k-nu-iv1.jpg" alt="Riau Project 25" loading="lazy">
+                  <div class="gallery-item-overlay">View Details</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- CTA Section -->
-  <div class="cta-section">
+  <div class="intro-section cc-cta">
     <div class="cta-container">
-      <div class="cta-content">
-        <h2>We construct for you</h2>
-        <p>Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
-        <a href="contact.html" class="button cc-jumbo-button cc-jumbo-black w-inline-block">
+      <div class="cta-wrap">
+        <div data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f163" class="cta-text">
+          <h1 class="h2-headingscta">We construct for you</h1>
+        </div>
+        <div class="cta-paragraph">
+          <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
+        </div>
+        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button cc-jumbo-black w-inline-block">
           <div class="text-block-2">Start Now</div>
         </a>
       </div>
@@ -1338,10 +1510,10 @@
   </div>
 
   <!-- Footer Section -->
-  <div class="footer-section">
-    <div class="footer-container">
-      <div class="footer-content">
-        <p>PT Eliazer Nahor Pratama</p>
+  <div class="intro-section" style="margin: 0; padding: 0; width: 100%;">
+    <div class="footer-section" style="padding: 15px 40px; margin: 0; width: 100%;">
+      <div class="footer-wrap">
+        <p class="paragraph-tiny">PT Eliazer Nahor Pratama</p>
       </div>
     </div>
   </div>
@@ -1359,39 +1531,6 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   
   <script>
-    // Photo Slider Functionality
-    let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      const sliderContainer = document.getElementById('sliderContainer');
-      sliderContainer.style.transform = `translateX(-${index * 100}%)`;
-      
-      // Update dots
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-    }
-
-    function changeSlide(direction) {
-      currentSlideIndex += direction;
-      if (currentSlideIndex >= totalSlides) currentSlideIndex = 0;
-      if (currentSlideIndex < 0) currentSlideIndex = totalSlides - 1;
-      showSlide(currentSlideIndex);
-    }
-
-    function currentSlide(index) {
-      currentSlideIndex = index - 1;
-      showSlide(currentSlideIndex);
-    }
-
-    // Auto-play slider
-    setInterval(() => {
-      changeSlide(1);
-    }, 5000);
-
     // Gallery Zoom Modal Functionality
     const zoomModal = document.getElementById('zoomModal');
     const zoomImage = document.getElementById('zoomImage');
@@ -1427,5 +1566,86 @@
       }
     });
   </script>
-</body>
+  <script>
+    let currentSlideIndex = 0;
+    const totalSlides = 6;
+
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const dots = document.querySelectorAll('.dot');
+      
+      // Update slide position
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      
+      currentSlideIndex = index;
+    }
+
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function prevSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(index) {
+      showSlide(index - 1);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Tab functionality
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName("tab-pane");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      
+      // Remove active class from all tab buttons
+      tablinks = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      
+      // Show the selected tab content and mark button as active
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Handle URL hash navigation to specific tabs
+    function handleHashNavigation() {
+      const hash = window.location.hash.substring(1); // Remove the # symbol
+      if (hash && (hash === 'aceh' || hash === 'jambi' || hash === 'riau')) {
+        // Find the corresponding tab button and click it
+        const tabButtons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabButtons.length; i++) {
+          if (tabButtons[i].textContent.toLowerCase() === hash) {
+            tabButtons[i].click();
+            break;
+          }
+        }
+      }
+    }
+
+    // Run hash navigation when page loads
+    document.addEventListener('DOMContentLoaded', handleHashNavigation);
+    
+    // Also run when hash changes (for back/forward navigation)
+    window.addEventListener('hashchange', handleHashNavigation);
+  </script>
+  </body>
 </html>

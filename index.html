@@ -485,21 +485,33 @@
     
     
     .button.cc-jumbo-button:not(.cc-jumbo-black):not(.cc-jumbo-white) {
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+      background-color: #000000 !important;
       color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
       padding: 15px 35px !important;
-      border-radius: 50px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
       font-weight: 600 !important;
       font-size: 16px !important;
-      transition: all 0.3s ease !important;
-      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3) !important;
-      display: inline-block !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
     }
     
     .button.cc-jumbo-button:not(.cc-jumbo-black):not(.cc-jumbo-white):hover {
-      transform: translateY(-3px) !important;
-      box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4) !important;
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .button.cc-jumbo-button:not(.cc-jumbo-black):not(.cc-jumbo-white):active {
+      background-color: #1a1a1a !important;
     }
     
     /* Black Button Style */
@@ -526,6 +538,60 @@
     
     .button.cc-jumbo-button.cc-jumbo-black:active {
       background-color: #1a1a1a !important;
+    }
+    
+    /* CTA Section Button - Apply cc-jumbo-black styling as main standard */
+    .cta-container .button.cc-jumbo-button {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
+      padding: 15px 35px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:hover {
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:active {
+      background-color: #1a1a1a !important;
+    }
+    
+    /* Ensure text centering on all devices */
+    @media (max-width: 768px) {
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 50px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 48px !important;
+        font-size: 14px !important;
+        padding: 12px 25px !important;
+      }
     }
     
     .second-content {
@@ -577,6 +643,9 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
       transition: transform 0.3s ease, box-shadow 0.3s ease !important;
       margin: 0 !important;
+      text-decoration: none !important;
+      color: inherit !important;
+      display: block !important;
     }
     
     .project-card:hover {
@@ -938,24 +1007,24 @@
           <p class="projects-subtitle">Showcasing our successful construction and EPCI gallery across Indonesia</p>
         </div>
         <div class="grid-content">
-          <div data-w-id="90996bc9-f7db-f04c-0bda-90c8d72d682d" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card first-block">
+          <a href="projects.html#aceh" data-w-id="90996bc9-f7db-f04c-0bda-90c8d72d682d" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card first-block">
             <div class="picture-section"><img src="images/Copy-of-ENP-WEB-7.jpg" loading="lazy" width="960" sizes="(max-width: 479px) 75vw, (max-width: 767px) 26vw, (max-width: 991px) 28vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" srcset="images/Copy-of-ENP-WEB-7-p-500.jpg 500w, images/Copy-of-ENP-WEB-7-p-800.jpg 800w, images/Copy-of-ENP-WEB-7-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-7-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-7.jpg 1920w" alt="" class="image-3"></div>
             <div class="text-section">
-              <div class="heading-2">Dumai</div>
+              <div class="heading-2">Aceh</div>
             </div>
-          </div>
-          <div data-w-id="a1ad0410-55bf-bfb7-e137-f6db09f7c8f8" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card second-block">
+          </a>
+          <a href="projects.html#jambi" data-w-id="a1ad0410-55bf-bfb7-e137-f6db09f7c8f8" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card second-block">
             <div class="picture-section"><img src="images/Copy-of-ENP-WEB-8_1.jpg" loading="lazy" sizes="(max-width: 479px) 56vw, (max-width: 767px) 26vw, (max-width: 991px) 27vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" width="950.5" srcset="images/Copy-of-ENP-WEB-8_1-p-500.jpg 500w, images/Copy-of-ENP-WEB-8_1-p-800.jpg 800w, images/Copy-of-ENP-WEB-8_1-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-8_1-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-8_1.jpg 1901w" alt="" class="image-5"></div>
             <div class="text-section">
-              <div class="heading-2">Duri</div>
+              <div class="heading-2">Jambi</div>
             </div>
-          </div>
-          <div data-w-id="1689230a-aa77-7aa9-1668-abf3679145cc" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card third-block">
+          </a>
+          <a href="projects.html#riau" data-w-id="1689230a-aa77-7aa9-1668-abf3679145cc" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-card third-block">
             <div class="picture-section"><img src="images/Copy-of-ENP-WEB-9.jpg" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 26vw, (max-width: 991px) 28vw, (max-width: 1279px) 24vw, (max-width: 1439px) 25vw, 26vw" width="960" srcset="images/Copy-of-ENP-WEB-9-p-500.jpg 500w, images/Copy-of-ENP-WEB-9-p-800.jpg 800w, images/Copy-of-ENP-WEB-9-p-1080.jpg 1080w, images/Copy-of-ENP-WEB-9-p-1600.jpg 1600w, images/Copy-of-ENP-WEB-9.jpg 1920w" alt="" class="image-4"></div>
             <div class="text-section">
-              <div class="heading-2">Kerinci</div>
+              <div class="heading-2">Riau</div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="button-content">
           <a href="projects.html" data-w-id="f30f2919-8b62-a1cf-3c3a-b139de854503" style="opacity:0" class="button cc-jumbo-button cc-jumbo-white w-inline-block">
@@ -973,7 +1042,7 @@
         <div class="cta-paragraph">
           <p data-w-id="61733ab1-48a3-8fb2-401b-26394588c316" class="paragraphscta">Delivering exceptional construction services beyond your expectations. Trust us to bring your vision to reality, with precision and expertise.</p>
         </div>
-        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button cc-jumbo-black w-inline-block">
+        <a href="contact.html" data-w-id="6b3b7785-d872-c313-8cb2-d9ee8f79f16a" class="button cc-jumbo-button w-inline-block">
           <div class="text-block-2">Start Now</div>
         </a>
       </div>

@@ -89,6 +89,50 @@
       background-color: #2c3e50;
       color: #ffffff;
     }
+    
+    
+    /* Partnership Section Styles */
+    .mid-section-web {
+      margin-bottom: 0 !important;
+    }
+    
+    /* Add height to Partnership Section and margin below logos */
+    .partner-section {
+      height: calc(100% + 60px);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      margin: 0;
+      margin-bottom: 0 !important;
+    }
+    
+    .mid-section, .mid-section-web {
+      padding-bottom: 55px !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+    
+    .margin-partner-text {
+      margin-top: 60px !important;
+    }
+    
+    /* Responsive margin for Partnership title */
+    @media (max-width: 768px) {
+      .margin-partner-text {
+        margin-top: 40px !important;
+      }
+      
+      .mid-section, .mid-section-web {
+        padding-bottom: 45px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .margin-partner-text {
+        margin-top: 30px !important;
+      }
+      
+      .mid-section, .mid-section-web {
+        padding-bottom: 35px !important;
+      }
+    }
     .paragraphx {
       color: #2c3e50;
     }
@@ -98,490 +142,280 @@
     .paragraph-smallx {
       color: #2c3e50;
     }
-    .experience-tabs-section {
-      min-height: 100vh;
-      padding: 20px 0;
-      background-color: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: relative;
-    }
     
-    /* Desktop large screens */
-    @media (min-width: 1200px) {
-      .experience-tabs-section {
-        background-color: #f8f9fa;
-      }
+    /* Experience Section */
+    .experience-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+      margin: 0;
+      min-height: 500px;
     }
-    .experience-tabs-container {
+
+    .experience-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px;
-      position: relative;
-      z-index: 2;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #f1f3f4;
-      overflow: hidden;
+      padding: 30px;
     }
     
-    @media (max-width: 1200px) {
-      .experience-tabs-section {
-        background-color: #f8f9fa;
-      }
-      .experience-tabs-container {
-        max-width: 1000px;
-        padding: 30px 20px;
-        border-radius: 20px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .project-item {
-        padding: 20px;
-        margin-bottom: 18px;
-      }
-      .project-title {
-        font-size: 16px;
-        margin-bottom: 14px;
-      }
-      .project-info p {
-        font-size: 13px;
-        margin-bottom: 8px;
-      }
+    .experience-title {
+      text-align: center;
+      margin-bottom: 40px;
     }
     
-    @media (max-width: 1024px) {
-      .experience-tabs-section {
-        min-height: 100vh;
-        padding: 20px 0;
-        background-color: #f8f9fa;
-      }
-      .experience-tabs-container {
-        padding: 25px 20px;
-        border-radius: 20px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .experience-tabs {
-        margin-bottom: 15px;
-        padding: 0 15px;
-      }
-      .experience-tab {
-        padding: 5px 18px;
-        font-size: 14px;
-      }
-      .experience-content {
-        padding: 0;
-        max-height: 65vh;
-        margin-top: 15px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .experience-tabs-section {
-        padding: 20px 0;
-      }
-      .experience-tabs-container {
-        padding: 20px 15px;
-        border-radius: 20px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .experience-tabs {
-        margin-bottom: 12px;
-        padding: 0 10px;
-        gap: 8px;
-      }
-      .experience-tab {
-        padding: 5px 16px;
-        font-size: 13px;
-        margin: 0 5px;
-      }
-      .experience-content {
-        padding: 0;
-        max-height: 60vh;
-        margin-top: 12px;
-      }
-      .project-item {
-        padding: 20px;
-        margin-bottom: 20px;
-      }
-      .project-title {
-        font-size: 16px;
-        margin-bottom: 15px;
-      }
-      .project-info p {
-        font-size: 13px;
-        margin-bottom: 8px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .experience-tabs-section {
-        min-height: 100vh;
-        padding: 20px 0;
-        background-color: #f8f9fa;
-      }
-      .experience-tabs-container {
-        padding: 15px 10px;
-        border-radius: 15px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .experience-tabs {
-        margin-bottom: 10px;
-        padding: 0 5px;
-        gap: 5px;
-      }
-      .experience-tab {
-        padding: 4px 12px;
-        font-size: 12px;
-        margin: 0 3px;
-      }
-      .experience-content {
-        padding: 0;
-        max-height: 55vh;
-        margin-top: 10px;
-      }
-      .project-item {
-        padding: 12px;
-        margin-bottom: 12px;
-      }
-      .project-title {
-        font-size: 13px;
-        margin-bottom: 10px;
-      }
-      .project-info p {
-        font-size: 11px;
-        margin-bottom: 5px;
-      }
-    }
-    
-    .project-details {
-      margin-top: 20px;
-    }
-    
-    .project-item {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 20px;
-      border-left: 4px solid #2c5aa0;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1;
-      border: 1px solid #f1f3f4;
-      max-width: 100%;
-      overflow: hidden;
-    }
-    
-    .project-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      border-left-color: #1e3a8a;
-    }
-    
-    .project-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1a202c;
-      margin-bottom: 16px;
-      line-height: 1.4;
-      letter-spacing: -0.01em;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-    
-    .project-info p {
-      margin-bottom: 10px;
-      color: #4a5568;
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 400;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-    
-    .project-info strong {
-      color: #2c5aa0;
-      font-weight: 700;
-      font-size: 15px;
-    }
-    
-    /* Professional Project Journey Heading Styling */
-    .section-heading-org h2 {
+    .experience-title h2 {
       font-size: 2.5rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      color: #2c3e50;
       margin-bottom: 15px;
+      letter-spacing: -0.5px;
     }
     
-    @media (max-width: 1024px) {
-      .section-heading-org h2 {
-        font-size: 2.2rem;
-        letter-spacing: 0.8px;
-      }
+    .experience-title p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    
-    @media (max-width: 768px) {
-      .section-heading-org h2 {
-        font-size: 1.8rem;
-        letter-spacing: 0.5px;
-        margin-bottom: 12px;
-      }
+
+    /* Tab Container */
+    .tab-container {
+      margin: 40px 0;
     }
-    
-    @media (max-width: 480px) {
-      .section-heading-org h2 {
-        font-size: 1.5rem;
-        letter-spacing: 0.3px;
-        margin-bottom: 10px;
-      }
-    }
-    .experience-tabs {
+
+    .tab-header {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
-      border-bottom: none;
-      flex-wrap: wrap;
-      gap: 15px;
-      max-width: 100%;
-      overflow-x: auto;
-      padding: 0;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e9ecef;
     }
-    .experience-tab {
-      background: #f8f9fa;
-      border: 2px solid #e9ecef;
-      padding: 12px 24px;
-      margin: 0;
-      font-size: 16px;
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 15px 25px;
+      margin: 0 5px;
+      font-size: 1rem;
       font-weight: 600;
-      color: #495057;
+      color: #7f8c8d;
       cursor: pointer;
-      border-bottom: none;
       transition: all 0.3s ease;
-      white-space: nowrap;
-      flex-shrink: 0;
-      border-radius: 12px;
-      backdrop-filter: none;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border-bottom: 3px solid transparent;
     }
-    .experience-tab:hover {
-      color: #2c5aa0;
-      background-color: #e3f2fd;
-      border-color: #2c5aa0;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.15);
-    }
-    .experience-tab.active {
-      color: #ffffff;
-      border-color: #2c5aa0;
-      background-color: #2c5aa0;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(44, 90, 160, 0.25);
-    }
-    .experience-content {
-      height: auto;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      max-height: 70vh;
-      overflow-y: auto;
-      padding: 0;
-      margin-top: 20px;
-    }
-    .experience-year-content {
-      display: none;
-      padding: 20px 0;
-      flex: 1;
-      overflow-y: auto;
-    }
-    .experience-year-content.active {
-      display: flex;
-      flex-direction: column;
-    }
-    .project-details {
-      max-height: 60vh;
-      overflow-y: auto;
-      padding-right: 8px;
-    }
-    .project-details::-webkit-scrollbar {
-      width: 6px;
-    }
-    .project-details::-webkit-scrollbar-track {
-      background: #f7fafc;
-      border-radius: 3px;
-    }
-    .project-details::-webkit-scrollbar-thumb {
-      background: #cbd5e0;
-      border-radius: 3px;
-    }
-    .project-details::-webkit-scrollbar-thumb:hover {
-      background: #a0aec0;
-    }
-    
-    /* New Commitment Section Styling */
-    .commitment-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .feature-item {
-      text-align: center;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      border-left: 4px solid #3498db;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    
-    .feature-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .feature-item h3 {
+
+    .tab-btn:hover {
       color: #2c3e50;
-      font-size: 18px;
+      background-color: #f8f9fa;
+    }
+
+    .tab-btn.active {
+      color: #2c3e50;
+      border-bottom-color: #3498db;
+    }
+
+    .tab-content {
+      min-height: 400px;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    .tab-content-inner {
+      padding: 20px 0;
+    }
+
+    /* Project Grid - Vertical List with Scroll */
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 0;
+      max-height: 600px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #2c5aa0 #f1f3f4;
+    }
+    
+    /* Custom scrollbar for webkit browsers */
+    .project-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .project-grid::-webkit-scrollbar-track {
+      background: #f1f3f4;
+      border-radius: 4px;
+    }
+    
+    .project-grid::-webkit-scrollbar-thumb {
+      background: #2c5aa0;
+      border-radius: 4px;
+    }
+    
+    .project-grid::-webkit-scrollbar-thumb:hover {
+      background: #1e3a5f;
+    }
+    
+    /* Scroll indicator */
+    .project-grid::after {
+      content: '';
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
       font-weight: 600;
+      color: #2c3e50;
       margin-bottom: 15px;
+      line-height: 1.4;
     }
-    
-    .feature-item p {
-      color: #555;
-      font-size: 14px;
-      line-height: 1.6;
+
+    .project-info {
+      color: #7f8c8d;
     }
-    
+
+    .project-info p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .commitment-features {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 30px;
+      .experience-section {
+        padding: 60px 0;
       }
       
-      .feature-item {
+      .experience-container {
+        padding: 0 20px;
+      }
+
+      .experience-title h2 {
+        font-size: 2rem;
+      }
+
+      .tab-header {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tab-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+
+      .project-grid {
+        gap: 15px;
+        max-height: 500px;
+      }
+
+      .project-item {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .experience-section {
+        padding: 40px 0;
+      }
+      
+      .experience-container {
+        padding: 0 15px;
+      }
+
+      .experience-title h2 {
+        font-size: 1.8rem;
+      }
+
+      .tab-btn {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+      }
+
+      .project-grid {
+        max-height: 400px;
+        gap: 12px;
+      }
+      
+      .project-item {
         padding: 15px;
       }
     }
+    
+    /* CTA Section Button - Apply cc-jumbo-black styling as main standard */
+    .cta-container .button.cc-jumbo-button {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
+      padding: 15px 35px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      letter-spacing: 0.2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:hover {
+      background-color: #333333 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+      border-color: #333333 !important;
+    }
+    
+    .cta-container .button.cc-jumbo-button:active {
+      background-color: #1a1a1a !important;
+    }
+    
+    /* Ensure text centering on all devices */
     @media (max-width: 768px) {
-      .experience-tabs-section {
-        height: 100vh;
-        padding: 20px 0;
-        background-color: #f8f9fa;
-      }
-      .experience-tabs {
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 12px;
-        justify-content: flex-start;
-        padding: 0 5px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-      .experience-tab {
-        margin: 2px;
-        padding: 5px 14px;
-        font-size: 13px;
-        min-width: 60px;
-        text-align: center;
-      }
-      .experience-content {
-        max-height: 60vh;
-        padding: 0;
-        margin-top: 10px;
-      }
-      .experience-tabs-container {
-        padding: 20px 15px;
-        border-radius: 20px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .project-details {
-        max-height: 50vh;
-        padding-right: 5px;
-      }
-      .experience-content {
-        flex: 1;
-        min-height: 0;
-      }
-      .intro-header-experience {
-        height: 60vh;
-        padding: 40px 15px;
-      }
-      .intro-header-experience .h1-headtext {
-        font-size: 32px;
-        line-height: 1.2;
-      }
-      .intro-header-experience .sub-heading-light2 {
-        font-size: 16px;
-        margin-bottom: 15px;
-      }
-      .intro-header-experience .experience-detail-text {
-        font-size: 14px;
-        max-width: 100%;
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 50px !important;
       }
     }
     
     @media (max-width: 480px) {
-      .experience-tabs {
-        gap: 5px;
-        padding: 0 2px;
-        margin-bottom: 8px;
-      }
-      .experience-tab {
-        padding: 4px 12px;
-        font-size: 12px;
-        margin: 1px;
-        min-width: 55px;
-      }
-      .experience-content {
-        max-height: 55vh;
-        padding: 0;
-        margin-top: 8px;
-      }
-      .experience-tabs-container {
-        padding: 12px 8px;
-        border-radius: 15px;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f1f3f4;
-        overflow: hidden;
-      }
-      .project-details {
-        max-height: 45vh;
-        padding-right: 2px;
-      }
-      .project-item {
-        padding: 14px;
-        margin-bottom: 14px;
-      }
-      .project-title {
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-      .project-info p {
-        font-size: 11px;
-        margin-bottom: 5px;
+      .cta-container .button.cc-jumbo-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 48px !important;
+        font-size: 14px !important;
+        padding: 12px 25px !important;
       }
     }
   </style>
@@ -624,24 +458,31 @@
       </div>
     </div>
   </div>
-  <div class="content-section">
-    <div class="body-content">
-      <div class="experience-tabs-section">
-        <div class="experience-tabs-container">
-          <div class="section-heading-org" style="text-align: center; margin-bottom: 30px;">
-            <h2 class="h2-headings" style="color: #2c3e50; text-transform: none;">Professional project journey</h2>
-            <p class="paragraph-smallx" style="color: #555;">Our track record of successful projects across the years</p>
-          </div>
-          <div class="experience-tabs">
-            <button class="experience-tab active" data-year="2021">2021</button>
-            <button class="experience-tab" data-year="2022">2022</button>
-            <button class="experience-tab" data-year="2023">2023</button>
-            <button class="experience-tab" data-year="2024">2024</button>
-            <button class="experience-tab" data-year="2025">2025</button>
-          </div>
-          <div class="experience-content">
-            <div class="experience-year-content active" data-year="2021">
-              <div class="project-details">
+  
+  <!-- Experience Section -->
+  <div class="experience-section">
+    <div class="experience-container">
+      <div class="experience-title">
+        <h2>Our Project Experience</h2>
+        <p>Explore our successful projects across different years</p>
+      </div>
+      
+      <!-- Tab Container -->
+      <div class="tab-container">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="openTab(event, '2021')">2021</button>
+          <button class="tab-btn" onclick="openTab(event, '2022')">2022</button>
+          <button class="tab-btn" onclick="openTab(event, '2023')">2023</button>
+          <button class="tab-btn" onclick="openTab(event, '2024')">2024</button>
+          <button class="tab-btn" onclick="openTab(event, '2025')">2025</button>
+        </div>
+        
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- 2021 Tab -->
+          <div id="2021" class="tab-pane active">
+            <div class="tab-content-inner">
+              <div class="project-grid">
                 <div class="project-item">
                   <h4 class="project-title">On Site Construction Works: Civil Works, Steel Structure, Mechanical, Pipping, Electrical, Instrument, Precom & Commissioning</h4>
                   <div class="project-info">
@@ -664,8 +505,12 @@
                 </div>
               </div>
             </div>
-            <div class="experience-year-content" data-year="2022">
-              <div class="project-details">
+          </div>
+          
+          <!-- 2022 Tab -->
+          <div id="2022" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="project-grid">
                 <div class="project-item">
                   <h4 class="project-title">Jasa Pengangkutan Material Tanah Urug sebanyak 50.000 m³</h4>
                   <div class="project-info">
@@ -788,8 +633,12 @@
                 </div>
               </div>
             </div>
-            <div class="experience-year-content" data-year="2023">
-              <div class="project-details">
+          </div>
+          
+          <!-- 2023 Tab -->
+          <div id="2023" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="project-grid">
                 <div class="project-item">
                   <h4 class="project-title">Repair & Installation Diesel Fuel Tank</h4>
                   <div class="project-info">
@@ -845,7 +694,7 @@
                   <div class="project-info">
                     <p><strong>Location:</strong> Dumai, Riau</p>
                     <p><strong>Bouwheer:</strong> -</p>
-                    <p><strong>Assignor:</strong> PT. QAIS PUTRA PERKASA</p>
+                    <p><strong>Assignor:</strong> PT. Qais Putra Perkasa</p>
                     <p><strong>No. SPK/SO:</strong> 017/SO/PPQ/ENP/III/2023</p>
                     <p><strong>Value of Contract:</strong> Rp647.920.000</p>
                   </div>
@@ -925,7 +774,7 @@
                   <div class="project-info">
                     <p><strong>Location:</strong> Dumai, Riau</p>
                     <p><strong>Bouwheer:</strong> -</p>
-                    <p><strong>Assignor:</strong> PT. QAIS PUTRA PERKASA</p>
+                    <p><strong>Assignor:</strong> PT. Qais Putra Perkasa</p>
                     <p><strong>No. SPK/SO:</strong> 045/QPP-ENP/V-2023</p>
                     <p><strong>Value of Contract:</strong> Rp133.500.000</p>
                   </div>
@@ -951,11 +800,11 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Jasa pengangkutan tanah urug dari Quary (Pelintung) ke PT. KID (Wilmar) dan pekerjaan tambahan memuat tanah ke dalam dump truck sebanyak 57.000 m³</h4>
+                  <h4 class="project-title">Jasa pengangkutan tanah urug dari Quary (Pelintung) ke PT. KID (Wilmar) dan pekerjaan tambahan memuat tanah ke dalam Dump Truck sebanyak 57.000 m³</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dumai, Riau</p>
                     <p><strong>Bouwheer:</strong> -</p>
-                    <p><strong>Assignor:</strong> PT. QAIS PUTRA PERKASA</p>
+                    <p><strong>Assignor:</strong> PT. Qais Putra Perkasa</p>
                     <p><strong>No. SPK/SO:</strong> 046/QPP-ENP/VI-2023</p>
                     <p><strong>Value of Contract:</strong> Rp2.536.500.000</p>
                   </div>
@@ -1081,7 +930,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Sewa Dump Truck untuk Langsir Pupuk MOP dari Kapal MV. Tominy Felicity, berat 756,030 Ton</h4>
+                  <h4 class="project-title">Sewa Dump Truck untuk Langsir Pupuk MOP dari Kapal MV. Tominy Felicity, berat 756.030 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-WCI Budi Indah</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1091,7 +940,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Sewa Dump Truck untuk Langsir HMPKE dari Kapal MV. Unity Light, berat 638,490 Ton</h4>
+                  <h4 class="project-title">Sewa Dump Truck untuk Langsir HMPKE dari Kapal MV. Unity Light, berat 638.490 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Wina PLT-Dermaga</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1102,8 +951,12 @@
                 </div>
               </div>
             </div>
-            <div class="experience-year-content" data-year="2024">
-              <div class="project-details">
+          </div>
+          
+          <!-- 2024 Tab -->
+          <div id="2024" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="project-grid">
                 <div class="project-item">
                   <h4 class="project-title">Sewa Dump Truck untuk Langsir PKE (Palm Kernel Expeller) ke kapal MV. Unity, berat 1.717,820 Ton</h4>
                   <div class="project-info">
@@ -1125,7 +978,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Sewa Dump Truck untuk Langsir Batu Bara Kapal Parta Jaya 3006, berat 1.761,100 Ton. dan Langsir Gandum Kapal MV. INCE BEYLERBEYI, berat 101,810 Ton</h4>
+                  <h4 class="project-title">Sewa Dump Truck untuk Langsir Batu Bara Kapal Parta Jaya 3006, berat 1.761.100 Ton. dan Langsir Gandum Kapal MV. INCE BEYLERBEYI, berat 101.810 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-PP 2X 75 MW</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1235,7 +1088,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. TD HAMBURG, berat 515,960 Ton. dan Langsir Gandum (Wheat) Kapal MV. THERESA PRIDE, berat 1.998,360 Ton</h4>
+                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. TD HAMBURG, berat 515.960 Ton. dan Langsir Gandum (Wheat) Kapal MV. THERESA PRIDE, berat 1.998.360 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-WCI Budi Indah dan Dermaga-Flour Mill</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1295,7 +1148,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. YOUNG HARMONY, berat 1.053,040 Ton</h4>
+                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. YOUNG HARMONY, berat 1.053.040 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-WCI Budi Indah</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1305,7 +1158,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. YOUNG HARMONY, berat 281,380 Ton</h4>
+                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. YOUNG HARMONY, berat 281.380 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-WCI Budi Indah</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1365,7 +1218,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Additional Land Fill and Preparation Works for Gas Bosster Plant (BCP-Seng)</h4>
+                  <h4 class="project-title">Additional Land Fill and Preparation Works for Gas Booster Plant (BCP-Seng)</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Langgam, Riau</p>
                     <p><strong>Bouwheer:</strong> EMP Bentu Ltd. (Jasa Penyewaan Field Booster Compression Plant-Seng)</p>
@@ -1375,7 +1228,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk CRP Kapal MV. MATSURI, berat 497,830 Ton</h4>
+                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk CRP Kapal MV. MATSURI, berat 497.830 Ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-SADP</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1405,7 +1258,7 @@
                   </div>
                 </div>
                 <div class="project-item">
-                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. SENTINEL, beraat 1.064,930 ton</h4>
+                  <h4 class="project-title">Biaya Angkut untuk Langsir Pupuk MOP Kapal MV. SENTINEL, berat 1.064,930 ton</h4>
                   <div class="project-info">
                     <p><strong>Location:</strong> Dermaga-WCI Budi Indah</p>
                     <p><strong>Bouwheer:</strong> -</p>
@@ -1506,8 +1359,12 @@
                 </div>
               </div>
             </div>
-            <div class="experience-year-content" data-year="2025">
-              <div class="project-details">
+          </div>
+          
+          <!-- 2025 Tab -->
+          <div id="2025" class="tab-pane">
+            <div class="tab-content-inner">
+              <div class="project-grid">
                 <div class="project-item">
                   <h4 class="project-title">Operation dan Maintenance Fasilitas Produksi SKN New Train dengan Kapasitas 30 MMSCFD Raw Gas</h4>
                   <div class="project-info">
@@ -1525,28 +1382,132 @@
       </div>
     </div>
   </div>
-  <div class="intro-section">
-    <div class="footer-container">
-      <div data-w-id="162606cf-5e38-9400-4c2b-ff4d9688004a" style="-webkit-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="about-story-wrap">
-        <h2 class="h2-headings">Our Commitment</h2>
-        <p class="paragraphx">Setiap proyek adalah kesempatan bagi kami untuk membuktikan komitmen, profesionalisme, dan kemampuan beradaptasi dalam menjawab tantangan bisnis klien. Kami berdedikasi untuk memberikan solusi konstruksi yang inovatif dan berkualitas tinggi.</p>
-        <div class="commitment-features">
-          <div class="feature-item">
-            <h3 class="h3-heading">Professional Excellence</h3>
-            <p class="paragraph-smallx">Tim berpengalaman dengan standar kualitas internasional</p>
-          </div>
-          <div class="feature-item">
-            <h3 class="h3-heading">Innovative Solutions</h3>
-            <p class="paragraph-smallx">Teknologi terdepan dan metode konstruksi modern</p>
-          </div>
-          <div class="feature-item">
-            <h3 class="h3-heading">Client Satisfaction</h3>
-            <p class="paragraph-smallx">Komitmen untuk memenuhi dan melampaui ekspektasi klien</p>
-          </div>
-        </div>
+  
+  <div class="partner-section">
+    <div data-w-id="3f83981f-538a-584e-6f9c-86cc4849c3e0" class="partner-section-text">
+      <div class="margin-partner-text">
+        <h1 class="h4-heading">PARTNERSHIP</h1>
+      </div>
+      <div class="margin-partner-paragraph">
+        <p class="paragraph-xsmall">We created an immense relationship with <br>our clients by doing the extra miles work.</p>
       </div>
     </div>
   </div>
+  <div class="mid-section">
+    <div data-delay="2000" data-animation="outin" class="slider-3 w-slider" data-autoplay="true" data-easing="ease-in" data-hide-arrows="false" data-disable-swipe="true" data-w-id="38d118e0-b604-005f-4a50-7097323277cb" data-autoplay-limit="0" data-nav-spacing="2" data-duration="150" data-infinite="true">
+      <div class="w-slider-mask">
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-eb0a3aba-5074-5587-03b8-8c904ba98a33-5499a8e2" class="logo"><img width="100" height="60" src="images/Energi_Mega_Persada_-_Green.png" loading="lazy" alt="" class="image-13"></div>
+            <div id="w-node-_7c015f5c-60b7-1c1b-2df2-c624ab44761e-5499a8e2" class="logo"><img width="120" height="60" src="images/Logo-sucofindo.png" loading="lazy" srcset="images/Logo-sucofindo-p-500.png 500w, images/Logo-sucofindo-p-800.png 800w, images/Logo-sucofindo-p-1080.png 1080w, images/Logo-sucofindo-p-1600.png 1600w, images/Logo-sucofindo.png 1842w" sizes="100vw" alt="" class="image-12"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_5bb70d92-d89a-d878-9f38-607d8cd5f9f4-5499a8e2" class="logo"><img width="120" height="60" src="images/Logo-ISA.png" loading="lazy" alt="" class="image-14"></div>
+            <div class="logo"><img width="120" height="60" src="images/Mandiri.svg.png" loading="lazy" srcset="images/Mandiri.svg-p-500.png 500w, images/Mandiri.svg-p-800.png 800w, images/Mandiri.svg-p-1080.png 1080w, images/Mandiri.svg.png 1200w" sizes="100vw" alt="" class="image-10"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae726-5499a8e2" class="logo"><img width="180" height="60" src="images/Pertamina-Hulu-Rokan.jpg" loading="lazy" alt="" class="image-16"></div>
+            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae728-5499a8e2" class="logo"><img width="150" height="60" src="images/logo-BASADO.jpg" loading="lazy" alt=""></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72c-5499a8e2" class="logo"><img width="200" height="60" src="images/logo-RITU.jpg" loading="lazy" srcset="images/logo-RITU-p-500.jpg 500w, images/logo-RITU-p-800.jpg 800w, images/logo-RITU.jpg 934w" sizes="100vw" alt="" class="image-17"></div>
+            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72a-5499a8e2" class="logo"><img width="300" height="60" src="images/logo-multi-teraindo.png" loading="lazy" srcset="images/logo-multi-teraindo-p-500.png 500w, images/logo-multi-teraindo.png 600w" sizes="100vw" alt=""></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_844fc78a-9911-7b15-f825-b810a3b17168-5499a8e2" class="logo"><img width="120" height="60" src="images/JSI.png" loading="lazy" alt="" class="image-21"></div>
+            <div class="logo"><img width="120" height="60" src="images/logo-PTM.png" loading="lazy" srcset="images/logo-PTM-p-500.png 500w, images/logo-PTM.png 504w" sizes="100vw" alt="" class="image-20"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_3806969f-b180-f0b8-be9d-278edd5ae72e-5499a8e2" class="logo"><img width="280" height="60" src="images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg" loading="lazy" srcset="images/WhatsApp-Image-2023-02-02-at-08.31.20-p-500.jpeg 500w, images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg 780w" sizes="100vw" alt="" class="image-18"></div>
+            <div class="logo"><img width="120" height="60" src="images/Petroflexx.png" loading="lazy" srcset="images/Petroflexx-p-500.png 500w, images/Petroflexx-p-800.png 800w, images/Petroflexx-p-1080.png 1080w, images/Petroflexx.png 1536w" sizes="100vw" alt="" class="image-18"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div class="logo"><img width="120" height="60" src="images/Logo-Mitika.jpeg" loading="lazy" alt="" class="image-11"></div>
+            <div class="logo"><img width="120" height="60" src="images/Wilmar.png" loading="lazy" srcset="images/Wilmar-p-500.png 500w, images/Wilmar-p-800.png 800w, images/Wilmar-p-1080.png 1080w, images/Wilmar.png 1200w" sizes="100vw" alt="" class="image-9"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div class="logo"><img width="120" height="60" src="images/Takisama-Logo.jpeg" loading="lazy" alt="" class="image-15"></div>
+            <div class="logo"><img width="120" height="60" src="images/rapp.jpeg" loading="lazy" alt="" class="image-19"></div>
+          </div>
+        </div>
+      </div>
+      <div class="left-arrow w-slider-arrow-left">
+        <div class="icon-4 w-icon-slider-left"></div>
+      </div>
+      <div class="right-arrow w-slider-arrow-right">
+        <div class="icon-5 w-icon-slider-right"></div>
+      </div>
+      <div class="slide-nav-2 w-slider-nav"></div>
+    </div>
+  </div>
+  <div class="mid-section-web">
+    <div data-delay="2000" data-animation="outin" class="slider4 w-slider" data-autoplay="true" data-easing="ease-in" data-hide-arrows="false" data-disable-swipe="true" data-w-id="53ad0f0c-c7bd-ea54-ffe6-5d7c61eba862" data-autoplay-limit="0" data-nav-spacing="2" data-duration="150" data-infinite="true">
+      <div class="w-slider-mask">
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba866-7682ee28" class="logo"><img width="100" height="60" src="images/Energi_Mega_Persada_-_Green.png" loading="lazy" alt="" class="image-13"></div>
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba868-7682ee28" class="logo"><img width="120" height="60" src="images/Logo-sucofindo.png" loading="lazy" srcset="images/Logo-sucofindo-p-500.png 500w, images/Logo-sucofindo-p-800.png 800w, images/Logo-sucofindo-p-1080.png 1080w, images/Logo-sucofindo-p-1600.png 1600w, images/Logo-sucofindo.png 1842w" sizes="(max-width: 479px) 95.11363220214844px, (max-width: 767px) 20vw, 119.99999237060547px" alt="" class="image-12"></div>
+            <div class="logo"><img width="150" height="60" src="images/Takisama-Logo.jpeg" loading="lazy" alt="" class="image-15"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba86c-7682ee28" class="logo"><img width="120" height="60" src="images/Logo-ISA.png" loading="lazy" alt="" class="image-14"></div>
+            <div class="logo"><img width="120" height="60" src="images/rapp.jpeg" loading="lazy" alt="" class="image-19"></div>
+            <div class="logo"><img width="120" height="60" src="images/Mandiri.svg.png" loading="lazy" srcset="images/Mandiri.svg-p-500.png 500w, images/Mandiri.svg-p-800.png 800w, images/Mandiri.svg-p-1080.png 1080w, images/Mandiri.svg.png 1200w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-10"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba872-7682ee28" class="logo"><img width="180" height="60" src="images/Pertamina-Hulu-Rokan.jpg" loading="lazy" alt="" class="image-16"></div>
+            <div class="logo"><img width="120" height="60" src="images/Logo-Mitika.jpeg" loading="lazy" alt="" class="image-11"></div>
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba874-7682ee28" class="logo"><img width="200" height="60" src="images/logo-BASADO.jpg" loading="lazy" alt=""></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba878-7682ee28" class="logo"><img width="300" height="60" src="images/logo-RITU.jpg" loading="lazy" srcset="images/logo-RITU-p-500.jpg 500w, images/logo-RITU-p-800.jpg 800w, images/logo-RITU.jpg 934w" sizes="(max-width: 479px) 161.63351440429688px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, (max-width: 1279px) 27vw, 300px" alt="" class="image-17"></div>
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba87a-7682ee28" class="logo"><img width="300" height="60" src="images/logo-multi-teraindo.png" loading="lazy" srcset="images/logo-multi-teraindo-p-500.png 500w, images/logo-multi-teraindo.png 600w" sizes="(max-width: 479px) 161.63351440429688px, (max-width: 767px) 35vw, (max-width: 991px) 32vw, 27vw, 300px" alt=""></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div class="logo"><img width="120" height="60" src="images/Wilmar.png" loading="lazy" srcset="images/Wilmar-p-500.png 500w, images/Wilmar-p-800.png 800w, images/Wilmar-p-1080.png 1080w, images/Wilmar.png 1200w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-9"></div>
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba87e-7682ee28" class="logo"><img width="120" height="60" src="images/JSI.png" loading="lazy" alt="" class="image-21"></div>
+            <div class="logo"><img width="120" height="60" src="images/logo-PTM.png" loading="lazy" srcset="images/logo-PTM-p-500.png 500w, images/logo-PTM.png 504w" sizes="(max-width: 479px) 97.75567626953125px, (max-width: 767px) 21vw, 119.99999237060547px" alt="" class="image-20"></div>
+          </div>
+        </div>
+        <div class="w-slide">
+          <div class="logo-head">
+            <div id="w-node-_53ad0f0c-c7bd-ea54-ffe6-5d7c61eba884-7682ee28" class="logo"><img width="280" height="60" src="images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg" loading="lazy" srcset="images/WhatsApp-Image-2023-02-02-at-08.31.20-p-500.jpeg 500w, images/WhatsApp-Image-2023-02-02-at-08.31.20.jpeg 780w" sizes="(max-width: 479px) 226.2926025390625px, (max-width: 767px) 48vw, 280px" alt="" class="image-18"></div>
+            <div class="logo"><img width="120" height="60" src="images/Petroflexx.png" loading="lazy" srcset="images/Petroflexx-p-500.png 500w, images/Petroflexx-p-800.png 800w, images/Petroflexx-p-1080.png 1080w, images/Petroflexx.png 1536w" sizes="(max-width: 479px) 96.97442626953125px, (max-width: 767px) 20vw, 119.99999237060547px" alt="" class="image-18"></div>
+          </div>
+        </div>
+      </div>
+      <div class="left-arrow w-slider-arrow-left">
+        <div class="icon-4 w-icon-slider-left"></div>
+      </div>
+      <div class="right-arrow w-slider-arrow-right">
+        <div class="icon-5 w-icon-slider-right"></div>
+      </div>
+      <div class="slide-nav-2 w-slider-nav"></div>
+    </div>
+  </div>
+  
   <div class="intro-section cc-cta">
     <div class="cta-container">
       <div class="cta-wrap">
@@ -1572,24 +1533,44 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63cf988ed154ef57f98c7ce0" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.experience-tab');
-      const contents = document.querySelectorAll('.experience-year-content');
+    // Tab switching function
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
       
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-          const year = this.getAttribute('data-year');
-          
-          // Remove active class from all tabs and contents
-          tabs.forEach(t => t.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-          
-          // Add active class to clicked tab and corresponding content
-          this.classList.add('active');
-          document.querySelector(`.experience-year-content[data-year="${year}"]`).classList.add('active');
-        });
-      });
-    });
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName("tab-pane");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      
+      // Remove active class from all tab buttons
+      tablinks = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      
+      // Show the selected tab content and mark button as active
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Hash navigation support
+    function handleHashNavigation() {
+      const hash = window.location.hash.substring(1);
+      if (hash && (hash === '2021' || hash === '2022' || hash === '2023' || hash === '2024' || hash === '2025')) {
+        // Find the corresponding tab button and click it
+        const tabButtons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabButtons.length; i++) {
+          if (tabButtons[i].textContent === hash) {
+            tabButtons[i].click();
+            break;
+          }
+        }
+      }
+    }
+
+    // Run hash navigation when page loads
+    document.addEventListener('DOMContentLoaded', handleHashNavigation);
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
