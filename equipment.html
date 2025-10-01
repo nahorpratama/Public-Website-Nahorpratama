@@ -451,7 +451,15 @@
       color: #2c3e50;
       font-size: 24px;
       font-weight: 600;
+      margin: 0 0 15px 0;
+    }
+    
+    .equipment-modal .modal-description {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
       margin: 0;
+      text-align: left;
     }
     
     .equipment-item:hover {
@@ -700,6 +708,10 @@
       .equipment-modal .modal-title {
         font-size: 20px;
       }
+      
+      .equipment-modal .modal-description {
+        font-size: 14px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -736,6 +748,10 @@
       
       .equipment-modal .modal-title {
         font-size: 18px;
+      }
+      
+      .equipment-modal .modal-description {
+        font-size: 13px;
       }
     }
     
@@ -1376,40 +1392,40 @@
       
       <div class="equipment-gallery-grid">
         <!-- Equipment photos from images/Equipment folder -->
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/17_SBiwXQFPvyi8-uD-6AWH7Hpdf4_xlC=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Excavator')">
-          <img src="images/Equipment/17_SBiwXQFPvyi8-uD-6AWH7Hpdf4_xlC=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Excavator" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/17_SBiwXQFPvyi8-uD-6AWH7Hpdf4_xlC=w548-h410-p-k-nu-iv1.jpg', 'Excavator Long Arm', 'Excavator Long Arm dengan kemampuan penggalian yang optimal untuk proyek konstruksi skala besar. Dilengkapi dengan boom dan arm yang diperpanjang untuk jangkauan maksimal dan kedalaman penggalian yang lebih dalam.')">
+          <img src="images/Equipment/17_SBiwXQFPvyi8-uD-6AWH7Hpdf4_xlC=w548-h410-p-k-nu-iv1.jpg" alt="Excavator Long Arm" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1l4RDTx_YOiXFrdlI0fgaGRvt14mR8Mp5=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Bulldozer')">
-          <img src="images/Equipment/1l4RDTx_YOiXFrdlI0fgaGRvt14mR8Mp5=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Bulldozer" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1l4RDTx_YOiXFrdlI0fgaGRvt14mR8Mp5=w548-h410-p-k-nu-iv1.jpg', 'Bulldozer', 'Bulldozer dengan blade yang kuat untuk pekerjaan pembersihan lahan, perataan tanah, dan pemindahan material. Ideal untuk persiapan lokasi konstruksi dan pekerjaan earthmoving yang membutuhkan tenaga besar.')">
+          <img src="images/Equipment/1l4RDTx_YOiXFrdlI0fgaGRvt14mR8Mp5=w548-h410-p-k-nu-iv1.jpg" alt="Bulldozer" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1N6htLfPBHufQqIGUlDDcuB5FywjbqJHA=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Motor Grader')">
-          <img src="images/Equipment/1N6htLfPBHufQqIGUlDDcuB5FywjbqJHA=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Motor Grader" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1N6htLfPBHufQqIGUlDDcuB5FywjbqJHA=w548-h410-p-k-nu-iv1.jpg', 'Motor Grader', 'Motor Grader untuk perataan dan grading permukaan tanah dengan presisi tinggi. Dilengkapi dengan blade yang dapat disesuaikan untuk membuat permukaan yang rata dan sesuai dengan spesifikasi teknis proyek.')">
+          <img src="images/Equipment/1N6htLfPBHufQqIGUlDDcuB5FywjbqJHA=w548-h410-p-k-nu-iv1.jpg" alt="Motor Grader" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1PC6LZmO1ZNHWFq-QSXRknxEjC9u2h1bo=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Forklift')">
-          <img src="images/Equipment/1PC6LZmO1ZNHWFq-QSXRknxEjC9u2h1bo=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Forklift" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1PC6LZmO1ZNHWFq-QSXRknxEjC9u2h1bo=w548-h410-p-k-nu-iv1.jpg', 'Forklift', 'Forklift untuk handling dan transportasi material konstruksi dengan aman dan efisien. Dilengkapi dengan fork yang dapat disesuaikan untuk berbagai ukuran dan jenis material yang akan diangkut.')">
+          <img src="images/Equipment/1PC6LZmO1ZNHWFq-QSXRknxEjC9u2h1bo=w548-h410-p-k-nu-iv1.jpg" alt="Forklift" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1qqqqNXktZwvJmS8YPL5kRaiguaiSYAw5=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Compactor')">
-          <img src="images/Equipment/1qqqqNXktZwvJmS8YPL5kRaiguaiSYAw5=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Compactor" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1qqqqNXktZwvJmS8YPL5kRaiguaiSYAw5=w548-h410-p-k-nu-iv1.jpg', 'Compactor', 'Compactor untuk pemadatan tanah dan material konstruksi dengan tekanan tinggi. Memastikan kepadatan yang optimal untuk fondasi dan struktur yang stabil sesuai standar konstruksi.')">
+          <img src="images/Equipment/1qqqqNXktZwvJmS8YPL5kRaiguaiSYAw5=w548-h410-p-k-nu-iv1.jpg" alt="Compactor" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1tfR95TmQiDWb59iZrTAf0m8prNG1JY0o=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Portable Compressor')">
-          <img src="images/Equipment/1tfR95TmQiDWb59iZrTAf0m8prNG1JY0o=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Portable Compressor" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1tfR95TmQiDWb59iZrTAf0m8prNG1JY0o=w548-h410-p-k-nu-iv1.jpg', 'Portable Compressor', 'Portable Compressor untuk menyediakan udara bertekanan tinggi di lokasi konstruksi. Digunakan untuk mengoperasikan berbagai peralatan pneumatik dan kebutuhan udara bertekanan lainnya.')">
+          <img src="images/Equipment/1tfR95TmQiDWb59iZrTAf0m8prNG1JY0o=w548-h410-p-k-nu-iv1.jpg" alt="Portable Compressor" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1ulQlaYkwxgZ6thh7Bgpve83yWmBPsgJc=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Bore Pile')">
-          <img src="images/Equipment/1ulQlaYkwxgZ6thh7Bgpve83yWmBPsgJc=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Bore Pile" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1ulQlaYkwxgZ6thh7Bgpve83yWmBPsgJc=w548-h410-p-k-nu-iv1.jpg', 'Bore Pile Machine', 'Bore Pile Machine untuk pembuatan pondasi dalam dengan metode bored pile. Dilengkapi dengan sistem drilling yang presisi untuk membuat lubang bor yang dalam dan stabil untuk fondasi struktur.')">
+          <img src="images/Equipment/1ulQlaYkwxgZ6thh7Bgpve83yWmBPsgJc=w548-h410-p-k-nu-iv1.jpg" alt="Bore Pile Machine" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1uRBaQjB7l36VEOQjV31d7SPt31HUwp7C=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Welding Machine')">
-          <img src="images/Equipment/1uRBaQjB7l36VEOQjV31d7SPt31HUwp7C=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Welding Machine" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1uRBaQjB7l36VEOQjV31d7SPt31HUwp7C=w548-h410-p-k-nu-iv1.jpg', 'Welding Machine', 'Welding Machine untuk pekerjaan pengelasan struktur baja dan komponen konstruksi. Dilengkapi dengan teknologi pengelasan yang presisi untuk menghasilkan sambungan yang kuat dan berkualitas tinggi.')">
+          <img src="images/Equipment/1uRBaQjB7l36VEOQjV31d7SPt31HUwp7C=w548-h410-p-k-nu-iv1.jpg" alt="Welding Machine" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
-        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1Xn6LsUljAlzsXtIAifXEroghfzIRa1Je=w548-h410-p-k-nu-iv1.jpg', 'Heavy Equipment - Genset')">
-          <img src="images/Equipment/1Xn6LsUljAlzsXtIAifXEroghfzIRa1Je=w548-h410-p-k-nu-iv1.jpg" alt="Heavy Equipment - Genset" loading="lazy">
+        <div class="equipment-gallery-item" onclick="openEquipmentModal('images/Equipment/1Xn6LsUljAlzsXtIAifXEroghfzIRa1Je=w548-h410-p-k-nu-iv1.jpg', 'Genset', 'Genset untuk menyediakan pasokan listrik cadangan di lokasi konstruksi. Memastikan kelancaran operasional proyek dengan pasokan listrik yang stabil dan dapat diandalkan.')">
+          <img src="images/Equipment/1Xn6LsUljAlzsXtIAifXEroghfzIRa1Je=w548-h410-p-k-nu-iv1.jpg" alt="Genset" loading="lazy">
           <div class="equipment-gallery-overlay">View Details</div>
         </div>
       </div>
@@ -1423,6 +1439,7 @@
       <img id="modalEquipmentImage" class="modal-image" src="" alt="">
       <div class="modal-info">
         <h3 id="modalEquipmentTitle" class="modal-title"></h3>
+        <p id="modalEquipmentDescription" class="modal-description"></p>
       </div>
     </div>
   </div>
@@ -1473,14 +1490,16 @@
     }
     
     // Equipment Modal Functions
-    function openEquipmentModal(imageSrc, title) {
+    function openEquipmentModal(imageSrc, title, description) {
       var modal = document.getElementById("equipmentModal");
       var modalImage = document.getElementById("modalEquipmentImage");
       var modalTitle = document.getElementById("modalEquipmentTitle");
+      var modalDescription = document.getElementById("modalEquipmentDescription");
       
       modalImage.src = imageSrc;
       modalImage.alt = title;
       modalTitle.textContent = title;
+      modalDescription.textContent = description || '';
       
       modal.style.display = "block";
       document.body.style.overflow = "hidden"; // Prevent background scrolling
