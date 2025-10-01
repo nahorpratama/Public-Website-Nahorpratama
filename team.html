@@ -87,21 +87,32 @@
       color: #ffffff;
     }
     
-    /* Remove spacing between Partnership Section and CTA Section */
-    .mid-section-web + .intro-section.cc-cta {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-    
-    .mid-section + .intro-section.cc-cta {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-    
-    /* Ensure no gap between sections */
+    /* AGGRESSIVE: Remove ALL spacing between Partnership Section and CTA Section */
+    .mid-section-web + .intro-section.cc-cta,
+    .mid-section + .intro-section.cc-cta,
     .partner-section + .mid-section + .mid-section-web + .intro-section.cc-cta {
       margin-top: 0 !important;
       padding-top: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Force negative margin to eliminate any gap */
+    .mid-section-web + .intro-section.cc-cta {
+      margin-top: -20px !important;
+      transform: translateY(-20px) !important;
+    }
+    
+    /* Target any element that might add spacing */
+    .mid-section-web {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    
+    /* Nuclear option: Remove spacing from all possible selectors */
+    div[class*="mid-section"] + div[class*="intro-section"][class*="cc-cta"] {
+      margin-top: -30px !important;
+      transform: translateY(-30px) !important;
     }
     .paragraphx {
       color: #2c3e50;
