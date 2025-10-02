@@ -227,8 +227,8 @@
       border: none;
       box-sizing: border-box;
       display: flex;
-      flex-direction: column;
-      gap: 5px;
+      flex-direction: row;
+      gap: 20px;
       position: relative;
       overflow: hidden;
       flex-shrink: 0;
@@ -279,8 +279,9 @@
     }
 
     .zone-1,
+    .zone-2,
     .zone-3 {
-      flex: 0 0 30%;
+      flex: 1;
       padding: 0px;
       background-color: #ffffff !important;
       background-image: none !important;
@@ -289,18 +290,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-    }
-
-    .zone-2 {
-      flex: 0 0 30%;
-      padding: 0px;
-      display: flex;
-      gap: 0px;
-      background-color: #ffffff !important;
-      background-image: none !important;
-      background: #ffffff !important;
-      box-sizing: border-box;
-      position: relative;
+      min-width: 0;
     }
 
     .zone-1 *,
