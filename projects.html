@@ -435,8 +435,10 @@
     .slide:nth-child(9) .project-header h3 {
       font-size: 1.0rem;
       line-height: 1.2;
-      max-width: 100%;
+      max-width: 50ch;          /* Maksimal 50 karakter per baris */
       white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .slide:nth-child(7) .project-description p,
@@ -444,8 +446,10 @@
     .slide:nth-child(9) .project-description p {
       font-size: 0.8rem;
       line-height: 1.4;
-      max-width: 100%;
+      max-width: 50ch;          /* Maksimal 50 karakter per baris */
       white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     /* Navigation Controls */
