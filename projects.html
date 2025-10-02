@@ -800,8 +800,8 @@
       .zone-1,
       .zone-2,
       .zone-3 {
-        flex: 0 0 calc((400px - 40px - 40px) / 3);
-        height: calc((400px - 40px - 40px) / 3);
+        flex: 0 0 calc((400px - 40px - 60px) / 3);
+        height: calc((400px - 40px - 60px) / 3);
         width: 100%;
       }
       
@@ -897,6 +897,39 @@
       .tab-content-inner .gallery-item {
         height: 150px;
       }
+    }
+
+    /* Mobile Portrait */
+    @media (max-width: 480px) {
+      .slide.layout-1,
+      .slide.layout-2 {
+        height: 350px;
+      }
+      
+      .zone-1,
+      .zone-2,
+      .zone-3 {
+        flex: 0 0 calc((350px - 40px - 50px) / 3);
+        height: calc((350px - 40px - 50px) / 3);
+        width: 100%;
+      }
+    }
+
+    /* Extra Small Devices */
+    @media (max-width: 320px) {
+      .slide.layout-1,
+      .slide.layout-2 {
+        height: 300px;
+      }
+      
+      .zone-1,
+      .zone-2,
+      .zone-3 {
+        flex: 0 0 calc((300px - 40px - 40px) / 3);
+        height: calc((300px - 40px - 40px) / 3);
+        width: 100%;
+      }
+    }
       
       .zoom-content {
         width: 95%;
