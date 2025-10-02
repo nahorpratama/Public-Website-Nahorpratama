@@ -330,6 +330,16 @@
       padding: 20px;
     }
 
+    /* CSS untuk gambar di hero-image dan bottom-image */
+    .hero-image img,
+    .bottom-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
     /* Layout 1: Teks kiri, Gambar kanan (65:35) */
     .layout-1 .zone-2 {
       flex-direction: row;
@@ -980,7 +990,7 @@
           <div class="slide layout-1">
             <div class="zone-1">
               <div class="hero-image">
-                <div class="image-placeholder">Slide 1 - Hero Image</div>
+                <img src="images/your-image-name.jpg" alt="EPCI Baru Gas Plant Modification - Hero Image">
               </div>
             </div>
             <div class="zone-2">
