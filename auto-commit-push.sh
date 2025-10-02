@@ -11,6 +11,10 @@ NC='\033[0m' # No Color
 
 echo -e "${YELLOW}🔄 Memulai proses auto commit dan push...${NC}"
 
+# Pull terlebih dahulu untuk menghindari divergent branches
+echo -e "${YELLOW}📥 Memperbarui dari remote...${NC}"
+git pull origin main
+
 # Cek apakah ada perubahan
 if [ -z "$(git status --porcelain)" ]; then
     echo -e "${YELLOW}ℹ️  Tidak ada perubahan untuk di-commit${NC}"

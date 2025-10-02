@@ -44,10 +44,21 @@ Git hook sudah diaktifkan dan akan otomatis push setiap kali ada commit.
 2. Cek token GitHub
 3. Cek apakah ada konflik dengan remote
 
+### Jika ada masalah divergent branches:
+```bash
+# Gunakan script khusus untuk mengatasi divergent branches
+./fix-divergent-branches.sh
+
+# Atau manual:
+git config pull.rebase false  # Set strategi merge
+git pull origin main          # Pull dengan merge
+```
+
 ### Jika script tidak bisa dijalankan:
 ```bash
 chmod +x auto-commit-push.sh
 chmod +x watch-changes.sh
+chmod +x fix-divergent-branches.sh
 ```
 
 ## 📝 Tips
