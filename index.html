@@ -814,15 +814,38 @@
         max-width: 100% !important;
       }
       
-      /* Projects Section Tablet Fixes */
+      /* Projects Section Tablet Fixes - Improved Container Height */
       .grid-content {
         gap: 20px !important;
         padding: 0 15px !important;
         max-width: 100% !important;
+        min-height: auto !important;
       }
       
       .project-card {
         max-width: 100% !important;
+        min-height: 320px !important;
+        height: auto !important;
+      }
+      
+      .project-card .picture-section {
+        height: 200px !important;
+        min-height: 200px !important;
+      }
+      
+      .project-card .picture-section img {
+        height: 200px !important;
+        min-height: 200px !important;
+        object-fit: cover !important;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 25px !important;
+        min-height: 120px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
       }
     }
     
@@ -896,20 +919,44 @@
         max-width: 100% !important;
       }
       
-      /* Projects Section Mobile Fixes */
+      /* Projects Section Mobile Fixes - Improved Container Height */
       .grid-content {
         gap: 15px !important;
         padding: 0 10px !important;
         max-width: 100% !important;
+        min-height: auto !important;
       }
       
       .project-card {
         max-width: 100% !important;
+        min-height: 280px !important;
+        height: auto !important;
+      }
+      
+      .project-card .picture-section {
+        height: 180px !important;
+        min-height: 180px !important;
+      }
+      
+      .project-card .picture-section img {
+        height: 180px !important;
+        min-height: 180px !important;
+        object-fit: cover !important;
       }
       
       .project-card .text-section,
       .project-card .text-sections {
         padding: 20px !important;
+        min-height: 100px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
       }
       
       /* Navigation Mobile Fixes */
