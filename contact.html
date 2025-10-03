@@ -182,9 +182,15 @@
       transition: transform 0.3s ease;
     }
     
+    /* Location Section Background */
+    .location-container {
+      background-color: #ffffff !important;
+      padding: 40px 20px;
+    }
+    
     /* Location Section Title Color */
     .location-container .h1-headtext {
-      color: white !important;
+      color: #2c3e50 !important;
     }
     
     /* Interactive Location Styling */
@@ -194,26 +200,32 @@
       border-radius: 8px;
       padding: 20px;
       margin: 10px;
+      background-color: #ffffff;
+      border: 2px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
     .clickable-location:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: #f8f9fa;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     
     .clickable-location.active-location {
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 2px solid #ffffff;
+      background-color: #ffffff;
+      border: 2px solid #2c3e50;
+      box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
     }
     
     .clickable-location h1,
     .clickable-location h3 {
       transition: color 0.3s ease;
+      color: #2c3e50;
     }
     
     .clickable-location:hover h1,
     .clickable-location:hover h3 {
-      color: #ffffff !important;
+      color: #2c3e50 !important;
     }
     
     /* CTA Section Button - Apply cc-jumbo-black styling as main standard */
