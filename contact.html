@@ -149,12 +149,32 @@
       width: 25px !important;
       height: 25px !important;
       object-fit: contain !important;
-      filter: none !important;
+      filter: brightness(0) saturate(100%) !important;
+    }
+    
+    /* LinkedIn logo - blue color */
+    .link-block:first-child img {
+      filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) !important;
+    }
+    
+    /* Instagram logo - gradient colors */
+    .link-block:last-child img {
+      filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7500%) hue-rotate(330deg) brightness(101%) contrast(101%) !important;
     }
     
     .link-block:hover img {
       opacity: 0.8 !important;
       transform: scale(1.1) !important;
+    }
+    
+    /* LinkedIn hover - darker blue */
+    .link-block:first-child:hover img {
+      filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2000%) hue-rotate(200deg) brightness(80%) contrast(120%) !important;
+    }
+    
+    /* Instagram hover - darker gradient */
+    .link-block:last-child:hover img {
+      filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(8000%) hue-rotate(320deg) brightness(80%) contrast(120%) !important;
     }
     
     .link-block .paragraph-smallx {
