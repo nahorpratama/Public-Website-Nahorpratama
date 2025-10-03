@@ -157,7 +157,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #eff6ff 50%, #eef2ff 75%, #f0f4ff 100%);
   position: relative;
   overflow: hidden;
 }
@@ -3731,7 +3731,7 @@ a:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #eef2ff;
   outline-offset: 2px;
 }
 
