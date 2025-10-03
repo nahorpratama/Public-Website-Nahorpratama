@@ -904,6 +904,72 @@
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
       }
+      
+      /* EXTREME - Force negative margins to eliminate ANY gap */
+      .intro-section.cc-cta {
+        margin-bottom: -1px !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+      
+      .intro-section.cc-cta + .intro-section {
+        margin-top: -1px !important;
+        padding-top: 0 !important;
+        position: relative !important;
+        top: -1px !important;
+      }
+      
+      /* Force CTA container to have NO bottom space */
+      .intro-section.cc-cta .cta-container {
+        margin-bottom: -1px !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+      }
+      
+      /* Force footer to overlap CTA */
+      .footer-section {
+        margin-top: -1px !important;
+        padding-top: 0 !important;
+        position: relative !important;
+        top: -1px !important;
+        z-index: 1 !important;
+      }
+      
+      /* Remove ALL possible spacing from button */
+      .intro-section.cc-cta .button.cc-jumbo-button {
+        margin-bottom: -1px !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        position: relative !important;
+        z-index: 0 !important;
+      }
+      
+      /* Force text elements to have NO spacing */
+      .intro-section.cc-cta .cta-text,
+      .intro-section.cc-cta .cta-paragraph,
+      .intro-section.cc-cta .h2-headingscta,
+      .intro-section.cc-cta .paragraphscta {
+        margin-bottom: -1px !important;
+        padding-bottom: 0 !important;
+        line-height: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      
+      /* Nuclear option - transform to eliminate gaps */
+      .intro-section.cc-cta {
+        transform: translateY(0) !important;
+      }
+      
+      .intro-section.cc-cta + .intro-section {
+        transform: translateY(-1px) !important;
+      }
     }
     
     /* Responsive Design for Equipment Header */
