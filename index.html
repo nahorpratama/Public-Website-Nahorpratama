@@ -450,14 +450,23 @@
       }
       
       .projects-main-title {
-        font-size: 24px;
+        font-size: 26px;
         letter-spacing: -0.05px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       
       .projects-subtitle {
-        font-size: 13px;
-        margin-bottom: 35px;
+        font-size: 14px;
+        margin-bottom: 40px;
         letter-spacing: 0.01px;
+        color: #666;
+        line-height: 1.5;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
       
       .project-card .text-section,
@@ -926,45 +935,108 @@
         max-width: 100% !important;
       }
       
-      /* Projects Section Mobile Fixes - Improved Container Height */
+      /* Projects Section Mobile Fixes - Enhanced Design */
       .grid-content {
-        gap: 15px !important;
-        padding: 0 10px !important;
+        gap: 20px !important;
+        padding: 0 15px !important;
         max-width: 100% !important;
         min-height: auto !important;
       }
       
       .project-card {
         max-width: 100% !important;
-        min-height: 280px !important;
+        min-height: 300px !important;
         height: auto !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+        transition: all 0.3s ease !important;
+        overflow: hidden !important;
+      }
+      
+      .project-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18) !important;
       }
       
       .project-card .picture-section {
-        height: 180px !important;
-        min-height: 180px !important;
+        height: 200px !important;
+        min-height: 200px !important;
+        position: relative !important;
+        overflow: hidden !important;
       }
       
       .project-card .picture-section img {
-        height: 180px !important;
-        min-height: 180px !important;
+        height: 200px !important;
+        min-height: 200px !important;
         object-fit: cover !important;
+        transition: transform 0.3s ease !important;
+        width: 100% !important;
+      }
+      
+      .project-card:hover .picture-section img {
+        transform: scale(1.05) !important;
       }
       
       .project-card .text-section,
       .project-card .text-sections {
-        padding: 20px !important;
+        padding: 25px 20px !important;
         min-height: 100px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+        position: relative !important;
+      }
+      
+      .project-card .text-section::before,
+      .project-card .text-sections::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 3px !important;
+        background: linear-gradient(90deg, #3498db, #2ecc71) !important;
       }
       
       .project-card .heading-2 {
-        font-size: 16px !important;
-        margin-bottom: 8px !important;
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
         text-align: center !important;
-        font-weight: 600 !important;
+        font-weight: 700 !important;
+        color: #2c3e50 !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+        position: relative !important;
+        z-index: 1 !important;
+      }
+      
+      /* Add subtle animation to project cards */
+      .project-card {
+        animation: fadeInUp 0.6s ease-out !important;
+      }
+      
+      .project-card:nth-child(1) {
+        animation-delay: 0.1s !important;
+      }
+      
+      .project-card:nth-child(2) {
+        animation-delay: 0.2s !important;
+      }
+      
+      .project-card:nth-child(3) {
+        animation-delay: 0.3s !important;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       
       /* Navigation Mobile Fixes */
