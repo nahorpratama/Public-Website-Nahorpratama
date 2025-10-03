@@ -794,12 +794,19 @@
         height: auto !important;
         min-height: 40vh;
         padding: 40px 15px !important;
+        margin-bottom: 0 !important;
+      }
+      
+      .intro-section.cc-cta {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
       }
       
       .cta-wrap {
         padding: 0 !important;
         max-width: 100% !important;
         width: 100% !important;
+        margin-bottom: 0 !important;
       }
       
       .cta-text {
@@ -824,6 +831,17 @@
         line-height: 1.5 !important;
         text-align: center !important;
         max-width: 100% !important;
+      }
+      
+      /* Ensure no gap between CTA and Footer on mobile */
+      .intro-section.cc-cta + .intro-section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+      
+      .footer-section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
       }
     }
     
