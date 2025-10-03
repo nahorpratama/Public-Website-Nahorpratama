@@ -231,6 +231,16 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
+    /* Ensure location images are visible */
+    .clickable-location img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: 30px !important;
+      height: 45px !important;
+      margin-bottom: 10px !important;
+    }
+    
     .clickable-location:hover {
       background-color: #ffffff !important;
       background-image: none !important;
@@ -238,11 +248,23 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     
+    .clickable-location:hover img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
     .clickable-location.active-location {
       background-color: #ffffff !important;
       background-image: none !important;
       border: 2px solid #2c3e50;
       box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+    }
+    
+    .clickable-location.active-location img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
     
     .clickable-location h1,
