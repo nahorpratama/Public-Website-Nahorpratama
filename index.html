@@ -1045,22 +1045,35 @@
         .projects-section-professional .project-card {
           height: auto !important;
           min-height: auto !important;
+          max-height: none !important;
+          display: flex !important;
+          flex-direction: column !important;
         }
         
         .projects-section-professional .project-card .picture-section {
-          height: 160px !important;
-          min-height: 160px !important;
+          height: 140px !important;
+          min-height: 140px !important;
+          max-height: 140px !important;
+          flex-shrink: 0 !important;
         }
         
         .projects-section-professional .project-card .picture-section img {
-          height: 160px !important;
-          min-height: 160px !important;
+          height: 140px !important;
+          min-height: 140px !important;
+          max-height: 140px !important;
+          width: 100% !important;
+          object-fit: cover !important;
         }
         
         .projects-section-professional .project-card .text-section,
         .projects-section-professional .project-card .text-sections {
-          padding: 15px 20px !important;
-          min-height: 60px !important;
+          padding: 12px 15px !important;
+          min-height: auto !important;
+          max-height: none !important;
+          flex: 1 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
         }
         
         .projects-section-professional .project-card .heading-2 {
@@ -1071,12 +1084,51 @@
         
         .projects-section-professional .grid-content {
           grid-template-columns: 1fr !important;
-          gap: 20px !important;
-          padding: 0 15px !important;
+          gap: 15px !important;
+          padding: 0 10px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 auto !important;
         }
         
         .projects-section-professional .main-content {
-          padding: 40px 10px !important;
+          padding: 30px 5px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+        }
+        
+        .projects-section-professional .title-content {
+          margin-bottom: 30px !important;
+          padding: 0 10px !important;
+        }
+        
+        .projects-section-professional {
+          margin: 40px 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+          overflow-x: hidden !important;
+        }
+        
+        /* Ensure cards are fully responsive */
+        .projects-section-professional .project-card {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+        }
+        
+        /* Fix any potential overflow issues */
+        .projects-section-professional * {
+          box-sizing: border-box !important;
+        }
+        
+        /* Ensure images don't break layout */
+        .projects-section-professional .project-card .picture-section img {
+          max-width: 100% !important;
+          height: auto !important;
+          min-height: 140px !important;
+          max-height: 140px !important;
         }
       }
       
