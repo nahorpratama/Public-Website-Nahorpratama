@@ -911,12 +911,24 @@
         box-shadow: none !important;
       }
       
-      /* Remove any line-height spacing */
+      /* OVERRIDE: Force exact specifications */
       .intro-section.cc-cta .h2-headingscta,
       .intro-section.cc-cta .paragraphscta {
-        line-height: 1 !important;
-        margin-bottom: 0 !important;
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
         padding-bottom: 0 !important;
+      }
+      
+      .intro-section.cc-cta .paragraphscta {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-bottom: 25px !important;
       }
       
       /* EXTREME - Force negative margins to eliminate ANY gap */
