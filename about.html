@@ -340,6 +340,7 @@
         align-items: center !important;
         gap: 5px !important; /* Final gap */
         flex-wrap: nowrap !important; /* Force single row */
+        flex-direction: row !important; /* FORCE ROW - Override any column settings */
         width: 100% !important;
         max-width: 100% !important;
         padding: 30px 15px !important;
@@ -350,6 +351,29 @@
       
       .mid-section .logo {
         margin: 0 5px !important; /* Final margin */
+        flex-shrink: 0 !important; /* Prevent shrinking */
+      }
+    }
+
+    /* OVERRIDE ALL MEDIA QUERIES - Force single line for all screen sizes */
+    @media (max-width: 1024px) {
+      .mid-section .logo-head {
+        flex-direction: row !important; /* Override column setting */
+        flex-wrap: nowrap !important; /* Force single row */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mid-section .logo-head {
+        flex-direction: row !important; /* Override column setting */
+        flex-wrap: nowrap !important; /* Force single row */
+      }
+    }
+    
+    @media (max-width: 320px) {
+      .mid-section .logo-head {
+        flex-direction: row !important; /* Override column setting */
+        flex-wrap: nowrap !important; /* Force single row */
       }
     }
 
@@ -1618,14 +1642,14 @@
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div class="logo"><img width="120" height="60" src="images/LOGO-LOGO/Logo Mitika.png" loading="lazy" alt="" class="image-11"></div>
-            <div class="logo"><img width="120" height="60" src="images/LOGO-LOGO/Logo Wilmar.png" loading="lazy" alt="" class="image-9"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/Logo Mitika.png" loading="lazy" alt="" class="image-11"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/Logo Wilmar.png" loading="lazy" alt="" class="image-9"></div>
           </div>
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div class="logo"><img width="120" height="60" src="images/LOGO-LOGO/Logo Takisama.jpeg.jpg" loading="lazy" alt="" class="image-15"></div>
-            <div class="logo"><img width="120" height="60" src="images/LOGO-LOGO/Logo RAPP.jpeg.jpg" loading="lazy" alt="" class="image-19"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/Logo Takisama.jpeg.jpg" loading="lazy" alt="" class="image-15"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/Logo RAPP.jpeg.jpg" loading="lazy" alt="" class="image-19"></div>
           </div>
         </div>
       </div>
