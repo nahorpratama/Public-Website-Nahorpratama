@@ -165,7 +165,7 @@
         width: 100% !important;
         max-width: 100% !important;
         padding: 30px 15px !important;
-        min-height: 90px !important; /* Increased from 85px to 90px (+5px more) */
+        min-height: 98px !important; /* Increased from 90px to 98px (+8px more) */
         overflow-x: auto !important; /* Allow horizontal scroll if needed */
         white-space: nowrap !important;
       }
@@ -266,6 +266,15 @@
         visibility: visible !important;
         opacity: 1 !important;
         filter: grayscale(0) !important;
+      }
+      
+      .mid-section .logo img[src*="JSI"] {
+        max-width: 162px !important; /* 10% reduction: 180px → 162px */
+        max-height: 72px !important; /* 10% reduction: 80px → 72px */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
       }
     }
     .paragraphx {
