@@ -165,7 +165,7 @@
         width: 100% !important;
         max-width: 100% !important;
         padding: 30px 15px !important;
-        min-height: 85px !important; /* Increased from 80px to 85px (+5px) */
+        min-height: 90px !important; /* Increased from 85px to 90px (+5px more) */
         overflow-x: auto !important; /* Allow horizontal scroll if needed */
         white-space: nowrap !important;
       }
@@ -253,6 +253,19 @@
         width: auto !important;
         object-fit: contain !important;
         object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="BRI"] {
+        max-width: 180px !important; /* Standard size for Bank BRI */
+        max-height: 80px !important; /* Standard height for Bank BRI */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        filter: grayscale(0) !important;
       }
     }
     .paragraphx {
