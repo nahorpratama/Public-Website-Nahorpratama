@@ -247,7 +247,8 @@
         object-position: center !important;
       }
       
-      .mid-section .logo img[src*="BRI"] {
+      .mid-section .logo img[src*="BRI"],
+      .mid-section .logo img[src*="Bank BRI"] {
         max-width: 200px !important; /* Primary - 25% larger */
         max-height: 90px !important; /* Primary - 25% larger */
         height: auto !important;
@@ -272,7 +273,8 @@
       }
       
       /* Force BRI logo container visibility */
-      .mid-section .logo:has(img[src*="BRI"]) {
+      .mid-section .logo:has(img[src*="BRI"]),
+      .mid-section .logo:has(img[src*="Bank BRI"]) {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -284,6 +286,21 @@
         overflow: visible !important;
         min-width: 200px !important;
         min-height: 90px !important;
+      }
+      
+      /* Additional BRI logo fixes */
+      .mid-section .logo img.image-bri {
+        max-width: 200px !important;
+        max-height: 90px !important;
+        width: 200px !important;
+        height: 90px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 999 !important;
+        background: red !important; /* Temporary debug color */
+        border: 2px solid blue !important; /* Temporary debug border */
       }
       
       /* VISUAL HIERARCHY - Secondary logos (standard) */
@@ -1788,8 +1805,8 @@
         </div>
         <div class="w-slide">
           <div class="logo-head">
-            <div class="logo"><img width="120" height="60" src="images/LOGO-LOGO/logo PTM.png" loading="lazy" alt="" class="image-20"></div>
-            <div class="logo"><img src="images/LOGO-LOGO/Logo Bank BRI.png" loading="lazy" alt="" class="image-bri"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/logo PTM.png" loading="lazy" alt="" class="image-20"></div>
+            <div class="logo"><img src="images/LOGO-LOGO/Logo BRI.png" loading="lazy" alt="" class="image-bri"></div>
           </div>
         </div>
         <div class="w-slide">
