@@ -258,6 +258,32 @@
         visibility: visible !important;
         opacity: 1 !important;
         filter: grayscale(0) !important;
+        position: relative !important;
+        z-index: 999 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        clip: auto !important;
+        clip-path: none !important;
+        overflow: visible !important;
+      }
+      
+      /* Force BRI logo container visibility */
+      .mid-section .logo:has(img[src*="BRI"]) {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 998 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        min-width: 200px !important;
+        min-height: 90px !important;
       }
       
       /* VISUAL HIERARCHY - Secondary logos (standard) */
@@ -308,8 +334,8 @@
       }
       
       .mid-section .logo img[src*="Sucofindo"] {
-        max-width: 128px !important; /* 20% reduction: 160px → 128px */
-        max-height: 56px !important; /* 20% reduction: 70px → 56px */
+        max-width: 115px !important; /* Additional 10% reduction: 128px → 115px */
+        max-height: 50px !important; /* Additional 10% reduction: 56px → 50px */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -335,8 +361,8 @@
       }
       
       .mid-section .logo img[src*="JSI"] {
-        max-width: 128px !important; /* 20% reduction: 160px → 128px */
-        max-height: 56px !important; /* 20% reduction: 70px → 56px */
+        max-width: 115px !important; /* Additional 10% reduction: 128px → 115px */
+        max-height: 50px !important; /* Additional 10% reduction: 56px → 50px */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
