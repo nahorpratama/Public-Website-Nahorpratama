@@ -272,35 +272,18 @@
         overflow: visible !important;
       }
       
-      /* Force BRI logo container visibility */
-      .mid-section .logo:has(img[src*="BRI"]),
-      .mid-section .logo:has(img[src*="Bank BRI"]) {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        z-index: 998 !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        overflow: visible !important;
-        min-width: 200px !important;
-        min-height: 90px !important;
-      }
-      
-      /* Additional BRI logo fixes */
+      /* BRI logo - no special container, same as other logos */
       .mid-section .logo img.image-bri {
         max-width: 200px !important;
         max-height: 90px !important;
-        width: 200px !important;
-        height: 90px !important;
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
-        position: relative !important;
-        z-index: 999 !important;
-        background: red !important; /* Temporary debug color */
-        border: 2px solid blue !important; /* Temporary debug border */
+        filter: grayscale(0) !important;
       }
       
       /* VISUAL HIERARCHY - Secondary logos (standard) */
