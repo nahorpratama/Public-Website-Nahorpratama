@@ -199,20 +199,26 @@
         opacity: 1 !important;
       }
       
-      /* Logo sizing - all logos from LOGO-LOGO folder - optimized size */
+      /* UNIFIED LOGO SIZING - Better Fit, Balance, Visual Hierarchy, Single Row */
+      
+      /* Base sizing for all logos - optimized for 118px slider height */
       .mid-section .logo img {
-        max-width: 180px !important; /* Reduced from 300px */
-        max-height: 80px !important; /* Reduced from 120px */
+        max-width: 160px !important; /* Unified base width */
+        max-height: 70px !important; /* Unified base height */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
         object-position: center !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        filter: grayscale(0) !important;
       }
       
-      /* Specific logo sizing adjustments */
+      /* VISUAL HIERARCHY - Primary logos (larger) */
       .mid-section .logo img[src*="Aztech"] {
-        max-width: 200px !important; /* Reduced for smaller slider area */
-        max-height: 90px !important; /* Reduced for smaller slider area */
+        max-width: 200px !important; /* Primary - 25% larger */
+        max-height: 90px !important; /* Primary - 25% larger */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -224,8 +230,8 @@
       }
       
       .mid-section .logo img[src*="Petroflexx"] {
-        max-width: 200px !important; /* Reduced for smaller slider area */
-        max-height: 90px !important; /* Reduced for smaller slider area */
+        max-width: 200px !important; /* Primary - 25% larger */
+        max-height: 90px !important; /* Primary - 25% larger */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -233,26 +239,8 @@
       }
       
       .mid-section .logo img[src*="Mitika"] {
-        max-width: 200px !important; /* Reduced for smaller slider area */
-        max-height: 90px !important; /* Reduced for smaller slider area */
-        height: auto !important;
-        width: auto !important;
-        object-fit: contain !important;
-        object-position: center !important;
-      }
-      
-      .mid-section .logo img[src*="Diratama"] {
-        max-width: 90px !important; /* Half size: 180px → 90px */
-        max-height: 40px !important; /* Half size: 80px → 40px */
-        height: auto !important;
-        width: auto !important;
-        object-fit: contain !important;
-        object-position: center !important;
-      }
-      
-      .mid-section .logo img[src*="Wilmar"] {
-        max-width: 153px !important; /* 15% reduction: 180px → 153px */
-        max-height: 68px !important; /* 15% reduction: 80px → 68px */
+        max-width: 200px !important; /* Primary - 25% larger */
+        max-height: 90px !important; /* Primary - 25% larger */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -260,8 +248,8 @@
       }
       
       .mid-section .logo img[src*="BRI"] {
-        max-width: 180px !important; /* Standard size for Bank BRI */
-        max-height: 80px !important; /* Standard height for Bank BRI */
+        max-width: 200px !important; /* Primary - 25% larger */
+        max-height: 90px !important; /* Primary - 25% larger */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -272,9 +260,128 @@
         filter: grayscale(0) !important;
       }
       
+      /* VISUAL HIERARCHY - Secondary logos (standard) */
+      .mid-section .logo img[src*="Energi"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Sucofindo"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="ISA"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Mandiri"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="PHR"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Ritu"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Multi"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
       .mid-section .logo img[src*="JSI"] {
-        max-width: 162px !important; /* 10% reduction: 180px → 162px */
-        max-height: 72px !important; /* 10% reduction: 80px → 72px */
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="PTM"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Takisama"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="RAPP"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="PMP"] {
+        max-width: 160px !important; /* Secondary - standard */
+        max-height: 70px !important; /* Secondary - standard */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      /* VISUAL HIERARCHY - Tertiary logos (smaller) */
+      .mid-section .logo img[src*="Diratama"] {
+        max-width: 120px !important; /* Tertiary - 25% smaller */
+        max-height: 50px !important; /* Tertiary - 25% smaller */
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+      
+      .mid-section .logo img[src*="Wilmar"] {
+        max-width: 120px !important; /* Tertiary - 25% smaller */
+        max-height: 50px !important; /* Tertiary - 25% smaller */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
