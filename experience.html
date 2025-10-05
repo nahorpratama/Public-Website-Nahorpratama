@@ -160,12 +160,14 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 30px !important;
-        flex-wrap: wrap !important;
+        gap: 20px !important;
+        flex-wrap: nowrap !important; /* Force single row */
         width: 100% !important;
         max-width: 100% !important;
         padding: 30px 15px !important;
-        min-height: 100px !important;
+        min-height: 120px !important;
+        overflow-x: auto !important; /* Allow horizontal scroll if needed */
+        white-space: nowrap !important;
       }
       
       .mid-section .logo {
@@ -173,20 +175,20 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        min-width: 120px !important;
-        max-width: 180px !important;
-        height: 60px !important;
+        min-width: 200px !important; /* Doubled from 100px */
+        max-width: 300px !important; /* Doubled from 150px */
+        height: 120px !important; /* Doubled from 60px */
         /* Remove container styling */
         background: transparent !important;
         border-radius: 0 !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin: 10px !important;
+        margin: 0 10px !important; /* Reduced margin for single row */
       }
       
       .mid-section .logo img {
         max-width: 100% !important;
-        max-height: 60px !important;
+        max-height: 120px !important; /* Doubled from 60px */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
@@ -197,10 +199,10 @@
         opacity: 1 !important;
       }
       
-      /* Logo sizing - all logos from LOGO-LOGO folder */
+      /* Logo sizing - all logos from LOGO-LOGO folder - 2x size */
       .mid-section .logo img {
-        max-width: 150px !important;
-        max-height: 60px !important;
+        max-width: 300px !important; /* Doubled from 150px */
+        max-height: 120px !important; /* Doubled from 60px */
         height: auto !important;
         width: auto !important;
         object-fit: contain !important;
