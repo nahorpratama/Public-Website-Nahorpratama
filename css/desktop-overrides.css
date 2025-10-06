@@ -1,5 +1,15 @@
 /* Desktop-specific enhancements */
 
+/* Ensure 3 cards in one row in Our Gallery on desktop */
+@media (min-width: 992px) {
+  .projects-section-professional .grid-content {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px;
+  }
+  .projects-section-professional .project-card { width: 100%; }
+}
+
 /* 1280px and up: widen containers, adjust grids */
 @media (min-width: 1280px) {
   /* Generic containers */
