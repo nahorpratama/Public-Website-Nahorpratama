@@ -1,2 +1,0 @@
-File test untuk menguji sistem otomatisasi GitHub
-Dibuat pada: $(date)
