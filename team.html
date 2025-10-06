@@ -101,6 +101,52 @@
     .mid-section-web {
       margin-bottom: 0 !important;
     }
+    
+    /* EXTREME - Force negative margins to eliminate ANY gap */
+    .intro-section.cc-cta {
+      margin-bottom: -1px !important;
+      padding-bottom: 0 !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    
+    .intro-section.cc-cta + .intro-section {
+      margin-top: -1px !important;
+      padding-top: 0 !important;
+      position: relative !important;
+      top: -1px !important;
+    }
+    
+    /* Force CTA container to have NO bottom space */
+    .intro-section.cc-cta .cta-container {
+      margin-bottom: -1px !important;
+      padding-bottom: 0 !important;
+      overflow: visible !important;
+    }
+    
+    /* Remove ALL possible spacing from button */
+    .intro-section.cc-cta .button.cc-jumbo-button {
+      margin-bottom: -1px !important;
+      position: relative !important;
+      z-index: 0 !important;
+    }
+    
+    /* Force text elements to have proper spacing */
+    .intro-section.cc-cta .cta-text,
+    .intro-section.cc-cta .cta-paragraph,
+    .intro-section.cc-cta .h2-headingscta,
+    .intro-section.cc-cta .paragraphscta {
+      overflow: visible !important;
+    }
+    
+    /* Nuclear option - transform to eliminate gaps */
+    .intro-section.cc-cta {
+      transform: translateY(0) !important;
+    }
+    
+    .intro-section.cc-cta + .intro-section {
+      transform: translateY(-1px) !important;
+    }
     .paragraphx {
       color: #2c3e50;
     }
