@@ -21,6 +21,19 @@
       overflow-x: hidden; /* Prevent horizontal scrolling */
     }
     
+    /* Smooth Scrolling for Desktop */
+    @media (min-width: 1200px) {
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    
     /* General Mobile Responsiveness */
     * {
       box-sizing: border-box;
@@ -32,6 +45,82 @@
     }
     .intro-section {
       background-color: #ffffff;
+      position: relative;
+    }
+    
+    /* Desktop Intro Section Enhancements */
+    @media (min-width: 1200px) {
+      .intro-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      }
+      
+      .intro-header {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      
+      .intro-content {
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .h1-headtext {
+        font-size: 72px !important;
+        font-weight: 800 !important;
+        line-height: 1.1 !important;
+        margin-bottom: 30px !important;
+        letter-spacing: -2px !important;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .sub-heading-light {
+        font-size: 28px !important;
+        font-weight: 400 !important;
+        color: #666 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 50px !important;
+        letter-spacing: 0.5px !important;
+      }
+      
+      .button-content {
+        margin-top: 60px !important;
+      }
+      
+      .button.cc-jumbo-button.cc-jumbo-white {
+        font-size: 18px !important;
+        padding: 20px 45px !important;
+        border-radius: 12px !important;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 10px 30px rgba(44, 62, 80, 0.2) !important;
+      }
+      
+      .button.cc-jumbo-button.cc-jumbo-white:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 40px rgba(44, 62, 80, 0.3) !important;
+        background: #34495e !important;
+      }
+    }
+    
+    @media (min-width: 1440px) {
+      .h1-headtext {
+        font-size: 84px !important;
+        letter-spacing: -2.5px !important;
+      }
+      
+      .sub-heading-light {
+        font-size: 32px !important;
+        letter-spacing: 0.8px !important;
+      }
     }
     .content-section {
       background-color: #f8f9fa;
@@ -685,6 +774,355 @@
     .text-block-2 {
       font-size: 16px !important;
       font-weight: 600 !important;
+    }
+    
+    /* Desktop Focus - Enhanced Layout */
+    @media (min-width: 1200px) {
+      .main-content {
+        max-width: 1200px !important;
+        padding: 100px 40px !important;
+      }
+      
+      .about-container {
+        max-width: 1200px !important;
+        padding: 100px 40px !important;
+      }
+      
+      .grid-content {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 40px !important;
+        max-width: 1200px !important;
+        padding: 0 20px !important;
+      }
+      
+      .projects-main-title {
+        font-size: 56px !important;
+        margin-bottom: 30px !important;
+        letter-spacing: -0.5px !important;
+      }
+      
+      .projects-subtitle {
+        font-size: 20px !important;
+        margin-bottom: 80px !important;
+        max-width: 800px !important;
+      }
+      
+      .project-card {
+        min-height: 400px !important;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+      
+      .project-card:hover {
+        transform: translateY(-20px) scale(1.02) !important;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2) !important;
+      }
+      
+      .project-card .picture-section {
+        height: 280px !important;
+        overflow: hidden !important;
+      }
+      
+      .project-card .picture-section img {
+        height: 280px !important;
+        transition: transform 0.4s ease !important;
+      }
+      
+      .project-card:hover .picture-section img {
+        transform: scale(1.1) !important;
+      }
+      
+      .project-card .text-section,
+      .project-card .text-sections {
+        padding: 40px 30px !important;
+        min-height: 120px !important;
+      }
+      
+      .project-card .heading-2 {
+        font-size: 24px !important;
+        margin-bottom: 15px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.3px !important;
+      }
+      
+      .project-description {
+        font-size: 16px !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Enhanced About Section for Desktop */
+      .about-main-title {
+        font-size: 64px !important;
+        margin-bottom: 25px !important;
+        letter-spacing: -1px !important;
+      }
+      
+      .about-subtitle {
+        font-size: 28px !important;
+        margin-bottom: 0 !important;
+      }
+      
+      .about-content-grid {
+        gap: 50px !important;
+        max-width: 1000px !important;
+      }
+      
+      .vision-card, .mission-card {
+        padding: 50px !important;
+        min-height: 400px !important;
+      }
+      
+      .card-title {
+        font-size: 32px !important;
+        margin-bottom: 30px !important;
+      }
+      
+      .card-description {
+        font-size: 20px !important;
+        line-height: 1.8 !important;
+      }
+      
+      .mission-points {
+        gap: 35px !important;
+      }
+      
+      .point-text {
+        font-size: 18px !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Enhanced Navigation for Desktop */
+      .navigation-item {
+        font-size: 16px !important;
+        padding: 12px 24px !important;
+        margin: 0 4px !important;
+        transition: all 0.3s ease !important;
+        border-radius: 8px !important;
+      }
+      
+      .navigation-item:hover {
+        background-color: rgba(44, 62, 80, 0.1) !important;
+        transform: translateY(-2px) !important;
+      }
+      
+      .text-block-9 {
+        font-size: 16px !important;
+        margin-top: 8px !important;
+      }
+      
+      /* Enhanced CTA Section for Desktop */
+      .cta-container {
+        padding: 100px 40px !important;
+        min-height: 60vh !important;
+      }
+      
+      .h2-headingscta {
+        font-size: 48px !important;
+        margin-bottom: 30px !important;
+        letter-spacing: -0.5px !important;
+      }
+      
+      .paragraphscta {
+        font-size: 22px !important;
+        line-height: 1.6 !important;
+        max-width: 800px !important;
+        margin: 0 auto 40px !important;
+      }
+      
+      .button.cc-jumbo-button {
+        font-size: 18px !important;
+        padding: 20px 45px !important;
+        border-radius: 12px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+      
+      .button.cc-jumbo-button:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+      }
+    }
+    
+    /* Large Desktop Focus */
+    @media (min-width: 1440px) {
+      .main-content {
+        max-width: 1400px !important;
+        padding: 120px 60px !important;
+      }
+      
+      .about-container {
+        max-width: 1400px !important;
+        padding: 120px 60px !important;
+      }
+      
+      .grid-content {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 50px !important;
+        max-width: 1400px !important;
+      }
+      
+      .projects-main-title {
+        font-size: 64px !important;
+        letter-spacing: -0.8px !important;
+      }
+      
+      .about-main-title {
+        font-size: 72px !important;
+        letter-spacing: -1.2px !important;
+      }
+      
+      .about-subtitle {
+        font-size: 32px !important;
+      }
+      
+      .project-card {
+        min-height: 450px !important;
+      }
+      
+      .project-card .picture-section {
+        height: 320px !important;
+      }
+      
+      .project-card .picture-section img {
+        height: 320px !important;
+      }
+      
+      /* Enhanced Footer for Large Desktop */
+      .footer-section {
+        padding: 40px 60px !important;
+      }
+      
+      .paragraph-tiny {
+        font-size: 16px !important;
+        text-align: center !important;
+        letter-spacing: 0.5px !important;
+      }
+    }
+    
+    /* Ultra-wide Desktop Support */
+    @media (min-width: 1920px) {
+      .main-content {
+        max-width: 1600px !important;
+        padding: 140px 80px !important;
+      }
+      
+      .about-container {
+        max-width: 1600px !important;
+        padding: 140px 80px !important;
+      }
+      
+      .grid-content {
+        max-width: 1600px !important;
+        gap: 60px !important;
+      }
+      
+      .projects-main-title {
+        font-size: 72px !important;
+        letter-spacing: -1px !important;
+      }
+      
+      .about-main-title {
+        font-size: 80px !important;
+        letter-spacing: -1.5px !important;
+      }
+      
+      .h1-headtext {
+        font-size: 96px !important;
+        letter-spacing: -3px !important;
+      }
+      
+      .sub-heading-light {
+        font-size: 36px !important;
+        letter-spacing: 1px !important;
+      }
+    }
+    
+    /* Desktop Performance Optimizations */
+    @media (min-width: 1200px) {
+      .project-card {
+        will-change: transform, box-shadow;
+      }
+      
+      .project-card .picture-section img {
+        will-change: transform;
+      }
+      
+      .button.cc-jumbo-button {
+        will-change: transform, box-shadow;
+      }
+      
+      .navigation-item {
+        will-change: transform, background-color;
+      }
+      
+      /* Desktop Loading Animations */
+      .intro-text {
+        animation: fadeInUp 1s ease-out 0.5s both;
+      }
+      
+      .project-card {
+        animation: fadeInUp 0.8s ease-out both;
+      }
+      
+      .project-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      
+      .project-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      
+      .project-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      
+      .vision-card, .mission-card {
+        animation: fadeInUp 0.8s ease-out both;
+      }
+      
+      .vision-card {
+        animation-delay: 0.2s;
+      }
+      
+      .mission-card {
+        animation-delay: 0.4s;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Desktop Hover States */
+      .about-section-professional {
+        transition: background-attachment 0.3s ease;
+      }
+      
+      .about-section-professional:hover {
+        background-attachment: scroll;
+      }
+      
+      /* Desktop Focus States */
+      .navigation-item:focus,
+      .button.cc-jumbo-button:focus {
+        outline: 2px solid #3498db;
+        outline-offset: 2px;
+      }
+      
+      /* Desktop Selection Styling */
+      ::selection {
+        background-color: rgba(52, 152, 219, 0.2);
+        color: #2c3e50;
+      }
+      
+      ::-moz-selection {
+        background-color: rgba(52, 152, 219, 0.2);
+        color: #2c3e50;
+      }
     }
     
     /* Responsive Design */
