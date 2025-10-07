@@ -15,6 +15,8 @@
 
 /* Ensure 3 cards in one row in Our Gallery on desktop */
 @media (min-width: 992px) {
+  /* Remove base left/right padding so grid padding is visible */
+  .projects-section-professional .main-content { padding-left: 0 !important; padding-right: 0 !important; }
   .projects-section-professional .grid-content {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -28,8 +30,8 @@
   /* Make each card horizontal */
   .projects-section-professional .project-card {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: stretch;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -50,6 +52,7 @@
 
 /* Tablet layout (768px–991px): 2 columns, horizontal square cards */
 @media (min-width: 768px) and (max-width: 991px) {
+  .projects-section-professional .main-content { padding-left: 0 !important; padding-right: 0 !important; }
   .projects-section-professional .grid-content {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -62,8 +65,8 @@
   }
   .projects-section-professional .project-card {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: stretch;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -168,6 +171,7 @@
 
 /* Mobile layout (<768px): 1 column, vertical square cards */
 @media (max-width: 767px) {
+  .projects-section-professional .main-content { padding-left: 0 !important; padding-right: 0 !important; }
   .projects-section-professional .grid-content {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -178,8 +182,8 @@
     padding-right: 16px;
   }
   .projects-section-professional .project-card {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     aspect-ratio: 1 / 1;
     overflow: hidden;
   }
