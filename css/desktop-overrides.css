@@ -30,26 +30,28 @@
     width: 100% !important;
     box-sizing: border-box;
   }
-  /* Make each card horizontal */
+  /* Make each card vertical square: 3/4 image (top), 1/4 text (bottom) */
   .projects-section-professional .project-card {
     width: 100%;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: stretch;
     overflow: hidden;
     aspect-ratio: 1 / 1 !important;
     min-height: 0;
   }
   .projects-section-professional .project-card .picture-section {
-    flex: 0 0 40%;
-    max-width: 40%;
-    height: 100%;
-    border-radius: 20px 0 0 20px;
+    flex: 0 0 75% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
   }
   .projects-section-professional .project-card .text-section {
-    flex: 1 1 auto;
-    padding: 24px 22px;
-    text-align: left;
+    flex: 0 0 25% !important;
+    padding: 16px 18px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
   }
 }
 
@@ -72,22 +74,24 @@
   .projects-section-professional .project-card {
     width: 100%;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: stretch;
     overflow: hidden;
     aspect-ratio: 1 / 1 !important;
     min-height: 0;
   }
   .projects-section-professional .project-card .picture-section {
-    flex: 0 0 45%;
-    max-width: 45%;
-    height: 100%;
-    border-radius: 20px 0 0 20px;
+    flex: 0 0 75% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
   }
   .projects-section-professional .project-card .text-section {
-    flex: 1 1 auto;
-    padding: 20px 18px;
-    text-align: left;
+    flex: 0 0 25% !important;
+    padding: 16px 16px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
   }
 }
 
@@ -197,14 +201,16 @@
     overflow: hidden;
   }
   .projects-section-professional .project-card .picture-section {
-    flex: 0 0 60%;
-    max-width: 100%;
-    height: 100%;
-    border-radius: 20px 20px 0 0;
+    flex: 0 0 75% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
   }
   .projects-section-professional .project-card .text-section {
-    flex: 1 1 auto;
-    padding: 18px 16px;
-    text-align: left;
+    flex: 0 0 25% !important;
+    padding: 14px 16px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
   }
 }
