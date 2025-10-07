@@ -307,6 +307,100 @@
       border-radius: 12px 12px 0 0;
     }
     
+    /* ============================= */
+    /* Home: Our Gallery - Inline CSS */
+    /* Force reliable overrides inline */
+    /* ============================= */
+    /* Reset padding so grid padding is visible */
+    .content-section.projects-section-professional .main-content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Desktop default (≥992px): 3 columns */
+    @media (min-width: 992px) {
+      .content-section.projects-section-professional .grid-content {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 32px !important;
+        padding: 0 24px !important;
+        align-items: stretch !important;
+        align-content: start !important;
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* Wider desktops */
+    @media (min-width: 1280px) {
+      .content-section.projects-section-professional .grid-content { gap: 40px !important; padding: 0 32px !important; }
+    }
+    @media (min-width: 1440px) {
+      .content-section.projects-section-professional .grid-content { gap: 48px !important; padding: 0 40px !important; }
+    }
+
+    /* Tablet (768–991px): 2 columns */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .content-section.projects-section-professional .grid-content {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 28px !important;
+        padding: 0 20px !important;
+        align-items: stretch !important;
+        align-content: start !important;
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* Mobile (<768px): 1 column */
+    @media (max-width: 767px) {
+      .content-section.projects-section-professional .grid-content {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 16px !important;
+        align-items: stretch !important;
+        align-content: start !important;
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* Card: Square, 3/4 image (top), 1/4 text (bottom) */
+    .content-section.projects-section-professional .project-card {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      aspect-ratio: 1 / 1 !important;
+      border-radius: 20px !important;
+    }
+    .content-section.projects-section-professional .project-card .picture-section {
+      position: relative !important;
+      overflow: hidden !important;
+      flex: 0 0 75% !important;
+      height: 100% !important;
+      border-radius: 20px 20px 0 0 !important;
+    }
+    .content-section.projects-section-professional .project-card .picture-section img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+    }
+    .content-section.projects-section-professional .project-card .text-section {
+      flex: 0 0 25% !important;
+      padding: 14px 16px !important;
+      display: flex !important;
+      align-items: center !important;
+      text-align: left !important;
+    }
+
     .project-card:hover .picture-section img {
       transform: scale(1.05);
     }
@@ -1019,7 +1113,6 @@
       }
     }
 </style>
-  <link href="css/desktop-overrides.css?v=20251007" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
