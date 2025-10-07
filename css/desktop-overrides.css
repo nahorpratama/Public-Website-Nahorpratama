@@ -9,6 +9,8 @@
     grid-template-rows: auto !important;
     align-items: stretch !important;
     align-content: start !important;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   /* Make each card horizontal */
   .projects-section-professional .project-card {
@@ -48,6 +50,8 @@
     grid-template-rows: auto !important;
     align-items: stretch !important;
     align-content: start !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .projects-section-professional .project-card {
     width: 100%;
@@ -148,10 +152,10 @@
 
 /* More generous gap for the homepage Our Gallery section at larger desktops */
 @media (min-width: 1280px) {
-  .projects-section-professional .grid-content { gap: 40px !important; }
+  .projects-section-professional .grid-content { gap: 40px !important; padding-left: 32px; padding-right: 32px; }
 }
 @media (min-width: 1440px) {
-  .projects-section-professional .grid-content { gap: 48px !important; }
+  .projects-section-professional .grid-content { gap: 48px !important; padding-left: 40px; padding-right: 40px; }
 }
 
 /* Desktop-only utility: prevent overly wide text */
@@ -169,6 +173,8 @@
     gap: 20px;
     align-items: stretch !important;
     align-content: start !important;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .projects-section-professional .project-card {
     display: flex;
