@@ -6,6 +6,9 @@
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 32px;
+    grid-template-rows: auto !important;
+    align-items: stretch !important;
+    align-content: start !important;
   }
   /* Make each card horizontal */
   .projects-section-professional .project-card {
