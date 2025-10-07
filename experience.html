@@ -775,9 +775,20 @@
     }
 
   /* Header text animations */
-  @keyframes headerFadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .intro-header-experience .h1-headtext { opacity: 0 !important; will-change: transform; animation: headerFadeUp 700ms ease-out forwards !important; animation-delay: 80ms !important; }
-  .intro-header-experience .sub-heading-light2, .intro-header-experience .experience-detail-text { opacity: 0 !important; will-change: transform; animation: headerFadeUp 800ms ease-out forwards !important; animation-delay: 220ms !important; }
+  @keyframes headerFadeUp { 
+    0% { opacity: 0; transform: translateY(20px); } 
+    100% { opacity: 1 !important; transform: translateY(0); } 
+  }
+  .intro-header-experience .h1-headtext { 
+    opacity: 1; 
+    animation: headerFadeUp 700ms ease-out forwards; 
+    animation-delay: 80ms; 
+  }
+  .intro-header-experience .sub-heading-light2, .intro-header-experience .experience-detail-text { 
+    opacity: 1; 
+    animation: headerFadeUp 800ms ease-out forwards; 
+    animation-delay: 220ms; 
+  }
 </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
