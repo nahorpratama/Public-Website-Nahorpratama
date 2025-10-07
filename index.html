@@ -311,10 +311,9 @@
     /* Home: Our Gallery - Inline CSS */
     /* Force reliable overrides inline */
     /* ============================= */
-    /* Reset padding so grid padding is visible */
+    /* Match Vision & Mission vertical rhythm and expose grid padding */
     .content-section.projects-section-professional .main-content {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      padding: 80px 0 !important;
     }
 
     /* Desktop default (≥992px): 3 columns */
@@ -327,7 +326,8 @@
         align-items: stretch !important;
         align-content: start !important;
         width: 100% !important;
-        max-width: none !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
         box-sizing: border-box !important;
       }
     }
@@ -350,7 +350,8 @@
         align-items: stretch !important;
         align-content: start !important;
         width: 100% !important;
-        max-width: none !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
         box-sizing: border-box !important;
       }
     }
@@ -365,9 +366,15 @@
         align-items: stretch !important;
         align-content: start !important;
         width: 100% !important;
-        max-width: none !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
         box-sizing: border-box !important;
       }
+    }
+
+    /* Mobile vertical padding alignment */
+    @media (max-width: 767px) {
+      .content-section.projects-section-professional .main-content { padding-top: 60px !important; padding-bottom: 60px !important; }
     }
 
     /* Card: Square, 3/4 image (top), 1/4 text (bottom) */
