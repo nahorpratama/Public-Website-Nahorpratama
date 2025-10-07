@@ -6,11 +6,11 @@
   overflow: hidden;
 }
 .projects-section-professional .project-card .picture-section img {
-  display: block;
+  display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  object-position: center;
+  object-fit: cover !important;
+  object-position: center !important;
 }
 
 /* Ensure 3 cards in one row in Our Gallery on desktop */
@@ -26,6 +26,9 @@
     align-content: start !important;
     padding-left: 24px;
     padding-right: 24px;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
   }
   /* Make each card horizontal */
   .projects-section-professional .project-card {
@@ -34,7 +37,7 @@
     flex-direction: row !important;
     align-items: stretch;
     overflow: hidden;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1 !important;
     min-height: 0;
   }
   .projects-section-professional .project-card .picture-section {
@@ -62,6 +65,9 @@
     align-content: start !important;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
   }
   .projects-section-professional .project-card {
     width: 100%;
@@ -69,7 +75,7 @@
     flex-direction: row !important;
     align-items: stretch;
     overflow: hidden;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1 !important;
     min-height: 0;
   }
   .projects-section-professional .project-card .picture-section {
@@ -180,11 +186,14 @@
     align-content: start !important;
     padding-left: 16px;
     padding-right: 16px;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
   }
   .projects-section-professional .project-card {
     display: flex !important;
     flex-direction: column !important;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1 !important;
     overflow: hidden;
   }
   .projects-section-professional .project-card .picture-section {
