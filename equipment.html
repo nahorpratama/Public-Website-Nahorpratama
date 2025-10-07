@@ -920,6 +920,10 @@
 
 
 
+  /* Header text animations */
+  @keyframes headerFadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .intro-header-equipment .h1-headtext { opacity: 0; will-change: transform; animation: headerFadeUp 700ms ease-out forwards; animation-delay: 80ms; }
+  .intro-header-equipment .sub-heading-light2 { opacity: 0; will-change: transform; animation: headerFadeUp 800ms ease-out forwards; animation-delay: 220ms; }
 </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
