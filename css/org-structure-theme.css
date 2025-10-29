@@ -1,0 +1,62 @@
+/* Organization Structure Visual Theme (non-destructive)
+   Apply by adding class `org-structure-theme` on the chart container
+   This only changes visuals (colors, fonts, shadows), not layout.
+*/
+
+.org-structure-theme {
+  /* Theme tokens */
+  --org-node-bg: #ffffff;
+  --org-node-stroke: #0f4c81; /* deep corporate blue */
+  --org-connector: #0f4c81;
+  --org-text: #111827; /* near-black */
+  --org-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --org-shadow-2: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --org-stroke-width: 1.75;
+}
+
+/* Ensure the SVG scales properly inside the container */
+.org-structure-theme svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Node boxes */
+.org-structure-theme svg rect {
+  fill: var(--org-node-bg);
+  stroke: var(--org-node-stroke);
+  stroke-width: var(--org-stroke-width);
+  shape-rendering: geometricPrecision;
+  /* Soft elevation to mimic polished card look */
+  filter: drop-shadow(var(--org-shadow-1)) drop-shadow(var(--org-shadow-2));
+}
+
+/* Connectors */
+.org-structure-theme svg line {
+  stroke: var(--org-connector);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+/* Labels */
+.org-structure-theme svg text {
+  fill: var(--org-text) !important; /* override inline presentation fills */
+  font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Container polish */
+.org-structure-theme {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+}
+
+/* Optional: subtle background for the section behind the chart if needed */
+.org-structure-theme__surface {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+}
