@@ -71,6 +71,19 @@
   margin: 40px auto;
 }
 
+/* Device-specific outer margins */
+@media (max-width: 767.98px) {
+  .org-structure-theme.org-container {
+    margin: 24px auto; /* Mobile */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .org-structure-theme.org-container {
+    margin: 32px auto; /* Tablet */
+  }
+}
+
 /* Optional: subtle background for the section behind the chart if needed */
 .org-structure-theme__surface {
   background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
