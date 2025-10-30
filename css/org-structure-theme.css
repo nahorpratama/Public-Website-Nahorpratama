@@ -17,7 +17,7 @@
 /* Ensure the SVG scales properly inside the container */
 .org-structure-theme svg {
   width: 100%;
-  height: 100%;
+  height: auto; /* let intrinsic aspect ratio decide height */
   display: block;
 }
 
@@ -63,6 +63,12 @@
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+}
+
+/* Override container sizing: follow SVG height and add outer margin */
+.org-structure-theme.org-container {
+  height: auto;
+  margin: 40px auto;
 }
 
 /* Optional: subtle background for the section behind the chart if needed */
