@@ -13,6 +13,18 @@
     font-size: 48px !important;
     line-height: 1.2 !important;
   }
+
+  /* Header description text */
+  .intro-header-about .sub-heading-light2,
+  .intro-header-project .sub-heading-light2,
+  .intro-header-experience .sub-heading-light2,
+  .intro-header-experience .experience-detail-text,
+  .intro-header-equipment .sub-heading-light2,
+  .intro-header-team .sub-heading-light2,
+  .intro-header-contact .sub-heading-light2 {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
 }
 
 /* Tablet (768px–1199.98px) */
@@ -26,6 +38,18 @@
     font-size: 40px !important;
     line-height: 1.25 !important;
   }
+
+  /* Header description text */
+  .intro-header-about .sub-heading-light2,
+  .intro-header-project .sub-heading-light2,
+  .intro-header-experience .sub-heading-light2,
+  .intro-header-experience .experience-detail-text,
+  .intro-header-equipment .sub-heading-light2,
+  .intro-header-team .sub-heading-light2,
+  .intro-header-contact .sub-heading-light2 {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
 }
 
 /* Mobile (≤767.98px) */
@@ -38,5 +62,17 @@
   .intro-header-contact .h1-headtext {
     font-size: 32px !important;
     line-height: 1.25 !important;
+  }
+
+  /* Header description text */
+  .intro-header-about .sub-heading-light2,
+  .intro-header-project .sub-heading-light2,
+  .intro-header-experience .sub-heading-light2,
+  .intro-header-experience .experience-detail-text,
+  .intro-header-equipment .sub-heading-light2,
+  .intro-header-team .sub-heading-light2,
+  .intro-header-contact .sub-heading-light2 {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
   }
 }
