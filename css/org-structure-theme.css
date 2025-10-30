@@ -48,6 +48,15 @@
   letter-spacing: 0.2px;
 }
 
+/* Icons styling */
+.org-structure-theme svg .org-icon { pointer-events: none; }
+.org-structure-theme svg .org-icon circle,
+.org-structure-theme svg .org-icon path {
+  stroke: var(--org-node-stroke);
+  fill: none;
+  stroke-width: 1.5;
+}
+
 /* Container polish */
 .org-structure-theme {
   background: #ffffff;
