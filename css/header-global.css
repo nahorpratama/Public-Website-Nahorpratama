@@ -1,0 +1,42 @@
+/* Global Header Typography for section headers (excluding index.html)
+   Targets page-specific intro headers and unifies per-device font sizes.
+*/
+
+/* Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .intro-header-about .h1-headtext,
+  .intro-header-project .h1-headtext,
+  .intro-header-experience .h1-headtext,
+  .intro-header-equipment .h1-headtext,
+  .intro-header-team .h1-headtext,
+  .intro-header-contact .h1-headtext {
+    font-size: 48px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Tablet (768px–1199.98px) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .intro-header-about .h1-headtext,
+  .intro-header-project .h1-headtext,
+  .intro-header-experience .h1-headtext,
+  .intro-header-equipment .h1-headtext,
+  .intro-header-team .h1-headtext,
+  .intro-header-contact .h1-headtext {
+    font-size: 40px !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* Mobile (≤767.98px) */
+@media (max-width: 767.98px) {
+  .intro-header-about .h1-headtext,
+  .intro-header-project .h1-headtext,
+  .intro-header-experience .h1-headtext,
+  .intro-header-equipment .h1-headtext,
+  .intro-header-team .h1-headtext,
+  .intro-header-contact .h1-headtext {
+    font-size: 32px !important;
+    line-height: 1.25 !important;
+  }
+}
