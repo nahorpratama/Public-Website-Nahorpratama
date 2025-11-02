@@ -68,33 +68,13 @@
     
     /* Professional About Section Styling */
     .about-section-professional {
-      background-color: #2c3e50;
-      background-image: url('./images/Copy-of-ENP-WEB-1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
       margin: 0;
       position: relative;
       overflow: hidden;
       min-height: 100vh;
+      background-color: #2c3e50; /* Fallback color */
     }
-    
-    /* Fallback for background image */
-    .about-section-professional::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('./images/Copy-of-ENP-WEB-1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-    
+
     .about-section-professional::before {
       content: '';
       position: absolute;
@@ -102,8 +82,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.2) 0%, rgba(52, 73, 94, 0.3) 50%, rgba(44, 62, 80, 0.2) 100%);
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.45) 0%, rgba(52, 73, 94, 0.55) 50%, rgba(44, 62, 80, 0.45) 100%);
       z-index: 0;
+      transition: opacity 2s ease;
     }
     
     .about-container {
@@ -112,6 +93,26 @@
       padding: 80px 20px;
       position: relative;
       z-index: 1;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .hero-video.is-visible {
+      opacity: 1;
+    }
+
+    .about-section-professional.overlay-fade::before {
+      opacity: 0.85;
     }
     
     .about-header {
@@ -1094,6 +1095,10 @@
     </div>
   </div>
   <div class="content-section about-section-professional">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+      <source src="images/Video/petal_20251102_153115.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="about-container">
         <div class="about-header">
           <h2 class="about-main-title">What We Do</h2>
@@ -1180,6 +1185,45 @@
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63cf988ed154ef57f98c7ce0" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+    (function() {
+      const video = document.getElementById('heroVideo');
+      const section = document.querySelector('.about-section-professional');
+
+      if (!video || !section) return;
+
+      const FADE_DURATION = 2.5; // seconds
+
+      const handleVisibility = () => {
+        const duration = video.duration || 0;
+        if (!duration) return;
+
+        const current = video.currentTime;
+
+        if (current < FADE_DURATION) {
+          video.classList.add('is-visible');
+          section.classList.remove('overlay-fade');
+        } else if (current > duration - FADE_DURATION) {
+          video.classList.remove('is-visible');
+          section.classList.add('overlay-fade');
+        } else {
+          video.classList.add('is-visible');
+          section.classList.remove('overlay-fade');
+        }
+      };
+
+      video.addEventListener('loadeddata', () => {
+        video.classList.add('is-visible');
+        section.classList.remove('overlay-fade');
+      });
+
+      video.addEventListener('play', () => {
+        handleVisibility();
+      });
+
+      video.addEventListener('timeupdate', handleVisibility);
+    })();
+  </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
