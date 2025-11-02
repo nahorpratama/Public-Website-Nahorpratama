@@ -77,6 +77,10 @@
       opacity: 1;
     }
 
+    .hero-bg-video.is-fadeout {
+      opacity: 0;
+    }
+
     .footer-section {
       background-color: #2c3e50;
       color: #ffffff;
@@ -356,7 +360,7 @@
       padding: 80px 0 !important;
     }
 
-    /* Desktop default (≥992px): 3 columns */
+    /* Desktop default (?992px): 3 columns */
     @media (min-width: 992px) {
       .content-section.projects-section-professional .grid-content {
         display: grid !important;
@@ -380,7 +384,7 @@
       .content-section.projects-section-professional .grid-content { gap: 48px !important; padding: 0 20px !important; }
     }
 
-    /* Tablet (768–991px): 2 columns */
+    /* Tablet (768?991px): 2 columns */
     @media (min-width: 768px) and (max-width: 991px) {
       .content-section.projects-section-professional .grid-content {
         display: grid !important;
@@ -1228,13 +1232,37 @@
       const heroVideo = document.getElementById('introHeroVideo');
       if (!heroVideo) return;
 
-      const showVideo = () => heroVideo.classList.add('is-visible');
+      const FADE_WINDOW = 2.5; // seconds for fade in/out
+
+      const updateFadeState = () => {
+        const duration = heroVideo.duration || 0;
+        if (!duration) return;
+
+        const current = heroVideo.currentTime;
+
+        heroVideo.classList.add('is-visible');
+
+        if (current > duration - FADE_WINDOW) {
+          heroVideo.classList.add('is-fadeout');
+        } else if (current < FADE_WINDOW) {
+          heroVideo.classList.remove('is-fadeout');
+        } else {
+          heroVideo.classList.remove('is-fadeout');
+        }
+      };
+
+      const onLoaded = () => {
+        updateFadeState();
+      };
 
       if (heroVideo.readyState >= 2) {
-        showVideo();
+        onLoaded();
       } else {
-        heroVideo.addEventListener('loadeddata', showVideo, { once: true });
+        heroVideo.addEventListener('loadeddata', onLoaded, { once: true });
       }
+
+      heroVideo.addEventListener('timeupdate', updateFadeState);
+      heroVideo.addEventListener('play', updateFadeState);
     })();
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
