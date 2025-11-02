@@ -24,6 +24,11 @@ This is a static HTML website for Energi Niaga Pratama, an engineering and const
 - 2025-11-02: Initial Replit setup with Express server for static file serving
 - Added server.js to serve the static HTML/CSS/JS files
 - Configured for Replit environment with proper port and host settings
+- Fixed video background in intro section:
+  - Added proper MIME type (video/mp4) and range request support in Express server
+  - Override CSS to make .intro-header background transparent
+  - Reduced gradient overlay opacity for better video visibility
+  - Added JavaScript to ensure video autoplay works across browsers
 
 ## Project Type
 Static website with no backend logic - purely presentation/informational site for a construction/engineering company.

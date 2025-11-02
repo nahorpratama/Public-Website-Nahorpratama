@@ -1239,12 +1239,7 @@
   <script>
     (function() {
       const heroVideo = document.getElementById('introHeroVideo');
-      if (!heroVideo) {
-        console.error('Hero video element not found');
-        return;
-      }
-
-      console.log('Hero video element found, initializing...');
+      if (!heroVideo) return;
 
       const FADE_WINDOW = 2.5;
 
@@ -1265,44 +1260,19 @@
       };
 
       const playVideo = () => {
-        console.log('Attempting to play video. Current state:', {
-          paused: heroVideo.paused,
-          readyState: heroVideo.readyState,
-          networkState: heroVideo.networkState,
-          src: heroVideo.currentSrc,
-          hasClass: heroVideo.classList.contains('is-visible')
-        });
-        
         heroVideo.play().then(() => {
-          console.log('Video playing successfully');
           heroVideo.classList.add('is-visible');
           heroVideo.style.opacity = '1';
-          
-          setTimeout(() => {
-            const computedStyle = window.getComputedStyle(heroVideo);
-            console.log('Video computed styles after 100ms:', {
-              opacity: computedStyle.opacity,
-              zIndex: computedStyle.zIndex,
-              display: computedStyle.display,
-              visibility: computedStyle.visibility
-            });
-          }, 100);
-        }).catch((error) => {
-          console.error('Error playing video:', error);
+        }).catch(() => {
           heroVideo.classList.add('is-visible');
           heroVideo.style.opacity = '1';
         });
       };
 
       const onLoaded = () => {
-        console.log('Video loaded, ready to play');
         updateFadeState();
         playVideo();
       };
-
-      heroVideo.addEventListener('error', (e) => {
-        console.error('Video loading error:', e);
-      });
 
       if (heroVideo.readyState >= 2) {
         onLoaded();
@@ -1315,7 +1285,6 @@
 
       setTimeout(() => {
         if (heroVideo.paused) {
-          console.log('Video still paused after 1s, attempting to play...');
           playVideo();
         }
       }, 1000);
