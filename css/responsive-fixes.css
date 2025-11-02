@@ -1,0 +1,284 @@
+/* Responsive Fixes untuk PT Eliazer Nahor Pratama Website */
+/* File ini menangani semua defect responsive design di tablet dan mobile */
+
+/* ===== TABLET (max-width: 991px) ===== */
+@media screen and (max-width: 991px) {
+  
+  /* About Section - Vision & Mission Cards */
+  .about-section-professional .about-container {
+    padding: 40px 30px !important;
+  }
+  
+  .about-section-professional .about-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .vision-card, .mission-card {
+    padding: 30px !important;
+  }
+  
+  /* Gallery Section */
+  .projects-section-professional {
+    padding: 40px 20px !important;
+  }
+  
+  .projects-section-professional .main-content {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  
+  .projects-section-professional .grid-content {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    max-width: 450px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .first-block, .second-block, .third-block {
+    max-width: 450px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    aspect-ratio: 4 / 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .picture-section {
+    position: relative !important;
+    width: 100% !important;
+    flex: 1 !important;
+    overflow: hidden !important;
+    background: #f5f5f5 !important;
+  }
+  
+  .picture-section img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .text-section {
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px !important;
+  }
+  
+  /* CTA Section */
+  .intro-section.cc-cta {
+    padding: 50px 30px !important;
+  }
+  
+  .cta-container {
+    padding: 40px 30px !important;
+  }
+  
+  .cta-wrap {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  .h2-headingscta {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .paragraphscta {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Navigation */
+  .navigation {
+    padding: 10px 20px !important;
+  }
+  
+  .text-block-9 {
+    font-size: 11px !important;
+  }
+  
+  /* Titles */
+  .projects-main-title, .about-main-title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+  
+  .projects-subtitle, .about-subtitle {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* ===== MOBILE (max-width: 767px) ===== */
+@media screen and (max-width: 767px) {
+  
+  /* About Section */
+  .about-section-professional .about-container {
+    padding: 30px 20px !important;
+  }
+  
+  .about-section-professional .about-content-grid {
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+  
+  .vision-card, .mission-card {
+    padding: 25px !important;
+  }
+  
+  .card-title {
+    font-size: 20px !important;
+  }
+  
+  .card-description, .point-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Gallery Section */
+  .projects-section-professional {
+    padding: 30px 15px !important;
+  }
+  
+  .projects-section-professional .main-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  .projects-section-professional .grid-content {
+    max-width: 380px !important;
+    gap: 25px !important;
+  }
+  
+  .first-block, .second-block, .third-block {
+    max-width: 380px !important;
+  }
+  
+  .text-section {
+    height: 50px !important;
+    padding: 12px !important;
+  }
+  
+  .heading-2 {
+    font-size: 18px !important;
+  }
+  
+  /* CTA Section */
+  .intro-section.cc-cta {
+    padding: 40px 20px !important;
+  }
+  
+  .cta-container {
+    padding: 30px 20px !important;
+  }
+  
+  .h2-headingscta {
+    font-size: 26px !important;
+  }
+  
+  .paragraphscta {
+    font-size: 15px !important;
+  }
+  
+  /* Buttons */
+  .button.cc-jumbo-button {
+    padding: 14px 28px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Titles */
+  .projects-main-title, .about-main-title {
+    font-size: 28px !important;
+  }
+  
+  .projects-subtitle, .about-subtitle {
+    font-size: 15px !important;
+  }
+}
+
+/* ===== MOBILE SMALL (max-width: 479px) ===== */
+@media screen and (max-width: 479px) {
+  
+  /* About Section */
+  .about-section-professional .about-container {
+    padding: 25px 15px !important;
+  }
+  
+  .vision-card, .mission-card {
+    padding: 20px !important;
+  }
+  
+  .card-title {
+    font-size: 18px !important;
+  }
+  
+  .card-description, .point-text {
+    font-size: 13px !important;
+  }
+  
+  /* Gallery Section */
+  .projects-section-professional {
+    padding: 25px 10px !important;
+  }
+  
+  .projects-section-professional .main-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .projects-section-professional .grid-content {
+    max-width: 320px !important;
+    gap: 20px !important;
+  }
+  
+  .first-block, .second-block, .third-block {
+    max-width: 320px !important;
+  }
+  
+  /* CTA Section */
+  .cta-container {
+    padding: 25px 15px !important;
+  }
+  
+  .h2-headingscta {
+    font-size: 22px !important;
+  }
+  
+  .paragraphscta {
+    font-size: 14px !important;
+  }
+  
+  /* Buttons */
+  .button.cc-jumbo-button {
+    padding: 12px 24px !important;
+    font-size: 13px !important;
+  }
+  
+  /* Titles */
+  .projects-main-title, .about-main-title {
+    font-size: 24px !important;
+  }
+  
+  .projects-subtitle, .about-subtitle {
+    font-size: 14px !important;
+  }
+  
+  /* Footer */
+  .footer-section {
+    padding: 15px 20px !important;
+  }
+  
+  .paragraph-tiny {
+    font-size: 11px !important;
+  }
+}
