@@ -90,9 +90,12 @@
       color: #ffffff;
     }
     
-    .intro-section.cc-cta .cta-wrap {
-      padding-top: 100px !important;
-      padding-bottom: 100px !important;
+    /* CTA padding untuk tablet */
+    @media (min-width: 481px) and (max-width: 991px) {
+      .intro-section.cc-cta .cta-wrap {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+      }
     }
     
     /* Clean spacing - remove aggressive overrides */
@@ -601,7 +604,7 @@
       }
       
       .cta-wrap {
-        padding: 0 !important;
+        padding: 80px 20px !important;
         max-width: 100% !important;
         width: 100% !important;
       }
