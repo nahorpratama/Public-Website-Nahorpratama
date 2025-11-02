@@ -106,11 +106,12 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
-      opacity: 1 !important;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
     }
 
     .hero-bg-video.is-visible {
-      opacity: 1 !important;
+      opacity: 1;
     }
 
     .hero-bg-video.is-fadeout {
@@ -1268,31 +1269,39 @@
       const heroVideo = document.getElementById('introHeroVideo');
       if (!heroVideo) return;
 
-      const FADE_WINDOW = 2.5;
+      const FADE_WINDOW = 2.0;
 
       const updateFadeState = () => {
         const duration = heroVideo.duration || 0;
         if (!duration) return;
 
         const current = heroVideo.currentTime;
-        heroVideo.classList.add('is-visible');
 
-        if (current > duration - FADE_WINDOW) {
-          heroVideo.classList.add('is-fadeout');
-        } else if (current < FADE_WINDOW) {
+        // Fade in di awal video
+        if (current < FADE_WINDOW) {
+          heroVideo.classList.add('is-visible');
           heroVideo.classList.remove('is-fadeout');
-        } else {
+        }
+        // Fade out di akhir video
+        else if (current > duration - FADE_WINDOW) {
+          heroVideo.classList.add('is-fadeout');
+        }
+        // Tampilkan penuh di tengah video
+        else {
+          heroVideo.classList.add('is-visible');
           heroVideo.classList.remove('is-fadeout');
         }
       };
 
       const playVideo = () => {
         heroVideo.play().then(() => {
-          heroVideo.classList.add('is-visible');
-          heroVideo.style.opacity = '1';
+          // Mulai fade in
+          setTimeout(() => {
+            heroVideo.classList.add('is-visible');
+          }, 100);
         }).catch(() => {
+          // Jika autoplay gagal, tetap tampilkan video
           heroVideo.classList.add('is-visible');
-          heroVideo.style.opacity = '1';
         });
       };
 
@@ -1309,6 +1318,13 @@
 
       heroVideo.addEventListener('timeupdate', updateFadeState);
       heroVideo.addEventListener('play', updateFadeState);
+
+      // Restart video dengan fade saat selesai
+      heroVideo.addEventListener('ended', () => {
+        heroVideo.currentTime = 0;
+        heroVideo.classList.remove('is-fadeout');
+        heroVideo.play();
+      });
 
       setTimeout(() => {
         if (heroVideo.paused) {
