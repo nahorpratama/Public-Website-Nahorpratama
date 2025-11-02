@@ -64,7 +64,7 @@
 .org-structure-theme svg .org-icon__badge {
   stroke: var(--org-node-stroke);
   stroke-width: 1.5;
-  fill: rgba(15, 76, 129, 0.12);
+  fill: #ffffff;
 }
 
 .org-structure-theme svg .org-icon__accent {
@@ -77,40 +77,28 @@
   fill: rgba(180, 83, 9, 0.16);
 }
 
-.org-structure-theme svg .org-icon--executive .org-icon__badge {
-  stroke: #b45309;
-  fill: rgba(180, 83, 9, 0.22);
-}
+.org-structure-theme svg .org-icon--executive .org-icon__badge { stroke: #b45309; }
 
 .org-structure-theme svg .org-icon--manager .org-icon__accent {
   stroke: #2563eb;
   fill: rgba(37, 99, 235, 0.14);
 }
 
-.org-structure-theme svg .org-icon--manager .org-icon__badge {
-  stroke: #2563eb;
-  fill: rgba(37, 99, 235, 0.2);
-}
+.org-structure-theme svg .org-icon--manager .org-icon__badge { stroke: #2563eb; }
 
 .org-structure-theme svg .org-icon--division .org-icon__accent {
   stroke: #047857;
   fill: rgba(4, 120, 87, 0.16);
 }
 
-.org-structure-theme svg .org-icon--division .org-icon__badge {
-  stroke: #047857;
-  fill: rgba(4, 120, 87, 0.22);
-}
+.org-structure-theme svg .org-icon--division .org-icon__badge { stroke: #047857; }
 
 .org-structure-theme svg .org-icon--team .org-icon__accent {
   stroke: #4b5563;
   fill: rgba(75, 85, 99, 0.18);
 }
 
-.org-structure-theme svg .org-icon--team .org-icon__badge {
-  stroke: #4b5563;
-  fill: rgba(75, 85, 99, 0.24);
-}
+.org-structure-theme svg .org-icon--team .org-icon__badge { stroke: #4b5563; }
 
 /* Node role palettes */
 .org-structure-theme svg .org-node {
