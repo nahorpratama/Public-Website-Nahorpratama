@@ -75,14 +75,15 @@
   
   /* CTA Section */
   .intro-section.cc-cta {
-    padding: 50px 30px !important;
+    padding: 0 !important;
   }
   
   .cta-container {
-    padding: 40px 30px !important;
+    padding: 0 !important;
   }
   
   .cta-wrap {
+    padding: 100px 30px !important;
     max-width: 600px !important;
     margin: 0 auto !important;
     text-align: center !important;
@@ -175,11 +176,15 @@
   
   /* CTA Section */
   .intro-section.cc-cta {
-    padding: 40px 20px !important;
+    padding: 0 !important;
   }
   
   .cta-container {
-    padding: 30px 20px !important;
+    padding: 0 !important;
+  }
+  
+  .cta-wrap {
+    padding: 100px 20px !important;
   }
   
   .h2-headingscta {
@@ -247,7 +252,11 @@
   
   /* CTA Section */
   .cta-container {
-    padding: 25px 15px !important;
+    padding: 0 !important;
+  }
+  
+  .cta-wrap {
+    padding: 80px 20px !important;
   }
   
   .h2-headingscta {
