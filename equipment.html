@@ -475,23 +475,16 @@
       }
     }
     
-    /* Mobile - Horizontal scroll with 3 visible items */
+    /* Mobile - Vertical scroll with 3 visible items */
     @media screen and (max-width: 767px) {
       .equipment-gallery-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        gap: 15px !important;
-        scroll-snap-type: x mandatory;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        max-height: 580px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
-      }
-      
-      .equipment-gallery-grid .equipment-gallery-item {
-        flex: 0 0 calc(33.333% - 10px) !important;
-        min-width: calc(33.333% - 10px) !important;
-        scroll-snap-align: start;
       }
     }
     
