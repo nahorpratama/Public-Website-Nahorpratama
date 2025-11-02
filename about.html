@@ -467,21 +467,22 @@
       margin-bottom: 0 !important;
     }
     
-    /* Add height to Partnership Section and margin below logos */
+    /* Add height to Partnership Section and margin below logos - Match Experience */
     .partner-section {
       height: calc(100% + 60px);
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      background: #ffffff;
       margin: 0;
+      margin-bottom: 0 !important;
     }
     
     .mid-section, .mid-section-web {
       padding-bottom: 55px !important;
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      background: #ffffff;
     }
     
-    /* Apply same white gradient background as Partnership Section to Company Story section */
+    /* Apply same white background as Partnership Section to Company Story section */
     .intro-section.cc-home-wrap {
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      background: #ffffff;
       background-attachment: fixed;
     }
     
@@ -1017,53 +1018,25 @@
       margin-top: 60px !important;
     }
     
-    /* Responsive Design for Partnership Section */
+    /* Responsive Design for Partnership Section - Match Experience */
     
-    /* Tablet and Medium Devices */
-    @media (max-width: 1024px) {
-      .partner-section {
-        padding: 40px 20px;
-      }
-      
-      .partner-section-text {
-        max-width: 90%;
-      }
-      
+    @media (max-width: 768px) {
       .margin-partner-text {
-        margin-top: 50px !important;
+        margin-top: 40px !important;
       }
       
-      .h4-heading {
-        font-size: 2.2rem;
-      }
-      
-      .paragraph-xsmall {
-        font-size: 1.1rem;
-        line-height: 1.6;
+      .mid-section, .mid-section-web {
+        padding-bottom: 45px !important;
       }
     }
     
-    /* Mobile Landscape - General Text Sizing */
-    @media (max-width: 768px) {
-      .partner-section {
-        padding: 30px 15px;
-        height: auto;
-        min-height: 200px;
-      }
-      
-      .partner-section-text {
-        max-width: 95%;
-        padding: 0 10px;
-      }
-      
+    @media (max-width: 480px) {
       .margin-partner-text {
-        margin-top: 40px !important;
-        margin-bottom: 20px !important;
+        margin-top: 30px !important;
       }
       
-      .margin-partner-paragraph {
-        width: 100%;
-        max-width: 350px;
+      .mid-section, .mid-section-web {
+        padding-bottom: 35px !important;
       }
       
       /* General Text Sizing for Mobile */
