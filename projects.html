@@ -826,15 +826,19 @@
         gap: 15px;
       }
 
-      /* Gallery Grid inside tab container - mobile 1 column */
+      /* Gallery Grid inside tab container - mobile 1 column (sama dengan equipment gallery) */
       .tab-content-inner .gallery-grid {
         grid-template-columns: 1fr !important;
-        gap: 20px !important;
+        gap: 15px !important;
         max-height: 580px !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
+      }
+      
+      .tab-content-inner .gallery-item {
+        height: 180px !important;
       }
 
       /* Text sizing untuk mobile */
@@ -924,18 +928,7 @@
 
       .gallery-grid {
         grid-template-columns: 1fr !important;
-        gap: 10px;
-      }
-
-      /* Gallery Grid inside tab container - mobile */
-      .tab-content-inner .gallery-grid {
-        grid-template-columns: 1fr !important;
-        gap: 10px;
-        max-height: 400px;
-      }
-
-      .tab-content-inner .gallery-item {
-        height: 180px;
+        gap: 20px;
       }
     }
 
