@@ -73,12 +73,11 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
-      opacity: 0;
-      transition: opacity 1.5s ease;
+      opacity: 1 !important;
     }
 
     .hero-bg-video.is-visible {
-      opacity: 1;
+      opacity: 1 !important;
     }
 
     .hero-bg-video.is-fadeout {
@@ -1271,10 +1270,21 @@
         heroVideo.play().then(() => {
           console.log('Video playing successfully');
           heroVideo.classList.add('is-visible');
-          console.log('Class is-visible added. Opacity should be 1 now.');
+          heroVideo.style.opacity = '1';
+          
+          setTimeout(() => {
+            const computedStyle = window.getComputedStyle(heroVideo);
+            console.log('Video computed styles after 100ms:', {
+              opacity: computedStyle.opacity,
+              zIndex: computedStyle.zIndex,
+              display: computedStyle.display,
+              visibility: computedStyle.visibility
+            });
+          }, 100);
         }).catch((error) => {
           console.error('Error playing video:', error);
           heroVideo.classList.add('is-visible');
+          heroVideo.style.opacity = '1';
         });
       };
 
