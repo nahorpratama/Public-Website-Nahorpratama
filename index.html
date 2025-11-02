@@ -73,6 +73,8 @@
       justify-content: center !important;
       align-items: center !important;
       text-align: center !important;
+      min-height: 100vh !important;
+      height: 100% !important;
     }
     
     .intro-section.cc-store-home-wrap .intro-content {
@@ -100,18 +102,31 @@
     
     /* Responsive: Pastikan center untuk tablet dan mobile */
     @media screen and (max-width: 991px) {
+      .intro-section.cc-store-home-wrap {
+        min-height: 100vh !important;
+      }
+      
       .intro-section.cc-store-home-wrap .intro-header {
         padding: 0 20px !important;
+        min-height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
       
       .intro-section.cc-store-home-wrap .intro-content {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
       
       .intro-section.cc-store-home-wrap .intro-text {
         width: 100% !important;
+        margin-bottom: 30px !important;
       }
       
       .intro-section.cc-store-home-wrap .h1-headtext,
@@ -124,6 +139,10 @@
     @media screen and (max-width: 767px) {
       .intro-section.cc-store-home-wrap .intro-header {
         padding: 0 15px !important;
+      }
+      
+      .intro-section.cc-store-home-wrap .intro-text {
+        margin-bottom: 20px !important;
       }
     }
 
