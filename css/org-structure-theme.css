@@ -86,6 +86,31 @@
   fill: rgba(75, 85, 99, 0.18);
 }
 
+/* Node role palettes */
+.org-structure-theme svg .org-node {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.org-structure-theme svg .org-node--executive {
+  fill: #fef3c7;
+  stroke: #b45309;
+}
+
+.org-structure-theme svg .org-node--manager {
+  fill: #dbeafe;
+  stroke: #2563eb;
+}
+
+.org-structure-theme svg .org-node--division {
+  fill: #dcfce7;
+  stroke: #047857;
+}
+
+.org-structure-theme svg .org-node--team {
+  fill: #e5e7eb;
+  stroke: #4b5563;
+}
+
 /* Container polish */
 .org-structure-theme {
   background: #ffffff;
