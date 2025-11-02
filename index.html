@@ -1234,16 +1234,20 @@
   <script>
     (function() {
       const heroVideo = document.getElementById('introHeroVideo');
-      if (!heroVideo) return;
+      if (!heroVideo) {
+        console.error('Hero video element not found');
+        return;
+      }
 
-      const FADE_WINDOW = 2.5; // seconds for fade in/out
+      console.log('Hero video element found, initializing...');
+
+      const FADE_WINDOW = 2.5;
 
       const updateFadeState = () => {
         const duration = heroVideo.duration || 0;
         if (!duration) return;
 
         const current = heroVideo.currentTime;
-
         heroVideo.classList.add('is-visible');
 
         if (current > duration - FADE_WINDOW) {
@@ -1255,9 +1259,34 @@
         }
       };
 
-      const onLoaded = () => {
-        updateFadeState();
+      const playVideo = () => {
+        console.log('Attempting to play video. Current state:', {
+          paused: heroVideo.paused,
+          readyState: heroVideo.readyState,
+          networkState: heroVideo.networkState,
+          src: heroVideo.currentSrc,
+          hasClass: heroVideo.classList.contains('is-visible')
+        });
+        
+        heroVideo.play().then(() => {
+          console.log('Video playing successfully');
+          heroVideo.classList.add('is-visible');
+          console.log('Class is-visible added. Opacity should be 1 now.');
+        }).catch((error) => {
+          console.error('Error playing video:', error);
+          heroVideo.classList.add('is-visible');
+        });
       };
+
+      const onLoaded = () => {
+        console.log('Video loaded, ready to play');
+        updateFadeState();
+        playVideo();
+      };
+
+      heroVideo.addEventListener('error', (e) => {
+        console.error('Video loading error:', e);
+      });
 
       if (heroVideo.readyState >= 2) {
         onLoaded();
@@ -1267,6 +1296,13 @@
 
       heroVideo.addEventListener('timeupdate', updateFadeState);
       heroVideo.addEventListener('play', updateFadeState);
+
+      setTimeout(() => {
+        if (heroVideo.paused) {
+          console.log('Video still paused after 1s, attempting to play...');
+          playVideo();
+        }
+      }, 1000);
     })();
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
