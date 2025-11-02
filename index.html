@@ -33,7 +33,7 @@
     }
     .intro-section {
       position: relative;
-      background-color: #ffffff;
+      background-color: #f8f9fa;
     }
     .content-section {
       background-color: #f8f9fa;
@@ -41,9 +41,10 @@
     .intro-section.cc-store-home-wrap {
       position: relative;
       overflow: hidden;
-      background: none !important;
+      background: transparent !important;
       background-image: none !important;
       background-color: transparent !important;
+      min-height: 500px;
     }
 
     .intro-section.cc-store-home-wrap::before {
@@ -1124,8 +1125,8 @@
       </a>
     </div>
   </div>
-  <div class="intro-section cc-store-home-wrap">
-    <video class="hero-bg-video" id="introHeroVideo" autoplay muted loop playsinline preload="auto">
+  <div class="intro-section cc-store-home-wrap" style="position: relative; min-height: 600px; overflow: hidden; background: black !important;">
+    <video class="hero-bg-video" id="introHeroVideo" autoplay muted loop playsinline preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 1 !important; display: block; border: 5px solid red;">
       <source src="images/Video/petal_20251102_153115.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
