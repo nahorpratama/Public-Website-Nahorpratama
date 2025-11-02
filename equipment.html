@@ -186,16 +186,32 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Project Grid - Vertical List with Scroll (sama seperti Experience) */
+    /* Project Grid - Responsive Grid Layout */
     .project-grid {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       padding: 20px 0;
       max-height: 600px;
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: #2c5aa0 #f1f3f4;
+    }
+    
+    /* Tablet - 2 columns for project grid in tabs */
+    @media screen and (max-width: 991px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+      }
+    }
+    
+    /* Mobile - 1 column for project grid in tabs */
+    @media screen and (max-width: 767px) {
+      .project-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+      }
     }
     
     /* Custom scrollbar for webkit browsers */
