@@ -49,12 +49,41 @@
 }
 
 /* Icons styling */
-.org-structure-theme svg .org-icon { pointer-events: none; }
-.org-structure-theme svg .org-icon circle,
-.org-structure-theme svg .org-icon path {
+.org-structure-theme svg .org-icon-root {
+  pointer-events: none;
+}
+
+.org-structure-theme svg .org-icon-root * {
   stroke: var(--org-node-stroke);
-  fill: none;
   stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.org-structure-theme svg .org-icon__accent {
+  stroke-width: 1.5;
+  fill: rgba(15, 76, 129, 0.08);
+}
+
+.org-structure-theme svg .org-icon--executive .org-icon__accent {
+  stroke: #b45309;
+  fill: rgba(180, 83, 9, 0.16);
+}
+
+.org-structure-theme svg .org-icon--manager .org-icon__accent {
+  stroke: #2563eb;
+  fill: rgba(37, 99, 235, 0.14);
+}
+
+.org-structure-theme svg .org-icon--division .org-icon__accent {
+  stroke: #047857;
+  fill: rgba(4, 120, 87, 0.16);
+}
+
+.org-structure-theme svg .org-icon--team .org-icon__accent {
+  stroke: #4b5563;
+  fill: rgba(75, 85, 99, 0.18);
 }
 
 /* Container polish */
