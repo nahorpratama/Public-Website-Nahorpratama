@@ -390,17 +390,17 @@
     }
     
     /* Tablet - 2 columns */
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       .equipment-gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 25px;
       }
     }
     
-    /* Mobile - 1 column */
-    @media (max-width: 767px) {
+    /* Mobile - 1 column (override tablet) */
+    @media screen and (max-width: 767px) {
       .equipment-gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 20px;
       }
     }
