@@ -602,13 +602,20 @@
       }
 
       .tab-header {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 5px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
       }
 
       .tab-btn {
         padding: 12px 20px;
         font-size: 0.9rem;
+        flex-shrink: 0;
+        white-space: nowrap;
       }
 
       .project-grid {
@@ -634,9 +641,21 @@
         font-size: 1.8rem;
       }
 
+      .tab-header {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 3px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+      
       .tab-btn {
         padding: 10px 15px;
         font-size: 0.85rem;
+        flex-shrink: 0;
+        white-space: nowrap;
       }
 
       .project-grid {
