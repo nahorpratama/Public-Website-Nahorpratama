@@ -186,11 +186,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Project Grid - Responsive Grid Layout */
+    /* Project Grid - List Layout (1 column for all devices) */
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: 1fr !important;
+      gap: 15px;
       padding: 20px 0;
       max-height: 600px;
       overflow-y: auto;
@@ -198,15 +198,15 @@
       scrollbar-color: #2c5aa0 #f1f3f4;
     }
     
-    /* Tablet - 2 columns for project grid in tabs */
+    /* Tablet - 1 column */
     @media screen and (max-width: 991px) {
       .project-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr !important;
         gap: 15px;
       }
     }
     
-    /* Mobile - 1 column for project grid in tabs */
+    /* Mobile - 1 column */
     @media screen and (max-width: 767px) {
       .project-grid {
         grid-template-columns: 1fr !important;
