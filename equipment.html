@@ -548,13 +548,20 @@
       backdrop-filter: blur(5px);
     }
     
+    .equipment-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
     .equipment-modal .modal-content {
       position: relative;
-      margin: 5% auto;
+      margin: auto;
       padding: 0;
       width: 70%;
       max-width: 1000px;
-      background: white;
+      height: 90vh;
+      background: transparent;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       animation: modalFadeIn 0.3s ease;
@@ -841,7 +848,8 @@
       
       .equipment-modal .modal-content {
         width: 85%;
-        margin: 8% auto;
+        height: 70vh;
+        margin: auto;
       }
       
       .equipment-modal .modal-image {
@@ -868,9 +876,9 @@
       
       .equipment-modal .modal-content {
         width: 95%;
-        margin: 10% auto;
+        height: 60vh;
+        margin: auto;
         border-radius: 10px;
-        height: auto;
       }
       
       .equipment-modal .modal-image {
@@ -1597,13 +1605,13 @@
       modalImage.src = imageSrc;
       modalImage.alt = title;
       
-      modal.style.display = "block";
+      modal.classList.add("active");
       document.body.style.overflow = "hidden"; // Prevent background scrolling
     }
     
     function closeEquipmentModal() {
       var modal = document.getElementById("equipmentModal");
-      modal.style.display = "none";
+      modal.classList.remove("active");
       document.body.style.overflow = "auto"; // Restore scrolling
     }
     
