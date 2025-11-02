@@ -180,11 +180,16 @@
   }
   
   .cta-container {
-    padding: 0 !important;
+    height: auto !important;
+    min-height: 40vh !important;
+    padding: 40px 15px !important;
+    width: 100% !important;
   }
   
   .cta-wrap {
-    padding: 100px 20px !important;
+    padding: 80px 20px !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   
   .h2-headingscta {
@@ -252,11 +257,16 @@
   
   /* CTA Section */
   .cta-container {
-    padding: 0 !important;
+    height: auto !important;
+    min-height: 40vh !important;
+    padding: 40px 15px !important;
+    width: 100% !important;
   }
   
   .cta-wrap {
     padding: 80px 20px !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   
   .h2-headingscta {
