@@ -951,18 +951,27 @@
         max-width: 100% !important;
         min-height: 320px !important;
         height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
       }
       
       .project-card .picture-section {
+        flex: 0 0 auto !important;
         height: 200px !important;
         min-height: 200px !important;
+        max-height: 200px !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
       }
       
       .project-card .picture-section img {
-        height: 200px !important;
-        min-height: 200px !important;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover !important;
         object-position: center !important;
+        display: block !important;
       }
       
       .project-card .text-section,
