@@ -85,3 +85,30 @@
 .text-block-9 {
   margin-left: 0 !important;
 }
+
+/* Logo Image - Maintain Aspect Ratio on All Devices */
+.logo-image {
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Logo Image - Desktop */
+@media (min-width: 992px) {
+  .logo-image {
+    width: 108px !important;
+  }
+}
+
+/* Logo Image - Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo-image {
+    width: 90px !important;
+  }
+}
+
+/* Logo Image - Mobile */
+@media (max-width: 767px) {
+  .logo-image {
+    width: 70px !important;
+  }
+}
