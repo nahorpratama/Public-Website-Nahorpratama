@@ -17,18 +17,18 @@
  */
 
 return [
-    // Set true untuk SMTP, false untuk PHP mail() function (recommended di shared hosting)
-    'use_smtp' => false,
+    // Set true untuk SMTP, false untuk PHP mail() function
+    'use_smtp' => true,
     
-    // SMTP Settings (hanya jika use_smtp = true)
-    'smtp_host' => 'smtp.gmail.com', // Atau smtp.hostinger.com jika pakai Hostinger Email
-    'smtp_port' => 587, // 587 untuk TLS, 465 untuk SSL
-    'smtp_secure' => 'tls', // 'tls' atau 'ssl'
-    'smtp_username' => 'your-email@gmail.com', // Email Anda
-    'smtp_password' => 'your-app-password-here', // Gmail App Password atau SMTP password
+    // SMTP Settings - Hostinger Email (RECOMMENDED)
+    'smtp_host' => 'smtp.hostinger.com',
+    'smtp_port' => 587,
+    'smtp_secure' => 'tls',
+    'smtp_username' => 'admin@nahorpratama.com', // Email Hostinger Anda
+    'smtp_password' => 'your-hostinger-email-password', // Password email Hostinger
     
     // Email Settings
-    'from_email' => 'noreply@nahorpratama.com',
+    'from_email' => 'admin@nahorpratama.com', // Harus sama dengan smtp_username
     'from_name' => 'PT Eliazer Nahor Pratama',
     'to_email' => 'marketing@nahorpratama.com',
     'reply_to_email' => 'marketing@nahorpratama.com'
