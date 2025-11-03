@@ -554,6 +554,23 @@
         transform: scale(1.05);
       }
     }
+
+    /* Force disable semua transform & transition di touch devices */
+    @media (hover: none) and (pointer: coarse) {
+      .project-card {
+        transition: none !important;
+        transform: none !important;
+      }
+      
+      .project-card .picture-section img {
+        transition: none !important;
+        transform: none !important;
+      }
+      
+      .project-card:active {
+        transform: none !important;
+      }
+    }
     
     .project-card .text-section,
     .project-card .text-sections {
