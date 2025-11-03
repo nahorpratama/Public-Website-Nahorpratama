@@ -1199,6 +1199,40 @@
       }
     }
     
+    /* Mobile Card Fixes - Ensure proper centering */
+    @media (max-width: 767px) {
+      .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+      }
+      
+      .project-card .picture-section {
+        position: relative !important;
+        overflow: hidden !important;
+        flex: 0 0 75% !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .project-card .picture-section img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+      }
+      
+      .project-card .text-section {
+        flex: 0 0 25% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+    }
+    
     /* CTA Footer Spacing - Mobile */
     @media (max-width: 480px) {
       .cta-container .button.cc-jumbo-button {
