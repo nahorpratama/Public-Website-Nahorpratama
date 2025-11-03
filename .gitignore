@@ -1,4 +1,17 @@
-node_modules/
-npm-debug.log
+# Environment and OS files
 .env
 .DS_Store
+.vscode/
+.idea/
+
+# PHP
+vendor/
+composer.lock
+*.log
+email-config.php
+
+# Old Node.js files (no longer used)
+node_modules/
+npm-debug.log
+package-lock.json
+server.js

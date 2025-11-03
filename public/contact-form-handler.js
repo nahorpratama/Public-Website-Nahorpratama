@@ -49,8 +49,8 @@
       submitBtn.value = 'Sending...';
       
       try {
-        // Send to backend
-        const response = await fetch('/api/contact', {
+        // Send to PHP backend
+        const response = await fetch('contact-handler.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
