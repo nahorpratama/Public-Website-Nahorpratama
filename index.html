@@ -956,17 +956,19 @@
       }
       
       .project-card .picture-section {
+        position: relative !important;
         flex: 0 0 auto !important;
         height: 200px !important;
         min-height: 200px !important;
         max-height: 200px !important;
         width: 100% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        overflow: hidden !important;
       }
       
       .project-card .picture-section img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
@@ -1199,7 +1201,7 @@
       }
     }
     
-    /* Mobile Card Fixes - Ensure proper centering */
+    /* Mobile Card Fixes - Proper image display */
     @media (max-width: 767px) {
       .project-card {
         display: flex !important;
@@ -1212,12 +1214,12 @@
         overflow: hidden !important;
         flex: 0 0 75% !important;
         width: 100% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
       }
       
       .project-card .picture-section img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
