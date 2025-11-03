@@ -76,3 +76,12 @@
     line-height: 1.5 !important;
   }
 }
+
+/* Logo and Company Name Spacing - All Devices */
+.logo-link {
+  gap: 15px !important;
+}
+
+.text-block-9 {
+  margin-left: 0 !important;
+}
