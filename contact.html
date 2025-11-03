@@ -373,6 +373,14 @@
     
     /* Tablet Responsive - Contact Form */
     @media (min-width: 768px) and (max-width: 991px) {
+      /* Remove padding from intro-section so background is full width */
+      .intro-section {
+        padding: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+      }
+      
+      /* Add padding only to containers inside intro-section */
       .footer-contact-container {
         padding: 60px 20px !important;
         height: auto !important;
@@ -398,10 +406,10 @@
         margin: 0 !important;
       }
       
-      .intro-section {
-        padding: 60px 20px !important;
-        min-height: auto !important;
-        height: auto !important;
+      /* Header background full width */
+      .intro-header-contact {
+        padding: 0 !important;
+        margin: 0 !important;
       }
       
       /* Contact form heading on tablet */
@@ -413,9 +421,10 @@
         font-size: 15px !important;
       }
       
-      /* Ensure location section also has proper spacing */
+      /* Location section full width background */
       .location-container {
         padding: 60px 20px !important;
+        margin: 0 !important;
       }
       
       .section-block {
@@ -451,7 +460,14 @@
         font-size: 13px !important;
       }
       
-      /* Mobile contact form */
+      /* Mobile - Remove padding from intro-section for full width backgrounds */
+      .intro-section {
+        padding: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+      }
+      
+      /* Add padding to containers inside */
       .footer-contact-container {
         padding: 40px 20px !important;
         height: auto !important;
@@ -469,10 +485,8 @@
         padding: 25px 20px !important;
       }
       
-      .intro-section {
+      .location-container {
         padding: 40px 20px !important;
-        height: auto !important;
-        min-height: auto !important;
       }
     }
     
