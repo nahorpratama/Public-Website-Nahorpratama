@@ -253,22 +253,34 @@
       transition: transform 0.3s ease;
     }
     
-    /* Location Section Background */
-    .location-container {
-      background-color: #ffffff !important;
-      background-image: none !important;
-      padding: 40px 20px;
-    }
-    
-    /* Override intro-section gradient for location section */
+    /* Location Section Background - FULL WIDTH FOR ALL DEVICES */
     .intro-section.location-section-wrapper {
       background-color: #ffffff !important;
       background-image: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    
+    .location-container {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      padding: 60px 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
     }
     
     /* Ensure location section preserves background images */
     .location-section {
       background-color: transparent !important;
+      padding: 0 20px !important;
+      /* background-image: none !important; - removed to preserve images */
+    }
+    
+    /* Section header with padding */
+    .section-block-head {
+      background-color: transparent !important;
+      padding: 0 20px !important;
+      margin-bottom: 30px !important;
       /* background-image: none !important; - removed to preserve images */
     }
     
@@ -280,12 +292,7 @@
       gap: 20px;
       justify-content: center;
       align-items: stretch;
-    }
-    
-    /* Ensure section-block-head preserves any background images */
-    .section-block-head {
-      background-color: transparent !important;
-      /* background-image: none !important; - removed to preserve images */
+      padding: 0 20px !important;
     }
     
     /* Location Section Title Color */
@@ -421,10 +428,23 @@
         font-size: 15px !important;
       }
       
-      /* Location section full width background */
-      .location-container {
-        padding: 60px 20px !important;
+      /* Location section full width background - TABLET */
+      .intro-section.location-section-wrapper {
+        padding: 0 !important;
         margin: 0 !important;
+      }
+      
+      .location-container {
+        padding: 60px 0 !important;
+        margin: 0 !important;
+      }
+      
+      .location-section {
+        padding: 0 20px !important;
+      }
+      
+      .section-block-head {
+        padding: 0 20px !important;
       }
       
       .section-block {
@@ -485,8 +505,23 @@
         padding: 25px 20px !important;
       }
       
+      /* Location section full width background - MOBILE */
+      .intro-section.location-section-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
       .location-container {
-        padding: 40px 20px !important;
+        padding: 40px 0 !important;
+        margin: 0 !important;
+      }
+      
+      .location-section {
+        padding: 0 20px !important;
+      }
+      
+      .section-block-head {
+        padding: 0 20px !important;
       }
     }
     
