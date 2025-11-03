@@ -374,14 +374,16 @@
     /* Tablet Responsive - Contact Form */
     @media (min-width: 768px) and (max-width: 991px) {
       .footer-contact-container {
-        padding: 0 20px !important;
+        padding: 60px 20px !important;
         height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
       }
       
       .contact-form-grid {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 60px 0 !important;
+        margin: 0 !important;
         padding: 0 !important;
         grid-column-gap: 30px !important;
         grid-row-gap: 40px !important;
@@ -397,7 +399,9 @@
       }
       
       .intro-section {
-        padding: 40px 20px !important;
+        padding: 60px 20px !important;
+        min-height: auto !important;
+        height: auto !important;
       }
       
       /* Contact form heading on tablet */
@@ -407,6 +411,15 @@
       
       .contact-form-heading-wrap p {
         font-size: 15px !important;
+      }
+      
+      /* Ensure location section also has proper spacing */
+      .location-container {
+        padding: 60px 20px !important;
+      }
+      
+      .section-block {
+        gap: 20px !important;
       }
     }
     
@@ -440,18 +453,26 @@
       
       /* Mobile contact form */
       .footer-contact-container {
-        padding: 0 20px !important;
+        padding: 40px 20px !important;
+        height: auto !important;
+        min-height: auto !important;
       }
       
       .contact-form-grid {
         width: 100% !important;
-        margin: 40px 0 !important;
+        margin: 0 !important;
         padding: 0 !important;
       }
       
       .contact-form-wrap,
       .div-block-14 {
         padding: 25px 20px !important;
+      }
+      
+      .intro-section {
+        padding: 40px 20px !important;
+        height: auto !important;
+        min-height: auto !important;
       }
     }
     
