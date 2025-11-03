@@ -337,14 +337,13 @@
       display: block;
     }
 
-    /* Layout 1: Teks kiri, Gambar kanan (60:40) */
+    /* Layout 1: Teks kiri, Gambar kanan */
     .layout-1 .zone-2 {
       flex-direction: row;
     }
 
     .layout-1 .text-block {
-      flex: 0 0 60%;
-      max-width: 60%;
+      flex: 3;
       background-color: #f8f9fa;
       border-radius: 10px;
       padding: 12px;
@@ -352,15 +351,14 @@
     }
 
     .layout-1 .image-stack {
-      flex: 0 0 35%;
-      max-width: 35%;
+      flex: 2;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
 
     .layout-1 .spacer {
-      flex: 0 0 5%;
+      flex: 0 0 5px;
       min-width: 5px;
     }
 
@@ -379,14 +377,13 @@
       min-height: 120px;
     }
 
-    /* Layout 2: Gambar kiri, Teks kanan (40:60) */
+    /* Layout 2: Gambar kiri, Teks kanan */
     .layout-2 .zone-2 {
       flex-direction: row;
     }
 
     .layout-2 .image-stack {
-      flex: 0 0 35%;
-      max-width: 35%;
+      flex: 2;
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -408,8 +405,7 @@
     }
 
     .layout-2 .text-block {
-      flex: 0 0 60%;
-      max-width: 60%;
+      flex: 3;
       background-color: #f8f9fa;
       border-radius: 10px;
       padding: 12px;
@@ -417,7 +413,7 @@
     }
 
     .layout-2 .spacer {
-      flex: 0 0 5%;
+      flex: 0 0 5px;
       min-width: 5px;
     }
 
@@ -889,6 +885,24 @@
         flex: 0 0 8px !important;
         min-width: 8px !important;
       }
+
+      /* Mobile: Proporsi konsisten untuk semua slide */
+      .layout-1 .text-block,
+      .layout-2 .text-block {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+      }
+
+      .layout-1 .image-stack,
+      .layout-2 .image-stack {
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+      }
+
+      .layout-1 .spacer,
+      .layout-2 .spacer {
+        flex: 0 0 5% !important;
+      }
     }
       
       .photo-slider-section {
@@ -1009,6 +1023,24 @@
         flex: 0 0 6px !important;
         min-width: 6px !important;
       }
+
+      /* Mobile Portrait: Proporsi konsisten untuk semua slide */
+      .layout-1 .text-block,
+      .layout-2 .text-block {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+      }
+
+      .layout-1 .image-stack,
+      .layout-2 .image-stack {
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+      }
+
+      .layout-1 .spacer,
+      .layout-2 .spacer {
+        flex: 0 0 5% !important;
+      }
     }
 
     /* Extra Small Devices */
@@ -1056,6 +1088,24 @@
       .spacer {
         flex: 0 0 5px !important;
         min-width: 5px !important;
+      }
+
+      /* Extra Small: Proporsi konsisten untuk semua slide */
+      .layout-1 .text-block,
+      .layout-2 .text-block {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+      }
+
+      .layout-1 .image-stack,
+      .layout-2 .image-stack {
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+      }
+
+      .layout-1 .spacer,
+      .layout-2 .spacer {
+        flex: 0 0 5% !important;
       }
     }
       
