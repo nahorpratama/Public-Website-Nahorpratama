@@ -248,6 +248,37 @@
       transition: transform 0.3s ease;
     }
     
+    /* Maps Section - Add bottom padding 20px */
+    .maps-google-api {
+      padding-bottom: 20px;
+    }
+    
+    /* Clickable Location Cards - Interactive Styling */
+    .clickable-location {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid transparent;
+    }
+    
+    .clickable-location:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .clickable-location.active-location {
+      background: rgba(198, 156, 109, 0.15);
+      border: 2px solid rgba(198, 156, 109, 0.5);
+      box-shadow: 0 4px 12px rgba(198, 156, 109, 0.2);
+    }
+    
+    .clickable-location.active-location .h2-headings {
+      color: #c69c6d;
+    }
+    
     .button:hover {
       transform: translateY(-2px);
       transition: transform 0.3s ease;
@@ -887,6 +918,31 @@
           'transform': 'translate3d(0, 0, 0)'
         });
       }, 300);
+      
+      // Office Location Click Handler - Switch Maps
+      const mapUrls = {
+        'head-office': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3358139042784!2d106.95927571427003!3d-6.350549963896051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699485f2919417%3A0x6f13ca7656457042!2sPT%20Eliazer%20Nahor%20Pratama%20-%20Head%20Office%20Bogor!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid',
+        'branch-office': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.668515951234!2d101.44312!3d0.50729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a8f4b1234567%3A0x1234567890abcdef!2sPT%20Eliazer%20Nahor%20Pratama%20-%20Branch%20Office%20Pekanbaru!5e0!3m2!1sid!2sid!4v1678154193945!5m2!1sid!2sid'
+      };
+      
+      $('.clickable-location').on('click', function() {
+        const location = $(this).data('location');
+        const mapUrl = mapUrls[location];
+        
+        if (mapUrl) {
+          // Update iframe src
+          $('#google-maps-iframe').attr('src', mapUrl);
+          
+          // Update active state
+          $('.clickable-location').removeClass('active-location');
+          $(this).addClass('active-location');
+          
+          // Smooth scroll to maps section
+          $('html, body').animate({
+            scrollTop: $('.maps-google-api').offset().top - 100
+          }, 800);
+        }
+      });
     });
   </script>
   
