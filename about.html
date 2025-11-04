@@ -1555,21 +1555,25 @@
     
     /* Responsive Design for Partnership Sliders */
     
-    /* Tablet and Medium Devices - Slider Responsive */
+    /* Tablet and Medium Devices - Slider Responsive - HORIZONTAL LAYOUT */
     @media (max-width: 1024px) {
       .slider-3, .slider4 {
         padding: 20px 0;
       }
       
       .logo-head {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
       }
       
       .logo {
-        flex: 0 0 auto;
-        max-width: 150px;
+        flex: 0 0 auto !important;
+        max-width: none !important;
       }
       
       .logo img {
@@ -1579,22 +1583,26 @@
       }
     }
     
-    /* Mobile Landscape - Slider Responsive */
+    /* Mobile Landscape - Slider Responsive - HORIZONTAL LAYOUT */
     @media (max-width: 768px) {
       .slider-3, .slider4 {
         padding: 15px 0;
       }
       
       .logo-head {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
       }
       
       .logo {
-        width: 100%;
-        max-width: 200px;
-        text-align: center;
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        text-align: center !important;
       }
       
       .logo img {
@@ -1614,22 +1622,26 @@
       }
     }
     
-    /* Mobile Portrait - Slider Responsive */
+    /* Mobile Portrait - Slider Responsive - HORIZONTAL LAYOUT */
     @media (max-width: 480px) {
       .slider-3, .slider4 {
         padding: 10px 0;
       }
       
       .logo-head {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
       }
       
       .logo {
-        width: 100%;
-        max-width: 180px;
-        text-align: center;
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        text-align: center !important;
       }
       
       .logo img {
@@ -1655,22 +1667,26 @@
       }
     }
     
-    /* Extra Small Devices - Slider Responsive */
+    /* Extra Small Devices - Slider Responsive - HORIZONTAL LAYOUT */
     @media (max-width: 320px) {
       .slider-3, .slider4 {
         padding: 8px 0;
       }
       
       .logo-head {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
       }
       
       .logo {
-        width: 100%;
-        max-width: 160px;
-        text-align: center;
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        text-align: center !important;
       }
       
       .logo img {
