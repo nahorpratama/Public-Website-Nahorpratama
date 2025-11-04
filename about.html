@@ -640,8 +640,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 20px;
-      width: 80%;
-      max-width: 600px;
+      width: 65%;
+      max-width: 900px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -669,7 +669,7 @@
     
     .modal-image {
       max-width: 100%;
-      max-height: 60vh;
+      max-height: 85vh;
       width: auto;
       height: auto;
       object-fit: contain;
@@ -1654,6 +1654,7 @@
       const modalImage = document.getElementById('modalImage');
       const modalTitle = document.getElementById('modalTitle');
       const modalDescription = document.getElementById('modalDescription');
+      const scrollToTopBtn = document.getElementById('scrollToTop');
       
       if (modal && modalImage && modalTitle && modalDescription) {
         modalImage.src = imageSrc;
@@ -1665,12 +1666,17 @@
         // Prevent body scroll when modal is open
         document.body.style.overflow = 'hidden';
         
+        // Hide scroll to top button when modal is active
+        if (scrollToTopBtn) {
+          scrollToTopBtn.style.display = 'none';
+        }
+        
         // Wait for image to load, then adjust for portrait
         modalImage.onload = function() {
           if (modalImage.naturalHeight > modalImage.naturalWidth) {
             // Portrait image - make it smaller and more centered
-            modalImage.style.maxWidth = '50vw';
-            modalImage.style.maxHeight = '65vh';
+            modalImage.style.maxWidth = '60vw';
+            modalImage.style.maxHeight = '80vh';
           }
           // Landscape images keep their original size
         };
@@ -1678,8 +1684,8 @@
         // If image is already cached, adjust immediately
         if (modalImage.complete) {
           if (modalImage.naturalHeight > modalImage.naturalWidth) {
-            modalImage.style.maxWidth = '50vw';
-            modalImage.style.maxHeight = '65vh';
+            modalImage.style.maxWidth = '60vw';
+            modalImage.style.maxHeight = '80vh';
           }
         }
       }
@@ -1687,10 +1693,16 @@
     
     function closeCertificateModal() {
       const modal = document.getElementById('certificateModal');
+      const scrollToTopBtn = document.getElementById('scrollToTop');
       if (modal) {
         modal.style.display = 'none';
         // Restore body scroll
         document.body.style.overflow = 'auto';
+        
+        // Show scroll to top button when modal is closed
+        if (scrollToTopBtn) {
+          scrollToTopBtn.style.display = 'flex';
+        }
       }
     }
     
