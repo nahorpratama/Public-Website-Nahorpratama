@@ -316,7 +316,7 @@
       margin-bottom: 0 !important;
     }
     
-    /* Section block - 40px top padding untuk jarak dari background, no bottom padding */
+    /* Section block - Padding dengan margin horizontal lebih besar */
     .section-block {
       background-color: #ffffff !important;
       background-image: none !important;
@@ -324,8 +324,13 @@
       gap: 20px;
       justify-content: center;
       align-items: stretch;
-      padding: 0 !important;
+      padding: 0 60px !important;
       padding-top: 40px !important;
+    }
+    
+    /* Section header - Add horizontal padding */
+    .section-block-head {
+      padding: 0 60px !important;
     }
     
     /* Location Section Title Color & Size */
@@ -494,18 +499,22 @@
       }
       
       .section-block-head {
-        padding: 0 !important;
+        padding: 0 40px !important;
       }
       
       .section-block {
         gap: 20px !important;
-        padding: 0 !important;
+        padding: 0 40px !important;
         padding-top: 40px !important;
       }
     }
     
     /* Responsive design for location cards */
     @media (max-width: 768px) {
+      .section-block-head {
+        padding: 0 20px !important;
+      }
+      
       .section-block {
         flex-direction: column;
         gap: 15px;
