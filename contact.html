@@ -328,9 +328,24 @@
       padding-top: 40px !important;
     }
     
-    /* Location Section Title Color */
+    /* Location Section Title Color & Size */
     .location-container .h1-headtext {
       color: #ffffff !important;
+      font-size: 48px !important;
+    }
+    
+    /* Tablet - Larger LOCATION title */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .location-container .h1-headtext {
+        font-size: 52px !important;
+      }
+    }
+    
+    /* Mobile - Smaller LOCATION title */
+    @media (max-width: 767px) {
+      .location-container .h1-headtext {
+        font-size: 36px !important;
+      }
     }
     
     /* Interactive Location Styling */
