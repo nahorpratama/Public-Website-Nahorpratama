@@ -1588,12 +1588,24 @@
       
       modal.classList.add("active");
       document.body.style.overflow = "hidden"; // Prevent background scrolling
+      
+      // Hide scroll to top button when modal is open
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      if (scrollToTopBtn) {
+        scrollToTopBtn.style.display = 'none';
+      }
     }
     
     function closeEquipmentModal() {
       var modal = document.getElementById("equipmentModal");
       modal.classList.remove("active");
       document.body.style.overflow = "auto"; // Restore scrolling
+      
+      // Show scroll to top button when modal is closed
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      if (scrollToTopBtn) {
+        scrollToTopBtn.style.display = '';
+      }
     }
     
     // Close modal when clicking outside of it
