@@ -248,9 +248,23 @@
       transition: transform 0.3s ease;
     }
     
-    /* Maps Section - Add bottom padding 20px */
+    /* Maps Section - Add padding untuk konsistensi dengan location section */
     .maps-google-api {
-      padding-bottom: 20px;
+      padding: 0 60px 20px 60px !important;
+    }
+    
+    /* Tablet - Maps padding */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .maps-google-api {
+        padding: 0 40px 20px 40px !important;
+      }
+    }
+    
+    /* Mobile - Maps padding */
+    @media (max-width: 767px) {
+      .maps-google-api {
+        padding: 0 20px 20px 20px !important;
+      }
     }
     
     /* Clickable Location Cards - Interactive Styling */
