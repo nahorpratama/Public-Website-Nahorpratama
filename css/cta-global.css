@@ -58,9 +58,25 @@
 
 /* Tablet Spacing (481px - 991px) */
 @media (min-width: 481px) and (max-width: 991px) {
+  .cta-container {
+    padding: 40px 20px !important;
+    min-height: 50vh !important;
+    height: auto !important;
+  }
+  
   .intro-section.cc-cta .cta-wrap {
     padding-top: 100px !important;
     padding-bottom: 100px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  .cta-text {
+    margin-bottom: 25px !important;
+  }
+  
+  .cta-paragraph {
+    margin-bottom: 30px !important;
   }
 }
 
