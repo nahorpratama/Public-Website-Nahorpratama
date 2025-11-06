@@ -1195,6 +1195,14 @@
       background-color: #1a1a1a !important;
     }
     
+    /* CTA Footer Spacing - Tablet */
+    @media (min-width: 481px) and (max-width: 991px) {
+      .intro-section.cc-cta .cta-wrap {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+      }
+    }
+    
     /* Ensure text centering on all devices */
     @media (max-width: 768px) {
       .cta-container .button.cc-jumbo-button,
@@ -1207,6 +1215,7 @@
       }
     }
     
+    /* CTA Footer Spacing - Mobile */
     @media (max-width: 480px) {
       .cta-container .button.cc-jumbo-button,
       .button.cc-jumbo-button.cc-jumbo-black {
@@ -1228,7 +1237,7 @@
       }
       
       .cta-wrap {
-        padding: 0 !important;
+        padding: 80px 20px !important;
         max-width: 100% !important;
         width: 100% !important;
       }
@@ -1244,6 +1253,11 @@
         max-width: 100% !important;
         margin-bottom: 25px !important;
         text-align: center !important;
+      }
+      
+      .cta-paragraph p {
+        text-align: center !important;
+        margin: 0 auto !important;
       }
       
       .h2-headingscta {
