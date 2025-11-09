@@ -526,13 +526,13 @@
       scrollbar-color: rgba(198, 156, 109, 0.8) rgba(0, 0, 0, 0.1);
     }
     
-    /* Timeline Line - Fixed Background */
+    /* Timeline Line - Dynamic Height Based on Content */
     .project-grid::before {
       content: '';
       position: absolute;
       left: 20px;
-      top: 0;
-      bottom: 0;
+      top: 30px;
+      height: var(--timeline-height, calc(100% - 60px));
       width: 2px;
       background: rgba(150, 150, 150, 0.3);
       z-index: 1;
@@ -2037,10 +2037,23 @@
 
     // Timeline Active Indicator with Intersection Observer
     function initTimelineObserver() {
-      const projectGrids = document.querySelectorAll('.project-grid');
+      const projectGrids = document.querySelectorAll('.tab-pane.active .project-grid');
       
       projectGrids.forEach(grid => {
         const projectItems = grid.querySelectorAll('.project-item');
+        
+        // Calculate timeline height based on content
+        if (projectItems.length > 0) {
+          const firstItem = projectItems[0];
+          const lastItem = projectItems[projectItems.length - 1];
+          const firstItemTop = firstItem.offsetTop;
+          const lastItemTop = lastItem.offsetTop;
+          const lastItemHeight = lastItem.offsetHeight;
+          
+          // Timeline height from first item to last item center
+          const timelineHeight = (lastItemTop - firstItemTop) + 25;
+          grid.style.setProperty('--timeline-height', `${timelineHeight}px`);
+        }
         
         // Intersection Observer configuration
         const observerOptions = {
