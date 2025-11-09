@@ -2050,8 +2050,8 @@
           const lastItemTop = lastItem.offsetTop;
           const lastItemHeight = lastItem.offsetHeight;
           
-          // Timeline height from first item to last item center
-          const timelineHeight = (lastItemTop - firstItemTop) + 25;
+          // Timeline height from first item to beyond last item
+          const timelineHeight = (lastItemTop - firstItemTop) + lastItemHeight + 30;
           grid.style.setProperty('--timeline-height', `${timelineHeight}px`);
         }
         
