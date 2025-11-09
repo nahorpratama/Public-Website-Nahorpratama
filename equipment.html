@@ -219,8 +219,8 @@
     .project-grid::after {
       content: '';
       position: absolute;
-      left: 12px;
-      top: var(--active-top, 50px);
+      left: 11px;
+      top: var(--active-top, 55px);
       width: 18px;
       height: 18px;
       background: white;
@@ -1718,35 +1718,36 @@
           const timelineHeight = (lastItemTop - firstItemTop) + lastItemHeight + 30;
           grid.style.setProperty('--timeline-height', `${timelineHeight}px`);
           
-          // Set first item as active initially with correct position
-          firstItem.classList.add('active');
-          const initialTop = firstItemTop + 25;
-          grid.style.setProperty('--active-top', `${initialTop}px`);
+          // Set first item as active initially
+          setTimeout(() => {
+            firstItem.classList.add('active');
+            const initialTop = firstItem.offsetTop + 55;
+            grid.style.setProperty('--active-top', `${initialTop}px`);
+          }, 50);
         }
         
         // Intersection Observer configuration
         const observerOptions = {
           root: grid,
-          rootMargin: '-45% 0px -45% 0px',
-          threshold: 0
+          rootMargin: '-40% 0px -50% 0px',
+          threshold: [0, 0.1, 0.5, 1]
         };
         
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && entry.intersectionRatio > 0) {
               // Remove active class from all items in this grid
               projectItems.forEach(item => item.classList.remove('active'));
               
               // Add active class to intersecting item
               entry.target.classList.add('active');
               
-              // Move the active indicator circle
-              const itemRect = entry.target.getBoundingClientRect();
-              const gridRect = grid.getBoundingClientRect();
-              const relativeTop = itemRect.top - gridRect.top + grid.scrollTop + 25;
+              // Calculate circle position relative to static dot position
+              const itemOffsetTop = entry.target.offsetTop;
+              const circleTop = itemOffsetTop + 55;
               
               // Update circle position via CSS custom property
-              grid.style.setProperty('--active-top', `${relativeTop}px`);
+              grid.style.setProperty('--active-top', `${circleTop}px`);
             }
           });
         }, observerOptions);
