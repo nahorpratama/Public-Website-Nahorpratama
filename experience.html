@@ -513,16 +513,46 @@
       padding: 20px 0;
     }
 
-    /* Project Grid - Vertical List with Scroll */
+    /* Project Grid - Vertical Timeline with Scroll */
     .project-grid {
+      position: relative;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      padding: 20px 15px 20px 0;
+      gap: 30px;
+      padding: 30px 15px 30px 50px;
       max-height: 600px;
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: rgba(198, 156, 109, 0.8) rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Timeline Line - Fixed Background */
+    .project-grid::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(150, 150, 150, 0.3);
+      z-index: 1;
+    }
+    
+    /* Moving Active Indicator Circle */
+    .project-grid::after {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: var(--active-top, 50px);
+      width: 18px;
+      height: 18px;
+      background: white;
+      border: 3px solid #c69c6d;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(198, 156, 109, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 3;
+      transition: top 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
     }
     
     /* Modern Custom Scrollbar for Webkit Browsers */
@@ -552,21 +582,10 @@
     .project-grid::-webkit-scrollbar-thumb:active {
       background: linear-gradient(180deg, #b8935f 0%, #a88050 100%);
     }
-    
-    /* Scroll indicator */
-    .project-grid::after {
-      content: '';
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 20px;
-      background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
-      pointer-events: none;
-      z-index: 1;
-    }
 
+    /* Project Item - Timeline Style */
     .project-item {
+      position: relative;
       background: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -574,12 +593,40 @@
       padding: 25px;
       border: 1px solid rgba(255, 255, 255, 0.6);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
+      transition: all 500ms ease;
+      opacity: 0.5;
+      z-index: 2;
+    }
+    
+    /* Static Timeline Dots for Each Item */
+    .project-item::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 25px;
+      width: 12px;
+      height: 12px;
+      background: rgba(150, 150, 150, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      z-index: 2;
+      transition: all 300ms ease;
+    }
+
+    /* Active Project Item */
+    .project-item.active {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .project-item.active::before {
+      background: #c69c6d;
+      transform: scale(1.2);
     }
 
     .project-item:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.6);
+      transform: translateX(5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
       border-color: rgba(255, 255, 255, 0.8);
     }
@@ -1981,6 +2028,56 @@
       // Show the selected tab content and mark button as active
       document.getElementById(tabName).classList.add("active");
       evt.currentTarget.classList.add("active");
+      
+      // Re-initialize timeline observer for new tab
+      setTimeout(() => {
+        initTimelineObserver();
+      }, 100);
+    }
+
+    // Timeline Active Indicator with Intersection Observer
+    function initTimelineObserver() {
+      const projectGrids = document.querySelectorAll('.project-grid');
+      
+      projectGrids.forEach(grid => {
+        const projectItems = grid.querySelectorAll('.project-item');
+        
+        // Intersection Observer configuration
+        const observerOptions = {
+          root: grid,
+          rootMargin: '-45% 0px -45% 0px',
+          threshold: 0
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Remove active class from all items in this grid
+              projectItems.forEach(item => item.classList.remove('active'));
+              
+              // Add active class to intersecting item
+              entry.target.classList.add('active');
+              
+              // Move the active indicator circle
+              const itemRect = entry.target.getBoundingClientRect();
+              const gridRect = grid.getBoundingClientRect();
+              const relativeTop = itemRect.top - gridRect.top + grid.scrollTop + 25;
+              
+              // Update circle position via CSS custom property
+              grid.style.setProperty('--active-top', `${relativeTop}px`);
+            }
+          });
+        }, observerOptions);
+        
+        // Observe all project items
+        projectItems.forEach(item => observer.observe(item));
+        
+        // Set first item as active initially
+        if (projectItems.length > 0) {
+          projectItems[0].classList.add('active');
+          grid.style.setProperty('--active-top', '50px');
+        }
+      });
     }
 
     // Hash navigation support
@@ -1998,8 +2095,11 @@
       }
     }
 
-    // Run hash navigation when page loads
-    document.addEventListener('DOMContentLoaded', handleHashNavigation);
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      handleHashNavigation();
+      initTimelineObserver();
+    });
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   
