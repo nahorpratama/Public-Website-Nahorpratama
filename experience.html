@@ -518,30 +518,38 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 20px 0;
+      padding: 20px 15px 20px 0;
       max-height: 600px;
       overflow-y: auto;
       scrollbar-width: thin;
-      scrollbar-color: #2c5aa0 #f1f3f4;
+      scrollbar-color: rgba(198, 156, 109, 0.8) rgba(0, 0, 0, 0.1);
     }
     
-    /* Custom scrollbar for webkit browsers */
+    /* Modern Custom Scrollbar for Webkit Browsers */
     .project-grid::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
     
     .project-grid::-webkit-scrollbar-track {
-      background: #f1f3f4;
-      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin: 10px 0;
     }
     
     .project-grid::-webkit-scrollbar-thumb {
-      background: #2c5aa0;
-      border-radius: 4px;
+      background: linear-gradient(180deg, #c69c6d 0%, #b8935f 100%);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     .project-grid::-webkit-scrollbar-thumb:hover {
-      background: #1e3a5f;
+      background: linear-gradient(180deg, #d4ab7d 0%, #c69c6d 100%);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project-grid::-webkit-scrollbar-thumb:active {
+      background: linear-gradient(180deg, #b8935f 0%, #a88050 100%);
     }
     
     /* Scroll indicator */
