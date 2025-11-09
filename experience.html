@@ -2019,6 +2019,12 @@
       projectGrids.forEach(grid => {
         const projectItems = grid.querySelectorAll('.project-item');
         
+        // Reset scroll to top
+        grid.scrollTop = 0;
+        
+        // Remove all active classes first
+        projectItems.forEach(item => item.classList.remove('active'));
+        
         // Calculate timeline height based on content
         if (projectItems.length > 0) {
           const firstItem = projectItems[0];
@@ -2030,6 +2036,11 @@
           // Timeline height from first item to beyond last item
           const timelineHeight = (lastItemTop - firstItemTop) + lastItemHeight + 30;
           grid.style.setProperty('--timeline-height', `${timelineHeight}px`);
+          
+          // Set first item as active initially with correct position
+          firstItem.classList.add('active');
+          const initialTop = firstItemTop + 25;
+          grid.style.setProperty('--active-top', `${initialTop}px`);
         }
         
         // Intersection Observer configuration
@@ -2061,12 +2072,6 @@
         
         // Observe all project items
         projectItems.forEach(item => observer.observe(item));
-        
-        // Set first item as active initially
-        if (projectItems.length > 0) {
-          projectItems[0].classList.add('active');
-          grid.style.setProperty('--active-top', '50px');
-        }
       });
     }
 
